@@ -24,6 +24,7 @@ Key-value Storage
 - Tooling to modify/access content of KVS "from the outside"
 - KVS should store default values
 - Integrity of the KVS should be checked
+- Only allow keys that are predefined to avoid spelling errors
 
 .. document:: [Your Feature Name]
    :id: DOC__Your_Feature_Name
@@ -44,40 +45,67 @@ Key-value Storage
 Feature flag
 ============
 
-To activate this feature, use the following feature flag:
-
-``experimental_[your_feature_name]``
-
-    .. note::
-     The feature flag must reflect the feature name in snake_case. Further, it is prepended with ``experimental_``, as
-     long as the feature is not yet stable.
+This feature is a standard feature that needs no special feature flag.
 
 
 Abstract
 ========
 
-[A short (~200 word) description of the contribution being addressed.]
+This feature request describes the key-value storage that is needed by
+applications to store either temporary or permant data in an easy way that
+conforms to most programming languages that provide a hash, hashmap, dictionary
+or similar. It provides support for commonly used datatypes and will be written
+in Rust. Access to the KVS is possible from any support language through
+language specific interfaces.
 
 
 Motivation
 ==========
 
-[Clearly explain why the existing platform/project solution is inadequate to address the topic that the Feature Request solves.]
+The current solutions availabkle mostly don't meet the specific needs of the
+S-CORE project like storing specific datatypes without a BASE64 conversation or
+having no rollback/replay feature. Also the integration into analysis tools is
+simpler when the solution grows with the needs instead having to adapt existing
+data structures through wrapppers. Especially in the focus of security it will
+be possible to build a system that integrates the layers from scratch and
+provide them as API to any language whilst still using Rust as the backend.
 
-    .. note::
-     The motivation is critical for Feature Requests that want to change the existing features or infrastructure.
-     It should clearly explain why the existing solution is inadequate to address the topic that the Feature Request solves.
-     Feature Request submissions without sufficient motivation may be rejected.
+A main USP of the solution will be the integration of a tracing framework that
+allows to understand how events also in the context of other events interact.
 
 
 Rationale
 =========
 
-[Describe why particular design decisions were made.]
+1. There are multiple key-value storages allowed per application.
 
+To allow for data separation and different levels of security, each application
+is allowed to have multiple KVS.
 
-   .. note::
-      The rationale should provide evidence of consensus within the community and discuss important objections or concerns raised during discussion.
+2. There must be an update mechanism from different versions of a KVS to another version.
+
+Staying compatible through updates and rollbacks is a main requirement for the
+project.
+
+3. The same KVS should be read/writeable from C++ & Rust and any other language.
+
+Having a flexible interface allows to focus on solutions where the language
+fits the needs.
+
+4. KVS should store default values.
+
+If possible, all keys should return a configurable default value or the access
+should return an error if the key needs to be written first.
+
+5. KVS should use a simple data representation.
+
+The KVS should use a data representation that supports versioned up- and
+downgrading like JSON or Cap'n Proto and is easily debugable by the developer.
+
+6. Integrity of the KVS should be checked.
+
+The KVS is always be in a consistent state that either provides the currently
+stored data or if not possible the previous snapshot.
 
 
 Specification
@@ -94,17 +122,17 @@ Specification
 Backwards Compatibility
 =======================
 
-[Describe potential impact (especially including safety and security impacts) and severity on pre-existing platform/project elements.]
+The API for the specific language tries to represent the language specific
+implementation like hashmaps or dictionaries to be mostly backwards compatible
+to already existing key-value-storage usage cases.
 
 
 Security Impact
 ===============
 
-[How could a malicious user take advantage of this new feature?]
-
-   .. note::
-      If there are security concerns in relation to the Feature Request, those concerns should be explicitly written out to make sure reviewers of the Feature Request are aware of them.
-
+Access to the key-value-storage would allow a malicious user to control the
+behaviour of the device so it needs to be secured as much as possible, like
+only providing debug access when a debug firmware image is installed.
 
 
 Safety Impact
