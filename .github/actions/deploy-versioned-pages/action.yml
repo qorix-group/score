@@ -77,7 +77,7 @@ runs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: deploy_root
-        clean: true  # Clean enabled for non-root folders
+        clean: true # Clean enabled for non-root folders
         target-folder: ${{ steps.calc.outputs.target_folder }}
         clean-exclude: |
           .nojekyll
@@ -88,7 +88,7 @@ runs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: deploy_root
-        clean: false  # Clean disabled for root folder
+        clean: false # Clean disabled for root folder
         target-folder: /
 
     - name: Deploy  version🚀
