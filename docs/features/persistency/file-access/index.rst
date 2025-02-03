@@ -15,6 +15,16 @@
 File Access
 ###########
 
+.. document:: File Storage Persistency
+   :id: DOC__persistency_file_storage
+   :status: draft
+   :safety: ASIL_B
+   :tags: contribution_request, feature_request
+
+
+Draft notes
+===========
+
 - "File Storage Persistency Feature":
    - Additional tooling regarding integrity checking & updating
 - "File Storage OSAL":
@@ -24,63 +34,44 @@ File Access
    - Enforcement of access rights is up to the OS
 
 
-.. document:: [Your Feature Name]
-   :id: DOC__Your_Feature_Name
-   :status: draft
-   :safety: ASIL_D
-   :tags: contribution_request, feature_request
-
-.. attention::
-    The above directive must be updated according to your Feature.
-
-    - Modify ``name`` to be your Feature Name
-    - Modify ``id`` to be your Feature Name in upper snake case preceded by ``DOC_``
-    - Adjust ``status`` to be ``valid``
-    - Adjust ``asil`` according to your needs
-    - Extend ``tags`` according to your needs, but please keep two default tags there
-
-
 Feature flag
 ============
 
 To activate this feature, use the following feature flag:
 
-``experimental_[your_feature_name]``
-
-    .. note::
-     The feature flag must reflect the feature name in snake_case. Further, it is prepended with ``experimental_``, as
-     long as the feature is not yet stable.
+``experimental_persistency_file_storage``
 
 
 Abstract
 ========
 
-[A short (~200 word) description of the contribution being addressed.]
+This feature request introduces a generic abstraction layer to the file storage
+either provided by the underlying operating system or emulated by the platform
+layer. It provides thread-safe access to files that can contain any data. It
+also ensures that the access is secured by a configurable access model.
 
 
 Motivation
 ==========
 
-[Clearly explain why the existing platform/project solution is inadequate to address the topic that the Feature Request solves.]
-
-    .. note::
-     The motivation is critical for Feature Requests that want to change the existing features or infrastructure.
-     It should clearly explain why the existing solution is inadequate to address the topic that the Feature Request solves.
-     Feature Request submissions without sufficient motivation may be rejected.
+The simplest solution would be accessing the file system directly by the POSIX
+API. As this would heavily rely on the underlying filesystem in regards of
+permissions and control this is not a portable solution. This feature provides
+a complete API that allows to separate processes and will also pass the safety
+certification for ASIL B.
 
 
 Rationale
 =========
 
-[Describe why particular design decisions were made.]
-
-
-   .. note::
-      The rationale should provide evidence of consensus within the community and discuss important objections or concerns raised during discussion.
+The feature must support traceability and all public APIs must be mock- and testable.
 
 
 Specification
 =============
+
+  * https://eclipse-score.github.io/score/requirements/stakeholder/index.html#STKH_REQ__12
+  * https://eclipse-score.github.io/score/requirements/stakeholder/index.html#STKH_REQ__8
 
 [Describe the requirements, architecture of any new feature.] or
 [Describe the change to requirements, architecture, implementation, process, documentation, infrastructure of any change request.]
@@ -93,7 +84,8 @@ Specification
 Backwards Compatibility
 =======================
 
-[Describe potential impact (especially including safety and security impacts) and severity on pre-existing platform/project elements.]
+This feature provides a similar file access API like POSIX so it is possible to
+retrofit existing solutions with minimal changes.
 
 
 Security Impact
