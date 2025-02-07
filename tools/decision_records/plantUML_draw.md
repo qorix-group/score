@@ -47,6 +47,5 @@ These tools complement each other, allowing users to choose between code-based a
 
 - **Challenges:**
   - Requires contributors to be familiar with PlantUML syntax if they opt for code-based diagrams.
-  - Draw.IO files should be properly version-controlled and handled to avoid conflicts.
 
 This decision aligns with the project's "Docs as Code" philosophy, ensuring maintainability, accessibility and effective collaboration.
