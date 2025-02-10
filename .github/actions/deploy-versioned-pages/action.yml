@@ -1,5 +1,5 @@
 # *******************************************************************************
-# Copyright (c) 2024 Contributors to the Eclipse Foundation
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -41,33 +41,37 @@ runs:
       id: calc
       shell: bash
       run: |
-        if [[ ${{github.event_name}} == 'pull_request' ]]; then
-          echo "target_folder=pr-${{github.event.pull_request.number}}" >> $GITHUB_OUTPUT
-        elif [[ ${{github.ref_name}} != 'main' ]]; then
-          echo "target_folder=${{github.ref_name}}" >> $GITHUB_OUTPUT
+        if [[ "${{ github.event_name }}" == 'pull_request_target' || "${{ github.event_name }}" == 'pull_request' ]]; then
+          target_folder="pr-${{ github.event.pull_request.number }}"
         else
-          echo "target_folder=/" >> $GITHUB_OUTPUT
+          target_folder="${{github.ref_name}}"
         fi
-    - name: Prepare
+        echo "target_folder=$target_folder" >> $GITHUB_OUTPUT
+
+    - name: Prepare the deploy folder
       shell: bash
       run: |
         # Prepare the deploy folder
-        mkdir -p deploy_root/${{ steps.calc.outputs.target_folder }}
+        mkdir -p deploy_root
+        mkdir -p version_root
         # Move the files to the deploy folder
-        mv ${{ inputs.source_folder }}/* deploy_root/${{ steps.calc.outputs.target_folder }}
+        mv ${{ inputs.source_folder }}/* deploy_root/
         # Ensure that the folder is not treated as a Jekyll site
         touch deploy_root/.nojekyll
 
         # Add the target folder to the versions file
-        git fetch origin gh-pages --depth 1
-        git checkout origin/gh-pages -- "${{ inputs.versions_file }}"
+        BASE_REPO="https://github.com/${{ github.repository }}.git"
+
+        echo "Fetching gh-pages from BASE_REPO: $BASE_REPO"
+        git remote add base "$BASE_REPO" || git remote set-url base "$BASE_REPO"
+        git fetch base gh-pages --depth 1
+
+        # Checkout only the versions file from gh-pages branch of the base repo
+        git checkout base/gh-pages -- "${{ inputs.versions_file }}"
 
         target="${{ steps.calc.outputs.target_folder }}"
-        if [ "$target" = "/" ]; then
-          new_version="stable"
-        else
-          new_version="$target"
-        fi
+        new_version="$target"
+
 
         if jq -e --arg version "$new_version" 'map(select(.version == $version)) | length > 0' "${{ inputs.versions_file }}" > /dev/null; then
           echo "Version '$new_version' already exists in ${{ inputs.versions_file }}"
@@ -84,16 +88,29 @@ runs:
           jq --arg version "$new_version" --arg url "$new_url" '. + [{"version": $version, "url": $url}]' "${{ inputs.versions_file }}" > tmp_versions.json
           mv tmp_versions.json "${{ inputs.versions_file }}"
         fi
-        mv "${{ inputs.versions_file }}" deploy_root/
+        mv "${{ inputs.versions_file }}" version_root/
         ls -al .
         ls -al deploy_root
-    - name: Deploy 🚀
+        ls -al version_root
+        cat  version_root/"${{ inputs.versions_file }}"
+
+    - name: Deploy Documentation
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: deploy_root
+        target-folder: ${{ steps.calc.outputs.target_folder }}
+        clean: true
+        clean-exclude: .nojekyll
+
+    - name: Deploy  version file 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: version_root
         clean: false
+
+
     - name: Comment on PR with docs URL
-      if: ${{ github.event_name == 'pull_request' && inputs.create_comment == 'true' }}
+      if: ${{ github.event_name == 'pull_request_target' && inputs.create_comment == 'true' }}
       uses: peter-evans/create-or-update-comment@v4
       with:
         issue-number: ${{github.event.pull_request.number}}

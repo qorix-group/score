@@ -1,5 +1,5 @@
 # *******************************************************************************
-# Copyright (c) 2024 Contributors to the Eclipse Foundation
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
 #
 # See the NOTICE file(s) distributed with this work for additional
 # information regarding copyright ownership.
@@ -13,7 +13,7 @@
 
 name: Cleanup Documentation
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
   delete:
 jobs:
@@ -28,7 +28,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          repository: ${{ github.event.pull_request.base.repo.full_name }} # Ensures we checkout the base repo, not the fork
           ref: gh-pages
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Remove version
         run: |
           if [[ ${{ github.event_name }} == "pull_request" ]]; then
