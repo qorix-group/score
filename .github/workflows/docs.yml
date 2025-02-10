@@ -14,7 +14,7 @@
 name: Documentation
 on:
   pull_request_target:
-    types: [opened, reopened, synchronize]  # Handles forked PRs
+    types: [opened, reopened, synchronize] # Handles forked PRs
   push:
   merge_group:
     types: [checks_requested]
@@ -59,7 +59,7 @@ jobs:
       cancel-in-progress: false
     runs-on: ubuntu-latest
     needs: docs-build
-    environment: github-pages  #  Requires approval before execution
+    environment: github-pages #  Requires approval before execution
     steps:
       - name: Checkout repository (Handle both PR events)
         uses: actions/checkout@v4.2.2
