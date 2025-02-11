@@ -57,8 +57,8 @@ jobs:
         # ------------------------------------------------------------------------------
         # Generate a unique artifact name to ensure proper tracking in all scenarios
         # ------------------------------------------------------------------------------
-        # | Condition                                      | Event Type             | Artifact Name Value                            |
-        # |------------------------------------------------|------------------------|-----------------------------------------------|
+        # | Condition                                     | Event Type             | Artifact Name Value                          |
+        # |-----------------------------------------------|------------------------|----------------------------------------------|
         # | github.event.pull_request.head.sha            | pull_request           | PR commit SHA (ensures uniqueness per PR)    |
         # | github.event.pull_request.head.sha            | pull_request_target    | PR commit SHA (ensures uniqueness per PR)    |
         # | github.sha                                    | push, merge_group      | Current commit SHA (used for main branch)    |
@@ -85,7 +85,12 @@ jobs:
     needs: docs-build
     environment: github-pages #  Requires approval before execution
     steps:
-      - name: Checkout repository (Handle both PR events)
+      # ------------------------------------------------------------------------------
+      # Always checks out the BASE repository since pull_request_target is used.
+      # This ensures that the workflow runs with trusted code from the base repo,
+      # even when triggered by a pull request from a fork.
+      # ------------------------------------------------------------------------------
+      - name: Checkout repository
         uses: actions/checkout@v4.2.2
 
       - name: Download documentation artifact
@@ -93,8 +98,8 @@ jobs:
         # ------------------------------------------------------------------------------
         # Generate a unique artifact name to ensure proper tracking in all scenarios
         # ------------------------------------------------------------------------------
-        # | Condition                                      | Event Type             | Artifact Name Value                            |
-        # |------------------------------------------------|------------------------|-----------------------------------------------|
+        # | Condition                                     | Event Type             | Artifact Name Value                          |
+        # |-----------------------------------------------|------------------------|----------------------------------------------|
         # | github.event.pull_request.head.sha            | pull_request           | PR commit SHA (ensures uniqueness per PR)    |
         # | github.event.pull_request.head.sha            | pull_request_target    | PR commit SHA (ensures uniqueness per PR)    |
         # | github.sha                                    | push, merge_group      | Current commit SHA (used for main branch)    |
