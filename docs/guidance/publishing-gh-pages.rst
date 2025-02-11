@@ -63,6 +63,8 @@ approved by a maintainer.
 
 With this setup, GitHub will pause execution of the workflow until a maintainer approves it.
 
+**This method is disabled at the moment.**
+
 
 Handling ``pull_request_target`` Workflow Adaptations
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
