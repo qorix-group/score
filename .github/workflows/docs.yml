@@ -26,19 +26,43 @@ jobs:
     permissions:
       pull-requests: write
     steps:
+      # ------------------------------------------------------------------------------
+      # Checkout the correct branch safely in all scenarios (PRs, forks, merges)
+      # ------------------------------------------------------------------------------
+      # | Condition                              | Event Type         | Checked Out Branch    |
+      # |----------------------------------------|--------------------|-----------------------|
+      # | github.head_ref                        | pull_request_target | PR branch (source branch) |
+      # | github.event.pull_request.head.ref     | pull_request        | PR branch (source branch) |
+      # | github.ref                             | push, merge_group   | The branch being pushed/merged |
+      # ------------------------------------------------------------------------------
+      # ------------------------------------------------------------------------------
+      # Checkout the correct repository safely in all scenarios (PRs, forks, merges)
+      # ------------------------------------------------------------------------------
+      # | Condition                                      | Event Type         | Checked Out Repository           |
+      # |------------------------------------------------|--------------------|----------------------------------|
+      # | github.event.pull_request.head.repo.full_name  | pull_request       | Forked repository (if PR is from a fork) |
+      # | github.repository                              | push, merge_group  | Default repository (same repo PRs, merges, pushes) |
       - name: Checkout repository (Handle all events)
         uses: actions/checkout@v4.2.2
         with:
           ref: ${{ github.head_ref || github.event.pull_request.head.ref || github.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
-
+      - name: Ensure GitHub Token is Masked
+        run: echo "::add-mask::$GITHUB_TOKEN"
       - name: Setup Bazel
         uses: bazel-contrib/setup-bazel@0.9.1
-
       - name: Build documentation
         run: |
           bazel build //docs:github-pages && cp bazel-bin/docs/github-pages.tar .
-
+        # ------------------------------------------------------------------------------
+        # Generate a unique artifact name to ensure proper tracking in all scenarios
+        # ------------------------------------------------------------------------------
+        # | Condition                                      | Event Type             | Artifact Name Value                            |
+        # |------------------------------------------------|------------------------|-----------------------------------------------|
+        # | github.event.pull_request.head.sha            | pull_request           | PR commit SHA (ensures uniqueness per PR)    |
+        # | github.event.pull_request.head.sha            | pull_request_target    | PR commit SHA (ensures uniqueness per PR)    |
+        # | github.sha                                    | push, merge_group      | Current commit SHA (used for main branch)    |
+        # ------------------------------------------------------------------------------
       - name: Upload artifact for job analysis
         uses: actions/upload-artifact@v4.4.0
         with:
@@ -63,12 +87,18 @@ jobs:
     steps:
       - name: Checkout repository (Handle both PR events)
         uses: actions/checkout@v4.2.2
-        with:
-          ref: ${{ github.head_ref || github.event.pull_request.head.ref || github.ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
 
       - name: Download documentation artifact
         uses: actions/download-artifact@v4.1.8
+        # ------------------------------------------------------------------------------
+        # Generate a unique artifact name to ensure proper tracking in all scenarios
+        # ------------------------------------------------------------------------------
+        # | Condition                                      | Event Type             | Artifact Name Value                            |
+        # |------------------------------------------------|------------------------|-----------------------------------------------|
+        # | github.event.pull_request.head.sha            | pull_request           | PR commit SHA (ensures uniqueness per PR)    |
+        # | github.event.pull_request.head.sha            | pull_request_target    | PR commit SHA (ensures uniqueness per PR)    |
+        # | github.sha                                    | push, merge_group      | Current commit SHA (used for main branch)    |
+        # ------------------------------------------------------------------------------
         with:
           name: github-pages-${{ github.event.pull_request.head.sha || github.sha }}
 
@@ -81,11 +111,4 @@ jobs:
         uses: ./.github/actions/deploy-versioned-pages
         with:
           source_folder: extracted_docs
-
-      - name: Deploy (fallback) 🚀
-        id: deployment
-        if: ${{ steps.pages-deployment.outcome == 'failure' && github.event_name == 'push' && github.ref_name == 'main' }}
-        uses: actions/deploy-pages@v4.0.5
-        with:
-          artifact_name: github-pages-${{ github.event.pull_request.head.sha || github.sha }}
 

@@ -70,7 +70,7 @@ runs:
         git checkout base/gh-pages -- "${{ inputs.versions_file }}"
 
         target="${{ steps.calc.outputs.target_folder }}"
-        new_version="$target"
+        new_version="${{ steps.calc.outputs.target_folder }}"
 
 
         if jq -e --arg version "$new_version" 'map(select(.version == $version)) | length > 0' "${{ inputs.versions_file }}" > /dev/null; then
