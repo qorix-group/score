@@ -19,3 +19,4 @@ Guidance
    :maxdepth: 2
 
    docs-as-code
+   publishing-gh-pages
