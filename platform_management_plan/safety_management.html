@@ -35,15 +35,15 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/score.css?v=dbf7d94f" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/score_needs.css?v=60b43b4f" />
-    <link rel="stylesheet" type="text/css" href="../_static/css/score_design.css?v=7fdb06ad" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -63,6 +63,13 @@
     <script src="../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'platform_management_plan/safety_management';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Risk management" href="risk_management.html" />
@@ -130,8 +137,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/S-CORE_Logo_white.svg" class="logo__image only-light" alt="Score 0.1 documentation - Home"/>
+    <img src="../_static/S-CORE_Logo_white.svg" class="logo__image only-dark pst-js-only" alt="Score 0.1 documentation - Home"/>
   
-    <p class="title logo__title">Eclipse SCORE Docs</p>
   
 </a></div>
     
@@ -160,6 +173,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../guidance/index.html">
+    Guidance
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../score_releases/index.html">
     Releases
   </a>
@@ -172,13 +192,6 @@
   </a>
 </li>
 
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="index.html">
-    PMP
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -187,6 +200,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="index.html">
+    PMP
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://eclipse-score.github.io">
     SCORE
@@ -246,6 +266,26 @@
         </li>
 </ul></div>
       
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
     </div>
     
   </div>
@@ -302,6 +342,13 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../features/index.html">
     Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../guidance/index.html">
+    Guidance
   </a>
 </li>
 
@@ -373,6 +420,26 @@
             <span class="sr-only">GitHub</span></a>
         </li>
 </ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
         
       </div>
     
@@ -466,6 +533,32 @@
 </section>
 <section id="objectives-and-scope">
 <h2>Objectives and scope<a class="headerlink" href="#objectives-and-scope" title="Link to this heading">#</a></h2>
+<section id="tailoring">
+<h3>Tailoring<a class="headerlink" href="#tailoring" title="Link to this heading">#</a></h3>
+<p>Tailoring of safety activities:</p>
+<ul class="simple">
+<li><p>The tailoring is divided into project wide and module specific rules.</p></li>
+<li><p>Project wide tailoring is documented in this document - this is based on developement of a platform SEooC.</p></li>
+<li><p>Module SEooC specific tailoring is documented in the module development Safety Plans - this may be based on SEooC specifics or because component qualification according to ISO 26262 part 8 clause 12 (or ISO PAS 8926) is selected.</p></li>
+<li><p>In case of a change request on an existing feature (i.e. a contribution request), the subsequent safety planning will be done based on an impact analysis.</p></li>
+</ul>
+<p>The following ISO26262 defined safety work products are not relevant for the SCORE SW platform development:</p>
+<p>Because these are in responsibility of the system integrator: <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__management_11" title="STD_WP_ISO26262__management_11"><em class="xref need">management_11 (STD_WP_ISO26262__management_11)</em></a>,
+<a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_2" title="STD_WP_ISO26262__system_2"><em class="xref need">system_2 (STD_WP_ISO26262__system_2)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_3" title="STD_WP_ISO26262__system_3"><em class="xref need">system_3 (STD_WP_ISO26262__system_3)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_4" title="STD_WP_ISO26262__system_4"><em class="xref need">system_4 (STD_WP_ISO26262__system_4)</em></a>,
+<a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_5" title="STD_WP_ISO26262__system_5"><em class="xref need">system_5 (STD_WP_ISO26262__system_5)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_6" title="STD_WP_ISO26262__system_6"><em class="xref need">system_6 (STD_WP_ISO26262__system_6)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_7" title="STD_WP_ISO26262__system_7"><em class="xref need">system_7 (STD_WP_ISO26262__system_7)</em></a>,
+<a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_8" title="STD_WP_ISO26262__system_8"><em class="xref need">system_8 (STD_WP_ISO26262__system_8)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_9" title="STD_WP_ISO26262__system_9"><em class="xref need">system_9 (STD_WP_ISO26262__system_9)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_10" title="STD_WP_ISO26262__system_10"><em class="xref need">system_10 (STD_WP_ISO26262__system_10)</em></a>,
+<a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__system_11" title="STD_WP_ISO26262__system_11"><em class="xref need">system_11 (STD_WP_ISO26262__system_11)</em></a></p>
+<p>Because there is no calibration used for the SCORE SW platform components, only configuration: <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__software_19" title="STD_WP_ISO26262__software_19"><em class="xref need">software_19 (STD_WP_ISO26262__software_19)</em></a>,
+<a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__software_21" title="STD_WP_ISO26262__software_21"><em class="xref need">software_21 (STD_WP_ISO26262__software_21)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__software_24" title="STD_WP_ISO26262__software_24"><em class="xref need">software_24 (STD_WP_ISO26262__software_24)</em></a></p>
+<p>Because distributed development is not how the project is organized. All contributors are seen as part of the project team.
+When used, OSS components are qualified and external SEooCs are integrated in the project scope: <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_1" title="STD_WP_ISO26262__support_1"><em class="xref need">support_1 (STD_WP_ISO26262__support_1)</em></a>,
+<a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_2" title="STD_WP_ISO26262__support_2"><em class="xref need">support_2 (STD_WP_ISO26262__support_2)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_3" title="STD_WP_ISO26262__support_3"><em class="xref need">support_3 (STD_WP_ISO26262__support_3)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_4" title="STD_WP_ISO26262__support_4"><em class="xref need">support_4 (STD_WP_ISO26262__support_4)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_5" title="STD_WP_ISO26262__support_5"><em class="xref need">support_5 (STD_WP_ISO26262__support_5)</em></a></p>
+<p>Because in the SCORE SW platform HW elements are out of scope: <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_21" title="STD_WP_ISO26262__support_21"><em class="xref need">support_21 (STD_WP_ISO26262__support_21)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_22" title="STD_WP_ISO26262__support_22"><em class="xref need">support_22 (STD_WP_ISO26262__support_22)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_23" title="STD_WP_ISO26262__support_23"><em class="xref need">support_23 (STD_WP_ISO26262__support_23)</em></a></p>
+<p>Because in the SCORE SW platform a proven in use argument will not be applied: <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_24" title="STD_WP_ISO26262__support_24"><em class="xref need">support_24 (STD_WP_ISO26262__support_24)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_25" title="STD_WP_ISO26262__support_25"><em class="xref need">support_25 (STD_WP_ISO26262__support_25)</em></a></p>
+<p>Because in the SCORE SW platform interfacing of out of scope of ISO 26262 applications is not planned: <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_26" title="STD_WP_ISO26262__support_26"><em class="xref need">support_26 (STD_WP_ISO26262__support_26)</em></a></p>
+<p>Because in the SCORE SW platform integration of safety-related systems not developed according to ISO 26262 is not planned: <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__support_27" title="STD_WP_ISO26262__support_27"><em class="xref need">support_27 (STD_WP_ISO26262__support_27)</em></a></p>
+<p>Because in the SCORE SW platform no ASIL decomposition is planned: <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__analysis_1" title="STD_WP_ISO26262__analysis_1"><em class="xref need">analysis_1 (STD_WP_ISO26262__analysis_1)</em></a>, <a class="reference internal" href="../process/standards/iso26262/index.html#STD_WP_ISO26262__analysis_2" title="STD_WP_ISO26262__analysis_2"><em class="xref need">analysis_2 (STD_WP_ISO26262__analysis_2)</em></a></p>
+</section>
 </section>
 <section id="approach">
 <h2>Approach<a class="headerlink" href="#approach" title="Link to this heading">#</a></h2>
@@ -520,7 +613,10 @@
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#purpose">Purpose</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives-and-scope">Objectives and scope</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectives-and-scope">Objectives and scope</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tailoring">Tailoring</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#approach">Approach</a></li>
 </ul>
   </nav></div>

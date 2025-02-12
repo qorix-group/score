@@ -35,15 +35,15 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=dbf7d94f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=60b43b4f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7fdb06ad" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -63,6 +63,13 @@
     <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'process/roles/index';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Workproducts" href="../workproducts/index.html" />
@@ -130,8 +137,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/S-CORE_Logo_white.svg" class="logo__image only-light" alt="Score 0.1 documentation - Home"/>
+    <img src="../../_static/S-CORE_Logo_white.svg" class="logo__image only-dark pst-js-only" alt="Score 0.1 documentation - Home"/>
   
-    <p class="title logo__title">Eclipse SCORE Docs</p>
   
 </a></div>
     
@@ -160,6 +173,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../guidance/index.html">
+    Guidance
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../score_releases/index.html">
     Releases
   </a>
@@ -172,13 +192,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../platform_management_plan/index.html">
-    PMP
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -187,6 +200,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../platform_management_plan/index.html">
+    PMP
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://eclipse-score.github.io">
     SCORE
@@ -246,6 +266,26 @@
         </li>
 </ul></div>
       
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
     </div>
     
   </div>
@@ -302,6 +342,13 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../features/index.html">
     Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../guidance/index.html">
+    Guidance
   </a>
 </li>
 
@@ -374,6 +421,26 @@
         </li>
 </ul></div>
         
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
       </div>
     
   </div>
@@ -397,6 +464,9 @@
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../guidance/index.html">Guidance</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../standards/index.html">Standards</a></li>
 </ul>
 </div>
 </nav></div>
@@ -461,7 +531,7 @@
 <h1>Roles<a class="headerlink" href="#roles" title="Link to this heading">#</a></h1>
 <section id="score-management-roles">
 <h2>SCORE Management Roles<a class="headerlink" href="#score-management-roles" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-d6b0c651">
+<div class="need_container docutils container" id="SNCB-ba9c67a0">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_project_lead">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -485,7 +555,7 @@
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is approver for: <span class="approver"><span><a class="reference internal" href="../workflows/process_management.html#WF_CR_MT_PROC_MGT_STRATEGY" title="RL_project_lead">WF_CR_MT_PROC_MGT_STRATEGY</a></span></span></div>
+<div class="line"><span><div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../workflows/process_management.html#WF_CR_MT_PROC_MGT_STRATEGY" title="RL_project_lead">WF_CR_MT_PROC_MGT_STRATEGY</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -507,7 +577,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-77c49f97">
+<div class="need_container docutils container" id="SNCB-1e565b2f">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_technical_lead">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -531,11 +601,11 @@
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_technical_lead">RL_committer</a></span></span></div>
-<div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#TE_platform_team" title="RL_technical_lead">TE_platform_team</a></span></span></div>
-<div class="line">is reponsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_technical_lead">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_technical_lead">WF_MR_VY_PLATFORM_MNGMT_PLAN</a></span></span></div>
-<div class="line">is approver for: <span class="approver"><span><a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_technical_lead">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/process_management.html#WF_DEF_APP_PROCESS_DEFINTION" title="RL_technical_lead">WF_DEF_APP_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/process_management.html#WF_MON_CTRL_PROCESS_DEFINTION" title="RL_technical_lead">WF_MON_CTRL_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_PltProcess_Audit" title="RL_technical_lead">WF_EXE_PltProcess_Audit</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="RL_technical_lead">WF_create_maintain_stakeholder_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="RL_technical_lead">WF_create_maintain_feature_requirements</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_PLAN" title="RL_technical_lead">WF_CR_MT_SAFETY_PLAN</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_CASE" title="RL_technical_lead">WF_CR_MT_SAFETY_CASE</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_MR_VY_Safety" title="RL_technical_lead">WF_MR_VY_Safety</a></span></span></div>
-<div class="line">is supporter for: <span class="supporter"><span><a class="reference internal" href="../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="RL_technical_lead">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CR_MT_QLM_PLAN" title="RL_technical_lead">WF_CR_MT_QLM_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_VY_AP_PltRelease" title="RL_technical_lead">WF_VY_AP_PltRelease</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatProcess_Compliance_Checks" title="RL_technical_lead">WF_EXE_FeatProcess_Compliance_Checks</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatWP_Review" title="RL_technical_lead">WF_EXE_FeatWP_Review</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CONSULT_EXE_QLY_TRAINING" title="RL_technical_lead">WF_CONSULT_EXE_QLY_TRAINING</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_MR_IMP_QLM_PLAN_PROCESSES" title="RL_technical_lead">WF_MR_IMP_QLM_PLAN_PROCESSES</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_FeatArch" title="RL_technical_lead">WF_ANALYSE_FeatArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_technical_lead">WF_MR_VY_SAF_ANALYSES_DFA</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_FS_AUDIT_ASSESSMENT" title="RL_technical_lead">WF_P_FS_AUDIT_ASSESSMENT</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_CONFIRM_RV" title="RL_technical_lead">WF_P_CONFIRM_RV</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_technical_lead">RL_committer</a></span></span></div>
+<div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL__platform_team" title="RL_technical_lead">RL__platform_team</a></span></span></div>
+<div class="line">is responsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_technical_lead">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_technical_lead">WF_MR_VY_PLATFORM_MNGMT_PLAN</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_technical_lead">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/process_management.html#WF_DEF_APP_PROCESS_DEFINTION" title="RL_technical_lead">WF_DEF_APP_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/process_management.html#WF_MON_CTRL_PROCESS_DEFINTION" title="RL_technical_lead">WF_MON_CTRL_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_PltProcess_Audit" title="RL_technical_lead">WF_EXE_PltProcess_Audit</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="RL_technical_lead">WF_create_maintain_stakeholder_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="RL_technical_lead">WF_create_maintain_feature_requirements</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_PLAN" title="RL_technical_lead">WF_CR_MT_SAFETY_PLAN</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_CASE" title="RL_technical_lead">WF_CR_MT_SAFETY_CASE</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_MR_VY_Safety" title="RL_technical_lead">WF_MR_VY_Safety</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="RL_technical_lead">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CR_MT_QLM_PLAN" title="RL_technical_lead">WF_CR_MT_QLM_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_VY_AP_PltRelease" title="RL_technical_lead">WF_VY_AP_PltRelease</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatProcess_Compliance_Checks" title="RL_technical_lead">WF_EXE_FeatProcess_Compliance_Checks</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatWP_Review" title="RL_technical_lead">WF_EXE_FeatWP_Review</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CONSULT_EXE_QLY_TRAINING" title="RL_technical_lead">WF_CONSULT_EXE_QLY_TRAINING</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_MR_IMP_QLM_PLAN_PROCESSES" title="RL_technical_lead">WF_MR_IMP_QLM_PLAN_PROCESSES</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_FeatArch" title="RL_technical_lead">WF_ANALYSE_FeatArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_technical_lead">WF_MR_VY_SAF_ANALYSES_DFA</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_FS_AUDIT_ASSESSMENT" title="RL_technical_lead">WF_P_FS_AUDIT_ASSESSMENT</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_CONFIRM_RV" title="RL_technical_lead">WF_P_CONFIRM_RV</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -557,7 +627,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-36e614db">
+<div class="need_container docutils container" id="SNCB-b8105e35">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_safety_manager">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -581,11 +651,11 @@
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">no</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_safety_manager">RL_committer</a></span></span></div>
-<div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#TE_platform_team" title="RL_safety_manager">TE_platform_team</a>, <a class="reference internal" href="#TE_module_team" title="RL_safety_manager">TE_module_team</a></span></span></div>
-<div class="line">is reponsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_PLAN" title="RL_safety_manager">WF_CR_MT_SAFETY_PLAN</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_CASE" title="RL_safety_manager">WF_CR_MT_SAFETY_CASE</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_MR_VY_Safety" title="RL_safety_manager">WF_MR_VY_Safety</a></span></span></div>
-<div class="line">is approver for: <span class="approver"><span><a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_FeatArch" title="RL_safety_manager">WF_ANALYSE_FeatArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_CompArch" title="RL_safety_manager">WF_ANALYSE_CompArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_safety_manager">WF_MR_VY_SAF_ANALYSES_DFA</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_FS_AUDIT_ASSESSMENT" title="RL_safety_manager">WF_P_FS_AUDIT_ASSESSMENT</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_CONFIRM_RV" title="RL_safety_manager">WF_P_CONFIRM_RV</a></span></span></div>
-<div class="line">is supporter for: <span class="supporter"><span><a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_FeatArch" title="RL_safety_manager">WF_CR_MT_FeatArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_CompArch" title="RL_safety_manager">WF_CR_MT_CompArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_MR_VY_Arch" title="RL_safety_manager">WF_MR_VY_Arch</a>, <a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_safety_manager">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_safety_manager">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_safety_manager">WF_MR_VY_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_PltProcess_Audit" title="RL_safety_manager">WF_EXE_PltProcess_Audit</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="RL_safety_manager">WF_create_maintain_stakeholder_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="RL_safety_manager">WF_create_maintain_feature_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="RL_safety_manager">WF_create_maintain_component_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="RL_safety_manager">WF_create_maintain_tool_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_monitor_verify_requirements" title="RL_safety_manager">WF_monitor_verify_requirements</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_safety_manager">RL_committer</a></span></span></div>
+<div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL__platform_team" title="RL_safety_manager">RL__platform_team</a>, <a class="reference internal" href="#RL__module_team" title="RL_safety_manager">RL__module_team</a></span></span></div>
+<div class="line">is responsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_PLAN" title="RL_safety_manager">WF_CR_MT_SAFETY_PLAN</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_CASE" title="RL_safety_manager">WF_CR_MT_SAFETY_CASE</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_MR_VY_Safety" title="RL_safety_manager">WF_MR_VY_Safety</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_FeatArch" title="RL_safety_manager">WF_ANALYSE_FeatArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_CompArch" title="RL_safety_manager">WF_ANALYSE_CompArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_safety_manager">WF_MR_VY_SAF_ANALYSES_DFA</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_FS_AUDIT_ASSESSMENT" title="RL_safety_manager">WF_P_FS_AUDIT_ASSESSMENT</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_CONFIRM_RV" title="RL_safety_manager">WF_P_CONFIRM_RV</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_FeatArch" title="RL_safety_manager">WF_CR_MT_FeatArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_CompArch" title="RL_safety_manager">WF_CR_MT_CompArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_MR_VY_Arch" title="RL_safety_manager">WF_MR_VY_Arch</a>, <a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_safety_manager">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_safety_manager">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_safety_manager">WF_MR_VY_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_PltProcess_Audit" title="RL_safety_manager">WF_EXE_PltProcess_Audit</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="RL_safety_manager">WF_create_maintain_stakeholder_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="RL_safety_manager">WF_create_maintain_feature_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="RL_safety_manager">WF_create_maintain_component_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="RL_safety_manager">WF_create_maintain_tool_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_monitor_verify_requirements" title="RL_safety_manager">WF_monitor_verify_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -607,7 +677,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-0bd4bd72">
+<div class="need_container docutils container" id="SNCB-29ecf2f3">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_quality_manager">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -631,11 +701,11 @@
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">no</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">no</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_quality_manager">RL_committer</a></span></span></div>
-<div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#TE_platform_team" title="RL_quality_manager">TE_platform_team</a>, <a class="reference internal" href="#TE_module_team" title="RL_quality_manager">TE_module_team</a></span></span></div>
-<div class="line">is reponsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/quality_management.html#WF_EXE_PltProcess_Audit" title="RL_quality_manager">WF_EXE_PltProcess_Audit</a></span></span></div>
-<div class="line">is approver for: <span class="approver"><span><a class="reference internal" href="../workflows/quality_management.html#WF_CR_MT_QLM_PLAN" title="RL_quality_manager">WF_CR_MT_QLM_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_VY_AP_PltRelease" title="RL_quality_manager">WF_VY_AP_PltRelease</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatProcess_Compliance_Checks" title="RL_quality_manager">WF_EXE_FeatProcess_Compliance_Checks</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatWP_Review" title="RL_quality_manager">WF_EXE_FeatWP_Review</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CONSULT_EXE_QLY_TRAINING" title="RL_quality_manager">WF_CONSULT_EXE_QLY_TRAINING</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_MR_IMP_QLM_PLAN_PROCESSES" title="RL_quality_manager">WF_MR_IMP_QLM_PLAN_PROCESSES</a></span></span></div>
-<div class="line">is supporter for: <span class="supporter"><span><a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_quality_manager">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_quality_manager">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_quality_manager">WF_MR_VY_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_PLAN" title="RL_quality_manager">WF_CR_MT_SAFETY_PLAN</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_CASE" title="RL_quality_manager">WF_CR_MT_SAFETY_CASE</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_MR_VY_Safety" title="RL_quality_manager">WF_MR_VY_Safety</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_quality_manager">RL_committer</a></span></span></div>
+<div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL__platform_team" title="RL_quality_manager">RL__platform_team</a>, <a class="reference internal" href="#RL__module_team" title="RL_quality_manager">RL__module_team</a></span></span></div>
+<div class="line">is responsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/quality_management.html#WF_EXE_PltProcess_Audit" title="RL_quality_manager">WF_EXE_PltProcess_Audit</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../workflows/quality_management.html#WF_CR_MT_QLM_PLAN" title="RL_quality_manager">WF_CR_MT_QLM_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_VY_AP_PltRelease" title="RL_quality_manager">WF_VY_AP_PltRelease</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatProcess_Compliance_Checks" title="RL_quality_manager">WF_EXE_FeatProcess_Compliance_Checks</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatWP_Review" title="RL_quality_manager">WF_EXE_FeatWP_Review</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CONSULT_EXE_QLY_TRAINING" title="RL_quality_manager">WF_CONSULT_EXE_QLY_TRAINING</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_MR_IMP_QLM_PLAN_PROCESSES" title="RL_quality_manager">WF_MR_IMP_QLM_PLAN_PROCESSES</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_quality_manager">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_quality_manager">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_quality_manager">WF_MR_VY_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_PLAN" title="RL_quality_manager">WF_CR_MT_SAFETY_PLAN</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_CR_MT_SAFETY_CASE" title="RL_quality_manager">WF_CR_MT_SAFETY_CASE</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_MR_VY_Safety" title="RL_quality_manager">WF_MR_VY_Safety</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -657,7 +727,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-6a2533dc">
+<div class="need_container docutils container" id="SNCB-11640aa0">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_security_manager">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -680,9 +750,9 @@
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_security_manager">RL_committer</a></span></span></div>
-<div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#TE_platform_team" title="RL_security_manager">TE_platform_team</a>, <a class="reference internal" href="#TE_module_team" title="RL_security_manager">TE_module_team</a></span></span></div>
-<div class="line">is supporter for: <span class="supporter"><span><a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_FeatArch" title="RL_security_manager">WF_CR_MT_FeatArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_CompArch" title="RL_security_manager">WF_CR_MT_CompArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_MR_VY_Arch" title="RL_security_manager">WF_MR_VY_Arch</a>, <a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_security_manager">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_security_manager">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_security_manager">WF_MR_VY_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_PltProcess_Audit" title="RL_security_manager">WF_EXE_PltProcess_Audit</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_FeatArch" title="RL_security_manager">WF_ANALYSE_FeatArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_CompArch" title="RL_security_manager">WF_ANALYSE_CompArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_security_manager">WF_MR_VY_SAF_ANALYSES_DFA</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_security_manager">RL_committer</a></span></span></div>
+<div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL__platform_team" title="RL_security_manager">RL__platform_team</a>, <a class="reference internal" href="#RL__module_team" title="RL_security_manager">RL__module_team</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_FeatArch" title="RL_security_manager">WF_CR_MT_FeatArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_CompArch" title="RL_security_manager">WF_CR_MT_CompArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_MR_VY_Arch" title="RL_security_manager">WF_MR_VY_Arch</a>, <a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_security_manager">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_security_manager">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_security_manager">WF_MR_VY_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_PltProcess_Audit" title="RL_security_manager">WF_EXE_PltProcess_Audit</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_FeatArch" title="RL_security_manager">WF_ANALYSE_FeatArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_CompArch" title="RL_security_manager">WF_ANALYSE_CompArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_security_manager">WF_MR_VY_SAF_ANALYSES_DFA</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -704,7 +774,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-ea296704">
+<div class="need_container docutils container" id="SNCB-6a468521">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_module_lead">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -728,10 +798,10 @@
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_module_lead">RL_committer</a></span></span></div>
-<div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#TE_module_team" title="RL_module_lead">TE_module_team</a></span></span></div>
-<div class="line">is approver for: <span class="approver"><span><a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_module_lead">WF_RV_AP_ChangeRequest</a></span></span></div>
-<div class="line">is supporter for: <span class="supporter"><span><a class="reference internal" href="../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="RL_module_lead">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_CompArch" title="RL_module_lead">WF_ANALYSE_CompArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_module_lead">WF_MR_VY_SAF_ANALYSES_DFA</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_module_lead">RL_committer</a></span></span></div>
+<div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL__module_team" title="RL_module_lead">RL__module_team</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_module_lead">WF_RV_AP_ChangeRequest</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="RL_module_lead">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_CompArch" title="RL_module_lead">WF_ANALYSE_CompArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_module_lead">WF_MR_VY_SAF_ANALYSES_DFA</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -756,7 +826,7 @@
 </section>
 <section id="score-process-roles">
 <h2>SCORE process roles<a class="headerlink" href="#score-process-roles" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-3ca0039e">
+<div class="need_container docutils container" id="SNCB-892cf7de">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_process_community">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -780,10 +850,10 @@
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_process_community">RL_committer</a></span></span></div>
-<div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#TE_platform_team" title="RL_process_community">TE_platform_team</a></span></span></div>
-<div class="line">is reponsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/process_management.html#WF_CR_MT_PROC_MGT_STRATEGY" title="RL_process_community">WF_CR_MT_PROC_MGT_STRATEGY</a>, <a class="reference internal" href="../workflows/process_management.html#WF_DEF_APP_PROCESS_DEFINTION" title="RL_process_community">WF_DEF_APP_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/process_management.html#WF_MON_CTRL_PROCESS_DEFINTION" title="RL_process_community">WF_MON_CTRL_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="RL_process_community">WF_create_maintain_tool_requirements</a></span></span></div>
-<div class="line">is approver for: <span class="approver"><span><a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_process_community">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_process_community">WF_MR_VY_PLATFORM_MNGMT_PLAN</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_process_community">RL_committer</a></span></span></div>
+<div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL__platform_team" title="RL_process_community">RL__platform_team</a></span></span></div>
+<div class="line">is responsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/process_management.html#WF_CR_MT_PROC_MGT_STRATEGY" title="RL_process_community">WF_CR_MT_PROC_MGT_STRATEGY</a>, <a class="reference internal" href="../workflows/process_management.html#WF_DEF_APP_PROCESS_DEFINTION" title="RL_process_community">WF_DEF_APP_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/process_management.html#WF_MON_CTRL_PROCESS_DEFINTION" title="RL_process_community">WF_MON_CTRL_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="RL_process_community">WF_create_maintain_tool_requirements</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../workflows/platform_management.html#WF_CR_MT_PLATFORM_MNGMT_PLAN" title="RL_process_community">WF_CR_MT_PLATFORM_MNGMT_PLAN</a>, <a class="reference internal" href="../workflows/platform_management.html#WF_MR_VY_PLATFORM_MNGMT_PLAN" title="RL_process_community">WF_MR_VY_PLATFORM_MNGMT_PLAN</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -809,7 +879,7 @@ The approval and release of the process is done by the safety, quality and secur
 </section>
 <section id="score-development-roles">
 <h2>SCORE development roles<a class="headerlink" href="#score-development-roles" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-10f1d761">
+<div class="need_container docutils container" id="SNCB-75354fdf">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_infrastructure_tooling_community">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -833,9 +903,9 @@ The approval and release of the process is done by the safety, quality and secur
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_infrastructure_tooling_community">RL_committer</a></span></span></div>
-<div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#TE_platform_team" title="RL_infrastructure_tooling_community">TE_platform_team</a></span></span></div>
-<div class="line">is approver for: <span class="approver"><span><a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="RL_infrastructure_tooling_community">WF_create_maintain_tool_requirements</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_committer" title="RL_infrastructure_tooling_community">RL_committer</a></span></span></div>
+<div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL__platform_team" title="RL_infrastructure_tooling_community">RL__platform_team</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="RL_infrastructure_tooling_community">WF_create_maintain_tool_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -857,7 +927,7 @@ The approval and release of the process is done by the safety, quality and secur
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-9bec4d6a">
+<div class="need_container docutils container" id="SNCB-3b9e250b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_contributor">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -878,8 +948,8 @@ The approval and release of the process is done by the safety, quality and secur
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#TE_platform_team" title="RL_contributor">TE_platform_team</a>, <a class="reference internal" href="#TE_module_team" title="RL_contributor">TE_module_team</a></span></span></div>
-<div class="line">is reponsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_FeatArch" title="RL_contributor">WF_CR_MT_FeatArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_CompArch" title="RL_contributor">WF_CR_MT_CompArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_MR_VY_Arch" title="RL_contributor">WF_MR_VY_Arch</a>, <a class="reference internal" href="../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="RL_contributor">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="RL_contributor">WF_create_maintain_stakeholder_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="RL_contributor">WF_create_maintain_feature_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="RL_contributor">WF_create_maintain_component_requirements</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL__platform_team" title="RL_contributor">RL__platform_team</a>, <a class="reference internal" href="#RL__module_team" title="RL_contributor">RL__module_team</a></span></span></div>
+<div class="line">is responsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_FeatArch" title="RL_contributor">WF_CR_MT_FeatArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_CompArch" title="RL_contributor">WF_CR_MT_CompArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_MR_VY_Arch" title="RL_contributor">WF_MR_VY_Arch</a>, <a class="reference internal" href="../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="RL_contributor">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="RL_contributor">WF_create_maintain_stakeholder_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="RL_contributor">WF_create_maintain_feature_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="RL_contributor">WF_create_maintain_component_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -907,7 +977,7 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-592cc8e4">
+<div class="need_container docutils container" id="SNCB-cb6aebe9">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_committer">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -931,9 +1001,9 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is part of: <span class="contains"><span><a class="reference internal" href="#RL_technical_lead" title="RL_committer">RL_technical_lead</a>, <a class="reference internal" href="#RL_safety_manager" title="RL_committer">RL_safety_manager</a>, <a class="reference internal" href="#RL_quality_manager" title="RL_committer">RL_quality_manager</a>, <a class="reference internal" href="#RL_security_manager" title="RL_committer">RL_security_manager</a>, <a class="reference internal" href="#RL_module_lead" title="RL_committer">RL_module_lead</a>, <a class="reference internal" href="#RL_process_community" title="RL_committer">RL_process_community</a>, <a class="reference internal" href="#RL_infrastructure_tooling_community" title="RL_committer">RL_infrastructure_tooling_community</a>, <a class="reference internal" href="#TE_platform_team" title="RL_committer">TE_platform_team</a>, <a class="reference internal" href="#TE_module_team" title="RL_committer">TE_module_team</a></span></span></div>
-<div class="line">is reponsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_committer">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CR_MT_QLM_PLAN" title="RL_committer">WF_CR_MT_QLM_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_VY_AP_PltRelease" title="RL_committer">WF_VY_AP_PltRelease</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatProcess_Compliance_Checks" title="RL_committer">WF_EXE_FeatProcess_Compliance_Checks</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatWP_Review" title="RL_committer">WF_EXE_FeatWP_Review</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CONSULT_EXE_QLY_TRAINING" title="RL_committer">WF_CONSULT_EXE_QLY_TRAINING</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_MR_IMP_QLM_PLAN_PROCESSES" title="RL_committer">WF_MR_IMP_QLM_PLAN_PROCESSES</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_monitor_verify_requirements" title="RL_committer">WF_monitor_verify_requirements</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_FeatArch" title="RL_committer">WF_ANALYSE_FeatArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_CompArch" title="RL_committer">WF_ANALYSE_CompArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_committer">WF_MR_VY_SAF_ANALYSES_DFA</a></span></span></div>
-<div class="line">is approver for: <span class="approver"><span><a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_FeatArch" title="RL_committer">WF_CR_MT_FeatArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_CompArch" title="RL_committer">WF_CR_MT_CompArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_MR_VY_Arch" title="RL_committer">WF_MR_VY_Arch</a>, <a class="reference internal" href="../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="RL_committer">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="RL_committer">WF_create_maintain_component_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_monitor_verify_requirements" title="RL_committer">WF_monitor_verify_requirements</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="#RL_technical_lead" title="RL_committer">RL_technical_lead</a>, <a class="reference internal" href="#RL_safety_manager" title="RL_committer">RL_safety_manager</a>, <a class="reference internal" href="#RL_quality_manager" title="RL_committer">RL_quality_manager</a>, <a class="reference internal" href="#RL_security_manager" title="RL_committer">RL_security_manager</a>, <a class="reference internal" href="#RL_module_lead" title="RL_committer">RL_module_lead</a>, <a class="reference internal" href="#RL_process_community" title="RL_committer">RL_process_community</a>, <a class="reference internal" href="#RL_infrastructure_tooling_community" title="RL_committer">RL_infrastructure_tooling_community</a>, <a class="reference internal" href="#RL__platform_team" title="RL_committer">RL__platform_team</a>, <a class="reference internal" href="#RL__module_team" title="RL_committer">RL__module_team</a></span></span></div>
+<div class="line">is responsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="RL_committer">WF_RV_AP_ChangeRequest</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CR_MT_QLM_PLAN" title="RL_committer">WF_CR_MT_QLM_PLAN</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_VY_AP_PltRelease" title="RL_committer">WF_VY_AP_PltRelease</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatProcess_Compliance_Checks" title="RL_committer">WF_EXE_FeatProcess_Compliance_Checks</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_EXE_FeatWP_Review" title="RL_committer">WF_EXE_FeatWP_Review</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_CONSULT_EXE_QLY_TRAINING" title="RL_committer">WF_CONSULT_EXE_QLY_TRAINING</a>, <a class="reference internal" href="../workflows/quality_management.html#WF_MR_IMP_QLM_PLAN_PROCESSES" title="RL_committer">WF_MR_IMP_QLM_PLAN_PROCESSES</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_monitor_verify_requirements" title="RL_committer">WF_monitor_verify_requirements</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_FeatArch" title="RL_committer">WF_ANALYSE_FeatArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_ANALYSE_CompArch" title="RL_committer">WF_ANALYSE_CompArch</a>, <a class="reference internal" href="../workflows/safety_analysis.html#WF_MR_VY_SAF_ANALYSES_DFA" title="RL_committer">WF_MR_VY_SAF_ANALYSES_DFA</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_FeatArch" title="RL_committer">WF_CR_MT_FeatArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_CR_MT_CompArch" title="RL_committer">WF_CR_MT_CompArch</a>, <a class="reference internal" href="../workflows/architecture_design.html#WF_MR_VY_Arch" title="RL_committer">WF_MR_VY_Arch</a>, <a class="reference internal" href="../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="RL_committer">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="RL_committer">WF_create_maintain_component_requirements</a>, <a class="reference internal" href="../workflows/requirements_management.html#WF_monitor_verify_requirements" title="RL_committer">WF_monitor_verify_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -963,8 +1033,8 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 </section>
 <section id="score-cross-functional-teams">
 <h2>SCORE cross functional teams<a class="headerlink" href="#score-cross-functional-teams" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-992c3d56">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_team table" id="TE_platform_team">
+<div class="need_container docutils container" id="SNCB-6d59f9b8">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL__platform_team">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Platform Team</span></span></span></div>
@@ -987,7 +1057,7 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_technical_lead" title="TE_platform_team">RL_technical_lead</a>, <a class="reference internal" href="#RL_safety_manager" title="TE_platform_team">RL_safety_manager</a>, <a class="reference internal" href="#RL_quality_manager" title="TE_platform_team">RL_quality_manager</a>, <a class="reference internal" href="#RL_security_manager" title="TE_platform_team">RL_security_manager</a>, <a class="reference internal" href="#RL_contributor" title="TE_platform_team">RL_contributor</a>, <a class="reference internal" href="#RL_committer" title="TE_platform_team">RL_committer</a>, <a class="reference internal" href="#RL_infrastructure_tooling_community" title="TE_platform_team">RL_infrastructure_tooling_community</a>, <a class="reference internal" href="#RL_process_community" title="TE_platform_team">RL_process_community</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_technical_lead" title="RL__platform_team">RL_technical_lead</a>, <a class="reference internal" href="#RL_safety_manager" title="RL__platform_team">RL_safety_manager</a>, <a class="reference internal" href="#RL_quality_manager" title="RL__platform_team">RL_quality_manager</a>, <a class="reference internal" href="#RL_security_manager" title="RL__platform_team">RL_security_manager</a>, <a class="reference internal" href="#RL_contributor" title="RL__platform_team">RL_contributor</a>, <a class="reference internal" href="#RL_committer" title="RL__platform_team">RL_committer</a>, <a class="reference internal" href="#RL_infrastructure_tooling_community" title="RL__platform_team">RL_infrastructure_tooling_community</a>, <a class="reference internal" href="#RL_process_community" title="RL__platform_team">RL_process_community</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -996,11 +1066,11 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 <tr class="content row-odd"><td class="content" colspan="6"><p>The platform team is responsible for all artefacts within the platform SEooC. Additionally it is also responsible for the overall process including its support by tooling.</p></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#TE_platform_team" title="TE_platform_team">TE_platform_team</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#RL__platform_team" title="RL__platform_team">RL__platform_team</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Team</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Role</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -1009,8 +1079,8 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c348876a">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_team table" id="TE_module_team">
+<div class="need_container docutils container" id="SNCB-bd778b72">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL__module_team">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Module Team</span></span></span></div>
@@ -1033,7 +1103,7 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">yes</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">consists of: <span class="contains"><span><a class="reference internal" href="#RL_module_lead" title="TE_module_team">RL_module_lead</a>, <a class="reference internal" href="#RL_safety_manager" title="TE_module_team">RL_safety_manager</a>, <a class="reference internal" href="#RL_quality_manager" title="TE_module_team">RL_quality_manager</a>, <a class="reference internal" href="#RL_security_manager" title="TE_module_team">RL_security_manager</a>, <a class="reference internal" href="#RL_contributor" title="TE_module_team">RL_contributor</a>, <a class="reference internal" href="#RL_committer" title="TE_module_team">RL_committer</a></span></span></div>
+<div class="line"><span><div class="line">is contained by: <span class="contains"><span><a class="reference internal" href="#RL_module_lead" title="RL__module_team">RL_module_lead</a>, <a class="reference internal" href="#RL_safety_manager" title="RL__module_team">RL_safety_manager</a>, <a class="reference internal" href="#RL_quality_manager" title="RL__module_team">RL_quality_manager</a>, <a class="reference internal" href="#RL_security_manager" title="RL__module_team">RL_security_manager</a>, <a class="reference internal" href="#RL_contributor" title="RL__module_team">RL_contributor</a>, <a class="reference internal" href="#RL_committer" title="RL__module_team">RL_committer</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -1042,11 +1112,11 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 <tr class="content row-odd"><td class="content" colspan="6"><p>The module team is responsible for all artefacts within the module SEooCs. Each module has only one responsible team but a team may also be responsible for several (small) modules.</p></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#TE_module_team" title="TE_module_team">TE_module_team</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#RL__module_team" title="RL__module_team">RL__module_team</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Team</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Role</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -1058,7 +1128,7 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 </section>
 <section id="score-external-roles">
 <h2>SCORE external roles<a class="headerlink" href="#score-external-roles" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-a3c48b16">
+<div class="need_container docutils container" id="SNCB-d4da6cfc">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_role table" id="RL_external_assessor">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1082,8 +1152,8 @@ Any contributor which contributes code, tests or documentation to SCORE.</p>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">no</span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">yes</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is reponsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/safety_management.html#WF_P_FS_AUDIT_ASSESSMENT" title="RL_external_assessor">WF_P_FS_AUDIT_ASSESSMENT</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_CONFIRM_RV" title="RL_external_assessor">WF_P_CONFIRM_RV</a></span></span></div>
-<div class="line">is supporter for: <span class="supporter"><span><a class="reference internal" href="../workflows/process_management.html#WF_CR_MT_PROC_MGT_STRATEGY" title="RL_external_assessor">WF_CR_MT_PROC_MGT_STRATEGY</a>, <a class="reference internal" href="../workflows/process_management.html#WF_DEF_APP_PROCESS_DEFINTION" title="RL_external_assessor">WF_DEF_APP_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/process_management.html#WF_MON_CTRL_PROCESS_DEFINTION" title="RL_external_assessor">WF_MON_CTRL_PROCESS_DEFINTION</a></span></span></div>
+<div class="line"><span><div class="line">is responsible for: <span class="responsible"><span><a class="reference internal" href="../workflows/safety_management.html#WF_P_FS_AUDIT_ASSESSMENT" title="RL_external_assessor">WF_P_FS_AUDIT_ASSESSMENT</a>, <a class="reference internal" href="../workflows/safety_management.html#WF_P_CONFIRM_RV" title="RL_external_assessor">WF_P_CONFIRM_RV</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../workflows/process_management.html#WF_CR_MT_PROC_MGT_STRATEGY" title="RL_external_assessor">WF_CR_MT_PROC_MGT_STRATEGY</a>, <a class="reference internal" href="../workflows/process_management.html#WF_DEF_APP_PROCESS_DEFINTION" title="RL_external_assessor">WF_DEF_APP_PROCESS_DEFINTION</a>, <a class="reference internal" href="../workflows/process_management.html#WF_MON_CTRL_PROCESS_DEFINTION" title="RL_external_assessor">WF_MON_CTRL_PROCESS_DEFINTION</a></span></span></div>
 </span></div>
 </div>
 </td>

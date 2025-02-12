@@ -35,15 +35,15 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=dbf7d94f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=60b43b4f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7fdb06ad" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -63,9 +63,16 @@
     <script src="../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'process/guidance/requirements/requirement_template';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Platform Management Plan" href="../../../platform_management_plan/index.html" />
+    <link rel="next" title="Standards" href="../../standards/index.html" />
     <link rel="prev" title="Requirement Guidance" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -130,8 +137,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../../_static/S-CORE_Logo_white.svg" class="logo__image only-light" alt="Score 0.1 documentation - Home"/>
+    <img src="../../../_static/S-CORE_Logo_white.svg" class="logo__image only-dark pst-js-only" alt="Score 0.1 documentation - Home"/>
   
-    <p class="title logo__title">Eclipse SCORE Docs</p>
   
 </a></div>
     
@@ -160,6 +173,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guidance/index.html">
+    Guidance
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../score_releases/index.html">
     Releases
   </a>
@@ -172,13 +192,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../platform_management_plan/index.html">
-    PMP
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -187,6 +200,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../platform_management_plan/index.html">
+    PMP
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://eclipse-score.github.io">
     SCORE
@@ -246,6 +266,26 @@
         </li>
 </ul></div>
       
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
     </div>
     
   </div>
@@ -302,6 +342,13 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../features/index.html">
     Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guidance/index.html">
+    Guidance
   </a>
 </li>
 
@@ -374,6 +421,26 @@
         </li>
 </ul></div>
         
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
       </div>
     
   </div>
@@ -399,6 +466,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Guidance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../git/index.html">Git Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../branch/index.html">Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../feature_flags/index.html">Feature Flags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/index.html">General</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contribution_request/index.html">Contribution Request Guideline</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Requirement Guidance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -407,6 +475,9 @@
 </details></li>
 </ul>
 </details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../standards/index.html">Standards</a></li>
 </ul>
 </div>
 </nav></div>
@@ -476,7 +547,7 @@
   <section id="requirement-templates">
 <h1>Requirement Templates<a class="headerlink" href="#requirement-templates" title="Link to this heading">#</a></h1>
 <p>todo: add links to standards</p>
-<div class="need_container docutils container" id="SNCB-463b8aa6">
+<div class="need_container docutils container" id="SNCB-c6de2375">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="GD_TEMP__stakeholder_requirements_template">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -498,7 +569,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">requirements_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is guiding: <span class="guidance"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="GD_TEMP__stakeholder_requirements_template">WF_create_maintain_stakeholder_requirements</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="GD_TEMP__stakeholder_requirements_template">WF_create_maintain_stakeholder_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -533,7 +604,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-ec17096e">
+<div class="need_container docutils container" id="SNCB-6a28f9cc">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="GD_TEMP__feature_requirements_template">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -555,7 +626,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is guiding: <span class="guidance"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="GD_TEMP__feature_requirements_template">WF_create_maintain_feature_requirements</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="GD_TEMP__feature_requirements_template">WF_create_maintain_feature_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -588,7 +659,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-5ed9a06f">
+<div class="need_container docutils container" id="SNCB-e532b3fa">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="GD_TEMP__component_requirements_template">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -610,7 +681,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is guiding: <span class="guidance"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="GD_TEMP__component_requirements_template">WF_create_maintain_component_requirements</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="GD_TEMP__component_requirements_template">WF_create_maintain_component_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -643,7 +714,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-0771c5b0">
+<div class="need_container docutils container" id="SNCB-aa390458">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="GD_TEMP__tool_requirements_template">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -665,7 +736,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is guiding: <span class="guidance"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="GD_TEMP__tool_requirements_template">WF_create_maintain_tool_requirements</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="GD_TEMP__tool_requirements_template">WF_create_maintain_tool_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -700,7 +771,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-e384ba64">
+<div class="need_container docutils container" id="SNCB-3fc3f841">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="GD_TEMP__requirement_formulation">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -722,7 +793,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is guiding: <span class="guidance"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="GD_TEMP__requirement_formulation">WF_create_maintain_stakeholder_requirements</a>, <a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="GD_TEMP__requirement_formulation">WF_create_maintain_feature_requirements</a>, <a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="GD_TEMP__requirement_formulation">WF_create_maintain_component_requirements</a>, <a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="GD_TEMP__requirement_formulation">WF_create_maintain_tool_requirements</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_stakeholder_requirements" title="GD_TEMP__requirement_formulation">WF_create_maintain_stakeholder_requirements</a>, <a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_feature_requirements" title="GD_TEMP__requirement_formulation">WF_create_maintain_feature_requirements</a>, <a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_component_requirements" title="GD_TEMP__requirement_formulation">WF_create_maintain_component_requirements</a>, <a class="reference internal" href="../../workflows/requirements_management.html#WF_create_maintain_tool_requirements" title="GD_TEMP__requirement_formulation">WF_create_maintain_tool_requirements</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -732,7 +803,7 @@
 <p>&lt;The SW Platform|Feature|Component&gt; shall &lt;main verb&gt; &lt;object&gt; &lt;parameter&gt; &lt;temporal/logical conjunction&gt;</p>
 <p>&lt;Note: (optional, not to be verified)&gt;</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id1">
-<caption><span class="caption-number">Table 2 </span><span class="caption-text">Sentence Table</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 4 </span><span class="caption-text">Sentence Table</span><a class="headerlink" href="#id1" title="Link to this table">#</a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Addressee of the requirement (subject)</p></th>
 <th class="head"><p>shall</p></th>
@@ -809,11 +880,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../../../platform_management_plan/index.html"
+       href="../../standards/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Platform Management Plan</p>
+        <p class="prev-next-title">Standards</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

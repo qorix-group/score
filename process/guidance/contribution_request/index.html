@@ -35,15 +35,15 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=dbf7d94f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=60b43b4f" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7fdb06ad" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7199c97b" />
   
   <!-- So that users can add custom icons -->
   <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -63,9 +63,16 @@
     <script src="../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'process/guidance/contribution_request/index';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Contribution Templates" href="templates/index.html" />
+    <link rel="next" title="Feature Request Template" href="templates/feature_request_template.html" />
     <link rel="prev" title="General" href="../general/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -130,8 +137,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../../_static/S-CORE_Logo_white.svg" class="logo__image only-light" alt="Score 0.1 documentation - Home"/>
+    <img src="../../../_static/S-CORE_Logo_white.svg" class="logo__image only-dark pst-js-only" alt="Score 0.1 documentation - Home"/>
   
-    <p class="title logo__title">Eclipse SCORE Docs</p>
   
 </a></div>
     
@@ -160,6 +173,13 @@
 
 
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guidance/index.html">
+    Guidance
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../score_releases/index.html">
     Releases
   </a>
@@ -172,13 +192,6 @@
   </a>
 </li>
 
-
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../platform_management_plan/index.html">
-    PMP
-  </a>
-</li>
-
             <li class="nav-item dropdown">
                 <button class="btn dropdown-toggle nav-item" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false"
@@ -187,6 +200,13 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../platform_management_plan/index.html">
+    PMP
+  </a>
+</li>
+
+
 <li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://eclipse-score.github.io">
     SCORE
@@ -246,6 +266,26 @@
         </li>
 </ul></div>
       
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
     </div>
     
   </div>
@@ -302,6 +342,13 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../../features/index.html">
     Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../guidance/index.html">
+    Guidance
   </a>
 </li>
 
@@ -374,6 +421,26 @@
         </li>
 </ul></div>
         
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
       </div>
     
   </div>
@@ -399,14 +466,19 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Guidance</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../git/index.html">Git Guidelines</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../branch/index.html">Branches</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../feature_flags/index.html">Feature Flags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/index.html">General</a></li>
 <li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Contribution Request Guideline</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="templates/feature_request_template.html">Feature Request Template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="templates/index.html">Contribution Templates</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2"><a class="reference internal" href="../requirements/index.html">Requirement Guidance</a></li>
 </ul>
 </details></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../standards/index.html">Standards</a></li>
 </ul>
 </div>
 </nav></div>
@@ -472,7 +544,7 @@
                   
   <section id="contribution-request-guideline">
 <h1>Contribution Request Guideline<a class="headerlink" href="#contribution-request-guideline" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-0d3e1f50">
+<div class="need_container docutils container" id="SNCB-c07cdee2">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="GD_GUIDL__Contr_Request_Guideline">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -494,7 +566,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">contribution_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is guiding: <span class="guidance"><span><a class="reference internal" href="../../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="GD_GUIDL__Contr_Request_Guideline">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="GD_GUIDL__Contr_Request_Guideline">WF_RV_AP_ChangeRequest</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="../../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="GD_GUIDL__Contr_Request_Guideline">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="GD_GUIDL__Contr_Request_Guideline">WF_RV_AP_ChangeRequest</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -519,7 +591,19 @@
 <p>Contributions to the <em>SCORE</em> project are the key to grow the content including the code. Contributions may cover simple improvement proposals, bug or problem reports, but also more complex scope changes of features up to new feature requests. Depending on the contribution scope, several steps may be required to finally merge it within the <em>SCORE</em> repository.</p>
 <p>This guidline shall help the contributor (<a class="reference internal" href="../../roles/index.html#RL_contributor" title="RL_contributor"><em class="xref need">Contributor (RL_contributor)</em></a>) to find the right path for his contribution.</p>
 <p>For simple contributions, like fixing bugs or improvements, just creating a <em>PR</em> is sufficient.</p>
-<p>For more complex contributions, like adding a new feature, where it’s unfitting to just open a PR, open an <em>GitHub Issue</em> to discuss with the community before starting work on it, would be the preferred way.</p>
+<p>For more complex contributions, like adding a new feature:</p>
+<ul class="simple">
+<li><p>open a <em>GitHub Issue</em> (<a class="reference internal" href="#GD_GUIDL__Issue_Guideline" title="GD_GUIDL__Issue_Guideline"><em class="xref need">Issue Guideline (GD_GUIDL__Issue_Guideline)</em></a>)</p></li>
+<li><p>create a PR</p></li>
+<li><p>add the PR to that <em>GitHub Issue</em></p></li>
+</ul>
+<p>For a feature request, use the template provided below and add it to the appropriate section under docs/features.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="templates/feature_request_template.html">Feature Request Template</a></li>
+</ul>
+</div>
+<p>If possible, the reviewer should use the suggestion functionality to suggest a change that the author of the pull request can click to commit if they agree with your suggestion.</p>
 <p>You can also join our <a class="reference external" href="https://sdvworkinggroup.slack.com/archives/C083Z4VL90B">Slack</a> for real-time discussions.</p>
 <p>The <em>SCORE</em> project defines a Contribution Request (<strong>COR</strong>) as any defined and allowed trigger to start the active contribution to the <em>SCORE</em> project. That means obviously that a <em>PR</em> is a Contribution Request.</p>
 <p>Summary:</p>
@@ -536,7 +620,7 @@
 <p>For all possibilites the project contains simple templates (provided by committers (<a class="reference internal" href="../../roles/index.html#RL_committer" title="RL_committer"><em class="xref need">Committer (RL_committer)</em></a>)), in particular please use <a class="reference internal" href="templates/feature_request_template.html#feature-request-template"><span class="std std-ref">Feature Request Template</span></a> to request a new feature or changes to the existing one.</p>
 <section id="what-is-a-pull-request-pr">
 <h2>What is a Pull Request (PR)?<a class="headerlink" href="#what-is-a-pull-request-pr" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-db42b08f">
+<div class="need_container docutils container" id="SNCB-cb331c75">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="GD_GUIDL__Pull_Request_Guideline">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -558,7 +642,7 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">contribution_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is guiding: <span class="guidance"><span><a class="reference internal" href="../../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="GD_GUIDL__Pull_Request_Guideline">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="GD_GUIDL__Pull_Request_Guideline">WF_RV_AP_ChangeRequest</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="../../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="GD_GUIDL__Pull_Request_Guideline">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="GD_GUIDL__Pull_Request_Guideline">WF_RV_AP_ChangeRequest</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -626,7 +710,7 @@ Further the contributor (<a class="reference internal" href="../../roles/index.h
 </section>
 <section id="what-is-a-github-issue">
 <h3>What is a GitHub Issue?<a class="headerlink" href="#what-is-a-github-issue" title="Link to this heading">#</a></h3>
-<div class="need_container docutils container" id="SNCB-ce900bfd">
+<div class="need_container docutils container" id="SNCB-16e61c70">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="GD_GUIDL__Issue_Guideline">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -648,7 +732,7 @@ Further the contributor (<a class="reference internal" href="../../roles/index.h
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">contribution_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">is guiding: <span class="guidance"><span><a class="reference internal" href="../../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="GD_GUIDL__Issue_Guideline">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="GD_GUIDL__Issue_Guideline">WF_RV_AP_ChangeRequest</a></span></span></div>
+<div class="line"><span><div class="line">contains: <span class="contains"><span><a class="reference internal" href="../../workflows/change_management.html#WF_CR_DC_ChangeRequest" title="GD_GUIDL__Issue_Guideline">WF_CR_DC_ChangeRequest</a>, <a class="reference internal" href="../../workflows/change_management.html#WF_RV_AP_ChangeRequest" title="GD_GUIDL__Issue_Guideline">WF_RV_AP_ChangeRequest</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -713,11 +797,11 @@ Further the contributor (<a class="reference internal" href="../../roles/index.h
       </div>
     </a>
     <a class="right-next"
-       href="templates/index.html"
+       href="templates/feature_request_template.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Contribution Templates</p>
+        <p class="prev-next-title">Feature Request Template</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

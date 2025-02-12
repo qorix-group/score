@@ -19,6 +19,13 @@
 Communication Framework
 #######################
 
+* Purpose - why and what do we need this for
+* Scope and context diagram 
+* QoS requirements
+* Error handling 
+* ASIL requirements (hashing, integrity, ...)
+* Interoperability 
+
 The Communication Framework handles the safe, secure and performant exchange of information between software and/or hardware components of the Score stack.
 
 Communication covers information exchange between endpoints residing in
@@ -78,6 +85,7 @@ The entirety of connected nodes within a mesh we call *fabric*.
 
    From a perspective of safety, a node also encapsulates a single safety domain. Links provide the means for separating safety domains and thus allow for mixed criticality applications.
 
+^^^^ End of Big Picture ^^^^
 
 Names
 -----
