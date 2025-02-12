@@ -47,8 +47,6 @@ jobs:
         with:
           ref: ${{ github.head_ref || github.event.pull_request.head.ref || github.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
-      - name: Ensure GitHub Token is Masked
-        run: echo "::add-mask::$GITHUB_TOKEN"
       - name: Setup Bazel
         uses: bazel-contrib/setup-bazel@0.9.1
       - name: Build documentation
@@ -111,8 +109,6 @@ jobs:
 
       - name: Deploy 🚀
         id: pages-deployment
-        continue-on-error: true
         uses: ./.github/actions/deploy-versioned-pages
         with:
           source_folder: extracted_docs
-
