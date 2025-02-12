@@ -13,9 +13,14 @@
 
 name: Cleanup Documentation
 on:
-  pull_request_target:
+  pull_request:
     types: [closed]
   delete:
+
+permissions:
+  contents: write
+  pages: write
+
 jobs:
   docs-build-cleanup:
     name: Remove build documentation
@@ -28,9 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          repository: ${{ github.event.pull_request.base.repo.full_name }} # Ensures we checkout the base repo, not the fork
           ref: gh-pages
-          fetch-depth: 0
       - name: Remove version
         run: |
           if [[ ${{ github.event_name }} == "pull_request" ]]; then
