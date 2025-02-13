@@ -11,46 +11,70 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
-name: Cleanup Documentation
+name: Daily Documentation Cleanup
 on:
-  pull_request_target:
-    types: [closed]
-  delete:
+  schedule:
+    - cron: "0 0 * * *" # Runs every day at midnight UTC
+  workflow_dispatch: # Allows manual trigger
+
 jobs:
-  docs-build-cleanup:
-    name: Remove build documentation
-    # Remove the corresponding documentation from the gh-pages branch,
-    # after a PR is closed or a branch is deleted.
+  docs-cleanup:
+    name: Cleanup old documentation
     runs-on: ubuntu-latest
-    concurrency:
-      group: gh-pages
-      cancel-in-progress: false
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
         with:
-          repository: ${{ github.event.pull_request.base.repo.full_name }} # Ensures we checkout the base repo, not the fork
+          repository: ${{ github.repository }}
           ref: gh-pages
           fetch-depth: 0
-      - name: Remove version
+
+      - name: Cleanup old documentation
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [[ ${{ github.event_name }} == "pull_request" ]]; then
-            VERSION="pr-${{ github.event.pull_request.number }}"
-          else
-            VERSION="${{ github.ref_name }}"
-          fi
+          gh auth status  # Verify authentication
 
-          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          # Fetch list of active branches
+          ACTIVE_BRANCHES=$(gh api repos/${{ github.repository }}/branches --jq '.[].name')
 
-          # Delete the folder and remove the version from the versions file
-          rm -rf "${VERSION}"
+          # Fetch list of open PRs
+          OPEN_PRS=$(gh api repos/${{ github.repository }}/pulls --jq '.[].number' | sed 's/^/pr-/')
 
-          # Remove from versions.json
+          # Combine active branches and PRs into one list
+          VALID_ENTRIES=$(echo -e "$ACTIVE_BRANCHES\n$OPEN_PRS")
+
+          # Get current folder names from the gh-pages, excluding hidden folders (e.g .git)
+          CURRENT_FOLDERS=$(find . -maxdepth 1 -type d -not -name '.' -not -path './.*' -exec basename {} \;)
+
+          # Read versions.json
           if [[ -f versions.json ]]; then
-            jq --arg ver "$VERSION" 'map(select(.version != $ver))' versions.json > tmp.json && mv tmp.json versions.json
+            jq '.' versions.json > versions_tmp.json
+          else
+            echo "[]" > versions_tmp.json
           fi
+
+          # Remove outdated folders and update versions.json
+          for FOLDER in $CURRENT_FOLDERS; do
+            if ! echo "$VALID_ENTRIES" | grep -Fxq "$FOLDER"; then
+              echo "Removing $FOLDER"
+              rm -rf "$FOLDER"
+              jq --arg ver "$FOLDER" 'map(select(.version != $ver))' versions_tmp.json > tmp.json && mv tmp.json versions_tmp.json
+            fi
+          done
+
+          # Remove versions.json entries without corresponding folders
+          jq '[.[] | select((.version | IN($folders[])))]' --argjson folders "$(ls -1 | jq -R -s -c 'split("\n")[:-1]')" versions_tmp.json > versions_tmp_clean.json
+
+          # Ensure "main" is the first entry and others sorted alphabetically
+          jq '[.[] | select(.version != "main")] | sort_by(.version) | [{"version": "main", "url": "https://eclipse-score.github.io/score/main/"}] + .' versions_tmp_clean.json > versions.json
+
+          # Clean up temp files
+          rm versions_tmp.json versions_tmp_clean.json
+
       - name: Push changes to gh-pages branch
         uses: EndBug/add-and-commit@v9
         with:
-          message: "Cleanup ${{ env.VERSION }}"
+          message: "Daily cleanup of outdated documentation"
           add: .
           new_branch: "gh-pages"
