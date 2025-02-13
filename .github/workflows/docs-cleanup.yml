@@ -36,10 +36,10 @@ jobs:
           gh auth status  # Verify authentication
 
           # Fetch list of active branches
-          ACTIVE_BRANCHES=$(gh api repos/${{ github.repository }}/branches --jq '.[].name')
+          ACTIVE_BRANCHES=$(gh api --paginate repos/${{ github.repository }}/branches --jq '.[].name')
 
           # Fetch list of open PRs
-          OPEN_PRS=$(gh api repos/${{ github.repository }}/pulls --jq '.[].number' | sed 's/^/pr-/')
+          OPEN_PRS=$(gh api --paginate repos/${{ github.repository }}/pulls --jq '.[].number' | sed 's/^/pr-/')
 
           # Combine active branches and PRs into one list
           VALID_ENTRIES=$(echo -e "$ACTIVE_BRANCHES\n$OPEN_PRS")
