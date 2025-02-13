@@ -72,9 +72,9 @@ jobs:
           # Clean up temp files
           rm versions_tmp.json versions_tmp_clean.json
 
-      - name: Push changes to gh-pages branch
-        uses: EndBug/add-and-commit@v9
+      - name: Commit and Push Changes
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          message: "Daily cleanup of outdated documentation"
-          add: .
-          new_branch: "gh-pages"
+          branch: gh-pages
+          folder: .
+          commit-message: "Daily cleanup of outdated documentation"
