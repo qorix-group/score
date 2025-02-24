@@ -137,14 +137,8 @@
   
   
   
-    
-    
-      
-    
-    
-    <img src="../../../_static/S-CORE_Logo_white.svg" class="logo__image only-light" alt="Score 0.1 documentation - Home"/>
-    <img src="../../../_static/S-CORE_Logo_white.svg" class="logo__image only-dark pst-js-only" alt="Score 0.1 documentation - Home"/>
   
+    <p class="title logo__title">Eclipse S-CORE</p>
   
 </a></div>
     
@@ -454,6 +448,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
 </ul>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../process_areas/requirements_engineering/index.html">Requirements Engineering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../process_areas/safety_management/index.html">Safety Management</a></li>
+</ul>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../roles/index.html">Roles</a></li>
 </ul>
 <ul class="nav bd-sidenav">
@@ -469,7 +467,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../feature_flags/index.html">Feature Flags</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../general/index.html">General</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../contribution_request/index.html">Contribution Request Guideline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../requirements/index.html">Requirement Guidance</a></li>
 </ul>
 </details></li>
 </ul>
@@ -539,7 +536,7 @@
                 <article class="bd-article">
                   
   <section id="git-guidelines">
-<h1>Git Guidelines<a class="headerlink" href="#git-guidelines" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1>Git Guidelines<a class="headerlink" href="#git-guidelines" title="Link to this heading">#</a></h1>
 <section id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h2>
 <p>The commit history and especially the commit messages are part of a
@@ -576,6 +573,9 @@ be preserved in the main branch of the repo as well.</p>
 <p>In Score it is checked if git commit messages are written according
 to guidelines. However, it cannot enforce the meaningfulness of the
 message (and its parts).</p>
+<p>The tool <code class="docutils literal notranslate"><span class="pre">gitlint</span></code> is used to check the compliance with the rules described below. Please check our
+<a class="reference external" href="https://github.com/eclipse-score/score/blob/main/.gitlint">gitlint configuration</a>
+for an overview of the rules we use.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Remember that this information is shown in git log and other tools.</p>
@@ -648,7 +648,7 @@ merges are reduced.</p>
 <h3>Example<a class="headerlink" href="#example" title="Link to this heading">#</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">component</span><span class="p">:</span> <span class="n">Short</span> <span class="n">one</span> <span class="n">line</span> <span class="n">summary</span> <span class="n">of</span> <span class="n">change</span>
 
-<span class="n">More</span> <span class="n">detailed</span> <span class="n">explanatory</span> <span class="n">text</span><span class="p">,</span> <span class="k">if</span> <span class="n">necessary</span><span class="o">.</span> <span class="n">Wrap</span> <span class="n">it</span> <span class="n">to</span> <span class="n">about</span> <span class="mi">72</span>
+<span class="n">More</span> <span class="n">detailed</span> <span class="n">explanatory</span> <span class="n">text</span><span class="p">,</span> <span class="n">mandatory</span><span class="o">.</span> <span class="n">Wrap</span> <span class="n">it</span> <span class="n">to</span> <span class="n">about</span> <span class="mi">72</span>
 <span class="n">characters</span> <span class="ow">or</span> <span class="n">less</span><span class="o">.</span> <span class="n">The</span> <span class="n">first</span> <span class="n">line</span> <span class="ow">is</span> <span class="n">treated</span> <span class="k">as</span> <span class="n">the</span> <span class="n">subject</span> <span class="ow">and</span> <span class="n">the</span>
 <span class="n">rest</span> <span class="n">of</span> <span class="n">the</span> <span class="n">text</span> <span class="k">as</span> <span class="n">the</span> <span class="n">body</span><span class="o">.</span> <span class="n">The</span> <span class="n">blank</span> <span class="n">line</span> <span class="n">separating</span> <span class="n">the</span> <span class="n">summary</span> <span class="kn">from</span>
 <span class="nn">the</span> <span class="n">body</span> <span class="ow">is</span> <span class="n">critical</span> <span class="p">(</span><span class="n">unless</span> <span class="n">you</span> <span class="n">omit</span> <span class="n">the</span> <span class="n">body</span> <span class="n">entirely</span><span class="p">);</span>
