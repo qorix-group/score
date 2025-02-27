@@ -4,11 +4,11 @@
     "url": "https://eclipse-score.github.io/score/main/"
   },
   {
-    "version": "nradakovic_dcalavrezo_dash_int",
-    "url": "https://qorix-group.github.io/score/nradakovic_dcalavrezo_dash_int/"
-  },
-  {
     "version": "dcalavrezo_dash_clearance",
     "url": "https://qorix-group.github.io/score/dcalavrezo_dash_clearance/"
+  },
+  {
+    "version": "nradakovic_dcalavrezo_dash_int",
+    "url": "https://qorix-group.github.io/score/nradakovic_dcalavrezo_dash_int/"
   }
 ]
