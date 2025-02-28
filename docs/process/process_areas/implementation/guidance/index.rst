@@ -19,3 +19,6 @@ Guidance
    :maxdepth: 1
 
    cpp/index
+   implementation_checklist
+   detailed_design
+   implementation_guideline
