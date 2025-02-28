@@ -22,6 +22,7 @@ def _impl(ctx):
     args = ctx.actions.args()
     args.add("-i", ctx.file.requirement_file)
     args.add("-o", output)
+    args.add("-t", ctx.attr.file_type)
 
     ctx.actions.run(
         inputs = [ctx.file.requirement_file],
@@ -40,6 +41,10 @@ dash_format_converter = rule(
             mandatory = True,
             allow_single_file = True,
             doc = "The requirement (requirement_lock.txt) input file which holds deps",
+        ),
+        "file_type": attr.string(
+            default = "requirements",
+            doc = "Type of input file: 'requirements' for requirements.txt or 'cargo' for Cargo.lock",
         ),
         "_tool": attr.label(
             default = Label("//tools/dash/formatters:dash_format_converter"),

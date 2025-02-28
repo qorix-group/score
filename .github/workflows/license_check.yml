@@ -62,7 +62,8 @@ jobs:
           # We save both  output and exit code in the GH actions env file
           set +e  # Ensure script does not exit on failure, even if the bazel run fails, the execution will continue
           OUTPUT=$(
-            bazel run //docs:license.check.python --define=CI_BUILD=true -- \
+            bazel run //docs:license.check.python -- \
+              -review \
               -project "$SHORTNAME" \
               -repo "$REPO_URL" \
               -token "${{ secrets.ECLIPSE_GITLAB_API_TOKEN }}" 2>&1

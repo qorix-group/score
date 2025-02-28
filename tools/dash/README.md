@@ -61,6 +61,28 @@ This will:
 3. Ensure compliance with dependency licensing requirements in your project.
 
 
+
+Example to check `RUST` based dependecies:
+
+```bash
+# Needed for Dash tool to check rust dependency licenses.
+filegroup(
+    name = "cargo_lock",
+    srcs = [
+        "_tooling/Cargo.lock",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+dash_license_checker(
+    name = "rust",
+    src = "//docs:cargo_lock",
+    visibility = ["//visibility:public"],
+    file_type = "cargo"
+)
+
+```
+
 ## Local vs. CI Execution
 
 ### Local Development

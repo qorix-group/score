@@ -19,6 +19,11 @@ import logging
 from pathlib import Path
 from typing import Optional
 
+try:
+    import tomllib
+except ImportError:
+    import tomli as tomllib
+
 LOGGER = logging.getLogger()
 
 COLORS = {
@@ -155,6 +160,43 @@ def convert_to_dash_format(input_file: Path, output_file: Path) -> int:
                     outfile.write(formatted_line + "\n")
 
 
+def convert_cargo_to_dash_format(input_file: Path, output_file: Path) -> int:
+    """
+    Converts a Cargo.lock file into dash format.
+
+    This function parses the TOML-formatted Cargo.lock file, iterates over the package entries,
+    and writes each package's name and version in the format:
+        cargo/cargo/-/{name}/{version}
+    """
+    encoding = "utf-8"
+    try:
+        with open(input_file, "rb") as infile:
+            cargo_data = tomllib.load(infile)
+    except Exception as e:
+        LOGGER.error(f"Error parsing Cargo.lock file: {e}")
+        return 1
+
+    packages = cargo_data.get("package", [])
+
+    if not packages:
+        LOGGER.warning("No packages found in Cargo.lock.")
+
+    with open(output_file, "w", encoding=encoding) as outfile:
+        for pkg in packages:
+            name = pkg.get("name")
+            version = pkg.get("version")
+            if name and version:
+                line = f"cargo/cargo/-/{name}/{version}"
+                LOGGER.debug(f"Extracted package: {line}")
+                outfile.write(line + "\n")
+
+    LOGGER.info(
+        f"Successfully converted {len(packages)} packages from Cargo.lock to {output_file}"
+    )
+
+    return 0
+
+
 def parse_arguments(argv: list[str]) -> argparse.Namespace:
     """
     Parses command-line arguments passed to the script.
@@ -207,6 +249,14 @@ def parse_arguments(argv: list[str]) -> argparse.Namespace:
         help="Path to the formatted_list.txt file",
     )
 
+    parser.add_argument(
+        "-t",
+        "--type",
+        choices=["requirements", "cargo"],
+        default="requirements",
+        help="Type of input file: 'requirements' for requirements.txt or 'cargo' for Cargo.lock (default: requirements)",
+    )
+
     return parser.parse_args(argv)
 
 
@@ -214,24 +264,36 @@ def main(argv: list[str] = None) -> int:
     """
     The main entry point of the script.
 
+    This function parses command-line arguments, configures logging, and dispatches the appropriate
+    conversion function based on the input file type. Supported file types include:
+      - 'requirements': for processing requirements.txt files.
+      - 'cargo': for processing Cargo.lock files.
+    The selected conversion function reads the input file, transforms its content into the Eclipse dash
+    format, and writes the results to the specified output file.
+
     Args:
-        argv (list[str], optional): A list of command-line arguments. If not provided,
-            defaults to `None`, in which case `sys.argv[1:]` is typically used.
+        argv (list[str], optional): A list of command-line arguments. If not provided, defaults to
+            None, in which case sys.argv[1:] is used.
 
     Returns:
-        int: An exit code where `0` indicates successful execution, and any non-zero
-        value indicates an error.
+        int: An exit code where 0 indicates successful execution, and any non-zero value indicates
+            an error occurred during processing.
 
     Notes:
-        - This function is often called in the `if __name__ == "__main__":` block.
-        - The function typically orchestrates parsing arguments, performing the core
-          logic of the script, and handling exceptions.
-        - Ensure the function catches and logs errors appropriately before returning
-          a non-zero exit code.
+        - This function is typically invoked in the 'if __name__ == "__main__":' block.
+        - It orchestrates argument parsing, logging configuration, file conversion, and error handling.
+        - Conversion behavior depends on the '--type' argument:
+            * 'requirements' (default): Converts a requirements.txt file.
+            * 'cargo': Converts a Cargo.lock file using TOML parsing.
+        - Errors during file reading, parsing, or conversion are logged appropriately, and a non-zero
+          exit code is returned to signal failure.
     """
     args = parse_arguments(argv if argv is not None else sys.argv[1:])
     configure_logging(args.log_file, args.verbose)
-    convert_to_dash_format(args.input, args.output)
+    if args.type == "cargo":
+        ret = convert_cargo_to_dash_format(args.input, args.output)
+    else:
+        ret = convert_to_dash_format(args.input, args.output)
     return 0
 
 

@@ -17,7 +17,8 @@ load("//tools/dash/formatters:dash_format_converter.bzl", "dash_format_converter
 def dash_license_checker(
         name,
         src,
-        visibility):
+        visibility,
+        file_type = "requirements"):
     """
     Defines a Bazel macro for creating a `java_binary` target that integrates the DASH license checker.
 
@@ -31,6 +32,9 @@ def dash_license_checker(
         visibility (list[str]):
             A list defining the visibility of the created target. It determines which packages
             can depend on this target.
+        file_type (str, optional):
+            The type of dependency file being processed. Valid values are "requirements" (default)
+            for requirements.txt files and "cargo" for Cargo.lock files.
 
     This macro simplifies the process of setting up the DASH license checker by creating a reusable
     `java_binary` target that adheres to the Bazel build rules and supports consistent license
@@ -39,6 +43,7 @@ def dash_license_checker(
     dash_format_converter(
         name = "{}2dash".format(name),
         requirement_file = src,
+        file_type = file_type,
     )
 
     java_binary(
@@ -47,17 +52,14 @@ def dash_license_checker(
         runtime_deps = [
             "@dash_license_tool//jar",
         ],
-        # We'll build up "args" in the order: [ static options ] + select() + [ file last ]
+        # We'll build up "args" in the order: [ static options ] + [ file last ]
         args = [
-            # If we have any always-on flags, put them here
-        ] + select({
-            # If CI_BUILD=true, add "-review"
-            ":ci_build": ["-review"],
-            "//conditions:default": [],
-        }) + [
-            # The file is last
-            "$(location :{}2dash)".format(name),
-        ],
+                   # If we have any always-on flags, put them here
+               ] +
+               [
+                   # The file is last
+                   "$(location :{}2dash)".format(name),
+               ],
         data = [
             ":{}2dash".format(name),
         ],
