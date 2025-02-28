@@ -1,6 +1,3 @@
-
-# ...s_areas/requirements_engineering/guidance/requirements_inspection_checklist.rst
-
 ..
    # *******************************************************************************
    # Copyright (c) 2025 Contributors to the Eclipse Foundation

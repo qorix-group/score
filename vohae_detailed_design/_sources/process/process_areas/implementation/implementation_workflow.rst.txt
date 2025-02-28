@@ -1,7 +1,4 @@
 ..
-    docs/process/process_areas/requirements_engineering/requirements_workflow.rst
-
-..
    # *******************************************************************************
    # Copyright (c) 2025 Contributors to the Eclipse Foundation
    #

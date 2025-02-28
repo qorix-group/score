@@ -29,7 +29,7 @@ Detailed Design
 ***************
 
 For the detailed design a template is :need:`gd_temp__detailed_design` available. With the detailed
-design everything for the develeoper and tester is sufficent defined.
+design everything for the developer and tester is sufficent defined.
 
 Tooling Support
 ***************
