@@ -17,12 +17,11 @@ py_library(
     visibility = ["//visibility:public"],
 )
 
-
 py_binary(
     name = "dash_format_converter",
     srcs = [
         "dash_format_converter.py",
     ],
-    deps = [":dash_format_converter_lib"],
     visibility = ["//visibility:public"],
+    deps = [":dash_format_converter_lib"],
 )

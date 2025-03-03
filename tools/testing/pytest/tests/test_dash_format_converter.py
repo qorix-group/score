@@ -16,7 +16,10 @@ import tempfile
 import os
 
 # Import the main function from your converter.
-from tools.dash.formatters.dash_format_converter import main as dash_format_converter_main
+from tools.dash.formatters.dash_format_converter import (
+    main as dash_format_converter_main,
+)
+
 
 def run_converter(input_text: str, converter_args: str) -> list[str]:
     """
@@ -25,8 +28,10 @@ def run_converter(input_text: str, converter_args: str) -> list[str]:
     file paths to the converter as arguments. Returns the converter's output
     as a list of lines.
     """
-    with tempfile.NamedTemporaryFile("w+", delete=False) as input_file, \
-         tempfile.NamedTemporaryFile("w+", delete=False) as output_file:
+    with (
+        tempfile.NamedTemporaryFile("w+", delete=False) as input_file,
+        tempfile.NamedTemporaryFile("w+", delete=False) as output_file,
+    ):
         try:
             # Write input_text to the temporary input file.
             input_file.write(input_text)

@@ -23,7 +23,7 @@ score_py_pytest(
 score_py_pytest(
     name = "test_dash_format_converter",
     srcs = [
-         "test_dash_format_converter.py",
+        "test_dash_format_converter.py",
     ],
     deps = [
         "//tools/dash/formatters:dash_format_converter_lib",
