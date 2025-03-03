@@ -11,10 +11,18 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
+py_library(
+    name = "dash_format_converter_lib",
+    srcs = ["dash_format_converter.py"],
+    visibility = ["//visibility:public"],
+)
+
+
 py_binary(
     name = "dash_format_converter",
     srcs = [
         "dash_format_converter.py",
     ],
+    deps = [":dash_format_converter_lib"],
     visibility = ["//visibility:public"],
 )

@@ -11,69 +11,54 @@
 # SPDX-License-Identifier: Apache-2.0
 # *******************************************************************************
 
+import sys
+import tempfile
 import os
-import subprocess
-import pytest
-from pathlib import Path
 
+# Import the main function from your converter.
+from tools.dash.formatters.dash_format_converter import main as dash_format_converter_main
 
-@pytest.fixture
-def temp_files(tmp_path):
+def run_converter(input_text: str, converter_args: str) -> list[str]:
     """
-    Creates temporary input and output files for the test and returns their paths.
+    Runs the converter by creating temporary input and output files,
+    writing the provided input_text to the input file, and passing the
+    file paths to the converter as arguments. Returns the converter's output
+    as a list of lines.
     """
-    input_file = tmp_path / "input_file.txt"
-    output_file = tmp_path / "formatted.txt"
-    return input_file, output_file
+    with tempfile.NamedTemporaryFile("w+", delete=False) as input_file, \
+         tempfile.NamedTemporaryFile("w+", delete=False) as output_file:
+        try:
+            # Write input_text to the temporary input file.
+            input_file.write(input_text)
+            input_file.flush()
+            input_path = input_file.name
+            output_path = output_file.name
+
+            # Build the full set of arguments.
+            # We need to add the required -i and -o arguments.
+            extra_args = converter_args.split() + ["-i", input_path, "-o", output_path]
+            sys.argv = ["dash_format_converter"] + extra_args
+
+            # Call the converter's main function.
+            dash_format_converter_main()
+
+            # Read and return the output file content as a list of lines.
+            with open(output_path, "r") as f:
+                output_text = f.read()
+            return output_text.splitlines()
+        finally:
+            # Clean up the temporary files.
+            os.unlink(input_file.name)
+            os.unlink(output_file.name)
 
 
-@pytest.fixture(scope="session")
-def converter_path():
+def test_requirements_conversion():
     """
-    Determines the correct way to call dash_format_converter.
-
-    - If running inside Bazel, use TEST_SRCDIR to find the `py_binary` target.
-    - If running manually, call the Python script directly.
+    Tests that dash_format_converter.py correctly converts a simple requirements.txt file
+    by calling the converter's main function directly.
     """
-    if "TEST_SRCDIR" in os.environ:
-        # Running inside Bazel: Use runfiles to locate the binary
-        return os.path.join(
-            os.environ["TEST_SRCDIR"],
-            "PROJECT_REPO_NAME",  # Change to your actual repo name
-            "tools",
-            "dash",
-            "formatters",
-            "dash_format_converter",
-        )
-
-    # Running standalone: Use direct Python script execution
-    script_path = (
-        Path(__file__).parent / "../../tools/dash/formatters/dash_format_converter.py"
-    )
-    if script_path.exists():
-        return f"python3 {script_path}"
-
-    raise FileNotFoundError("Could not find 'dash_format_converter' script or binary.")
-
-
-def test_requirements_conversion(temp_files, converter_path):
-    """
-    Tests that dash_format_converter.py correctly converts a simple requirements.txt file.
-    """
-    input_file, output_file = temp_files
-
-    # Write a sample requirements file
-    input_file.write_text("requests==2.28.1\nFlask==2.2.2\n")
-
-    # Invoke the converter with -t requirements
-    subprocess.run(
-        f"{converter_path} -i {input_file} -o {output_file} -t requirements",
-        shell=True,
-        check=True,
-    )
-
-    # Read the output and verify correctness
-    actual = output_file.read_text().splitlines()
+    input_text = "requests==2.28.1\nFlask==2.2.2\n"
+    actual = run_converter(input_text, "-t requirements")
     expected = [
         "pypi/pypi/-/requests/2.28.1",
         "pypi/pypi/-/Flask/2.2.2",
@@ -81,13 +66,11 @@ def test_requirements_conversion(temp_files, converter_path):
     assert actual == expected, f"Expected {expected} but got {actual}"
 
 
-def test_cargo_conversion(temp_files, converter_path):
+def test_cargo_conversion():
     """
-    Tests that dash_format_converter.py correctly converts a sample Cargo.lock file.
+    Tests that dash_format_converter.py correctly converts a sample Cargo.lock file
+    by calling the converter's main function directly.
     """
-    input_file, output_file = temp_files
-
-    # Write a minimal Cargo.lock content in TOML format
     cargo_lock_content = """\
 [[package]]
 name = "serde"
@@ -97,17 +80,7 @@ version = "1.0.123"
 name = "reqwest"
 version = "0.11.12"
 """
-    input_file.write_text(cargo_lock_content)
-
-    # Invoke the converter with -t cargo
-    subprocess.run(
-        f"{converter_path} -i {input_file} -o {output_file} -t cargo",
-        shell=True,
-        check=True,
-    )
-
-    # Read the output and verify correctness
-    actual = output_file.read_text().splitlines()
+    actual = run_converter(cargo_lock_content, "-t cargo")
     expected = [
         "cargo/cargo/-/serde/1.0.123",
         "cargo/cargo/-/reqwest/0.11.12",
