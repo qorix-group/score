@@ -49,9 +49,9 @@ jobs:
         uses: bazel-contrib/setup-bazel@0.9.1
       - name: Derive project shortname and repo URL
         run: |
-          # Convert slash to dot for the Dash shortname
-          SHORTNAME=$(echo "${GITHUB_REPOSITORY}" | tr '/' '.')
-          REPO_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}.git"
+          # Use a fixed shortname for the Dash project
+          SHORTNAME="eclipse-score"
+          REPO_URL="${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}"
           echo "SHORTNAME=$SHORTNAME" >> $GITHUB_ENV
           echo "REPO_URL=$REPO_URL" >> $GITHUB_ENV
       - name: Run license checks
