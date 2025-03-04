@@ -47,12 +47,13 @@ Actions for Employers
 
 1. **Ensure Employees Have an Eclipse Foundation Account**
    - Encourage employees to **register and link their employer** to their account.
+   - If the employer account is **unclear** (e.g. due to subsidiaries), establish clear guidelines for employees on which account to use.
 
 2. **Verify Membership Information in the Portal**
    - **Member representatives** can check and update the list of employees through the `Eclipse Membership Portal <https://www.eclipse.org/membership/>`_.
 
 3. **Assist Employees in Aligning Emails**
-   - If an employee has used an alternative email, **help them update their account** to include all relevant emails.
+   - If an employee has used an alternative email, **help them update their account** to include the relevant email address.
 
 
 
