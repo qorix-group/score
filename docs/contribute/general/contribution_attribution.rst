@@ -25,6 +25,7 @@ Actions for Contributors
 
 1. **Create an Eclipse Foundation Account**
    - If you don't have one, register at `Eclipse Foundation <https://accounts.eclipse.org/user/register>`_.
+   - While it's a private account, please use your corporate email account (the one you will be using for commits). In case of change of employment there is a dedicated process for it.
 
 2. **Link Your Account to Your Employer**
    - Ensure that your **employer information** is set to a valid **Eclipse Foundation Member Company**.
