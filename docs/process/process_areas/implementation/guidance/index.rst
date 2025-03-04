@@ -19,6 +19,6 @@ Guidance
    :maxdepth: 1
 
    implementation_checklist
-   detailed_design
+   detailed_design_template
    implementation_guideline
 
