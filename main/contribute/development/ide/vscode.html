@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Documentation Management &#8212; Score 0.1 documentation</title>
+    <title>VS Code &#8212; Score 0.1 documentation</title>
   
   
   
@@ -62,7 +62,7 @@
     <script src="../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'process/process_areas/documentation_management/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'contribute/development/ide/vscode';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
@@ -72,8 +72,8 @@
         </script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Document Management Process Requirements" href="guidance/process_req.html" />
-    <link rel="prev" title="Safety Management Process Requirements" href="../safety_management/guidance/process_req.html" />
+    <link rel="next" title="CLion" href="clion.html" />
+    <link rel="prev" title="Setting Up the Development Environment" href="../development_environment.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -166,8 +166,8 @@
 </li>
 
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../contribute/index.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
     Contribute
   </a>
 </li>
@@ -180,8 +180,8 @@
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="../../index.html">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../process/index.html">
     Process
   </a>
 </li>
@@ -340,8 +340,8 @@
 </li>
 
 
-<li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../../contribute/index.html">
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../index.html">
     Contribute
   </a>
 </li>
@@ -354,8 +354,8 @@
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="../../index.html">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../process/index.html">
     Process
   </a>
 </li>
@@ -444,31 +444,19 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../introduction/index.html">Introduction</a></li>
-</ul>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../requirements_engineering/index.html">Requirements Engineering</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
-<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">Documentation Management</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="guidance/process_req.html">Document Management Process Requirements</a></li>
-</ul>
-</details></li>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../general/index.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribution_request/index.html">Contribution Request</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../documentation/index.html">Documentation</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Development</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../development_environment.html">Setting Up the Development Environment</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">VS Code</a></li>
+<li class="toctree-l3"><a class="reference internal" href="clion.html">CLion</a></li>
 </ul>
 </details></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../roles/index.html">Roles</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../workproducts/index.html">Workproducts</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../workflows/index.html">Workflows</a></li>
-</ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../standards/index.html">Standards</a></li>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../../ci/index.html">CI</a></li>
 </ul>
 </div>
 </nav></div>
@@ -510,12 +498,15 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Process</a></li>
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Contribute</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Process Areas</a></li>
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Development</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Documentation Management</span></li>
+    
+    <li class="breadcrumb-item"><a href="../development_environment.html" class="nav-link">Setting Up the Development Environment</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">VS Code</span></li>
   </ul>
 </nav>
 </div>
@@ -532,156 +523,94 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="documentation-management">
-<span id="process-documentation-management"></span><h1>Documentation Management<a class="headerlink" href="#documentation-management" title="Link to this heading">#</a></h1>
-<section id="concept">
-<h2>Concept<a class="headerlink" href="#concept" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-a6f622eb">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_doc_concept table" id="doc_concept__documentation__process">
-<tbody>
-<tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">Documentation Management Concept</span></span></span></div>
+  <section id="vs-code">
+<h1>VS Code<a class="headerlink" href="#vs-code" title="Link to this heading">#</a></h1>
+<p>For VS Code any preexisting configuration is provided via the workspace configuration in the directory &lt;workspace_root/.vscode&gt;. It includes</p>
+<ul class="simple">
+<li><p>some formatting rules</p></li>
+<li><p>configuration for recommended plugins</p></li>
+</ul>
+<section id="starlark">
+<h2>Starlark<a class="headerlink" href="#starlark" title="Link to this heading">#</a></h2>
+<p>For <em>Starlark</em> currently no solution is integrated in VScode.</p>
+</section>
+<section id="c">
+<h2>C++<a class="headerlink" href="#c" title="Link to this heading">#</a></h2>
+</section>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="Link to this heading">#</a></h2>
+<p>For <em>Python</em> to work inside VS code the virtual environment needs to be selected. If not suggested automatically it can be performed manually:</p>
+<p>Click on the <em>Python</em> Version which is displayed in the lower right corner of the screen and select the <em>.venv_docs</em>.</p>
+<p>After selecting the virtual environment the full feature set of the official <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.python">Python</a>  Extension (MIT License) is provided included features e.g. autocomplete, syntax checking, …</p>
+<p>Also the configuration for displaying and executing <em>pytest</em> in the IDE is provided.</p>
+<p>As a linter the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff">ruff extension</a>  (MIT License) is set up.</p>
+<section id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Link to this heading">#</a></h3>
+<p>For <em>usual</em> debugging the <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ms-python.debugpy">Python Debugger</a> (MIT License) can be used.</p>
+<section id="debugging-the-docs-build">
+<h4>Debugging the docs build<a class="headerlink" href="#debugging-the-docs-build" title="Link to this heading">#</a></h4>
+<p>For debugging the docs environment all necessary configuration is already provided. It can be activated for the incremental build via the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>bazel<span class="w"> </span>run<span class="w"> </span>//docs:incremental<span class="w"> </span>--<span class="w"> </span>--debug
+</pre></div>
 </div>
-</td>
-<td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></span></div>
-<div class="line"><span></span></div>
-<div class="line"><span></span></div>
+</section>
+<section id="debugging-python-code-started-via-bazel">
+<h4>Debugging python code started via bazel<a class="headerlink" href="#debugging-python-code-started-via-bazel" title="Link to this heading">#</a></h4>
+<p>In rare cases where this does not fit, mostly because you want to start the tool via bazel, you can reuse the <em>debugpy</em> approach from <em>//docs:incremental</em> and use remote debugging:</p>
+<ol class="arabic">
+<li><p>Add following code to the project (e.g. the __init__.py)</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">debugpy</span><span class="o">.</span><span class="n">listen</span><span class="p">((</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="o">&lt;&lt;</span><span class="n">port</span><span class="o">&gt;&gt;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Waiting for client to connect&#39;</span><span class="p">)</span>
+<span class="n">debugpy</span><span class="o">.</span><span class="n">wait_for_client</span><span class="p">()</span>
+</pre></div>
 </div>
-</td>
-<td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
+</li>
+<li><p>Create a launch configuration (can also be done automatically in VScode) similar to this</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0.2.0&quot;</span><span class="p">,</span>
+<span class="nt">&quot;configurations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">   </span><span class="p">{</span>
+<span class="w">         </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Python Debugger: Remote Attach Bazel&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;debugpy&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;request&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;attach&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="nt">&quot;connect&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;host&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;&lt;localhost or name of remote workstation&gt;&gt;&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&lt;&lt;port number&gt;&gt;&quot;</span><span class="p">,</span>
+<span class="w">         </span><span class="p">},</span>
+<span class="w">   </span><span class="p">}</span>
+<span class="w">   </span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
 </div>
-</td>
-</tr>
-<tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-</span></span></div>
-<div class="line"><span></span></div>
-</div>
-</td>
-<td class="meta" colspan="3"></td>
-</tr>
-<tr class="content row-odd"><td class="content" colspan="6"></td>
-</tr>
-<tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#doc_concept__documentation__process" title="doc_concept__documentation__process">doc_concept__documentation__process</a></span></span></div>
-</div>
-</td>
-<td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Concept Definition</span></span></span></div>
-</div>
-</td>
-<td class="footer_right" colspan="2"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>In this section a concept for the documentation management will be discussed. Inputs for this concepts are mainly the requirements of ISO26262 “Part 2: Management of functional safety”</p>
-<section id="inputs">
-<h3>Inputs<a class="headerlink" href="#inputs" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Stakeholders for the documentation work products?</p></li>
-<li><p>Who needs which information?</p></li>
-<li><p>Which work products do we have?</p></li>
-<li><p>What tooling do we need?</p></li>
+</li>
+<li><p>Execute the bazel command to run the target</p></li>
+<li><p>Wait till “Waiting for client to connect” appears in the output</p></li>
+<li><p>Execute launch configuration</p></li>
+<li><p>Enjoy debugging</p></li>
 </ol>
 </section>
-<section id="stakeholders">
-<h3>Stakeholders<a class="headerlink" href="#stakeholders" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p><a class="reference internal" href="../../roles/index.html#rl__technical_lead" title="rl__technical_lead"><em class="xref need">Technical Lead (rl__technical_lead)</em></a></p>
+</section>
+</section>
+<section id="sphinx">
+<h2>Sphinx<a class="headerlink" href="#sphinx" title="Link to this heading">#</a></h2>
+<p>For Sphinx development currently following features are supported:</p>
 <ul class="simple">
-<li><p>planning and status reporting of work products and their documentation</p></li>
+<li><p>Syntax checking</p></li>
+<li><p>live-preview within IDE</p></li>
+<li><p>autocompletion</p></li>
 </ul>
-</li>
-<li><p><a class="reference internal" href="../safety_management/roles.html#rl__safety_manager" title="rl__safety_manager"><em class="xref need">Safety Manager (rl__safety_manager)</em></a></p>
-<ul class="simple">
-<li><p>wants to know when the safety related documents are ready for a release</p></li>
-<li><p>wants to know who was the author and approver of a document in case of safety issues</p></li>
+<p>Therefore when you open the project you get some recommendations for extensions (open directory) or preinstalled extensions (open devcontainer). A configuration for following plugins is available:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=lextudio.restructuredtext">lextudio.restructuredtext</a> : rst syntax highlighting (MIT License)</p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=swyddfa.esbonio">swyddfa.esbonio</a> (only release version): linting and live preview (MIT License)</p></li>
+<li><p><a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens">usernamehw.errorlens</a>: highlights errors and warnings in IDE (MIT License)</p></li>
 </ul>
-</li>
-</ol>
-</section>
-<section id="work-products">
-<h3>Work Products<a class="headerlink" href="#work-products" title="Link to this heading">#</a></h3>
-<p><a class="reference internal" href="../../../platform_management_plan/documentation_management.html#doc__documentation_mgt_plan" title="doc__documentation_mgt_plan"><em class="xref need">Documentation Management Plan (doc__documentation_mgt_plan)</em></a> is a document and part of the work product <a class="reference internal" href="../../workproducts/index.html#wp__platform_mgmt" title="wp__platform_mgmt"><em class="xref need">Platform Management Plan (wp__platform_mgmt)</em></a>.</p>
-</section>
-<section id="document-management-tooling">
-<h3>Document Management Tooling<a class="headerlink" href="#document-management-tooling" title="Link to this heading">#</a></h3>
-<p>For the document attributes to be manually set, sphinx-needs will be used.</p>
-<p>For the versioning and version history github is used.</p>
-<p>For the automated attributes additional tooling is created (see <a class="reference internal" href="guidance/process_req.html"><span class="doc">Document Management Process Requirements</span></a>)</p>
-</section>
-</section>
-<section id="getting-started">
-<h2>Getting started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-3c6d8ed0">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_doc_getstrt table" id="doc_getstrt__documentation__process">
-<tbody>
-<tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">Documentation Management Get Started</span></span></span></div>
-</div>
-</td>
-<td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></span></div>
-<div class="line"><span></span></div>
-<div class="line"><span></span></div>
-</div>
-</td>
-<td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
-</div>
-</td>
-</tr>
-<tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-</span></span></div>
-<div class="line"><span></span></div>
-</div>
-</td>
-<td class="meta" colspan="3"></td>
-</tr>
-<tr class="content row-odd"><td class="content" colspan="6"></td>
-</tr>
-<tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#doc_getstrt__documentation__process" title="doc_getstrt__documentation__process">doc_getstrt__documentation__process</a></span></span></div>
-</div>
-</td>
-<td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Getting Startet</span></span></span></div>
-</div>
-</td>
-<td class="footer_right" colspan="2"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>In case you are appointed as a <a class="reference internal" href="../../roles/index.html#rl__technical_lead" title="rl__technical_lead"><em class="xref need">Technical Lead (rl__technical_lead)</em></a> by the <a class="reference internal" href="../../roles/index.html#rl__project_lead" title="rl__project_lead"><em class="xref need">Project Lead (rl__project_lead)</em></a> in the S-CORE project:</p>
-<ul class="simple">
-<li><p>On platform level, process community already provided a draft documentation management plan,
-see <a class="reference internal" href="../../../platform_management_plan/documentation_management.html#doc__documentation_mgt_plan" title="doc__documentation_mgt_plan"><em class="xref need">Documentation Management Plan (doc__documentation_mgt_plan)</em></a>, just set it to “valid”</p></li>
-<li><p>On module level, create a documentation management plan using the platform one as a template</p></li>
-<li><p>On both levels: make sure only the documents in your scope appear in the documents list within the plan</p></li>
-</ul>
-</section>
-<section id="workflows">
-<h2>Workflows<a class="headerlink" href="#workflows" title="Link to this heading">#</a></h2>
-<p>The main work product is the documentation management plan, which is a part of the platform management plan.
-Thus the work flow <a class="reference internal" href="../../workflows/platform_management.html#wf__cr_mt_platform_mngmt_plan" title="wf__cr_mt_platform_mngmt_plan"><em class="xref need">Create/Maintain Platform Ma... (wf__cr_mt_platform_mngmt_plan)</em></a> applies.</p>
-</section>
-<section id="guidance">
-<h2>Guidance<a class="headerlink" href="#guidance" title="Link to this heading">#</a></h2>
-<p>The document management guideline is contained within the document management plan,
-to have all relevant information in one space, see <a class="reference internal" href="../../../platform_management_plan/documentation_management.html#gd_guidl__documentation" title="gd_guidl__documentation"><em class="xref need">Documentation (gd_guidl__documentation)</em></a></p>
-<p>Some process requirements to be automated are available:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="guidance/process_req.html">Document Management Process Requirements</a></li>
-</ul>
-</div>
+</div></blockquote>
+<p>The live-preview can then be activated inside a .rst file by pressing “Ctrl + Shift + V” or clicking on the tiny symbol on the top right corner which looks like a book with a magnifier.</p>
+<p>If the sphinx configuration is altered the language server has to be restarted:</p>
+<p>“Ctrl + Shift + P” and select “Esbonio: Restart Language Server”</p>
+<p>If there is any issue with the preview or syntax highlighting the error log can be visualized via the output and select “Esbonio”</p>
 </section>
 </section>
 
@@ -696,20 +625,20 @@ to have all relevant information in one space, see <a class="reference internal"
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../safety_management/guidance/process_req.html"
+       href="../development_environment.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Safety Management Process Requirements</p>
+        <p class="prev-next-title">Setting Up the Development Environment</p>
       </div>
     </a>
     <a class="right-next"
-       href="guidance/process_req.html"
+       href="clion.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Document Management Process Requirements</p>
+        <p class="prev-next-title">CLion</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -732,16 +661,17 @@ to have all relevant information in one space, see <a class="reference internal"
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#concept">Concept</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inputs">Inputs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stakeholders">Stakeholders</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#work-products">Work Products</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#document-management-tooling">Document Management Tooling</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#starlark">Starlark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c">C++</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python">Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-the-docs-build">Debugging the docs build</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging-python-code-started-via-bazel">Debugging python code started via bazel</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting started</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#workflows">Workflows</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guidance">Guidance</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sphinx">Sphinx</a></li>
 </ul>
   </nav></div>
 
@@ -749,7 +679,7 @@ to have all relevant information in one space, see <a class="reference internal"
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/eclipse-score/score/edit/main/docs/process/process_areas/documentation_management/index.rst">
+    <a href="https://github.com/eclipse-score/score/edit/main/docs/contribute/development/ide/vscode.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -765,7 +695,7 @@ to have all relevant information in one space, see <a class="reference internal"
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../_sources/process/process_areas/documentation_management/index.rst.txt"
+      <li><a href="../../../_sources/contribute/development/ide/vscode.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>
