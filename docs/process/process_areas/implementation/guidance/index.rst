@@ -20,5 +20,5 @@ Guidance
 
    cpp/index
    implementation_checklist
-   detailed_design
+   detailed_design_template
    implementation_guideline
