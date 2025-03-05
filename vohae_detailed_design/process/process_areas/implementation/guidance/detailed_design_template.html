@@ -62,7 +62,7 @@
     <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'process/process_areas/implementation/guidance/detailed_design';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'process/process_areas/implementation/guidance/detailed_design_template';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
@@ -552,11 +552,11 @@
                   
   <section id="detailed-design-template">
 <h1>Detailed Design Template<a class="headerlink" href="#detailed-design-template" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-bc113270">
+<div class="need_container docutils container" id="SNCB-8625850a">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_temp table" id="gd_temp__detailed_design">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">Stakeholder Requirements Templates</span></span></span></div>
+<div class="line"><span><span class="needs_title"><span class="needs_data">Detailed Design Templates</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
@@ -622,10 +622,11 @@
 <div><div class="line-block">
 <div class="line">.. unit_dd_sta:: &lt;Title&gt;</div>
 <div class="line-block">
-<div class="line">:id: UNIT_DD_STA__&lt;Component&gt;__&lt;Title&gt;</div>
+<div class="line">:id: unit_dd_sta__&lt;Title&gt;</div>
 <div class="line">:security: &lt;YES|NO&gt;</div>
 <div class="line">:safety: &lt;QM|ASIL_B|ASIL_D&gt;</div>
-<div class="line">:satisfies: &lt;link to component requirement id&gt;</div>
+<div class="line">:status: &lt;valid|invalid&gt;</div>
+<div class="line">:implements: &lt;link to component requirement id&gt;</div>
 </div>
 <div class="line">.. image:: &lt;link to drawio image&gt; or .. uml:: &lt;link to plantuml&gt;</div>
 </div>
@@ -637,10 +638,11 @@
 <div><div class="line-block">
 <div class="line">.. unit_dd_dyn:: &lt;Title&gt;</div>
 <div class="line-block">
-<div class="line">:id: UNIT_DD_DYN__&lt;Component&gt;__&lt;Title&gt;</div>
+<div class="line">:id: unit_dd_dyn__&lt;Title&gt;</div>
 <div class="line">:security: &lt;YES|NO&gt;</div>
 <div class="line">:safety: &lt;QM|ASIL_B|ASIL_D&gt;</div>
-<div class="line">:satisfies: &lt;link to component requirement id&gt;</div>
+<div class="line">:status: &lt;valid|invalid&gt;</div>
+<div class="line">:implements: &lt;link to component requirement id&gt;</div>
 </div>
 <div class="line">.. image:: &lt;link to drawio image&gt; or .. uml:: &lt;link to plantuml&gt;</div>
 </div>
@@ -650,12 +652,13 @@
 <h3>Units within the Component<a class="headerlink" href="#units-within-the-component" title="Link to this heading">#</a></h3>
 <blockquote>
 <div><div class="line-block">
-<div class="line">.. unit_dd:: &lt;Unit Name&gt;</div>
+<div class="line">.. unit_dd:: &lt;Unit&gt;</div>
 <div class="line-block">
-<div class="line">:id: UNIT_DD__&lt;Unit&gt;__&lt;Unit Name&gt;</div>
+<div class="line">:id: unit_dd__&lt;Unit&gt;</div>
 <div class="line">:security: &lt;YES|NO&gt;</div>
 <div class="line">:safety: &lt;QM|ASIL_B|ASIL_D&gt;</div>
-<div class="line">:satisfies: &lt;link to component requirement id&gt;</div>
+<div class="line">:status: &lt;valid|invalid&gt;</div>
+<div class="line">:implements: &lt;link to component requirement id&gt;</div>
 </div>
 </div>
 </div></blockquote>
@@ -665,12 +668,12 @@
 <div><div class="line-block">
 <div class="line">.. unit_dd_int:: &lt;Title&gt;</div>
 <div class="line-block">
-<div class="line">:id: UNIT_DD_INT__&lt;Unit&gt;__&lt;Unit Name&gt;</div>
+<div class="line">:id: unit_dd_int__&lt;Unit&gt;_&lt;Title&gt;</div>
 <div class="line">:security: &lt;YES|NO&gt;</div>
 <div class="line">:safety: &lt;QM|ASIL_B|ASIL_D&gt;</div>
-<div class="line">:satisfies: &lt;link to component requirement id&gt;</div>
+<div class="line">:status: &lt;valid|invalid&gt;</div>
+<div class="line">:implements: &lt;link to component requirement id&gt;</div>
 </div>
-<div class="line">.. image:: &lt;link to drawio image&gt; or .. uml:: &lt;link to plantuml&gt;</div>
 </div>
 </div></blockquote>
 </section>
@@ -745,7 +748,7 @@
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/eclipse-score/score/edit/main/docs/process/process_areas/implementation/guidance/detailed_design.rst">
+    <a href="https://github.com/eclipse-score/score/edit/main/docs/process/process_areas/implementation/guidance/detailed_design_template.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -761,7 +764,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../../_sources/process/process_areas/implementation/guidance/detailed_design.rst.txt"
+      <li><a href="../../../../_sources/process/process_areas/implementation/guidance/detailed_design_template.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>

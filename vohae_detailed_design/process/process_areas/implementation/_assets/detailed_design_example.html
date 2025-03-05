@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SWE.6 Software Verification &#8212; Score 0.1 documentation</title>
+    <title>Detailed Design for Component: component1 &#8212; Score 0.1 documentation</title>
   
   
   
@@ -62,7 +62,7 @@
     <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'process/standards/aspice_40/swe/swe.6';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'process/process_areas/implementation/_assets/detailed_design_example';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
@@ -72,8 +72,8 @@
         </script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="../sup/index.html" />
-    <link rel="prev" title="SWE.5 Software Component Verification and Integration Verification" href="swe.5.html" />
+    <link rel="next" title="Guidance" href="../guidance/index.html" />
+    <link rel="prev" title="Concept Description" href="../implementation_concept.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -447,8 +447,23 @@
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../introduction/index.html">Introduction</a></li>
 </ul>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../../../process_areas/index.html">Process Areas</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../requirements_engineering/index.html">Requirements Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../safety_management/index.html">Safety Management</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Implementation</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../implementation_getstrt.html">Getting Started</a></li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="../implementation_concept.html">Concept Description</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">Detailed Design for Component: component1</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../guidance/index.html">Guidance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../implementation_workflow.html">Workflow Implementation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../implementation_workproducts.html">Workproducts Implementation</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
 </ul>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../roles/index.html">Roles</a></li>
@@ -462,31 +477,8 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../guidance/index.html">Guidance</a></li>
 </ul>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Standards</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../../iso26262/iso26262.html">ISO 26262</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../isopas8926/isopas8926.html">ISO PAS 8926</a></li>
-<li class="toctree-l2 current active has-children"><a class="reference internal" href="../aspice.html">ASPICE 4.0</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../man/man.3.html">MAN.3 Project Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../man/man.5.html">MAN.5 Risk Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="swe.1.html">SWE.1 Software Requirements Analysis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="swe.2.html">SWE.2 Software Architectural Design</a></li>
-<li class="toctree-l3"><a class="reference internal" href="swe.3.html">SWE.3 Software Detailed Design and Unit Construction</a></li>
-<li class="toctree-l3"><a class="reference internal" href="swe.4.html">SWE.4 Software Unit Verification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="swe.5.html">SWE.5 Software Component Verification and Integration Verification</a></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">SWE.6 Software Verification</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sup/sup.1.html">SUP.1 Quality Assurance</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sup/sup.8.html">SUP.8 Configuration Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sup/sup.9.html">SUP.9 Problem Resolution Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../sup/sup.10.html">SUP.10 Change Request Management</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../spl/spl.2.html">SPL.2 Product Release</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../reu/reu.2.html">REU.2 Management of Products for Reuse</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../pim/pim.3.html">PIM.3 Process Improvement</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../iic/index.html">Information Item Characteristics</a></li>
-</ul>
-</details></li>
-</ul>
-</details></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../standards/index.html">Standards</a></li>
 </ul>
 </div>
 </nav></div>
@@ -531,18 +523,15 @@
     <li class="breadcrumb-item"><a href="../../../index.html" class="nav-link">Process</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Standards</a></li>
+    <li class="breadcrumb-item"><a href="../../index.html" class="nav-link">Process Areas</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">&lt;no title&gt;</a></li>
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Implementation</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../aspice.html" class="nav-link">ASPICE 4.0</a></li>
+    <li class="breadcrumb-item"><a href="../implementation_concept.html" class="nav-link">Concept Description</a></li>
     
-    
-    <li class="breadcrumb-item"><a href="index.html" class="nav-link">&lt;no title&gt;</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">SWE.6 Software Verification</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Detailed Design for Component: component1</span></li>
   </ul>
 </nav>
 </div>
@@ -559,41 +548,30 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="swe-6-software-verification">
-<h1>SWE.6 Software Verification<a class="headerlink" href="#swe-6-software-verification" title="Link to this heading">#</a></h1>
-<p>The purpose of the Software Verification process is to ensure that the
-integrated software is verified to be consistent with the software
-requirements.</p>
-<section id="process-outcomes">
-<h2>Process outcomes<a class="headerlink" href="#process-outcomes" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p>Verification measures are specified for software verification of the
-software based on the software requirements.</p></li>
-<li><p>Verification measures are selected according to the release scope
-considering criteria, including criteria for regression verification.</p></li>
-<li><p>The integrated software is verified using the selected verification
-measures and the results of software verification are recorded.</p></li>
-<li><p>Consistency and bidirectional traceability are established between
-verification measures and software requirements; and bidirectional
-traceability are established between verification results and
-verification measures.</p></li>
-<li><p>Results of the software verification are summarized and communicated
-to all affected parties.</p></li>
-</ol>
+  <section id="detailed-design-for-component-component1">
+<h1>Detailed Design for Component: component1<a class="headerlink" href="#detailed-design-for-component-component1" title="Link to this heading">#</a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p>component is split into two units unit1 and unit2 based on single responsibility principle.</p></li>
+<li><p>unit2 is injected to unit1 one via dependency injection for testability.</p></li>
+</ul>
+</div></blockquote>
 </section>
-<section id="base-practices">
-<h2>Base practices<a class="headerlink" href="#base-practices" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-e246b344">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_std_req table" id="std_req__aspice_40__SWE-6-BP1">
+<section id="static-diagrams-for-unit-interactions">
+<h2>Static Diagrams for Unit Interactions<a class="headerlink" href="#static-diagrams-for-unit-interactions" title="Link to this heading">#</a></h2>
+<div class="need_container docutils container" id="SNCB-1913547d">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_unit_dd_sta table" id="unit_dd_sta__dd_example_static">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">SWE.6.BP1: Specify verification measures for software verification</span></span></span></div>
+<div class="line"><span><span class="needs_title"><span class="needs_data">dd example static</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
 <div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">valid</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span>security: </span><strong><span><span class="needs_security"><span class="needs_data">NO</span></span></span></strong></div>
+<div class="line"><span>safety: </span><strong><span><span class="needs_safety"><span class="needs_data">ASIL_B</span></span></span></strong></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
@@ -603,37 +581,22 @@ to all affected parties.</p></li>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
+<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="../iic/iic-08.html#std_req__aspice_40__iic-08-60" title="std_req__aspice_40__SWE-6-BP1">std_req__aspice_40__iic-08-60</a></span></span></div>
-</span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="meta" colspan="3"></td>
 </tr>
-<tr class="content row-odd"><td class="content" colspan="6"><p>Specify the verification
-measures for software verification suitable to provide evidence for compliance of the integrated
-software with the functional and non-functional information in the software requirements,
-including
-- techniques for the verification measures,
-- pass/fail criteria for verification measures,
-- a definition of entry and exit criteria for the verification measures,
-- necessary sequence of verification measures, and
-- the required verification infrastructure and environment setup.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The selection of appropriate techniques for verification measures may depend on the
-content of the respective software requirement (e.g, boundary values and equivalence classes for
-data range-oriented requirements, positive/sunny-day-test vs. negative testing such as fault
-injection), or on requirements-based testing vs. “error guessing based on knowledge or experience”.</p>
-</div>
-</td>
+<tr class="content row-odd"><td class="content" colspan="6"></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#std_req__aspice_40__SWE-6-BP1" title="std_req__aspice_40__SWE-6-BP1">std_req__aspice_40__SWE-6-BP1</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#unit_dd_sta__dd_example_static" title="unit_dd_sta__dd_example_static">unit_dd_sta__dd_example_static</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Standard Requirement</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Detailed Design Static View</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -642,17 +605,22 @@ injection), or on requirements-based testing vs. “error guessing based on know
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-8fa37760">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_std_req table" id="std_req__aspice_40__SWE-6-BP2">
+<p class="plantuml">
+<object data="../../../../_images/plantuml-3f333e97f8b476f7b70ccd0c9044dbf2ef3697bd.svg" type="image/svg+xml" style="width:303px;height:244px;background:#FFFFFF;"></object></p>
+</section>
+<section id="dynamic-diagrams-for-unit-interactions">
+<h2>Dynamic Diagrams for Unit Interactions<a class="headerlink" href="#dynamic-diagrams-for-unit-interactions" title="Link to this heading">#</a></h2>
+<div class="need_container docutils container" id="SNCB-9d11ca51">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_unit_dd_dyn table" id="unit_dd_dyn__dd_example_dynamic">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">SWE.6.BP2: Select verification measures</span></span></span></div>
+<div class="line"><span><span class="needs_title"><span class="needs_data">dd example dynamic</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
 <div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">valid</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span>security: </span><strong><span><span class="needs_security"><span class="needs_data">NO</span></span></span></strong></div>
+<div class="line"><span>safety: </span><strong><span><span class="needs_safety"><span class="needs_data">ASIL_B</span></span></span></strong></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
@@ -662,31 +630,22 @@ injection), or on requirements-based testing vs. “error guessing based on know
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
+<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="../iic/iic-08.html#std_req__aspice_40__iic-08-58" title="std_req__aspice_40__SWE-6-BP2">std_req__aspice_40__iic-08-58</a></span></span></div>
-</span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="meta" colspan="3"></td>
 </tr>
-<tr class="content row-odd"><td class="content" colspan="6"><p>Document the selection of verification measures
-considering selection criteria including criteria for regression verification. The documented
-selection of verification measures shall have sufficient coverage according to the release scope.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Examples for selection criteria can be prioritization of requirements, continuous
-development, the need for regression verification (due to e.g., changes to the software
-requirements), or the intended use of the delivered product release (test bench, test track, public
-road etc.)</p>
-</div>
-</td>
+<tr class="content row-odd"><td class="content" colspan="6"></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#std_req__aspice_40__SWE-6-BP2" title="std_req__aspice_40__SWE-6-BP2">std_req__aspice_40__SWE-6-BP2</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#unit_dd_dyn__dd_example_dynamic" title="unit_dd_dyn__dd_example_dynamic">unit_dd_dyn__dd_example_dynamic</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Standard Requirement</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Detailed Design Dynamic View</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -695,17 +654,22 @@ road etc.)</p>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-5dd2fead">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_std_req table" id="std_req__aspice_40__SWE-6-BP3">
+<p class="plantuml">
+<object data="../../../../_images/plantuml-d26c1d5ca79ef318cc41445d50a5e6497cbdfca2.svg" type="image/svg+xml" style="width:296px;height:245px;background:#FFFFFF;"></object></p>
+</section>
+<section id="units-within-the-component">
+<h2>Units within the Component<a class="headerlink" href="#units-within-the-component" title="Link to this heading">#</a></h2>
+<div class="need_container docutils container" id="SNCB-99d0e84f">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_unit_dd table" id="unit_dd__unit1">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">SWE.6.BP3: Verify the integrated software</span></span></span></div>
+<div class="line"><span><span class="needs_title"><span class="needs_data">unit1</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
 <div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">valid</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span>security: </span><strong><span><span class="needs_security"><span class="needs_data">NO</span></span></span></strong></div>
+<div class="line"><span>safety: </span><strong><span><span class="needs_safety"><span class="needs_data">ASIL_B</span></span></span></strong></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
@@ -715,28 +679,22 @@ road etc.)</p>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
+<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="../iic/iic-03.html#std_req__aspice_40__iic-03-50" title="std_req__aspice_40__SWE-6-BP3">std_req__aspice_40__iic-03-50</a>, <a class="reference internal" href="../iic/iic-15.html#std_req__aspice_40__iic-15-52" title="std_req__aspice_40__SWE-6-BP3">std_req__aspice_40__iic-15-52</a></span></span></div>
-</span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="meta" colspan="3"></td>
 </tr>
-<tr class="content row-odd"><td class="content" colspan="6"><p>Perform the verification of the integrated software
-using the selected verification measures. Record the verification results including pass/fail status
-and corresponding verification measure data.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>See SUP.9 for handling verification results that deviate from expected results.</p>
-</div>
-</td>
+<tr class="content row-odd"><td class="content" colspan="6"></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#std_req__aspice_40__SWE-6-BP3" title="std_req__aspice_40__SWE-6-BP3">std_req__aspice_40__SWE-6-BP3</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#unit_dd__unit1" title="unit_dd__unit1">unit_dd__unit1</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Standard Requirement</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Detailed Design Units</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -745,17 +703,19 @@ and corresponding verification measure data.</p>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-78646bf1">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_std_req table" id="std_req__aspice_40__SWE-6-BP4">
+<section id="interface">
+<h3>Interface<a class="headerlink" href="#interface" title="Link to this heading">#</a></h3>
+<div class="need_container docutils container" id="SNCB-3e220d11">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_unit_dd_int table" id="unit_dd_int__unit1_int1">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">SWE.6.BP4: Ensure consistency and establish bidirectional traceability</span></span></span></div>
+<div class="line"><span><span class="needs_title"><span class="needs_data">int1</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
 <div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">valid</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span>security: </span><strong><span><span class="needs_security"><span class="needs_data">NO</span></span></span></strong></div>
+<div class="line"><span>safety: </span><strong><span><span class="needs_safety"><span class="needs_data">ASIL_B</span></span></span></strong></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
@@ -765,31 +725,22 @@ and corresponding verification measure data.</p>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
+<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="../iic/iic-13.html#std_req__aspice_40__iic-13-51" title="std_req__aspice_40__SWE-6-BP4">std_req__aspice_40__iic-13-51</a></span></span></div>
-</span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="meta" colspan="3"></td>
 </tr>
-<tr class="content row-odd"><td class="content" colspan="6"><p>Ensure
-consistency and establish bidirectional traceability between verification measures and software
-requirements. Establish bidirectional traceability between verification results and verification
-measures.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Bidirectional traceability supports consistency, and facilitates impact analysis of change
-requests, and demonstration of verification coverage. Traceability alone, e.g., the existence of links,
-does not necessarily mean that the information is consistent with each other.</p>
-</div>
-</td>
+<tr class="content row-odd"><td class="content" colspan="6"></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#std_req__aspice_40__SWE-6-BP4" title="std_req__aspice_40__SWE-6-BP4">std_req__aspice_40__SWE-6-BP4</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#unit_dd_int__unit1_int1" title="unit_dd_int__unit1_int1">unit_dd_int__unit1_int1</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Standard Requirement</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Detailed Design Interfaces</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -798,17 +749,17 @@ does not necessarily mean that the information is consistent with each other.</p
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-92b06db8">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_std_req table" id="std_req__aspice_40__SWE-6-BP5">
+<div class="need_container docutils container" id="SNCB-d5380892">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_unit_dd table" id="unit_dd__unit2">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">SWE.6.BP5: Summarize and communicate results</span></span></span></div>
+<div class="line"><span><span class="needs_title"><span class="needs_data">unit2</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
 <div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">valid</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span>security: </span><strong><span><span class="needs_security"><span class="needs_data">NO</span></span></span></strong></div>
+<div class="line"><span>safety: </span><strong><span><span class="needs_safety"><span class="needs_data">ASIL_B</span></span></span></strong></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
@@ -818,28 +769,22 @@ does not necessarily mean that the information is consistent with each other.</p
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
+<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">links outgoing: <span class="links"><span><a class="reference internal" href="../iic/iic-13.html#std_req__aspice_40__iic-13-52" title="std_req__aspice_40__SWE-6-BP5">std_req__aspice_40__iic-13-52</a></span></span></div>
-</span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="meta" colspan="3"></td>
 </tr>
-<tr class="content row-odd"><td class="content" colspan="6"><p>Summarize the software verification
-results and communicate them to all affected parties.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Providing all necessary information from the test case execution in a summary enables other
-parties to judge the consequences.</p>
-</div>
-</td>
+<tr class="content row-odd"><td class="content" colspan="6"></td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#std_req__aspice_40__SWE-6-BP5" title="std_req__aspice_40__SWE-6-BP5">std_req__aspice_40__SWE-6-BP5</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#unit_dd__unit2" title="unit_dd__unit2">unit_dd__unit2</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Standard Requirement</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Detailed Design Units</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -848,6 +793,54 @@ parties to judge the consequences.</p>
 </table>
 </div>
 </div>
+</section>
+<section id="id1">
+<h3>Interface<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<div class="need_container docutils container" id="SNCB-80825ee5">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_unit_dd_int table" id="unit_dd_int__unit2_int2">
+<tbody>
+<tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
+<div class="line"><span><span class="needs_title"><span class="needs_data">int2</span></span></span></div>
+</div>
+</td>
+<td class="head_center" colspan="2"><div class="needs_head line-block">
+<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">valid</span></span></span></strong></div>
+<div class="line"><span>security: </span><strong><span><span class="needs_security"><span class="needs_data">NO</span></span></span></strong></div>
+<div class="line"><span>safety: </span><strong><span><span class="needs_safety"><span class="needs_data">ASIL_B</span></span></span></strong></div>
+</div>
+</td>
+<td class="head_right" colspan="2"><div class="needs_head_right line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+</div>
+</td>
+</tr>
+<tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
+<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+<td class="meta" colspan="3"></td>
+</tr>
+<tr class="content row-odd"><td class="content" colspan="6"></td>
+</tr>
+<tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#unit_dd_int__unit2_int2" title="unit_dd_int__unit2_int2">unit_dd_int__unit2_int2</a></span></span></div>
+</div>
+</td>
+<td class="footer" colspan="2"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Detailed Design Interfaces</span></span></span></div>
+</div>
+</td>
+<td class="footer_right" colspan="2"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -862,20 +855,20 @@ parties to judge the consequences.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="swe.5.html"
+       href="../implementation_concept.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">SWE.5 Software Component Verification and Integration Verification</p>
+        <p class="prev-next-title">Concept Description</p>
       </div>
     </a>
     <a class="right-next"
-       href="../sup/index.html"
+       href="../guidance/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">&lt;no title&gt;</p>
+        <p class="prev-next-title">Guidance</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -898,8 +891,14 @@ parties to judge the consequences.</p>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#process-outcomes">Process outcomes</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#base-practices">Base practices</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#static-diagrams-for-unit-interactions">Static Diagrams for Unit Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-diagrams-for-unit-interactions">Dynamic Diagrams for Unit Interactions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#units-within-the-component">Units within the Component</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interface">Interface</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Interface</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -907,7 +906,7 @@ parties to judge the consequences.</p>
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/eclipse-score/score/edit/main/docs/process/standards/aspice_40/swe/swe.6.rst">
+    <a href="https://github.com/eclipse-score/score/edit/main/docs/process/process_areas/implementation/_assets/detailed_design_example.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -923,7 +922,7 @@ parties to judge the consequences.</p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../../_sources/process/standards/aspice_40/swe/swe.6.rst.txt"
+      <li><a href="../../../../_sources/process/process_areas/implementation/_assets/detailed_design_example.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>

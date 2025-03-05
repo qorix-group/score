@@ -16,7 +16,7 @@
 Detailed Design Template
 ########################
 
-.. gd_temp:: Stakeholder Requirements Templates
+.. gd_temp:: Detailed Design Templates
    :id: gd_temp__detailed_design
    :status: valid
    :complies: std_req__iso26262__software_2, std_req__iso26262__support_1, std_req__iso26262__support_2, std_req__iso26262__support_6
@@ -42,38 +42,41 @@ Static Diagrams for Unit Interactions
 -------------------------------------
 
     | .. unit_dd_sta:: <Title>
-    |    :id: UNIT_DD_STA__<Component>__<Title>
+    |    :id: unit_dd_sta__<Title>
     |    :security: <YES|NO>
     |    :safety: <QM|ASIL_B|ASIL_D>
-    |    :satisfies: <link to component requirement id>
+    |    :status: <valid|invalid>
+    |    :implements: <link to component requirement id>
     | .. image:: <link to drawio image> or .. uml:: <link to plantuml>
 
 Dynamic Diagrams for Unit Interactions
 --------------------------------------
 
     | .. unit_dd_dyn:: <Title>
-    |    :id: UNIT_DD_DYN__<Component>__<Title>
+    |    :id: unit_dd_dyn__<Title>
     |    :security: <YES|NO>
     |    :safety: <QM|ASIL_B|ASIL_D>
-    |    :satisfies: <link to component requirement id>
+    |    :status: <valid|invalid>
+    |    :implements: <link to component requirement id>
     | .. image:: <link to drawio image> or .. uml:: <link to plantuml>
 
 Units within the Component
 --------------------------
 
-    | .. unit_dd:: <Unit Name>
-    |    :id: UNIT_DD__<Unit>__<Unit Name>
+    | .. unit_dd:: <Unit>
+    |    :id: unit_dd__<Unit>
     |    :security: <YES|NO>
     |    :safety: <QM|ASIL_B|ASIL_D>
-    |    :satisfies: <link to component requirement id>
+    |    :status: <valid|invalid>
+    |    :implements: <link to component requirement id>
 
 Interface
 *********
 
     | .. unit_dd_int:: <Title>
-    |    :id: UNIT_DD_INT__<Unit>__<Unit Name>
+    |    :id: unit_dd_int__<Unit>_<Title>
     |    :security: <YES|NO>
     |    :safety: <QM|ASIL_B|ASIL_D>
-    |    :satisfies: <link to component requirement id>
-    | .. image:: <link to drawio image> or .. uml:: <link to plantuml>
+    |    :status: <valid|invalid>
+    |    :implements: <link to component requirement id>
 
