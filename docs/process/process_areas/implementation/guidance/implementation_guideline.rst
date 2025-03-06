@@ -20,6 +20,7 @@ Guideline
    :status: valid
 
 This document describes the general guidances for implementation based on the concept which is defined :need:`[[title]]<doc_concept__imp__concept>`.
+In the concept is a example of a Detailed Design included.
 
 General Hints
 =============
@@ -27,11 +28,12 @@ General Hints
 Template
 ---------
 
-The detailded design template :need:`[[title]] <gd_temp__detailed_design>` shall be used to ensure that the correct syntax and attribute definition is used.
-
+The detailded design template :need:`[[title]] <gd_temp__detailed_design>` shall be used to ensure that the correct syntax
+and attribute definition is used.
 
 Attributes
 ----------
+
 
 
 Checks
@@ -59,6 +61,3 @@ the tools.
 In the CI/CDcd pipeline the checks <TBD> are executed. Use the explenations in the pipeline.
 
 .. Exceptions handling
-
-
-

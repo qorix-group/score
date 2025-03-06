@@ -12,17 +12,12 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _implementation:
+Roles
+#####
 
-Implementation
-##############
+For implementation no additional roles need to be defined.
 
-.. toctree::
-   :maxdepth: 1
+Contributing Roles:
 
-   implementation_getstrt
-   implementation_concept
-   guidance/index
-   implementation_workflow
-   implementation_workproducts
-   implementation_roles
+   * :need:`Contributor <rl__contributor>`
+   * :need:`Committer <rl__committer>`

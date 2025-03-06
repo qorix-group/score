@@ -15,21 +15,22 @@
 Workproducts Implementation
 ###########################
 
-workproduct: Unit
-
 .. workproduct:: Implementation
-   :id: wp__implementation
-   :status: valid
+   :id: wp__sw_implementation
+   :status: draft
+   :tags: safety
    :complies: std_wp__iso26262__software_10, std_req__iso26262__software_29
 
-   Implementation of a Unit
+   Implementation includes source code and detailed design (e.g. in form of comments or linked graphical representations) and SW configuration (e.g. #ifdef)
+   The "how to" is described in the SW Development Plan guidelines
 
-.. workproduct:: Unit Verification Measures
-   :id: wp__unit_verification_measures
-   :status: valid
+.. workproduct:: Unit test
+   :id: wp__sw_unit_test
+   :status: draft
+   :tags: safety
    :complies: std_wp__iso26262__software_11, std_wp__iso26262__software_12, std_req__iso26262__software_29
 
-   Unit Verification Measures
+   Unit testing verifies component requirements and detailed design (traced to). Tooling defined in SW Development Plan and integrated in CI/Build.
 
 .. needextend:: "docs/process/implementation" in docname
    :+tags: implementation

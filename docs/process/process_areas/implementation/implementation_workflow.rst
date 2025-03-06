@@ -15,17 +15,26 @@
 Workflow Implementation
 #######################
 
-.. ? Haben wir einen Workflow für Implementation
-.. .. workflow:: Create/Maintain Detailed Design
-..    :id: wf__imp__det_des
-..    :status: valid
-..    :tags: implementation
-..    :responsible: rl__contributor
-..    :approved_by: rl__technical_lead
-..    :supported_by: rl__safety_manager
-..    :input: wp__policies, wp__issue_track_system
-..    :output: wp__requirements__stkh
-..    :contains: gd_temp__req__stkh_req, gd_temp__req__formulation
-..    :has: doc_concept__req__process, doc_concept__req__process
+.. workflow:: Create/Maintain Detailed Design
+   :id: wf__impl__detailed_design
+   :status: valid
+   :tags: implementation
+   :responsible: rl__contributor
+   :approved_by: rl__technical_lead
+   :input: wp__sw_component_req, wp__sw_component_architecture
+   :output: wp__sw_implementation
 
-..    Stakeholder requirements can be created during a contribution request. Any contributor can create a stakeholder requirement and propose it for approval.
+   Every Unit has a Detailed Design. After the Design the implementation will be done by write the
+   Source Code. It will be verified by the Unit Test. It's recommended to use the local build environments
+   to avoid unnecessary cycles.
+
+.. workflow:: Create/Perform Unit Test
+   :id: wf__impl__unit_test
+   :status: valid
+   :tags: implementation
+   :responsible: rl__contributor
+   :approved_by: rl__technical_lead
+   :input: wp__sw_implementation
+   :output: wp__sw_unit_test
+
+   Every Unit shall have at least one Unit Test.

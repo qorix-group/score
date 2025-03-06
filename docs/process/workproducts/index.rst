@@ -291,21 +291,6 @@ Component development
    Depends on architecture, FMEA and DFA tooling.
    May include several methods like inspection, modelling ... Which are selected in SW Development Plan.
 
-.. workproduct:: Implementation
-   :id: wp__sw_implementation
-   :status: draft
-   :tags: safety
-
-   Implementation includes source code and detailed design (e.g. in form of comments or linked graphical representations) and SW configuration (e.g. #ifdef)
-   The "how to" is described in the SW Development Plan guidelines
-
-.. workproduct:: Unit test
-   :id: wp__sw_unit_test
-   :status: draft
-   :tags: safety
-
-   Unit testing verifies component requirements and detailed design (traced to). Tooling defined in SW Development Plan and integrated in CI/Build.
-
 .. workproduct:: Code Inspection
    :id: wp__sw_code_inspect
    :status: draft

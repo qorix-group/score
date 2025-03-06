@@ -20,49 +20,46 @@ Getting Started
    :status: valid
    :tags: Implementation
 
-This document describes the steps which need to be done to detailed unit design and implementation.
+This document describes the steps which need to be done to document detailed design and implement the code.
 
 Therefore a detailed guideline :need:`gd_guidl__implementation` is available.
 
 
-Detailed Design
-***************
+Relevant Documents
+******************
 
-For the detailed design a template is :need:`gd_temp__detailed_design` available. With the detailed
-design everything for the developer and tester is sufficent defined.
+**Concept Document:** :need:`doc_concept__imp__concept` provides a high-level overview of the integration concept.
+**Implementation Guideline:** :need:`gd_guidl__implementation` Details on the implemenation.
+**SW Development Plan:** <Link to SW Development Plan> Process description of SW development including
+- selection of design and programming language
+- design guideline
+- coding guideline (e.g. MISRA, can also include style guide or naming convention)
+- SW configuration guideline
+- Method selection (e.g. for Architecture Verification)
+- development tools
+
 
 Tooling Support
 ***************
 
-Coding Guidelines
-=================
-
-For C++17 devlopment MISRA C++:2023 shall be used <Link to source>
-
-For Rust development a set of coding rules has to be defined. Therefore the following sources can be considered:
- |  https://github.com/PolySync/misra-rust/blob/master/MISRA-Rules.md#rule-55
- |  https://google.github.io/learn_unsafe_rust/undefined_behavior.html
- |  https://github.com/rustfoundation/safety-critical-rust-consortium/pull/182/files
-
-Static Code Analyis
-===================
-
-<TDB> tool to enforce coding rules e.g. axivion, parasoft c++, helix qac
+Compiler selection
+==================
+<TBD>
 
 
 CI/CD Pipeline
 ==============
 
-Description which Static Code Analysis Tools <TBD> are implmented in the CI/CD Pipeline.
+Description which Static Code Analysis Tools <TBD>, Compiler <TBD>, Unit Test Tool <TBD>, Structural Coverage
+ Tool <TBD>, are implmented in the CI/CD Pipeline.
 
-.. Developer Experience
-.. ====================
+Developer Experience
+====================
 
-.. For all RST files also a linter is configured, it will be automatically run in the CI upon check-in.
-.. Locally it can be run via
+For all RST files also a linter is configured, it will be automatically run in the CI upon check-in.
+Locally it can be run via
 
-.. .. code-block:: shell
+.. code-block:: shell
 
-..    bazel test //:format.check
-
-
+   bazel test //:format.check
+   bazel build //docs
