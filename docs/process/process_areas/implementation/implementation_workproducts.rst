@@ -15,21 +15,36 @@
 Workproducts Implementation
 ###########################
 
-workproduct: Unit
-
 .. workproduct:: Implementation
-   :id: wp__implementation
+   :id: wp__sw_implementation
    :status: valid
-   :complies: std_wp__iso26262__software_10, std_req__iso26262__software_29
+   :tags: safety
+   :complies: std_wp__iso26262__software_9, std_wp__iso26262__software_10
 
-   Implementation of a Unit
+   Implementation includes source code and detailed design (e.g. in form of comments or linked graphical representations) and SW configuration (e.g. #ifdef)
+   The "how to" is described in the SW Development Plan guidelines
 
-.. workproduct:: Unit Verification Measures
-   :id: wp__unit_verification_measures
+.. workproduct:: Implementation Inspection
+   :id: wp__sw_implementation_inspection
    :status: valid
-   :complies: std_wp__iso26262__software_11, std_wp__iso26262__software_12, std_req__iso26262__software_29
+   :tags: safety
+   :complies: std_wp__iso26262__software_11, std_wp__iso26262__software_11
 
-   Unit Verification Measures
+   Github review with integrated inspection checklist, only valid Detailed Design and Code get merged
+
+.. workproduct:: Software Development Plan
+   :id: wp__sw_development_plan
+   :status: valid
+   :tags: safety
+   :complies: std_wp__iso26262__software_1, std_wp__iso26262__software_25, std_wp__iso26262__management_7
+
+   Process description of SW development including
+   - selection of design and programming language
+   - design guideline
+   - coding guideline (e.g. MISRA, can also include style guide or naming convention)
+   - SW configuration guideline
+   - Method selection (e.g. for Architecture Verification)
+   - development tools
 
 .. needextend:: "docs/process/implementation" in docname
    :+tags: implementation

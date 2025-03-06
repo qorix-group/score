@@ -165,7 +165,7 @@ Workflow Verification
    :input: wp__verification__plan, wp__requirements__comp, wp__requirements__comp_aou,
            wp__component_arch, wp__module_sw_release_note, wp__platform_mgmt,
            wp__sw_component_safety_analyses, wp__sw_component_dfa,
-           wp__sw_arch_verification, wp__sw_code_inspect, wp__requirements__inspect,
+           wp__sw_arch_verification, wp__sw_implementation_inspection, wp__requirements__inspect,
            wp__verification__component_test, wp__verification__comp_int_test, wp__verification__sw_unit_test
    :output: wp__verification__module_ver_report
    :contains: gd_temp__mod_ver_report

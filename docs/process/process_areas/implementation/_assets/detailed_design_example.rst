@@ -53,6 +53,8 @@ Units within the Component
     :safety: ASIL_B
     :status: valid
 
+    Placeholder for the description that will be generated from doxygen
+
 Interface
 *********
 
@@ -62,11 +64,15 @@ Interface
     :safety: ASIL_B
     :status: valid
 
+    Placeholder for the description that will be generated from doxygen
+
 .. unit_dd:: unit2
     :id: unit_dd__unit2
     :security: NO
     :safety: ASIL_B
     :status: valid
+
+    Placeholder for the description that will be generated from doxygen
 
 Interface
 *********
@@ -77,3 +83,4 @@ Interface
     :safety: ASIL_B
     :status: valid
 
+    Placeholder for the description that will be generated from doxygen

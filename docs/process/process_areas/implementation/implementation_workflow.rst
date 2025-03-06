@@ -15,17 +15,47 @@
 Workflow Implementation
 #######################
 
-.. ? Haben wir einen Workflow für Implementation
-.. .. workflow:: Create/Maintain Detailed Design
-..    :id: wf__imp__det_des
-..    :status: valid
-..    :tags: implementation
-..    :responsible: rl__contributor
-..    :approved_by: rl__technical_lead
-..    :supported_by: rl__safety_manager
-..    :input: wp__policies, wp__issue_track_system
-..    :output: wp__requirements__stkh
-..    :contains: gd_temp__req__stkh_req, gd_temp__req__formulation
-..    :has: doc_concept__req__process, doc_concept__req__process
+.. workflow:: Create/Maintain Software Development Plan
+   :id: wf__sw_development_plan
+   :status: valid
+   :tags: implementation
+   :responsible: rl__committer
+   :approved_by: rl__technical_lead
+   :input: wp__platform_mgmt
+   :output: wp__sw_development_plan
+   :contains: gd_temp__software_development_plan
+   :has: doc_concept__imp__concept, doc_getstrt__imp__getstrt
 
-..    Stakeholder requirements can be created during a contribution request. Any contributor can create a stakeholder requirement and propose it for approval.
+   The Software Development Plan shall descirbe
+     - methods
+     - Guidelines
+     - development environment
+
+.. workflow:: Create/Maintain Implementation
+   :id: wf__sw_detailed_design
+   :status: valid
+   :tags: implementation
+   :responsible: rl__contributor
+   :approved_by: rl__committer
+   :input: wp__requirements__comp, wp__component_arch, wp__sw_development_plan
+   :output: wp__sw_implementation
+   :contains: gd_temp__detailed_design
+   :has: doc_concept__imp__concept, doc_getstrt__imp__getstrt
+
+   The implementation is created, consisting of
+     - Detailed Design
+     - Source Code
+
+.. workflow:: Verify Implementation
+   :id: wf__sw_verify_implementation
+   :status: valid
+   :tags: implementation
+   :responsible: rl__committer
+   :approved_by: rl__committer
+   :input: wp__sw_implementation, wp__sw_development_plan
+   :output: wp__issue_track_system, wp__sw_implementation_inspection, wp__verification__module_ver_report
+   :contains: gd_chklst__impl_inspection_checklist, doc_getstrt__imp__getstrt
+
+   The Implementation Verification of the Detailed Design and Code consists of the following topics
+     - Detailed Design and Code Inspection
+     - Static and Dynamic Code Analysis performed by a tool

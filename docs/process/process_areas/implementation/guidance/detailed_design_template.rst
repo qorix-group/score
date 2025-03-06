@@ -47,6 +47,7 @@ Static Diagrams for Unit Interactions
     |    :safety: <QM|ASIL_B|ASIL_D>
     |    :status: <valid|invalid>
     |    :implements: <link to component requirement id>
+    |    :satisfies: <link to component architecture id>
     | .. image:: <link to drawio image> or .. uml:: <link to plantuml>
 
 Dynamic Diagrams for Unit Interactions
@@ -58,6 +59,7 @@ Dynamic Diagrams for Unit Interactions
     |    :safety: <QM|ASIL_B|ASIL_D>
     |    :status: <valid|invalid>
     |    :implements: <link to component requirement id>
+    |    :satisfies: <link to component architecture id>
     | .. image:: <link to drawio image> or .. uml:: <link to plantuml>
 
 Units within the Component
@@ -69,6 +71,7 @@ Units within the Component
     |    :safety: <QM|ASIL_B|ASIL_D>
     |    :status: <valid|invalid>
     |    :implements: <link to component requirement id>
+    |    :satisfies: <link to component architecture id>
 
 Interface
 *********
@@ -79,4 +82,4 @@ Interface
     |    :safety: <QM|ASIL_B|ASIL_D>
     |    :status: <valid|invalid>
     |    :implements: <link to component requirement id>
-
+    |    :satisfies: <link to component architecture id>

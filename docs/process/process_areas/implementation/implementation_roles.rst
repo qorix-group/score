@@ -12,24 +12,12 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-@startuml
+Roles
+#####
 
-title Static View - dd example
+For implementation no additional roles need to be defined.
 
-skinparam component {
-    BackgroundColor<<component>> white
-}
+Contributing Roles:
 
-skinparam rectangle {
-    BackgroundColor<<unit>> green
-}
-
-' Define Features
-component "component1" <<component>> {
-    rectangle "unit1" as unit1 <<unit>>
-    rectangle "unit2" as unit2 <<unit>>
-}
-
-unit1 ..> unit2 : uses
-
-@enduml
+   * :need:`Contributor <rl__contributor>`
+   * :need:`Committer <rl__committer>`

@@ -28,7 +28,7 @@ def check_id_format(app: Sphinx, need: NeedsInfoType, log: CheckLogger):
     parts = need["id"].split("__")
 
     if need["id"].startswith(
-        ("gd_", "wf__", "wp__", "rl__", "tool_req__", "doc__")
+        ("gd_", "wf__", "wp__", "rl__", "stkh_req__", "tool_req__", "doc__")
     ) or ("process/" in need.get("docname", "")):
         if len(parts) != 2 and len(parts) != 3:
             msg = "expected to consisting of one of these 2 formats:`<Req Type>__<Abbreviations>` or `<Req Type>__<Abbreviations>__<Architectural Element>`."

@@ -335,7 +335,7 @@ needs_types:
     mandatory_links:
       implements: "^feat_arc_int_op__.*$"
 
- # Detailed Design
+  # Detailed Design
   unit_dd_sta:
     title: "Detailed Design Static View"
     prefix: "unit_dd_sta__"
@@ -347,7 +347,7 @@ needs_types:
       safety: "^(QM|ASIL_B|ASIL_D)$"
       status: "^(valid|invalid)$"
     mandatory_links:
-     # implements: "^comp_req__.*$"
+    # implements: "^comp_req__.*$"
 
   unit_dd_dyn:
     title: "Detailed Design Dynamic View"
@@ -360,7 +360,7 @@ needs_types:
       safety: "^(QM|ASIL_B|ASIL_D)$"
       status: "^(valid|invalid)$"
     mandatory_links:
-      #implements: "^comp_req__.*$"
+    #implements: "^comp_req__.*$"
 
   unit_dd:
     title: "Detailed Design Units"
@@ -373,7 +373,7 @@ needs_types:
       safety: "^(QM|ASIL_B|ASIL_D)$"
       status: "^(valid|invalid)$"
     mandatory_links:
-      #implements: "^comp_req__.*$"
+    #implements: "^comp_req__.*$"
 
   unit_dd_int:
     title: "Detailed Design Interfaces"
@@ -386,7 +386,7 @@ needs_types:
       safety: "^(QM|ASIL_B|ASIL_D)$"
       status: "^(valid|invalid)$"
     mandatory_links:
-      #implements: "^comp_req__.*$"
+    #implements: "^comp_req__.*$"
 
 # Extra link types, which shall be available and allow need types to be linked to each other.
 # We use a dedicated linked type for each type of a conncetion, for instance from
