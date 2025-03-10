@@ -32,7 +32,7 @@ Feature Safety Work Products Template
       - WP status
 
     * - :need:`wp__feat_request`
-      - :ref:`feature_request_template`
+      - :ref:`Feature Request Template <chm_feature_templates>`
       - <automated>
       - <link to issue>
       - <link to WP>
