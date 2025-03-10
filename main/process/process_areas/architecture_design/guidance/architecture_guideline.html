@@ -549,7 +549,7 @@
                   
   <section id="guideline">
 <span id="arch-design-guideline"></span><h1>Guideline<a class="headerlink" href="#guideline" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-41bd77db">
+<div class="need_container docutils container" id="SNCB-0a043743">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_gd_guidl table" id="gd_guidl__arch__design">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -729,7 +729,11 @@
 <li></li>
 </ol>
 </td>
-<td><p><a class="reference internal" href="#create-component-architecture"><span class="std std-ref">Create component architecture (Concept)</span></a></p></td>
+<td><div class="line-block">
+<div class="line"><a class="reference internal" href="#create-component-architecture"><span class="std std-ref">Create component architecture (Concept)</span></a></div>
+<div class="line"><a class="reference internal" href="#allocate-component-requirements"><span class="std std-ref">Allocate component requirements to architectural elements</span></a></div>
+</div>
+</td>
 <td><p><a class="reference internal" href="../../../roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor</em></a></p></td>
 </tr>
 <tr class="row-even"><td><ol class="arabic simple" start="7">
@@ -743,17 +747,10 @@
 <li></li>
 </ol>
 </td>
-<td><p><a class="reference internal" href="#allocate-component-requirements"><span class="std std-ref">Allocate component requirements to architectural elements</span></a></p></td>
-<td><p><a class="reference internal" href="../../../roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor</em></a></p></td>
-</tr>
-<tr class="row-even"><td><ol class="arabic simple" start="9">
-<li></li>
-</ol>
-</td>
 <td><p><a class="reference internal" href="#review-component-architecture"><span class="std std-ref">Review component architecture</span></a></p></td>
 <td><p><a class="reference internal" href="../../../roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer</em></a></p></td>
 </tr>
-<tr class="row-odd"><td><ol class="arabic simple" start="10">
+<tr class="row-even"><td><ol class="arabic simple" start="9">
 <li></li>
 </ol>
 </td>
@@ -842,6 +839,10 @@ As a starting point a <a class="reference internal" href="feature_architecture_t
 <li><p><a class="reference internal" href="component_architecture_template.html#gd_temp__arch__comp" title="gd_temp__arch__comp"><em class="xref need">Component Architecture Temp...</em></a></p></li>
 </ul>
 </section>
+<section id="allocate-component-requirements-to-architectural-elements">
+<span id="allocate-component-requirements"></span><h3>Allocate component requirements to architectural elements<a class="headerlink" href="#allocate-component-requirements-to-architectural-elements" title="Link to this heading">#</a></h3>
+<p>In this step the component requirements shall be derived (see <a class="reference internal" href="../../requirements_engineering/guidance/requirements_guideline.html#gd_guidl__req__engineering" title="gd_guidl__req__engineering"><em class="xref need">Requirements Guideline</em></a>) and allocated to the architectural elements via the attribute <em>fulfils</em>.</p>
+</section>
 <section id="model-component-architecture">
 <span id="id3"></span><h3>Model component architecture<a class="headerlink" href="#model-component-architecture" title="Link to this heading">#</a></h3>
 <p>According to the architecture design description the model for the component architecture shall be created. It shall consist of components, real interfaces and real interface operations. Depending on the size of the component it can also be split into multiple (sub) components.</p>
@@ -875,10 +876,6 @@ As a starting point a <a class="reference internal" href="feature_architecture_t
 </table>
 </div>
 <p>The relations of those elements are described in <a class="reference internal" href="../architecture_concept.html#metamodel-architectural-design"><span class="std std-numref">Fig. 19</span></a></p>
-</section>
-<section id="allocate-component-requirements-to-architectural-elements">
-<span id="allocate-component-requirements"></span><h3>Allocate component requirements to architectural elements<a class="headerlink" href="#allocate-component-requirements-to-architectural-elements" title="Link to this heading">#</a></h3>
-<p>In this step the component requirements shall be derived (see <a class="reference internal" href="../../requirements_engineering/guidance/requirements_guideline.html#gd_guidl__req__engineering" title="gd_guidl__req__engineering"><em class="xref need">Requirements Guideline</em></a>) and allocated to the architectural elements via the attribute <em>fulfils</em>.</p>
 </section>
 <section id="review-component-architecture">
 <span id="id4"></span><h3>Review component architecture<a class="headerlink" href="#review-component-architecture" title="Link to this heading">#</a></h3>
@@ -953,8 +950,8 @@ As a starting point a <a class="reference internal" href="feature_architecture_t
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#allocate-feature-requirements-to-architectural-elements">Allocate feature requirements to architectural elements</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-architectural-design">Review architectural design</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-component-architecture-concept">Create component architecture (Concept)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-component-architecture">Model component architecture</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#allocate-component-requirements-to-architectural-elements">Allocate component requirements to architectural elements</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#model-component-architecture">Model component architecture</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#review-component-architecture">Review component architecture</a></li>
 </ul>
 </li>

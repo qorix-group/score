@@ -558,9 +558,9 @@ examples/                                       -&gt; examples how a C++, Rust, 
 features/                                       -&gt; All features of the platform.
     &lt;feature_name&gt;/                             -&gt; Folder containing all sub-folders corresponding to one feature and the contribution request [wp__cont_request]
         docs/                                   -&gt; Documentation of the feature consisting of ...
-            architecture/                       -&gt; ... Feature architecture [WP_FEATURE_ARCHITECTURE].
+            architecture/                       -&gt; ... Feature architecture [wp__feature_architecture].
             requirements/                       -&gt; ... Feature requirements [wp__requirements__feat].
-            safety_analysis/                    -&gt; ... Safety analysis on feature level [WP_FEATURE_SAFETY_ANALYSES]
+            safety_analysis/                    -&gt; ... Safety analysis on feature level [wp__feature_safety_analysis]
             safety_planning/                    -&gt; ... the feature specific safety workproducts planning
             verification/                       -&gt; ... Feature verification report (reporting all feature verifications) [wp__platform_sw_verification_report]
         tests/                                  -&gt; Feature tests, consisting of ...
@@ -579,7 +579,7 @@ modules/                                        -&gt; Modules of the SW platform
         components/                             -&gt; Components of the module.
             &lt;component_name&gt;/                   -&gt; Folder containing all artifacts corresponding to one component.
                 docs/                           -&gt; Documentation of the component consisting of ...
-                    architecture/               -&gt; ... Component architecture (only if sub-components exist) [wf__cr_mt_comparch].
+                    architecture/               -&gt; ... Component architecture (only if sub-components exist) [wp__cr_mt_comparch].
                     requirements/               -&gt; ... Component requirements [wp__sw_component_req] and HSI (if relevant) [wp__hsi].
                     safety_analysis/            -&gt; ... Safety analysis on component level [wp__sw_component_safety_analyses]
                     verification/               -&gt; ... Architecture review [wp__sw_arch_verification], code inspection [wp__sw_code_inspect]
