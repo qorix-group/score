@@ -51,6 +51,8 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
       - name: Setup Bazel
         uses: bazel-contrib/setup-bazel@0.9.1
+      - name: Install Graphviz
+        run: sudo apt update && sudo apt install -y graphviz
       - name: Build documentation
         run: |
           bazel build //docs:github-pages && cp bazel-bin/docs/github-pages.tar .

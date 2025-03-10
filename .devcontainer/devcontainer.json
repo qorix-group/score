@@ -1,5 +1,7 @@
 {
-	"image": "mcr.microsoft.com/devcontainers/python:1.2-3.12",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
 	"features": {
 		"ghcr.io/devcontainers-community/features/bazel:1": {}
 	},
