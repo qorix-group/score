@@ -78,7 +78,8 @@ Basically following steps need to be performed:
 Graphviz/Dot Installation
 -------------------------
 
-Graphviz/Dot is mandatory for local development. To install it on a Linux system using apt, execute the following command:
+Graphviz/Dot is mandatory for local development (outside the `devcointainer`).
+To install it on a Linux system using apt, execute the following command:
 
 .. code-block:: shell
 
