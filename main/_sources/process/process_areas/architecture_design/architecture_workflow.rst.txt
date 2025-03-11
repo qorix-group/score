@@ -38,7 +38,7 @@ Architecture Workflow
    :responsible: rl__contributor
    :approved_by: rl__committer
    :supported_by: rl__safety_manager, rl__security_manager
-   :input: wp__feature_arch, wp__sw_component_req, wp__issue_track_system
+   :input: wp__feature_arch, wp__requirements__comp, wp__issue_track_system
    :output: wp__component_arch
    :contains: gd_guidl__arch__design, gd_chklst__arch__inspection_checklist, gd_temp__arch__feature
    :has: doc_concept__arch__process, doc_getstrt__arch__process, gd_temp__arch__comp

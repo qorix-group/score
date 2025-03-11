@@ -24,3 +24,4 @@ Process Areas
    safety_management/index.rst
    requirements_engineering/index.rst
    architecture_design/index.rst
+   verification/index.rst
