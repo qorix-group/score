@@ -105,7 +105,7 @@ Checklist
       - manual
       - QM
       -
-      - Check if the interface reacts on non-defined behaviour or errors; can established protocols be used; are the
+      - Check if the interface reacts on non-defined behavior or errors; can established protocols be used; are the
         interfaces for inputs, outputs, error codes documented; is loose coupling considered and only limited exposure;
         can unit or integration test be written against the interface; data amount transferred; no sensitive data
         exposure;
