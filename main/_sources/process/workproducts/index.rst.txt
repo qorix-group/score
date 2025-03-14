@@ -194,20 +194,29 @@ Component development
    Depends on architecture, FMEA and DFA tooling.
    May include several methods like inspection, modelling ... Which are selected in SW Development Plan.
 
-.. workproduct:: Implementation
-   :id: wp__sw_implementation
+.. workproduct:: Module Verification Report
+   :id: wp__module_sw_verification_report
    :status: draft
    :tags: safety
 
-   Implementation includes source code and detailed design (e.g. in form of comments or linked graphical representations) and SW configuration (e.g. #ifdef)
-   The "how to" is described in the SW Development Plan guidelines
+   Verification Report contains:
+   - List of requirements (and architecture/detailed design tags) tested by which test (can be several levels), passed/failed and completeness verdict, including normal operation and failure reactions
+   - The list of requirements may also contain other verification methods like "Analysis"
+   - Structural Coverage (C0 and C1, from unit testing on host) per unit
+   - Static Code Analysis (including compiler warnings, automated checking of coding guidelines and additional checks)
+   - Formal evidence about the preformed DFA.
+   - Formal evidence about the performed Safety Analyses
+   - Software component qualification verification report
 
-.. workproduct:: Code Inspection
-   :id: wp__sw_code_inspect
+.. workproduct:: Component Integration test
+   :id: wp__sw_component_integration_test
    :status: draft
-   :complies: std_wp__iso26262__software_12
+   :tags: safety
 
-   github review with integrated inspection checklist (includes manual checking of coding guidelines)
+   Integration Testing verifies component architecture:
+   - all interfaces from Static view and
+   - all flows from Dynamic View and
+   performance: i.e. RAM and processor usage on reference HW
 
 .. workproduct:: Module Build Configuration
    :id: wp__module_sw_build_config

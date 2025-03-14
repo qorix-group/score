@@ -289,7 +289,7 @@ following aspects define the coverage of detailed design.
 
 - Statement/Branch/Path coverage as defined by their specific thresholds
 - Static analysis and Linting
-- :need:`wp__sw_code_inspect` for safety-critical implementation
+- :need:`wp__sw_implementation_inspection` for safety-critical implementation
 
 Coverage of architectural design
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
