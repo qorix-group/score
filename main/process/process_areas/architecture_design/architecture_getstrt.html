@@ -31,10 +31,10 @@
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=940e959b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=e97392eb" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7199c97b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -72,7 +72,7 @@
         </script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
-    <link rel="next" title="Guideline" href="guidance/architecture_guideline.html" />
+    <link rel="next" title="Concept Description" href="architecture_concept.html" />
     <link rel="prev" title="Architecture Design" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -452,13 +452,8 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../change_management/index.html">Change Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../documentation_management/index.html">Documentation Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../requirements_engineering/index.html">Requirements Engineering</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Architecture Design</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Getting Started</a></li>
-<li class="toctree-l3"><a class="reference internal" href="guidance/architecture_guideline.html">Guideline</a></li>
 <li class="toctree-l3"><a class="reference internal" href="architecture_concept.html">Concept Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guidance/index.html">Guidances</a></li>
 <li class="toctree-l3"><a class="reference internal" href="architecture_roles.html">Roles</a></li>
@@ -467,6 +462,11 @@
 <li class="toctree-l3"><a class="reference internal" href="_assets/architecture_modeling_example.html">Example model of architectural design</a></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference internal" href="../change_management/index.html">Change Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation_management/index.html">Documentation Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../implementation/index.html">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements_engineering/index.html">Requirements Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -550,7 +550,7 @@
                   
   <section id="getting-started">
 <span id="arch-getting-started"></span><h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-e8ab1d18">
+<div class="need_container docutils container" id="SNCB-b0833bab">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_doc_getstrt table" id="doc_getstrt__arch__process">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -602,10 +602,10 @@
 <a class="reference internal image-reference" href="../../../_images/architecture_workflow.drawio.svg"><img alt="../../../_images/architecture_workflow.drawio.svg" src="../../../_images/architecture_workflow.drawio.svg" style="width: 80%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Architecture Design Workflow</span><a class="headerlink" href="#architecture-workflow-fig" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 15 </span><span class="caption-text">Architecture Design Workflow</span><a class="headerlink" href="#architecture-workflow-fig" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
-<p><a class="reference internal" href="#architecture-workflow-fig"><span class="std std-numref">Fig. 16</span></a> shows all steps which are required to create an architectural design. In this getting started only a short overview is given. A more detailed description of all the step is provided in the <a class="reference internal" href="guidance/architecture_guideline.html#gd_guidl__arch__design" title="gd_guidl__arch__design"><em class="xref need">guideline (gd_guidl__arch__design)</em></a></p>
+<p><a class="reference internal" href="#architecture-workflow-fig"><span class="std std-numref">Fig. 15</span></a> shows all steps which are required to create an architectural design. In this getting started only a short overview is given. A more detailed description of all the step is provided in the <a class="reference internal" href="guidance/architecture_guideline.html#gd_guidl__arch__design" title="gd_guidl__arch__design"><em class="xref need">guideline (gd_guidl__arch__design)</em></a></p>
 </section>
 <section id="tooling-support">
 <h2>Tooling support<a class="headerlink" href="#tooling-support" title="Link to this heading">#</a></h2>
@@ -702,7 +702,7 @@ To achieve this the <em>need()</em> call needs to be replaced with the following
       {{ draw_component( need(), needs ) }}
 </pre></div>
 </div>
-<div class="need_container docutils container" id="SNCB-b473d7c6">
+<div class="need_container docutils container" id="SNCB-fd5439b6">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_arc_sta table" id="comp_arc_sta__component_getstrt">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -735,7 +735,7 @@ To achieve this the <em>need()</em> call needs to be replaced with the following
 <td class="meta" colspan="3"></td>
 </tr>
 <tr class="content row-odd"><td class="content" colspan="6"><p class="plantuml" id="needarch-process/process_areas/architecture_design/architecture_getstrt-0">
-<object data="../../../_images/plantuml-d0a215a1ba94e85a99157bf0680ec61a0e67c12c.svg" type="image/svg+xml" style="width:436px;height:375px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-292438b4e779ef862ec3676ba6ef6a84694ae4d3.svg" type="image/svg+xml" style="width:436px;height:375px;background:#FFFFFF;"></object></p>
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
@@ -774,7 +774,7 @@ To make <em>needuml</em> work we have to replace the <em>need()</em> call with a
       CM -&gt; LI1: EXTRA_LINKAGE_MANUALLY_ADDED
 </pre></div>
 </div>
-<div class="need_container docutils container" id="SNCB-c36e9c6c">
+<div class="need_container docutils container" id="SNCB-42f7980a">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_arc_sta table" id="comp_arc_sta__component_manual_getstrt">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -807,7 +807,7 @@ To make <em>needuml</em> work we have to replace the <em>need()</em> call with a
 <td class="meta" colspan="3"></td>
 </tr>
 <tr class="content row-odd"><td class="content" colspan="6"><p class="plantuml" id="needuml-process/process_areas/architecture_design/architecture_getstrt-0">
-<object data="../../../_images/plantuml-8e08ac63ceae7e27ddb234325ef4626447b7be5d.svg" type="image/svg+xml" style="width:870px;height:375px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-28f69d047ef58dc686cb9f5c860fed7c841c7212.svg" type="image/svg+xml" style="width:870px;height:375px;background:#FFFFFF;"></object></p>
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
@@ -858,11 +858,11 @@ To make <em>needuml</em> work we have to replace the <em>need()</em> call with a
       </div>
     </a>
     <a class="right-next"
-       href="guidance/architecture_guideline.html"
+       href="architecture_concept.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Guideline</p>
+        <p class="prev-next-title">Concept Description</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

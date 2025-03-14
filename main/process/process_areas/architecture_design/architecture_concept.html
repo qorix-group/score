@@ -31,10 +31,10 @@
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=940e959b" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=e97392eb" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css?v=7199c97b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/score_design.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -73,7 +73,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Guidances" href="guidance/index.html" />
-    <link rel="prev" title="Guideline" href="guidance/architecture_guideline.html" />
+    <link rel="prev" title="Getting Started" href="architecture_getstrt.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -452,13 +452,8 @@
 </ul>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Process Areas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../change_management/index.html">Change Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../documentation_management/index.html">Documentation Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../requirements_engineering/index.html">Requirements Engineering</a></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Architecture Design</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="architecture_getstrt.html">Getting Started</a></li>
-<li class="toctree-l3"><a class="reference internal" href="guidance/architecture_guideline.html">Guideline</a></li>
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Concept Description</a></li>
 <li class="toctree-l3"><a class="reference internal" href="guidance/index.html">Guidances</a></li>
 <li class="toctree-l3"><a class="reference internal" href="architecture_roles.html">Roles</a></li>
@@ -467,6 +462,11 @@
 <li class="toctree-l3"><a class="reference internal" href="_assets/architecture_modeling_example.html">Example model of architectural design</a></li>
 </ul>
 </details></li>
+<li class="toctree-l2"><a class="reference internal" href="../change_management/index.html">Change Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../documentation_management/index.html">Documentation Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../implementation/index.html">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../requirements_engineering/index.html">Requirements Engineering</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../safety_management/index.html">Safety Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../verification/index.html">Verification</a></li>
 </ul>
 </details></li>
@@ -550,7 +550,7 @@
                   
   <section id="concept-description">
 <h1>Concept Description<a class="headerlink" href="#concept-description" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-ba65467b">
+<div class="need_container docutils container" id="SNCB-78b46cb1">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_doc_concept table" id="doc_concept__arch__process">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -707,7 +707,7 @@
 <section id="static-view">
 <h4>Static View<a class="headerlink" href="#static-view" title="Link to this heading">#</a></h4>
 <p>The first viewpoint is named as <em>feature architecture</em>. It displays the SW modules (= top level SW components) which are required to realize the feature including their interactions. Also the <em>logical interfaces</em> and the interaction between the feature and the user are included in this view. On this architectural level the feature requirements shall be allocated. An example for the static architecture is shown here:</p>
-<div class="need_container docutils container" id="SNCB-96c58a75">
+<div class="need_container docutils container" id="SNCB-b2e13a7b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_sta table" id="feat_arc_sta__feature_1">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -771,14 +771,14 @@
 <p class="plantuml">
 <object data="../../../_images/plantuml-398aee822710805b6633190376c5cc0dfd70c2ec.svg" type="image/svg+xml" style="width:578px;height:283px;background:#FFFFFF;"></object></p>
 <figcaption>
-<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Dynamic Feature Architecture</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 16 </span><span class="caption-text">Dynamic Feature Architecture</span><a class="headerlink" href="#id9" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="interface-view">
 <h4>Interface View<a class="headerlink" href="#interface-view" title="Link to this heading">#</a></h4>
 <p>On the feature level only <em>logical interfaces</em> shall be displayed. This means that only logical names shall be provided for both the interface and the operations within. Those <em>logical interfaces</em> shall be connected to component interfaces on the module view.</p>
-<div class="need_container docutils container" id="SNCB-297a5f75">
+<div class="need_container docutils container" id="SNCB-c8256184">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_arc_int table" id="feat_arc_int__archdes_logical_interface_1">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -839,7 +839,7 @@
 <section id="id2">
 <h4>Static View<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
 <p>The second viewpoint is named as <em>component architecture</em> and describes the implementation of the functionalities in a white-box view of the platform. It describes the structural decomposition of the <em>SW components</em> into <em>lower level</em> SW components. In the S-CORE project this viewpoint provides more detailed information concerning the respective interfaces of a component. If a SW component interacts with a different component it is also included via a <em>use</em> relationship in the diagram. An example of the <em>component architecture</em> is displayed here:</p>
-<div class="need_container docutils container" id="SNCB-8d67e254">
+<div class="need_container docutils container" id="SNCB-8e603541">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_arc_sta table" id="comp_arc_sta__archdes_component_2">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -871,7 +871,7 @@
 <td class="meta" colspan="3"></td>
 </tr>
 <tr class="content row-odd"><td class="content" colspan="6"><p class="plantuml" id="needarch-process/process_areas/architecture_design/architecture_concept-2">
-<object data="../../../_images/plantuml-c9d2b4bb2a4a6d171bff3ab3026418e37921d5bd.svg" type="image/svg+xml" style="width:613px;height:426px;background:#FFFFFF;"></object></p>
+<object data="../../../_images/plantuml-dd41d51d2ef3e8623968da5e3a176868ef114800.svg" type="image/svg+xml" style="width:613px;height:426px;background:#FFFFFF;"></object></p>
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
@@ -897,14 +897,14 @@
 <p class="plantuml">
 <object data="../../../_images/plantuml-0961639faefec5c13aba6af71ab16d1e5ed98741.svg" type="image/svg+xml" style="width:651px;height:358px;background:#FFFFFF;"></object></p>
 <figcaption>
-<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Dynamic Component Architecture</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 17 </span><span class="caption-text">Dynamic Component Architecture</span><a class="headerlink" href="#id10" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
 <section id="id4">
 <h4>Interface View<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <p>The component interface view shows the actual interfaces of the component. Also links to their corresponding logical interfaces are displayed in this view:</p>
-<div class="need_container docutils container" id="SNCB-c71e4fbb">
+<div class="need_container docutils container" id="SNCB-8d9fc302">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_arc_int table" id="comp_arc_int__archdes_component_interface_1">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -974,7 +974,7 @@ For the description a natural language, diagrams or a semi-formal language <em>(
 <h3>Static view<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <p>The <em>static view</em> shows the <em>building blocks</em> of the architecture. It shall be completely modeled in <em>sphinx needs</em>. Following elements are defined:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id11">
-<caption><span class="caption-number">Table 27 </span><span class="caption-text">Definition of the static architectural elements</span><a class="headerlink" href="#id11" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 5 </span><span class="caption-text">Definition of the static architectural elements</span><a class="headerlink" href="#id11" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 17.6%" />
 <col style="width: 41.2%" />
@@ -1004,7 +1004,7 @@ For the description a natural language, diagrams or a semi-formal language <em>(
 <p>The <em>dynamic view</em> describes the concrete behavior and interactions of the <em>building blocks</em> in form of use cases which were described above.</p>
 <p>The dynamic view shall be modeled partly in Sphinx Needs and PlantUML. The components itself shall be generated from the sphinx needs model into the PlantUML diagram. The dynamic relations between the component and the interfaces shall be modeled in PlantUML as it would be a huge effort to model the dynamic behavior in sphinx needs and would not provide any additional benefit.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id12">
-<caption><span class="caption-number">Table 28 </span><span class="caption-text">Definition of the dynamic architectural elements</span><a class="headerlink" href="#id12" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 6 </span><span class="caption-text">Definition of the dynamic architectural elements</span><a class="headerlink" href="#id12" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 17.6%" />
 <col style="width: 41.2%" />
@@ -1033,7 +1033,7 @@ For the description a natural language, diagrams or a semi-formal language <em>(
 <h3>Interface view<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
 <p>The <em>interface view</em> focuses on the interfaces of the components and shows the operations within.</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id13">
-<caption><span class="caption-number">Table 29 </span><span class="caption-text">Definition of the architectural elements</span><a class="headerlink" href="#id13" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 7 </span><span class="caption-text">Definition of the architectural elements</span><a class="headerlink" href="#id13" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 17.6%" />
 <col style="width: 41.2%" />
@@ -1069,7 +1069,7 @@ For the description a natural language, diagrams or a semi-formal language <em>(
 <a class="reference internal image-reference" href="../../../_images/metamodel_architectural_design.drawio.svg"><img alt="Definition of the Metamodel for Architectural Design" src="../../../_images/metamodel_architectural_design.drawio.svg" style="width: 90%;" />
 </a>
 <figcaption>
-<p><span class="caption-number">Fig. 19 </span><span class="caption-text">Definition of the Metamodel for Architectural Design</span><a class="headerlink" href="#metamodel-architectural-design" title="Link to this image">#</a></p>
+<p><span class="caption-number">Fig. 18 </span><span class="caption-text">Definition of the Metamodel for Architectural Design</span><a class="headerlink" href="#metamodel-architectural-design" title="Link to this image">#</a></p>
 </figcaption>
 </figure>
 </section>
@@ -1079,7 +1079,7 @@ For the description a natural language, diagrams or a semi-formal language <em>(
 <p>Since the architecture should be modeled in <em>Sphinx Needs</em> the corresponding attributes need to be defined. On the top level we can distinguish between attributes which need to be filled manually and attributes which are generated during the sphinx-docs build.</p>
 <p>Following attributes need to be filled manually for each requirement:</p>
 <div class="pst-scrollable-table-container"><table class="table" id="id14">
-<caption><span class="caption-number">Table 30 </span><span class="caption-text">Manual attributes for architectural elements</span><a class="headerlink" href="#id14" title="Link to this table">#</a></caption>
+<caption><span class="caption-number">Table 8 </span><span class="caption-text">Manual attributes for architectural elements</span><a class="headerlink" href="#id14" title="Link to this table">#</a></caption>
 <colgroup>
 <col style="width: 15.0%" />
 <col style="width: 85.0%" />
@@ -1138,12 +1138,12 @@ For the description a natural language, diagrams or a semi-formal language <em>(
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="guidance/architecture_guideline.html"
+       href="architecture_getstrt.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Guideline</p>
+        <p class="prev-next-title">Getting Started</p>
       </div>
     </a>
     <a class="right-next"
