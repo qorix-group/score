@@ -30,6 +30,7 @@ Static Diagrams for Unit Interactions
     :security: NO
     :safety: ASIL_B
     :status: valid
+    :implements: comp_req__archdes_example_req
 
 .. uml:: dd_example_ex_sta.puml
 
@@ -41,6 +42,7 @@ Dynamic Diagrams for Unit Interactions
     :security: NO
     :safety: ASIL_B
     :status: valid
+    :implements: comp_req__archdes_example_req
 
 .. uml:: dd_example_ex_dyn.puml
 
@@ -52,6 +54,7 @@ Units within the Component
     :security: NO
     :safety: ASIL_B
     :status: valid
+    :implements: comp_req__archdes_example_req
 
     Placeholder for the description that will be generated from doxygen
 
@@ -63,6 +66,7 @@ Interface
     :security: NO
     :safety: ASIL_B
     :status: valid
+    :implements: comp_req__archdes_example_req
 
     Placeholder for the description that will be generated from doxygen
 
@@ -71,6 +75,7 @@ Interface
     :security: NO
     :safety: ASIL_B
     :status: valid
+    :implements: comp_req__archdes_example_req
 
     Placeholder for the description that will be generated from doxygen
 
@@ -82,5 +87,6 @@ Interface
     :security: NO
     :safety: ASIL_B
     :status: valid
+    :implements: comp_req__archdes_example_req
 
     Placeholder for the description that will be generated from doxygen
