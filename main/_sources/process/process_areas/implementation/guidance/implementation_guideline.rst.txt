@@ -25,7 +25,7 @@ In the concept is a example of a Detailed Design included.
 Workflow for Implementation
 ===========================
 
-This section describes which steps are need for implementation.
+Detailed description which steps are need for implementation.
 
 #. Consult which programming languages, design/coding guidelines and tools are used for Software
    development within the Software Development Plan :need:`doc__software_development_plan`.
@@ -41,3 +41,32 @@ This section describes which steps are need for implementation.
 #. Fix or justify the errors.
 #. Merge the pull request.
 #. Create a follow up ticket if not all findings could be fixed.
+
+
+Traceability
+============
+
+The detailed design is created by using the template :need:`gd_temp__detailed_design`. In the template
+the static and the dynamic view for unit interactions is described.
+
+.. figure:: _assets/static_view.drawio.svg
+   :align: center
+   :width: 30%
+   :name: static_view_fig
+
+The static diagram statisfies the architecture and implements the requirements of the related component. The static diagram includes Unit1+2.
+
+
+.. figure:: _assets/dynamic_view.drawio.svg
+   :align: center
+   :width: 30%
+   :name: dynamic_view_fig
+
+The dynamic diagram satisfies the architecture and implements the requirements of the related component.
+
+.. figure:: _assets/dd_traceability.drawio.svg
+   :align: center
+   :width: 30%
+   :name: dd_traceability_fig
+
+The unit description will be generated automatically based on the comments in the source code and from the interface description.

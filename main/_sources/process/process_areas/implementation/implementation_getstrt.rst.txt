@@ -25,6 +25,19 @@ This document describes the steps which need to be done to document detailed des
 Therefore a detailed guideline :need:`gd_guidl__implementation` and a :need:`[[title]] <doc_concept__imp__concept>` is available.
 
 
+General Workflow
+################
+
+Overview of the implemenation workflow.
+
+.. figure:: _assets/implementation_workflow.drawio.svg
+   :align: center
+   :width: 80%
+   :name: implementation_workflow_fig
+
+The details of what needs to be done in each steps are described in the :need:`gd_guidl__implementation`.
+
+
 Relevant Documents
 ******************
 

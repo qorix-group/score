@@ -32,7 +32,6 @@ Static Diagrams for Unit Interactions
     :status: valid
     :implements: comp_req__archdes_example_req
     :satisfies: comp_arc_sta__archdes_sub_component_1
-    :includes: sw_unit__unit1, sw_unit__unit2
 
 .. uml:: dd_example_ex_sta.puml
 

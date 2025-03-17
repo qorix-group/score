@@ -50,7 +50,7 @@ Static Diagrams for Unit Interactions
       :implements: <link to component requirement id>
       :satisfies: <link to component architecture id>
 
-      .. image:: <link to drawio image> or .. uml:: <link to plantuml>
+        .. image:: <link to drawio image> or .. uml:: <link to plantuml>
 
 Dynamic Diagrams for Unit Interactions
 --------------------------------------

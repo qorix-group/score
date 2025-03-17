@@ -26,9 +26,8 @@ Workflow Verification
    :supported_by: rl__safety_manager
    :input: wp__sw_implementation, wp__verification__plan
    :output: wp__verification__sw_unit_test
-   :has: doc_concept__verification__process, doc_getstrt__verification__process
-
-   ``[TODO: add :has: doc_concept__imp__concept, doc_getstrt__imp__getstrt after PR #526 is merged]``
+   :has: doc_concept__verification__process, doc_getstrt__verification__process,
+         doc_concept__imp__concept, doc_getstrt__imp__getstrt
 
    Every Unit shall have at least one Unit Test. They verify the detailed design of the implementation.
    Unit tests are automatically executed as part of the CI after PR merge.
