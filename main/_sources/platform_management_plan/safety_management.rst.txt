@@ -204,15 +204,20 @@ Functional Safety Management Communication
 
 To exchange general information and to clarify general topics the following communication channels are used:
 
-* Regular (online) meetings, at least every two months.
+* Regular (online) meetings, at least every month.
 * E-Mails
 * Messenger Services e.g., Slack, Microsoft Teams, Github Notifications
 * Ad hoc safety related meetings are set up for clarification topics.
 
 *Reporting*
 
-The safety management status is reported due the meeting defined in the platform management plan.
-The status report includes at least the defined Quality Criteria defined below in chapter TODO, LINK TO TEMPLATE
+The safety management status is reported in the Technical Lead Circle Meeting which is defined in :need:`doc__project_mgt_plan`.
+The status report is based on safety plans work product lists (see below) and verification reports on platform and module level:
+
+* :need:`wp__platform_safety_plan`
+* :need:`wp__module_safety_plan`
+* :need:`wp__verification__platform_ver_report`
+* :need:`wp__verification__module_ver_report`
 
 *Escalation*
 
