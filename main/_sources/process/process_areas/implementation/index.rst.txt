@@ -20,9 +20,10 @@ Implementation
 .. toctree::
    :maxdepth: 1
 
-   guidance/index
    implementation_getstrt
    implementation_concept
+   guidance/index
    implementation_workflow
    implementation_workproducts
    implementation_roles
+   _assets/detailed_design_example.rst

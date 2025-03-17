@@ -40,46 +40,28 @@ Rationale Behind Decomposition into Units
 
 Static Diagrams for Unit Interactions
 -------------------------------------
+.. code-block:: rst
 
-    | .. unit_dd_sta:: <Title>
-    |    :id: unit_dd_sta__<Title>
-    |    :security: <YES|NO>
-    |    :safety: <QM|ASIL_B|ASIL_D>
-    |    :status: <valid|invalid>
-    |    :implements: <link to component requirement id>
-    |    :satisfies: <link to component architecture id>
-    | .. image:: <link to drawio image> or .. uml:: <link to plantuml>
+   .. dd_sta:: <Title>
+      :id: dd_sta__<Title>
+      :security: <YES|NO>
+      :safety: <QM|ASIL_B|ASIL_D>
+      :status: <valid|invalid>
+      :implements: <link to component requirement id>
+      :satisfies: <link to component architecture id>
+
+      .. image:: <link to drawio image> or .. uml:: <link to plantuml>
 
 Dynamic Diagrams for Unit Interactions
 --------------------------------------
+.. code-block:: rst
 
-    | .. unit_dd_dyn:: <Title>
-    |    :id: unit_dd_dyn__<Title>
-    |    :security: <YES|NO>
-    |    :safety: <QM|ASIL_B|ASIL_D>
-    |    :status: <valid|invalid>
-    |    :implements: <link to component requirement id>
-    |    :satisfies: <link to component architecture id>
-    | .. image:: <link to drawio image> or .. uml:: <link to plantuml>
+   .. dd_dyn:: <Title>
+      :id: dd_dyn__<Title>
+      :security: <YES|NO>
+      :safety: <QM|ASIL_B|ASIL_D>
+      :status: <valid|invalid>
+      :implements: <link to component requirement id>
+      :satisfies: <link to component architecture id>
 
-Units within the Component
---------------------------
-
-    | .. unit_dd:: <Unit>
-    |    :id: unit_dd__<Unit>
-    |    :security: <YES|NO>
-    |    :safety: <QM|ASIL_B|ASIL_D>
-    |    :status: <valid|invalid>
-    |    :implements: <link to component requirement id>
-    |    :satisfies: <link to component architecture id>
-
-Interface
-*********
-
-    | .. unit_dd_int:: <Title>
-    |    :id: unit_dd_int__<Unit>_<Title>
-    |    :security: <YES|NO>
-    |    :safety: <QM|ASIL_B|ASIL_D>
-    |    :status: <valid|invalid>
-    |    :implements: <link to component requirement id>
-    |    :satisfies: <link to component architecture id>
+        .. image:: <link to drawio image> or .. uml:: <link to plantuml>

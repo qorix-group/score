@@ -12,8 +12,8 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Detailed Design for Component: component1
-=========================================
+Example: Detailed Design
+========================
 
 Description
 -----------
@@ -25,30 +25,39 @@ Description
 Static Diagrams for Unit Interactions
 -------------------------------------
 
-.. unit_dd_sta:: dd example static
-    :id: unit_dd_sta__dd_example_static
+.. dd_sta:: dd example static
+    :id: dd_sta__dd_example_static
     :security: NO
     :safety: ASIL_B
     :status: valid
+    :implements: comp_req__archdes_example_req
+    :satisfies: comp_arc_sta__archdes_sub_component_1
+    :includes: sw_unit__unit1, sw_unit__unit2
 
 .. uml:: dd_example_ex_sta.puml
 
 Dynamic Diagrams for Unit Interactions
 --------------------------------------
 
-.. unit_dd_dyn:: dd example dynamic
-    :id: unit_dd_dyn__dd_example_dynamic
+.. dd_dyn:: dd example dynamic
+    :id: dd_dyn__dd_example_dynamic
     :security: NO
     :safety: ASIL_B
     :status: valid
+    :implements: comp_req__archdes_example_req
+    :satisfies: comp_arc_sta__archdes_sub_component_1
 
 .. uml:: dd_example_ex_dyn.puml
 
 Units within the Component
 --------------------------
+From here onwards the needs are defined in the source code and will be automatically generated and linked via doxygen.
 
-.. unit_dd:: unit1
-    :id: unit_dd__unit1
+SW Unit
+*******
+
+.. sw_unit:: unit1
+    :id: sw_unit__unit1
     :security: NO
     :safety: ASIL_B
     :status: valid
@@ -58,16 +67,19 @@ Units within the Component
 Interface
 *********
 
-.. unit_dd_int:: int1
-    :id: unit_dd_int__unit1_int1
+.. sw_unit_int:: int1
+    :id: sw_unit_int__unit1_int1
     :security: NO
     :safety: ASIL_B
     :status: valid
 
     Placeholder for the description that will be generated from doxygen
 
-.. unit_dd:: unit2
-    :id: unit_dd__unit2
+SW Unit
+*******
+
+.. sw_unit:: unit2
+    :id: sw_unit__unit2
     :security: NO
     :safety: ASIL_B
     :status: valid
@@ -77,8 +89,8 @@ Interface
 Interface
 *********
 
-.. unit_dd_int:: int2
-    :id: unit_dd_int__unit2_int2
+.. sw_unit_int:: int2
+    :id: sw_unit_int__unit2_int2
     :security: NO
     :safety: ASIL_B
     :status: valid

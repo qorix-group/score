@@ -118,11 +118,13 @@ For cpp using doxygen style comments-
 
    /**
       * @rst
-      * .. unit_impl:: cpp unit
-      *    :id: unit_impl_<title>
-      *    :implements: unit id
+      * .. sw_unit:: cpp unit
+      *    :id: sw_unit__<title>
+      *    :security:
+      *    :safety:
+      *    :status
       *
-      *    This implements the constructor of the IF spec
+      *    This implements the ....
       * @endrst
    */
 
@@ -130,9 +132,13 @@ for rust -
 
 .. code-block:: rust
 
-   //! .. unit_impl:: rust unit
-   //!     :id: unit_impl_<title>
-   //!     :implements: unit_dd__<Unit>
+   //! .. sw_unit:: rust unit
+   //!     :id: sw_unit__<title>
+   //!     :security:
+   //!     :safety:
+   //!     :status
+   //!
+   //!     This implements the ....
 
 
 Interface View
@@ -148,9 +154,11 @@ For cpp using doxygen comments-
 
    /**
       * @rst
-      * .. unit_impl_int:: cpp unit
-      *    :id: unit_impl_int__<title>
-      *    :implements: unit_dd_int__<Unit>_<Title>
+      * .. sw_unit_int:: cpp unit
+      *    :id: sw_unit_int__<title>
+      *    :security:
+      *    :safety:
+      *    :status
       *
       *    This implements the ....
       * @endrst
@@ -160,15 +168,10 @@ For rust -
 
 .. code-block:: rust
 
-   //! .. unit_impl_int:: rust unit
-   //!     :id: unit_impl_int__<title>
-   //!     :implements: unit_dd_int__<Unit>_<Title>
-
-Example
--------
-
-.. toctree::
-  :titlesonly:
-  :maxdepth: 1
-
-  _assets/detailed_design_example.rst
+   //! .. sw_unit_int:: rust unit
+   //!     :id: sw_unit_int__<title>
+   //!     :security:
+   //!     :safety:
+   //!     :status
+   //!
+   //!     This implements the ....

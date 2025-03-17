@@ -18,9 +18,9 @@ Guidance
 .. toctree::
    :maxdepth: 1
 
+   implementation_guideline
    cpp/index
    implementation_checklist
    detailed_design_template
-   implementation_guideline
    implementation_process_reqs
    software_development_template

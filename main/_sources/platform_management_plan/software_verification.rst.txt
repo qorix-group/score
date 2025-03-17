@@ -17,11 +17,10 @@
    :status: draft
    :safety: ASIL_B
    :tags: platform_management
+   :realizes: wp__verification__plan
 
 Software verification
 *********************
-
-This document implements :need:`wp__verification__plan`.
 
 Purpose
 =======

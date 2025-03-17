@@ -297,7 +297,7 @@ Functional Safety Management SW Platform Work Products
     * - :need:`wp__qms`
       - :need:`wf__cr_mt_platform_mngmt_plan`
       - :ndf:`copy('status', need_id='wf__cr_mt_platform_mngmt_plan')`
-      - <Link to issue>
+      - `#316 <https://github.com/eclipse-score/score/issues/316>`_
       - :doc:`quality_management`
       - not started
 
@@ -311,7 +311,7 @@ Functional Safety Management SW Platform Work Products
     * - :need:`wp__platform_mgmt`
       - :need:`wf__cr_mt_platform_mngmt_plan`
       - :ndf:`copy('status', need_id='wf__cr_mt_platform_mngmt_plan')`
-      - <Link to issue>
+      - `#540 <https://github.com/eclipse-score/score/issues/540>`_
       - :doc:`index`
       - :ndf:`copy('status', need_id='doc__platform_mgt_plan')`
 
@@ -374,9 +374,9 @@ Functional Safety Management SW Platform Work Products
     * - :need:`wp__audit_report`
       - performed by external experts
       - n/a
-      - <Link to issue>
+      - `#470 <https://github.com/eclipse-score/score/issues/470>`_
       - <Link to WP>
-      - <WP status (manual)>
+      - intermediate
 
     * - :need:`wp__feature_dfa`
       - <Link to process>
@@ -386,8 +386,8 @@ Functional Safety Management SW Platform Work Products
       - <automated>
 
     * - :need:`wp__platform_sw_build_config`
-      - :doc:`software_development`
-      - not started
+      - :need:`doc__software_development_plan`
+      - :ndf:`copy('status', need_id='doc__software_development_plan')`
       - <Link to issue>
       - <Link to WP>
       - <automated>
@@ -407,8 +407,8 @@ Functional Safety Management SW Platform Work Products
       - <automated>
 
     * - :need:`wp__verification__platform_ver_report`
-      - <Link to process>
-      - <Process status>
+      - :need:`gd_temp__mod_ver_report`
+      - :ndf:`copy('status', need_id='gd_temp__mod_ver_report')`
       - <Link to issue>
       - <Link to WP>
       - <automated>
@@ -460,7 +460,7 @@ Functional Safety Work Products Status Charts
 
 .. needtable::
    :style: table
-   :columns: title;id;status;complies
+   :columns: title;id;status;realizes
    :colwidths: 25,25,25,25
    :sort: title
 
