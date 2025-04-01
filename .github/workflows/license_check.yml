@@ -22,4 +22,3 @@ jobs:
     uses: eclipse-score/cicd-workflows/.github/workflows/license-check.yml@main
     with:
       repo-url: "${{ github.server_url }}/${{ github.repository }}"
-      bazel-target: "run //docs:license.check.python"
