@@ -223,7 +223,7 @@ Objectives and scope
       - None
       - Ensured by process configuration and tool management, only valid requirements can be merged, review required, script based check
     * - 11
-      - :need:`wp__feature_safety_analyses`
+      - :need:`wp__feature_safety_analysis`
       - | Inductive (bottom-up) safety analysis e.g. FMEA is completed. Analysis verifies the feature architecture.
         | All detection and prevention mitigations are linked to Software Feature Requirements or Assumptions of use.
       - 100%
@@ -237,7 +237,7 @@ Objectives and scope
       - None
       - Ensured by process configuration and tool management, only valid architecture can be merged, review required, script based check
     * - 13
-      - :need:`wp__sw_component_safety_analyses`
+      - :need:`wp__sw_component_safety_analysis`
       - | Inductive (bottom-up) safety analysis e.g. FMEA is completed. Analysis verifies the component architecture.
         | All detection and prevention mitigations are linked to Software Component Requirements or Assumptions of use.
       - 100%
@@ -344,7 +344,7 @@ Objectives and scope
       - None
       - Ensured by safety management, only verified and valid documents can be merged, review required
     * - 30
-      - :need:`wp__module_safety_case`
+      - :need:<wp__module_safety_case>
       - All findings from work product review are resolved and reviewed. Document is valid.
       - 100%
       - None
@@ -356,13 +356,13 @@ Objectives and scope
       - None
       - Ensured by safety management, only verified and valid documents can be merged, review required
     * - 32
-      - :need:`wp__platform_safety_case`
+      - :need:<wp__platform_safety_case>
       - All findings from work product review are resolved and reviewed. Document is valid.
       - 100%
       - None
       - Ensured by safety management, only verified and valid documents can be merged, review required
     * - 33
-      - :need:`wp__cmr_reports`
+      - :need:<wp__cmr_reports>
       - CMR reports (Safety Plan, Safety Case, Safety Analyses and DFA) are available and valid for every platform release.
       - 100%
       - None
@@ -418,7 +418,7 @@ Objectives and scope
       - None
       - Ensured by process configuration and tool management, only valid documents can be merged, review required, script based check
     * - 42
-      - :need:`wp__tool_eval`
+      - :need:<wp__tool_eval>
       - | All tool conficence levels (TCL) are determined. Appropiate qualification methods are applied.
       - 100%
       - None

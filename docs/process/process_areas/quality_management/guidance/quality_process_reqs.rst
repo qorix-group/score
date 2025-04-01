@@ -19,7 +19,7 @@ Process Reqirements
    :id: gd_req__qlm_report
    :status: valid
    :tags: structure
-   :complies: std_wp__iso26262__management_3, std_req__aspice_40__SUP-1-BP5, std_req__aspice_40__SUP-1-BP6
+   :complies: std_req__iso26262__management_5423, std_req__aspice_40__SUP-1-BP5, std_req__aspice_40__SUP-1-BP6
 
    | The quality report shall be generated progressively and automatically compiling the work products.
    | A template exists to guide the reporting and the right collection of the required work products.
