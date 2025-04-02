@@ -520,7 +520,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="need_container docutils container" id="SNCB-8a90f677">
+  <div class="need_container docutils container" id="SNCB-c9efdce8">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__verification_plan">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -920,6 +920,31 @@ fulfilled when contributing to the project.</p></li>
 <li><p>The <a class="reference internal" href="../process/roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer (rl__committer)</em></a> needs to verify that the contributor has fulfilled the expected objectives.</p></li>
 </ol>
 <p>In this way roles are followed as defined in <a class="reference internal" href="../process/process_areas/verification/verification_roles.html#verification-roles"><span class="std std-ref">Roles</span></a>.</p>
+<section id="independence-of-verification">
+<h4>Independence of verification<a class="headerlink" href="#independence-of-verification" title="Link to this heading">#</a></h4>
+<p>As there are no separated roles for a software developer and test developer with <a class="reference internal" href="../process/roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor (rl__contributor)</em></a> and
+<a class="reference internal" href="../process/roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer (rl__committer)</em></a> it is important to achieve independence. This is done by having different
+people responsible for the test implementation and the actual code which gets tested.</p>
+<p>The following test level fall in the responsibility of the <a class="reference internal" href="../process/roles/index.html#rl__testing_community" title="rl__testing_community"><em class="xref need">Testing Community Member (rl__testing_community)</em></a>:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../process/process_areas/verification/workproducts.html#wp__verification__comp_int_test" title="wp__verification__comp_int_test"><em class="xref need">Component Integration test (wp__verification__comp_int_test)</em></a></p></li>
+<li><p><a class="reference internal" href="../process/process_areas/verification/workproducts.html#wp__verification__feat_int_test" title="wp__verification__feat_int_test"><em class="xref need">Feature Integration test (wp__verification__feat_int_test)</em></a></p></li>
+<li><p><a class="reference internal" href="../process/process_areas/verification/workproducts.html#wp__verification__platform_test" title="wp__verification__platform_test"><em class="xref need">Platform test (wp__verification__platform_test)</em></a></p></li>
+</ul>
+<p>Still a <a class="reference internal" href="../process/roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor (rl__contributor)</em></a> of one function in a component doesn’t prevent them from writing tests
+for other functions they do not own.
+Independence is achieved by the establishment of <a class="reference internal" href="../process/roles/index.html#rl__testing_community" title="rl__testing_community"><em class="xref need">Testing Community Member (rl__testing_community)</em></a> performing reviews.</p>
+<p>The following test level fall in the responsibility of the <a class="reference internal" href="../process/roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor (rl__contributor)</em></a>:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../process/process_areas/verification/workproducts.html#wp__verification__sw_unit_test" title="wp__verification__sw_unit_test"><em class="xref need">Unit test (wp__verification__sw_unit_test)</em></a></p></li>
+</ul>
+<p>Unit tests can be the developed by the same <a class="reference internal" href="../process/roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor (rl__contributor)</em></a> who also contributed the unit code.
+A level of independence is achieved as the review process demands to have a review by a <a class="reference internal" href="../process/roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer (rl__committer)</em></a>
+different to the author of a Pull Request. This is also described in process requirement <a class="reference internal" href="../process/process_areas/verification/guidance/verification_process_toolreqs.html#gd_req__verification_independence" title="gd_req__verification_independence"><em class="xref need">Test Independence (gd_req__verification_independence)</em></a>.</p>
+<p>Note that, each <a class="reference internal" href="../process/roles/index.html#rl__contributor" title="rl__contributor"><em class="xref need">Contributor (rl__contributor)</em></a> of the project acts in a publicly visible space where also
+others see the contribution and have the possibility to perform additional reviews independent from
+the <a class="reference internal" href="../process/roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer (rl__committer)</em></a> and <a class="reference internal" href="../process/roles/index.html#rl__testing_community" title="rl__testing_community"><em class="xref need">Testing Community Member (rl__testing_community)</em></a>.</p>
+</section>
 </section>
 <section id="tools">
 <h3>Tools<a class="headerlink" href="#tools" title="Link to this heading">#</a></h3>
@@ -1052,7 +1077,10 @@ This includes physical maintenance as well as virtual access.</p>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#environments-and-resources">Environments and resources</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#independence-of-verification">Independence of verification</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tools">Tools</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#verification-setups-and-variants">Verification setups and variants</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#test-execution-environment-and-reference-hardware">Test execution environment and reference hardware</a><ul class="nav section-nav flex-column">
