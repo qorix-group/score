@@ -1,0 +1,795 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Orchestration &#8212; S-CORE 0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../_static/jquery.js?v=5d32c60e"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+    <script src="../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../../_static/sphinx-data-viewer/jsonview.bundle.js?v=18cd53c5"></script>
+    <script src="../../_static/sphinx-data-viewer/jsonview_loader.js?v=f7ff7e7d"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
+    <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
+    <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'features/orchestration/index';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Persistency" href="../persistency/index.html" />
+    <link rel="prev" title="Integration" href="../integration/index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Eclipse S-CORE</p>
+  
+</a></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../requirements/index.html">
+    Requirements
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contribute/index.html">
+    Contribute
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../score_releases/index.html">
+    Releases
+  </a>
+</li>
+
+            <li class="nav-item dropdown">
+                <button class="btn dropdown-toggle nav-item" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false"
+                aria-controls="pst-nav-more-links">
+                    More
+                </button>
+                <ul id="pst-nav-more-links" class="dropdown-menu">
+                    
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../process/index.html">
+    Process
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../platform_management_plan/index.html">
+    PMP
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-external" href="https://projects.eclipse.org/projects/automotive.score">
+    Eclipse
+  </a>
+</li>
+
+                </ul>
+            </li>
+            
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../requirements/index.html">
+    Requirements
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../index.html">
+    Features
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../contribute/index.html">
+    Contribute
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../score_releases/index.html">
+    Releases
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../process/index.html">
+    Process
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../platform_management_plan/index.html">
+    PMP
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-external" href="https://projects.eclipse.org/projects/automotive.score">
+    Eclipse
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/eclipse-score" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../analysis-infra/index.html">Analysis Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../communication/index.html">Communication</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../frameworks/index.html">Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../persistency/index.html">Persistency</a></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Features</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Orchestration</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="need_container docutils container" id="SNCB-902aaa6b">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__orchestration">
+<tbody>
+<tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
+<div class="line"><span><span class="needs_title"><span class="needs_data">Orchestration</span></span></span></div>
+</div>
+</td>
+<td class="head_center" colspan="2"><div class="needs_head line-block">
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></span></div>
+</div>
+</td>
+<td class="head_right" colspan="2"><div class="needs_head_right line-block">
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
+</div>
+</td>
+</tr>
+<tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
+<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">contribution_request</span><span class="needs_spacer">, </span><span class="needs_data">feature_request</span></span></span></div>
+<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
+</span></span></div>
+<div class="line"><span></span></div>
+</div>
+</td>
+<td class="meta" colspan="3"></td>
+</tr>
+<tr class="content row-odd"><td class="content" colspan="6"></td>
+</tr>
+<tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#doc__orchestration" title="doc__orchestration">doc__orchestration</a></span></span></div>
+</div>
+</td>
+<td class="footer" colspan="2"><div class="needs_footer line-block">
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Generic Document</span></span></span></div>
+</div>
+</td>
+<td class="footer_right" colspan="2"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<section id="orchestration">
+<h1>Orchestration<a class="headerlink" href="#orchestration" title="Link to this heading">#</a></h1>
+<section id="motivation">
+<h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h2>
+<p>The rapid evolution of high-performance computing (HPC) architectures and the increased availability of multi-core processors in centralized E/E systems have driven the need for a platform capable of hosting advanced ADAS/AD applications while upintegrating existing ECU functionalities. This approach facilitates the deployment of loosely coupled applications that support flexible maintenance and updates, with the goal of hosting between 100 and 150 individual applications.</p>
+<section id="increasing-performance-in-a-highly-concurrent-system">
+<h3>Increasing Performance in a Highly Concurrent System<a class="headerlink" href="#increasing-performance-in-a-highly-concurrent-system" title="Link to this heading">#</a></h3>
+<p>In existing platforms for microprocessors (µP), each application is expected to interact with approximately 15 system services or daemons - such as <code class="docutils literal notranslate"><span class="pre">ara::diag</span></code> for diagnostics and <code class="docutils literal notranslate"><span class="pre">ara::com</span></code> for SOME/IP communication. Under a straightforward implementation, this interaction model results in the creation of around 15 threads per application. When scaled to 100-150 applications, this amounts to roughly 1500 to 2250 threads solely managing inter-process communication, excluding those performing the core application tasks.</p>
+<p>Given that the HPC’s µP typically provides between 2 and 16 cores, only a limited number of threads can be processed in parallel. In POSIX-like operating systems, threads become the currency for concurrency, meaning that when the thread count far exceeds available cores, the system must rely on context switching. With context switching times estimated between 2µs and 4.5µs <a class="footnote-reference brackets" href="#f1" id="id1" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#f2" id="id2" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#f3" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a>, even a 100ms time slice could spend between 3% and 10% of its duration on context switching alone - assuming each thread is scheduled once. This overhead increases dramatically if threads are forced to switch more frequently due to competition for processing time.</p>
+</section>
+<section id="enabling-a-user-friendly-and-deterministic-interface-for-concurrent-programs">
+<h3>Enabling a User-Friendly and Deterministic Interface for Concurrent Programs<a class="headerlink" href="#enabling-a-user-friendly-and-deterministic-interface-for-concurrent-programs" title="Link to this heading">#</a></h3>
+<p>Concurrent programming in our target environment spans multiple scopes. At one level, concurrency exists within the algorithms of individual applications or system services, while at another level, multiple applications must execute concurrently across the platform. The challenge is to offer an interface that is not only simple and expressive but also deterministic and reliable - a critical requirement in safety-critical systems.</p>
+<p>Traditional thread-based concurrency in POSIX-like environments introduces complexities such as deadlocks, livelocks, and starvation. These issues, coupled with the inherent difficulties in debugging and validating thread-based systems, can compromise both performance and reliability <a class="footnote-reference brackets" href="#f4" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#f5" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#f6" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. Moreover, current designs often separate the management of timing requirements, monitoring, and error handling from the control flow. Integrating these aspects closer to the application logic would promote higher cohesion and lower coupling, enabling more effective debugging and validation, particularly when addressing application-specific scenarios.</p>
+</section>
+<section id="managing-reliable-integrations-in-mixed-criticality-environments">
+<h3>Managing Reliable Integrations in Mixed-Criticality Environments<a class="headerlink" href="#managing-reliable-integrations-in-mixed-criticality-environments" title="Link to this heading">#</a></h3>
+<p>The broader objective of the HPC platform is to support the concurrent integration and maintenance of multiple applications, potentially sourced from different vendors. Unlike traditional microcontroller (µC) platforms that are statically configured, this platform must allow dynamic updates, upgrades, and new deployments throughout the vehicle’s lifecycle. This introduces significant complexity in managing concurrency, particularly in mixed-criticality environments where applications of varying criticality levels must coexist without interference.</p>
+<p>Currently, application developers are expected to manage runtime scheduling directly via the operating system, controlling thread lifecycles, priorities, and affinities. Such an approach ties the configuration too closely to a specific deployment scenario and often leads to discrepancies between behaviors observed during development and those on the target system. This misalignment complicates integration efforts, as integrators must repeatedly iterate with the application developer to meet the system’s reliability requirements. An orchestrator that abstracts these complexities could alleviate these challenges by offering a uniform, deterministic interface for managing runtime scheduling, thus ensuring that lower-criticality applications do not adversely affect the performance or reliability of higher-criticality ones.</p>
+</section>
+</section>
+<section id="specification">
+<h2>Specification<a class="headerlink" href="#specification" title="Link to this heading">#</a></h2>
+<p>Now that we know the motivation behind the feature request, let’s dive deeper into the proposed solution for the problem statements described above.</p>
+<section id="how-to-increase-performance-in-a-highly-concurrent-system">
+<h3>How to increase performance in a highly concurrent system?<a class="headerlink" href="#how-to-increase-performance-in-a-highly-concurrent-system" title="Link to this heading">#</a></h3>
+<p>An approach to avoid unnecessary thread context switching - and therefore more effectively utilize existing system resources - is to employ user-level scheduling, commonly known as cooperative multi-tasking. The key benefit is that task switching in this model is significantly cheaper than traditional thread context switching, costing roughly ~30ns instead of ~2-4µs. This efficiency is achieved because control does not need to be handed off to the operating system, there is less data to swap (no registers or caches are switched), and the memory overhead is lower since tasks can share the same stack <a class="footnote-reference brackets" href="#s1" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s2" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s3" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s4" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>.</p>
+</section>
+<section id="how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs">
+<h3>How to enable a user-friendly &amp; deterministic interface for concurrent programs?<a class="headerlink" href="#how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs" title="Link to this heading">#</a></h3>
+<p>To harness the benefits of user-space multi-tasking while still providing a user-friendly and deterministic interface for concurrent programs, this proposal advocates for a nested task-based programming framework. The choice for a nested structure over a graph-based one is driven by the need to design reliable programs and enable straightforward control flow analysis - a requirement that becomes critical during safety inspections. Although graph-based structures may have a gentler learning curve and offer rapid initial results, they often become limiting when more complex scheduling descriptions are needed, such as conditional branching, time monitoring, and error handling paths.</p>
+<dl class="simple">
+<dt>The envisioned programming framework will be:</dt><dd><ul class="simple">
+<li><p>Free from explicit thread management.</p></li>
+<li><p>Free from complex synchronization mechanisms.</p></li>
+<li><p>Capable of expressing both concurrent and sequential dependencies.</p></li>
+<li><p>Capable of expressing timing constraints and error handling paths directly within the program.</p></li>
+<li><p>Expressive, transparent, and deterministic to facilitate straightforward control-flow analysis.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="how-to-manage-reliable-integrations-in-mixed-criticality-environments">
+<h3>How to manage reliable integrations in mixed-criticality environments?<a class="headerlink" href="#how-to-manage-reliable-integrations-in-mixed-criticality-environments" title="Link to this heading">#</a></h3>
+<p>To address the challenge of integrating applications developed by distributed teams - each with only a partial view of the final target system - the solution must decouple algorithm design from deployment details. Application developers should be able to define algorithms that can exploit parallel execution when processing resources are available without binding their implementations to a specific deployment scenario.</p>
+<p>This can be achieved by leveraging the proposed programming framework to express application structures without direct dependence on kernel threads. Integrators would then define a shared thread pool that executes the routines of these programs via cooperative multi-tasking. This design allows integrators to manage the number, affinity, and priorities of threads in the pool, providing full control over system resources. Consequently, integrators can assign computing resources during deployment without the need for iterative fine-tuning with each application developer.</p>
+<p>Additionally, the system will use priority-based preemption between thread pools to ensure that lower-priority programs cannot interfere with higher-priority ones. Error handling is managed independently of the application’s normal execution paths, with misbehaving code preemptively handled to maintain overall system stability. This mechanism empowers developers to build robust safety mechanisms on top of the orchestration feature.</p>
+<dl class="simple">
+<dt>In summary, to manage reliable integrations in mixed-criticality environments, the orchestration feature must:</dt><dd><ul class="simple">
+<li><p>Provide a resource-independent definition of algorithm design.</p></li>
+<li><p>Allow the assignment of computing resources during integration and deployment.</p></li>
+<li><p>Utilize preemptive prioritization between criticalities along with robust error handling.</p></li>
+<li><p>Offer tracing and profiling of program execution to verify the behavior and control flow of the final integrated system.</p></li>
+</ul>
+</dd>
+</dl>
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="f1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
+<p>Paul Turner, “User-level threads……. with threads”, YouTube, <a class="reference external" href="https://www.youtube.com/watch?v=KXuZi9aeGTw">https://www.youtube.com/watch?v=KXuZi9aeGTw</a>.</p>
+</aside>
+<aside class="footnote brackets" id="f2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id2">2</a><span class="fn-bracket">]</span></span>
+<p>“Measuring context switching and memory overheads for Linux threads”, Eli the Green Place, <a class="reference external" href="https://eli.thegreenplace.net/2018/measuring-context-switching-and-memory-overheads-for-linux-threads">https://eli.thegreenplace.net/2018/measuring-context-switching-and-memory-overheads-for-linux-threads</a>.</p>
+</aside>
+<aside class="footnote brackets" id="f3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">3</a><span class="fn-bracket">]</span></span>
+<p>“QNX® Neutrino® Realtime OS: Kernel Benchmark Results”, QNX Support, <a class="reference external" href="https://support7.qnx.com/download/download/19099/qnx_freescale_i-mx31-ads_final.pdf">https://support7.qnx.com/download/download/19099/qnx_freescale_i-mx31-ads_final.pdf</a>.</p>
+</aside>
+<aside class="footnote brackets" id="f4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">4</a><span class="fn-bracket">]</span></span>
+<p>“Determinism Is Not Enough: Making Parallel Programs Reliable with Stable Multithreading”, Columbia University, <a class="reference external" href="https://www.cs.columbia.edu/~junfeng/papers/smt-cacm.pdf">https://www.cs.columbia.edu/~junfeng/papers/smt-cacm.pdf</a>.</p>
+</aside>
+<aside class="footnote brackets" id="f5" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">5</a><span class="fn-bracket">]</span></span>
+<p>“Design of an Empirical Study for Comparing the Usability of Concurrent Programming Languages”, CiteSeerX, <a class="reference external" href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=011212ec94ae9497f96e2a27f4f823722cb84a2f">https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=011212ec94ae9497f96e2a27f4f823722cb84a2f</a>.</p>
+</aside>
+<aside class="footnote brackets" id="f6" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id6">6</a><span class="fn-bracket">]</span></span>
+<p>“Taskflow: A Lightweight Parallel and Heterogeneous Task Graph Computing System”, Taskflow Paper, <a class="reference external" href="https://tsung-wei-huang.github.io/papers/tpds21-taskflow.pdf">https://tsung-wei-huang.github.io/papers/tpds21-taskflow.pdf</a>.</p>
+</aside>
+<aside class="footnote brackets" id="s1" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
+<p>“Asynchronous Programming in Rust”, The Rust Async Book, <a class="reference external" href="https://rust-lang.github.io/async-book/part-guide/concurrency.html">https://rust-lang.github.io/async-book/part-guide/concurrency.html</a>.</p>
+</aside>
+<aside class="footnote brackets" id="s2" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id8">8</a><span class="fn-bracket">]</span></span>
+<p>“Skyloft: A General High-Efficient Scheduling Framework in User Space”, ACM Digital Library, <a class="reference external" href="https://dl.acm.org/doi/pdf/10.1145/3694715.3695973">https://dl.acm.org/doi/pdf/10.1145/3694715.3695973</a>.</p>
+</aside>
+<aside class="footnote brackets" id="s3" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id9">9</a><span class="fn-bracket">]</span></span>
+<p>“Cooperative Scheduling of Parallel Tasks with General Synchronization Patterns”, Semantic Scholar, <a class="reference external" href="https://pdfs.semanticscholar.org/ef9f/7fa173808fd0a4a21f318fc2c9890ccd9e5a.pdf">https://pdfs.semanticscholar.org/ef9f/7fa173808fd0a4a21f318fc2c9890ccd9e5a.pdf</a>.</p>
+</aside>
+<aside class="footnote brackets" id="s4" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id10">10</a><span class="fn-bracket">]</span></span>
+<p>“Scheduler Activations: Effective Kernel Support for the User-Level Management of Parallelism”, ACM Digital Library, <a class="reference external" href="https://dl.acm.org/doi/pdf/10.1145/146941.146944">https://dl.acm.org/doi/pdf/10.1145/146941.146944</a>.</p>
+</aside>
+</aside>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../integration/index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Integration</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../persistency/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Persistency</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-performance-in-a-highly-concurrent-system">Increasing Performance in a Highly Concurrent System</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-a-user-friendly-and-deterministic-interface-for-concurrent-programs">Enabling a User-Friendly and Deterministic Interface for Concurrent Programs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#managing-reliable-integrations-in-mixed-criticality-environments">Managing Reliable Integrations in Mixed-Criticality Environments</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specification">Specification</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-increase-performance-in-a-highly-concurrent-system">How to increase performance in a highly concurrent system?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs">How to enable a user-friendly &amp; deterministic interface for concurrent programs?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-manage-reliable-integrations-in-mixed-criticality-environments">How to manage reliable integrations in mixed-criticality environments?</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  
+  <div class="tocsection editthispage">
+    <a href="https://github.com/eclipse-score/score/edit/main/docs/features/orchestration/index.rst">
+      <i class="fa-solid fa-pencil"></i>
+      
+      
+        
+          Edit on GitHub
+        
+      
+    </a>
+  </div>
+</div>
+
+  <div class="sidebar-secondary-item">
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/features/orchestration/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  <!-- # L10n: Setting the PST URL as an argument as this does not need to be localized -->
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
