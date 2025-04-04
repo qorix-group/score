@@ -12,23 +12,17 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Process Areas
-#############
+.. _safety_analysis:
+
+Safety Analysis
+###############
 
 .. toctree::
    :maxdepth: 1
-   :glob:
 
-   architecture_design/index.rst
-   change_management/index.rst
-   configuration_management/index.rst
-   documentation_management/index.rst
-   implementation/index.rst
-   platform_management/index.rst
-   problem_resolution/index.rst
-   release_management/index.rst
-   requirements_engineering/index.rst
-   safety_analysis/index.rst
-   safety_management/index.rst
-   tool_management/index.rst
-   verification/index.rst
+   guidance/index
+   safety_analysis_concept
+   safety_analysis_getstrt
+   safety_analysis_roles
+   safety_analysis_workflow
+   safety_analysis_workproducts

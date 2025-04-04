@@ -12,23 +12,15 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Process Areas
-#############
+Guidance
+########
 
 .. toctree::
    :maxdepth: 1
-   :glob:
 
-   architecture_design/index.rst
-   change_management/index.rst
-   configuration_management/index.rst
-   documentation_management/index.rst
-   implementation/index.rst
-   platform_management/index.rst
-   problem_resolution/index.rst
-   release_management/index.rst
-   requirements_engineering/index.rst
-   safety_analysis/index.rst
-   safety_management/index.rst
-   tool_management/index.rst
-   verification/index.rst
+   dfa_checklist_template
+   dfa_template
+   fault_models_guideline
+   safety_analysis_guideline
+   safety_analysis_process_reqs
+   safety_analysis_templates
