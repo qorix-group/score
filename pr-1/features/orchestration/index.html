@@ -512,7 +512,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="need_container docutils container" id="SNCB-902aaa6b">
+  <div class="need_container docutils container" id="SNCB-f66439d2">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__orchestration">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -532,7 +532,7 @@
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">contribution_request</span><span class="needs_spacer">, </span><span class="needs_data">feature_request</span></span></span></div>
+<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">change_management</span></span></span></div>
 <div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
 </span></span></div>
 <div class="line"><span></span></div>
@@ -558,6 +558,17 @@
 </div>
 <section id="orchestration">
 <h1>Orchestration<a class="headerlink" href="#orchestration" title="Link to this heading">#</a></h1>
+<section id="feature-flag">
+<h2>Feature flag<a class="headerlink" href="#feature-flag" title="Link to this heading">#</a></h2>
+<p>To activate this feature, use the following feature flag:</p>
+<p><code class="docutils literal notranslate"><span class="pre">experimental_orchestration</span></code></p>
+</section>
+<section id="abstract">
+<h2>Abstract<a class="headerlink" href="#abstract" title="Link to this heading">#</a></h2>
+<p>In response to the increasing complexity of modern centralized E/E architectures and the need to support hundreds of applications, this feature request proposes a comprehensive orchestration framework for managing concurrency in high-performance computing (HPC) systems. The motivation for this proposal is rooted in the significant performance penalties incurred by conventional thread-based approaches, where an excessive number of threads leads to costly context switching in operating systems.</p>
+<p>The proposed solution introduces user-level scheduling through cooperative multi-tasking, allowing task switches to occur in the nanosecond range instead of microseconds. By treating tasks as the fundamental unit of concurrency and enabling multiple tasks to share the same OS thread, the framework significantly reduces overhead and simplifies resource allocation.</p>
+<p>Overall, this orchestration feature is designed to provide a deterministic, user-friendly interface that streamlines concurrent execution, optimizes resource utilization, and facilitates the reliable integration of mixed-criticality applications in complex automotive and embedded systems.</p>
+</section>
 <section id="motivation">
 <h2>Motivation<a class="headerlink" href="#motivation" title="Link to this heading">#</a></h2>
 <p>The rapid evolution of high-performance computing (HPC) architectures and the increased availability of multi-core processors in centralized E/E systems have driven the need for a platform capable of hosting advanced ADAS/AD applications while upintegrating existing ECU functionalities. This approach facilitates the deployment of loosely coupled applications that support flexible maintenance and updates, with the goal of hosting between 100 and 150 individual applications.</p>
@@ -569,7 +580,7 @@
 <section id="enabling-a-user-friendly-and-deterministic-interface-for-concurrent-programs">
 <h3>Enabling a User-Friendly and Deterministic Interface for Concurrent Programs<a class="headerlink" href="#enabling-a-user-friendly-and-deterministic-interface-for-concurrent-programs" title="Link to this heading">#</a></h3>
 <p>Concurrent programming in our target environment spans multiple scopes. At one level, concurrency exists within the algorithms of individual applications or system services, while at another level, multiple applications must execute concurrently across the platform. The challenge is to offer an interface that is not only simple and expressive but also deterministic and reliable - a critical requirement in safety-critical systems.</p>
-<p>Traditional thread-based concurrency in POSIX-like environments introduces complexities such as deadlocks, livelocks, and starvation. These issues, coupled with the inherent difficulties in debugging and validating thread-based systems, can compromise both performance and reliability <a class="footnote-reference brackets" href="#f4" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#f5" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#f6" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a>. Moreover, current designs often separate the management of timing requirements, monitoring, and error handling from the control flow. Integrating these aspects closer to the application logic would promote higher cohesion and lower coupling, enabling more effective debugging and validation, particularly when addressing application-specific scenarios.</p>
+<p>Traditional thread-based concurrency in POSIX-like environments introduces complexities such as deadlocks, livelocks, and starvation. These issues, coupled with the inherent difficulties in debugging and validating thread-based systems, can compromise both performance and reliability. <a class="footnote-reference brackets" href="#f4" id="id4" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#f5" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>5<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#f6" id="id6" role="doc-noteref"><span class="fn-bracket">[</span>6<span class="fn-bracket">]</span></a> Moreover, current designs often separate the management of timing requirements, monitoring, and error handling from the control flow. Integrating these aspects closer to the application logic would promote higher cohesion and lower coupling, enabling more effective debugging and validation, particularly when addressing application-specific scenarios.</p>
 </section>
 <section id="managing-reliable-integrations-in-mixed-criticality-environments">
 <h3>Managing Reliable Integrations in Mixed-Criticality Environments<a class="headerlink" href="#managing-reliable-integrations-in-mixed-criticality-environments" title="Link to this heading">#</a></h3>
@@ -582,16 +593,27 @@
 <p>Now that we know the motivation behind the feature request, let’s dive deeper into the proposed solution for the problem statements described above.</p>
 <section id="how-to-increase-performance-in-a-highly-concurrent-system">
 <h3>How to increase performance in a highly concurrent system?<a class="headerlink" href="#how-to-increase-performance-in-a-highly-concurrent-system" title="Link to this heading">#</a></h3>
-<p>An approach to avoid unnecessary thread context switching - and therefore more effectively utilize existing system resources - is to employ user-level scheduling, commonly known as cooperative multi-tasking. The key benefit is that task switching in this model is significantly cheaper than traditional thread context switching, costing roughly ~30ns instead of ~2-4µs. This efficiency is achieved because control does not need to be handed off to the operating system, there is less data to swap (no registers or caches are switched), and the memory overhead is lower since tasks can share the same stack <a class="footnote-reference brackets" href="#s1" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s2" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s3" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s4" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a>.</p>
+<p>To address the performance challenges described in the motivation - where an excessive number of threads leads to significant context-switch overhead - the proposed solution is to adopt user-level scheduling through cooperative multi-tasking. This approach minimizes overhead by reusing existing threads within a process instead of creating one thread per session or task within a service or application component. By handling task switching at the user level, the system avoids the costly transition between user space and kernel space, reducing the typical context switch cost from the microsecond to the nanosecond range. <a class="footnote-reference brackets" href="#s1" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s2" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>8<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s3" id="id9" role="doc-noteref"><span class="fn-bracket">[</span>9<span class="fn-bracket">]</span></a> <a class="footnote-reference brackets" href="#s4" id="id10" role="doc-noteref"><span class="fn-bracket">[</span>10<span class="fn-bracket">]</span></a></p>
+<p>The proposed solution provides a framework where tasks, rather than threads, serve as the fundamental unit of concurrency. In this model, concurrent tasks can share the same OS thread, thereby significantly reducing the number of threads and the associated context-switch overhead. To enable parallelism for concurrent tasks, the solution will implement a configurable thread pool. In the target application of the framework, additional thread pools will only be introduced when necessary - for instance, in cases where application tasks differ in criticality or are separated by process boundaries. This reuse of threads not only minimizes the performance penalty associated with managing a vast number of threads but also simplifies resource allocation and scheduling in the final target scenario.</p>
+<dl class="simple">
+<dt>The solution includes the following key functionalities:</dt><dd><ul class="simple">
+<li><p>User-level scheduling to efficiently handle task switches in the nanosecond range.</p></li>
+<li><p>Cooperative multi-tasking, allowing multiple concurrent tasks to use the same OS thread.</p></li>
+<li><p>Provision of a configurable thread pool to enable parallelism for concurrent tasks.</p></li>
+<li><p>Introduction of additional thread pools only when necessary, such as when tasks differ in criticality or require separation by process boundaries.</p></li>
+</ul>
+</dd>
+</dl>
 </section>
 <section id="how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs">
-<h3>How to enable a user-friendly &amp; deterministic interface for concurrent programs?<a class="headerlink" href="#how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs" title="Link to this heading">#</a></h3>
+<span id="id11"></span><h3>How to enable a user-friendly &amp; deterministic interface for concurrent programs?<a class="headerlink" href="#how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs" title="Link to this heading">#</a></h3>
 <p>To harness the benefits of user-space multi-tasking while still providing a user-friendly and deterministic interface for concurrent programs, this proposal advocates for a nested task-based programming framework. The choice for a nested structure over a graph-based one is driven by the need to design reliable programs and enable straightforward control flow analysis - a requirement that becomes critical during safety inspections. Although graph-based structures may have a gentler learning curve and offer rapid initial results, they often become limiting when more complex scheduling descriptions are needed, such as conditional branching, time monitoring, and error handling paths.</p>
 <dl class="simple">
 <dt>The envisioned programming framework will be:</dt><dd><ul class="simple">
 <li><p>Free from explicit thread management.</p></li>
 <li><p>Free from complex synchronization mechanisms.</p></li>
 <li><p>Capable of expressing both concurrent and sequential dependencies.</p></li>
+<li><p>Capable of expressing conditional branching within the program.</p></li>
 <li><p>Capable of expressing timing constraints and error handling paths directly within the program.</p></li>
 <li><p>Expressive, transparent, and deterministic to facilitate straightforward control-flow analysis.</p></li>
 </ul>
@@ -599,7 +621,7 @@
 </dl>
 </section>
 <section id="how-to-manage-reliable-integrations-in-mixed-criticality-environments">
-<h3>How to manage reliable integrations in mixed-criticality environments?<a class="headerlink" href="#how-to-manage-reliable-integrations-in-mixed-criticality-environments" title="Link to this heading">#</a></h3>
+<span id="id12"></span><h3>How to manage reliable integrations in mixed-criticality environments?<a class="headerlink" href="#how-to-manage-reliable-integrations-in-mixed-criticality-environments" title="Link to this heading">#</a></h3>
 <p>To address the challenge of integrating applications developed by distributed teams - each with only a partial view of the final target system - the solution must decouple algorithm design from deployment details. Application developers should be able to define algorithms that can exploit parallel execution when processing resources are available without binding their implementations to a specific deployment scenario.</p>
 <p>This can be achieved by leveraging the proposed programming framework to express application structures without direct dependence on kernel threads. Integrators would then define a shared thread pool that executes the routines of these programs via cooperative multi-tasking. This design allows integrators to manage the number, affinity, and priorities of threads in the pool, providing full control over system resources. Consequently, integrators can assign computing resources during deployment without the need for iterative fine-tuning with each application developer.</p>
 <p>Additionally, the system will use priority-based preemption between thread pools to ensure that lower-priority programs cannot interfere with higher-priority ones. Error handling is managed independently of the application’s normal execution paths, with misbehaving code preemptively handled to maintain overall system stability. This mechanism empowers developers to build robust safety mechanisms on top of the orchestration feature.</p>
@@ -612,6 +634,51 @@
 </ul>
 </dd>
 </dl>
+</section>
+</section>
+<section id="security-impact">
+<h2>Security Impact<a class="headerlink" href="#security-impact" title="Link to this heading">#</a></h2>
+<p>The design of this orchestration feature is based on the assumption that all code executing within a process is trusted. Consequently, the attack surface within a single process is inherently minimized, as the task isolation provided by threads is secure due to the fact that threads cannot be accessed from outside the process.</p>
+<p>The only potential attack surface arises from the synchronization between tasks or threads that belong to different processes. To mitigate this risk, the feature request mandates the exclusive use of the <a class="reference internal" href="../communication/ipc/index.html#ipc-feature"><span class="std std-ref">Inter-process Communication</span></a> for any inter-process synchronization. This communication feature has been previously evaluated with regard to its security impact on synchronization primitives and is considered secure. No alternative forms of exchange or synchronization between processes are permitted for this feature.</p>
+<p>By adhering to this design, the orchestration feature maintains a robust security posture, ensuring that inter-process communication is managed in a controlled and secure manner.</p>
+</section>
+<section id="safety-impact">
+<h2>Safety Impact<a class="headerlink" href="#safety-impact" title="Link to this heading">#</a></h2>
+<p>The orchestration feature is designed under the assumption that all tasks within a single process share the same ASIL level. As a result, the internal task management does not mix different safety levels. In the section <a class="reference internal" href="#how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs"><span class="std std-ref">How to enable a user-friendly &amp; deterministic interface for concurrent programs?</span></a>, the capability to define robust error handling mechanisms is described. These mechanisms are intended to serve as integral safety elements within an application’s safety concept. Consequently, the feature must ensure that if error handling mechanisms are present, they are isolated from the effects of misbehaving tasks (for example, in the worst-case scenario where all threads in the pool become occupied by tasks in an infinite loop). This functionality will be implemented in a configurable manner, recognizing that not all applications require safety mechanisms to be defined through the orchestration feature, and that ensuring guaranteed reactivity typically incurs a cost.</p>
+<p>In addition, the orchestration feature will expose hooks for external supervision of its safety mechanisms. These hooks enable integration with an external watchdog, while the feature itself will not directly connect to a watchdog, thereby preserving platform maintainability.</p>
+<p>Finally, for mixed-criticality deployments - as discussed in <a class="reference internal" href="#how-to-manage-reliable-integrations-in-mixed-criticality-environments"><span class="std std-ref">How to manage reliable integrations in mixed-criticality environments?</span></a> - the feature will enforce that all tasks within a thread pool (or process) have the same criticality level. Lower-criticality tasks must not influence the timing behavior of higher-criticality tasks. This is achieved by leveraging the OS’s preemptive scheduling between thread pools, and by managing inter-process synchronization exclusively via the <a class="reference internal" href="../communication/ipc/index.html#ipc-feature"><span class="std std-ref">Inter-process Communication</span></a>, which is already validated for this purpose.</p>
+<dl class="simple">
+<dt>The solution includes the following key safety functionalities:</dt><dd><ul class="simple">
+<li><p>All tasks within a process must share the same ASIL level.</p></li>
+<li><p>Integrated, configurable error handling mechanisms that are insulated from misbehaving tasks.</p></li>
+<li><p>Exposure of hooks for external supervision (e.g., integration with a watchdog), without direct coupling to the watchdog.</p></li>
+<li><p>Enforcement of homogeneous criticality within thread pools to prevent lower-criticality tasks from affecting higher-criticality tasks.</p></li>
+<li><p>Exclusive use of the <a class="reference internal" href="../communication/ipc/index.html#ipc-feature"><span class="std std-ref">Inter-process Communication</span></a> for inter-process synchronization to uphold criticality boundaries.</p></li>
+</ul>
+</dd>
+</dl>
+</section>
+<section id="how-to-teach-this">
+<h2>How to Teach This<a class="headerlink" href="#how-to-teach-this" title="Link to this heading">#</a></h2>
+<p>A good first read is The Rust Async Book <a class="footnote-reference brackets" href="#s1" id="id13" role="doc-noteref"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></a>. It helps to get a better understanding of how user-level context switching and cooperative multi-tasking works in theory. Additionally, the referenced material in the <a class="reference internal" href="#footnotes"><span class="std std-ref">Footnotes</span></a> can be used to get more familiar with the problem statements and proposed solution of the feature request.</p>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Link to this heading">#</a></h2>
+<dl class="simple glossary">
+<dt id="term-task">task<a class="headerlink" href="#term-task" title="Link to this term">#</a></dt><dd><p>A unit of work or a logical operation scheduled for execution by the orchestration framework. Tasks represent the individual functions or routines within an application that can be managed independently of the underlying thread.</p>
+</dd>
+<dt id="term-thread">thread<a class="headerlink" href="#term-thread" title="Link to this term">#</a></dt><dd><p>The smallest sequence of programmed instructions that can be managed independently by an operating system. Threads share a process’s resources, such as memory, and are scheduled by the operating system or by user-level schedulers.</p>
+</dd>
+<dt id="term-concurrent">concurrent<a class="headerlink" href="#term-concurrent" title="Link to this term">#</a></dt><dd><p>The ability of a system to manage multiple tasks over overlapping time periods. Concurrency does not necessarily mean that tasks are executed simultaneously, but rather that progress can be made on more than one task during the same time interval.</p>
+</dd>
+<dt id="term-parallel">parallel<a class="headerlink" href="#term-parallel" title="Link to this term">#</a></dt><dd><p>The simultaneous execution of multiple tasks on different processing units, such as CPU cores. Parallelism is a subset of concurrency and is used to speed up processing by dividing tasks among available hardware resources.</p>
+</dd>
+<dt id="term-cooperative">cooperative<a class="headerlink" href="#term-cooperative" title="Link to this term">#</a></dt><dd><p>A scheduling model in which tasks voluntarily yield control to enable other tasks to execute. In cooperative multitasking, task switching occurs at well-defined points, reducing the overhead of context switching and simplifying the management of shared resources.</p>
+</dd>
+</dl>
+</section>
+<section id="footnotes">
+<span id="id14"></span><h2>Footnotes<a class="headerlink" href="#footnotes" title="Link to this heading">#</a></h2>
 <aside class="footnote-list brackets">
 <aside class="footnote brackets" id="f1" role="doc-footnote">
 <span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id1">1</a><span class="fn-bracket">]</span></span>
@@ -638,7 +705,8 @@
 <p>“Taskflow: A Lightweight Parallel and Heterogeneous Task Graph Computing System”, Taskflow Paper, <a class="reference external" href="https://tsung-wei-huang.github.io/papers/tpds21-taskflow.pdf">https://tsung-wei-huang.github.io/papers/tpds21-taskflow.pdf</a>.</p>
 </aside>
 <aside class="footnote brackets" id="s1" role="doc-footnote">
-<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id7">7</a><span class="fn-bracket">]</span></span>
+<span class="label"><span class="fn-bracket">[</span>7<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id13">2</a>)</span>
 <p>“Asynchronous Programming in Rust”, The Rust Async Book, <a class="reference external" href="https://rust-lang.github.io/async-book/part-guide/concurrency.html">https://rust-lang.github.io/async-book/part-guide/concurrency.html</a>.</p>
 </aside>
 <aside class="footnote brackets" id="s2" role="doc-footnote">
@@ -654,7 +722,6 @@
 <p>“Scheduler Activations: Effective Kernel Support for the User-Level Management of Parallelism”, ACM Digital Library, <a class="reference external" href="https://dl.acm.org/doi/pdf/10.1145/146941.146944">https://dl.acm.org/doi/pdf/10.1145/146941.146944</a>.</p>
 </aside>
 </aside>
-</section>
 </section>
 </section>
 
@@ -705,6 +772,8 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#feature-flag">Feature flag</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#abstract">Abstract</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#motivation">Motivation</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#increasing-performance-in-a-highly-concurrent-system">Increasing Performance in a Highly Concurrent System</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enabling-a-user-friendly-and-deterministic-interface-for-concurrent-programs">Enabling a User-Friendly and Deterministic Interface for Concurrent Programs</a></li>
@@ -717,6 +786,11 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-manage-reliable-integrations-in-mixed-criticality-environments">How to manage reliable integrations in mixed-criticality environments?</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#security-impact">Security Impact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-impact">Safety Impact</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-teach-this">How to Teach This</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#glossary">Glossary</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#footnotes">Footnotes</a></li>
 </ul>
   </nav></div>
 
