@@ -1,6 +1,6 @@
 ..
    # *******************************************************************************
-   # Copyright (c) 2024 Contributors to the Eclipse Foundation
+   # Copyright (c) 2025 Contributors to the Eclipse Foundation
    #
    # See the NOTICE file(s) distributed with this work for additional
    # information regarding copyright ownership.
@@ -12,6 +12,10 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+.. _orchestration_feature:
+
+Orchestration
+#############
 
 .. document:: Orchestration
    :id: doc__orchestration
@@ -19,8 +23,12 @@
    :safety: ASIL_B
    :tags: change_management
 
-Orchestration
-#############
+
+.. toctree::
+   :hidden:
+
+   requirements.rst
+
 
 Feature flag
 ============
@@ -93,6 +101,12 @@ The solution includes the following key functionalities:
    - Provision of a configurable thread pool to enable parallelism for concurrent tasks.
    - Introduction of additional thread pools only when necessary, such as when tasks differ in criticality or require separation by process boundaries.
 
+.. admonition:: Related Requirements
+
+   - :need:`feat_req__orchestration__user_level`
+   - :need:`feat_req__orchestration__cooperative_multi`
+   - :need:`feat_req__orchestration__configurable_thread`
+
 
 .. _how_to_enable_a_user_friendly_deterministic_interface_for_concurrent_programs:
 
@@ -108,6 +122,11 @@ The envisioned programming framework will be:
    - Capable of expressing conditional branching within the program.
    - Capable of expressing timing constraints and error handling paths directly within the program.
    - Expressive, transparent, and deterministic to facilitate straightforward control-flow analysis.
+
+.. admonition:: Related Requirements
+
+   - :need:`feat_req__orchestration__deterministic_and`
+   - :need:`feat_req__orchestration__configurable_error`
 
 
 .. _how_to_manage_reliable_integrations_in_mixed_criticality_environments:
@@ -127,6 +146,12 @@ In summary, to manage reliable integrations in mixed-criticality environments, t
    - Utilize preemptive prioritization between criticalities along with robust error handling.
    - Offer tracing and profiling of program execution to verify the behavior and control flow of the final integrated system.
 
+.. admonition:: Related Requirements
+
+   - :need:`feat_req__orchestration__resource`
+   - :need:`feat_req__orchestration__tracing_and`
+   - :need:`feat_req__orchestration__priority_based`
+
 
 .. Backwards Compatibility
 .. =======================
@@ -140,6 +165,11 @@ The design of this orchestration feature is based on the assumption that all cod
 The only potential attack surface arises from the synchronization between tasks or threads that belong to different processes. To mitigate this risk, the feature request mandates the exclusive use of the :ref:`ipc_feature` for any inter-process synchronization. This communication feature has been previously evaluated with regard to its security impact on synchronization primitives and is considered secure. No alternative forms of exchange or synchronization between processes are permitted for this feature.
 
 By adhering to this design, the orchestration feature maintains a robust security posture, ensuring that inter-process communication is managed in a controlled and secure manner.
+
+.. admonition:: Related Requirements
+
+   - :need:`feat_req__orchestration__trusted_intra`
+   - :need:`feat_req__orchestration__exclusive_use_of_ipc`
 
 
 Safety Impact
@@ -157,6 +187,15 @@ The solution includes the following key safety functionalities:
    - Exposure of hooks for external supervision (e.g., integration with a watchdog), without direct coupling to the watchdog.
    - Enforcement of homogeneous criticality within thread pools to prevent lower-criticality tasks from affecting higher-criticality tasks.
    - Exclusive use of the :ref:`ipc_feature` for inter-process synchronization to uphold criticality boundaries.
+
+.. admonition:: Related Requirements
+
+   - :need:`feat_req__orchestration__exclusive_use_of_ipc`
+   - :need:`feat_req__orchestration__homogeneous_asil`
+   - :need:`feat_req__orchestration__configurable_error`
+   - :need:`feat_req__orchestration__external_supervision`
+   - :need:`feat_req__orchestration__enforcement_of`
+   - :need:`feat_req__orchestration__priority_based`
 
 
 .. License Impact

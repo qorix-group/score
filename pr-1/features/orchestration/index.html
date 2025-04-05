@@ -72,7 +72,7 @@
         </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Persistency" href="../persistency/index.html" />
+    <link rel="next" title="Requirements" href="requirements.html" />
     <link rel="prev" title="Integration" href="../integration/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -450,7 +450,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../frameworks/index.html">Frameworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../infrastructure/index.html">Infrastructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Orchestration</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Orchestration</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html">Requirements</a></li>
+</ul>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="../persistency/index.html">Persistency</a></li>
 </ul>
 </div>
@@ -512,7 +515,9 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="need_container docutils container" id="SNCB-35e349c6">
+  <section id="orchestration">
+<span id="orchestration-feature"></span><h1>Orchestration<a class="headerlink" href="#orchestration" title="Link to this heading">#</a></h1>
+<div class="need_container docutils container" id="SNCB-cbeefffc">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__orchestration">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -556,8 +561,8 @@
 </table>
 </div>
 </div>
-<section id="orchestration">
-<h1>Orchestration<a class="headerlink" href="#orchestration" title="Link to this heading">#</a></h1>
+<div class="toctree-wrapper compound">
+</div>
 <section id="feature-flag">
 <h2>Feature flag<a class="headerlink" href="#feature-flag" title="Link to this heading">#</a></h2>
 <p>To activate this feature, use the following feature flag:</p>
@@ -604,6 +609,14 @@
 </ul>
 </dd>
 </dl>
+<div class="admonition-related-requirements admonition">
+<p class="admonition-title">Related Requirements</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__user_level" title="feat_req__orchestration__user_level"><em class="xref need">User Level Scheduling (feat_req__orchestration__user_level)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__cooperative_multi" title="feat_req__orchestration__cooperative_multi"><em class="xref need">Cooperative Multi Tasking (feat_req__orchestration__cooperative_multi)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__configurable_thread" title="feat_req__orchestration__configurable_thread"><em class="xref need">Configurable Thread Pool (feat_req__orchestration__configurable_thread)</em></a></p></li>
+</ul>
+</div>
 </section>
 <section id="how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs">
 <span id="id11"></span><h3>How to enable a user-friendly &amp; deterministic interface for concurrent programs?<a class="headerlink" href="#how-to-enable-a-user-friendly-deterministic-interface-for-concurrent-programs" title="Link to this heading">#</a></h3>
@@ -619,6 +632,13 @@
 </ul>
 </dd>
 </dl>
+<div class="admonition-related-requirements admonition">
+<p class="admonition-title">Related Requirements</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__deterministic_and" title="feat_req__orchestration__deterministic_and"><em class="xref need">Deterministic and Expressiv... (feat_req__orchestration__deterministic_and)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__configurable_error" title="feat_req__orchestration__configurable_error"><em class="xref need">Configurable Error Handling... (feat_req__orchestration__configurable_error)</em></a></p></li>
+</ul>
+</div>
 </section>
 <section id="how-to-manage-reliable-integrations-in-mixed-criticality-environments">
 <span id="id12"></span><h3>How to manage reliable integrations in mixed-criticality environments?<a class="headerlink" href="#how-to-manage-reliable-integrations-in-mixed-criticality-environments" title="Link to this heading">#</a></h3>
@@ -634,6 +654,14 @@
 </ul>
 </dd>
 </dl>
+<div class="admonition-related-requirements admonition">
+<p class="admonition-title">Related Requirements</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__resource" title="feat_req__orchestration__resource"><em class="xref need">Resource Independent Algori... (feat_req__orchestration__resource)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__tracing_and" title="feat_req__orchestration__tracing_and"><em class="xref need">Tracing and Profiling (feat_req__orchestration__tracing_and)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__priority_based" title="feat_req__orchestration__priority_based"><em class="xref need">Priority Based Preemption B... (feat_req__orchestration__priority_based)</em></a></p></li>
+</ul>
+</div>
 </section>
 </section>
 <section id="security-impact">
@@ -641,6 +669,13 @@
 <p>The design of this orchestration feature is based on the assumption that all code executing within a process is trusted. Consequently, the attack surface within a single process is inherently minimized, as the task isolation provided by threads is secure due to the fact that threads cannot be accessed from outside the process.</p>
 <p>The only potential attack surface arises from the synchronization between tasks or threads that belong to different processes. To mitigate this risk, the feature request mandates the exclusive use of the <a class="reference internal" href="../communication/ipc/index.html#ipc-feature"><span class="std std-ref">Inter-process Communication</span></a> for any inter-process synchronization. This communication feature has been previously evaluated with regard to its security impact on synchronization primitives and is considered secure. No alternative forms of exchange or synchronization between processes are permitted for this feature.</p>
 <p>By adhering to this design, the orchestration feature maintains a robust security posture, ensuring that inter-process communication is managed in a controlled and secure manner.</p>
+<div class="admonition-related-requirements admonition">
+<p class="admonition-title">Related Requirements</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__trusted_intra" title="feat_req__orchestration__trusted_intra"><em class="xref need">Trusted Intra Process Code ... (feat_req__orchestration__trusted_intra)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__exclusive_use_of_ipc" title="feat_req__orchestration__exclusive_use_of_ipc"><em class="xref need">Exclusive Use of IPC Featur... (feat_req__orchestration__exclusive_use_of_ipc)</em></a></p></li>
+</ul>
+</div>
 </section>
 <section id="safety-impact">
 <h2>Safety Impact<a class="headerlink" href="#safety-impact" title="Link to this heading">#</a></h2>
@@ -657,6 +692,17 @@
 </ul>
 </dd>
 </dl>
+<div class="admonition-related-requirements admonition">
+<p class="admonition-title">Related Requirements</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__exclusive_use_of_ipc" title="feat_req__orchestration__exclusive_use_of_ipc"><em class="xref need">Exclusive Use of IPC Featur... (feat_req__orchestration__exclusive_use_of_ipc)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__homogeneous_asil" title="feat_req__orchestration__homogeneous_asil"><em class="xref need">Homogeneous ASIL Levels Wit... (feat_req__orchestration__homogeneous_asil)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__configurable_error" title="feat_req__orchestration__configurable_error"><em class="xref need">Configurable Error Handling... (feat_req__orchestration__configurable_error)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__external_supervision" title="feat_req__orchestration__external_supervision"><em class="xref need">External Supervision Hooks (feat_req__orchestration__external_supervision)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__enforcement_of" title="feat_req__orchestration__enforcement_of"><em class="xref need">Enforcement of Homogeneous ... (feat_req__orchestration__enforcement_of)</em></a></p></li>
+<li><p><a class="reference internal" href="requirements.html#feat_req__orchestration__priority_based" title="feat_req__orchestration__priority_based"><em class="xref need">Priority Based Preemption B... (feat_req__orchestration__priority_based)</em></a></p></li>
+</ul>
+</div>
 </section>
 <section id="how-to-teach-this">
 <h2>How to Teach This<a class="headerlink" href="#how-to-teach-this" title="Link to this heading">#</a></h2>
@@ -745,11 +791,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../persistency/index.html"
+       href="requirements.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Persistency</p>
+        <p class="prev-next-title">Requirements</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
