@@ -517,7 +517,7 @@
                   
   <section id="orchestration">
 <span id="orchestration-feature"></span><h1>Orchestration<a class="headerlink" href="#orchestration" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-294bb338">
+<div class="need_container docutils container" id="SNCB-daef59cb">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__orchestration">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -669,7 +669,7 @@
 <h2>Security Impact<a class="headerlink" href="#security-impact" title="Link to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This section does not replace a formal security impact analysis. This only guides the design thoughts behind securitly related topics and is to be understood as a starting point for later workflows.</p>
+<p>This section does not replace a formal security impact analysis. This only guides the design thoughts behind security related topics and is to be understood as a starting point for later workflows.</p>
 </div>
 <p>The design of this orchestration feature is based on the assumption that all code executing within a process is trusted. Consequently, the attack surface within a single process is inherently minimized, as the task isolation provided by threads is secure due to the fact that threads cannot be accessed from outside the process.</p>
 <p>A potential attack surface arises from the synchronization between tasks or threads that belong to different processes. To mitigate this risk, the feature request mandates the exclusive use of the <a class="reference internal" href="../communication/ipc/index.html#ipc-feature"><span class="std std-ref">Inter-process Communication</span></a> for any inter-process synchronization. This communication feature has been previously evaluated with regard to its security impact on synchronization primitives and is considered secure. No alternative forms of exchange or synchronization between processes are permitted for this feature.</p>

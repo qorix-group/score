@@ -164,7 +164,7 @@ Security Impact
 
 .. note::
 
-   This section does not replace a formal security impact analysis. This only guides the design thoughts behind securitly related topics and is to be understood as a starting point for later workflows.
+   This section does not replace a formal security impact analysis. This only guides the design thoughts behind security related topics and is to be understood as a starting point for later workflows.
 
 The design of this orchestration feature is based on the assumption that all code executing within a process is trusted. Consequently, the attack surface within a single process is inherently minimized, as the task isolation provided by threads is secure due to the fact that threads cannot be accessed from outside the process.
 
