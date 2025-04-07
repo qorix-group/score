@@ -45,7 +45,7 @@ In response to the increasing complexity of modern centralized E/E architectures
 
 The proposed solution introduces user-level scheduling through cooperative multi-tasking, allowing task switches to occur in the nanosecond range instead of microseconds. By treating tasks as the fundamental unit of concurrency and enabling multiple tasks to share the same OS thread, the framework significantly reduces overhead and simplifies resource allocation.
 
-Overall, this orchestration feature is designed to provide a deterministic, user-friendly interface that streamlines concurrent execution, optimizes resource utilization, and facilitates the reliable integration of mixed-criticality applications in complex automotive and embedded systems.
+Overall, this orchestration feature is designed to provide a safe and secure, deterministic, user-friendly interface that streamlines concurrent execution, optimizes resource utilization, and facilitates the reliable integration of mixed-criticality applications in complex automotive and embedded systems.
 
 
 Motivation
@@ -54,24 +54,26 @@ Motivation
 The rapid evolution of high-performance computing (HPC) architectures and the increased availability of multi-core processors in centralized E/E systems have driven the need for a platform capable of hosting advanced ADAS/AD applications while upintegrating existing ECU functionalities. This approach facilitates the deployment of loosely coupled applications that support flexible maintenance and updates, with the goal of hosting between 100 and 150 individual applications.
 
 
-Increasing Performance in a Highly Concurrent System
-----------------------------------------------------
+Motivation: Increasing Performance in a Highly Concurrent System
+-----------------------------------------------------------------
 
 In existing platforms for microprocessors (µP), each application is expected to interact with approximately 15 system services or daemons - such as ``ara::diag`` for diagnostics and ``ara::com`` for SOME/IP communication. Under a straightforward implementation, this interaction model results in the creation of around 15 threads per application. When scaled to 100-150 applications, this amounts to roughly 1500 to 2250 threads solely managing inter-process communication, excluding those performing the core application tasks.
 
 Given that the HPC's µP typically provides between 2 and 16 cores, only a limited number of threads can be processed in parallel. In POSIX-like operating systems, threads become the currency for concurrency, meaning that when the thread count far exceeds available cores, the system must rely on context switching. With context switching times estimated between 2µs and 4.5µs [#f1]_ [#f2]_ [#f3]_, even a 100ms time slice could spend between 3% and 10% of its duration on context switching alone - assuming each thread is scheduled once. This overhead increases dramatically if threads are forced to switch more frequently due to competition for processing time.
 
+Furthermore, reducing context switching overhead not only improves raw performance but also enhances overall safety and reliability. By minimizing the number of context switches, the CPU can devote more time to executing critical application logic and monitoring system health, thereby reducing the risk of timing violations in safety-critical functions. This reduction in overhead also minimizes the likelihood of cascading delays and resource starvation, which bolsters system resilience and ensures predictable, real-time execution for safety-critical tasks.
 
-Enabling a User-Friendly and Deterministic Interface for Concurrent Programs
------------------------------------------------------------------------------
 
-Concurrent programming in our target environment spans multiple scopes. At one level, concurrency exists within the algorithms of individual applications or system services, while at another level, multiple applications must execute concurrently across the platform. The challenge is to offer an interface that is not only simple and expressive but also deterministic and reliable - a critical requirement in safety-critical systems.
+Motivation: Enabling a User-Friendly and Deterministic Interface for Concurrent Programs
+-----------------------------------------------------------------------------------------
+
+Concurrent programming in our target environment spans multiple scopes. At one level, concurrency exists within the algorithms of individual applications or system services, while at another level, multiple applications must execute concurrently across the platform. The challenge is to offer an interface that is not only simple and expressive but also deterministic and reliable - an important requirement in safety-critical systems.
 
 Traditional thread-based concurrency in POSIX-like environments introduces complexities such as deadlocks, livelocks, and starvation. These issues, coupled with the inherent difficulties in debugging and validating thread-based systems, can compromise both performance and reliability. [#f4]_ [#f5]_ [#f6]_ Moreover, current designs often separate the management of timing requirements, monitoring, and error handling from the control flow. Integrating these aspects closer to the application logic would promote higher cohesion and lower coupling, enabling more effective debugging and validation, particularly when addressing application-specific scenarios.
 
 
-Managing Reliable Integrations in Mixed-Criticality Environments
------------------------------------------------------------------
+Motivation: Managing Reliable Integrations in Mixed-Criticality Environments
+-----------------------------------------------------------------------------
 
 The broader objective of the HPC platform is to support the concurrent integration and maintenance of multiple applications, potentially sourced from different vendors. Unlike traditional microcontroller (µC) platforms that are statically configured, this platform must allow dynamic updates, upgrades, and new deployments throughout the vehicle's lifecycle. This introduces significant complexity in managing concurrency, particularly in mixed-criticality environments where applications of varying criticality levels must coexist without interference.
 
@@ -88,8 +90,8 @@ Specification
 Now that we know the motivation behind the feature request, let's dive deeper into the proposed solution for the problem statements described above.
 
 
-How to increase performance in a highly concurrent system?
------------------------------------------------------------
+Specification: How to increase performance in a highly concurrent system?
+--------------------------------------------------------------------------
 
 To address the performance challenges described in the motivation - where an excessive number of threads leads to significant context-switch overhead - the proposed solution is to adopt user-level scheduling through cooperative multi-tasking. This approach minimizes overhead by reusing existing threads within a process instead of creating one thread per session or task within a service or application component. By handling task switching at the user level, the system avoids the costly transition between user space and kernel space, reducing the typical context switch cost from the microsecond to the nanosecond range. [#s1]_ [#s2]_ [#s3]_ [#s4]_
 
@@ -110,8 +112,8 @@ The solution includes the following key functionalities:
 
 .. _how_to_enable_a_user_friendly_deterministic_interface_for_concurrent_programs:
 
-How to enable a user-friendly & deterministic interface for concurrent programs?
----------------------------------------------------------------------------------
+Specification: How to enable a user-friendly & deterministic interface for concurrent programs?
+------------------------------------------------------------------------------------------------
 
 To harness the benefits of user-space multi-tasking while still providing a user-friendly and deterministic interface for concurrent programs, this proposal advocates for a nested task-based programming framework. The choice for a nested structure over a graph-based one is driven by the need to design reliable programs and enable straightforward control flow analysis - a requirement that becomes critical during safety inspections. Although graph-based structures may have a gentler learning curve and offer rapid initial results, they often become limiting when more complex scheduling descriptions are needed, such as conditional branching, time monitoring, and error handling paths.
 
@@ -131,8 +133,8 @@ The envisioned programming framework will be:
 
 .. _how_to_manage_reliable_integrations_in_mixed_criticality_environments:
 
-How to manage reliable integrations in mixed-criticality environments?
------------------------------------------------------------------------
+Specification: How to manage reliable integrations in mixed-criticality environments?
+--------------------------------------------------------------------------------------
 
 To address the challenge of integrating applications developed by distributed teams - each with only a partial view of the final target system - the solution must decouple algorithm design from deployment details. Application developers should be able to define algorithms that can exploit parallel execution when processing resources are available without binding their implementations to a specific deployment scenario.
 
@@ -160,9 +162,13 @@ In summary, to manage reliable integrations in mixed-criticality environments, t
 Security Impact
 ===============
 
+.. note::
+
+   This section does not replace a formal security impact analysis. This only guides the design thoughts behind securitly related topics and is to be understood as a starting point for later workflows.
+
 The design of this orchestration feature is based on the assumption that all code executing within a process is trusted. Consequently, the attack surface within a single process is inherently minimized, as the task isolation provided by threads is secure due to the fact that threads cannot be accessed from outside the process.
 
-The only potential attack surface arises from the synchronization between tasks or threads that belong to different processes. To mitigate this risk, the feature request mandates the exclusive use of the :ref:`ipc_feature` for any inter-process synchronization. This communication feature has been previously evaluated with regard to its security impact on synchronization primitives and is considered secure. No alternative forms of exchange or synchronization between processes are permitted for this feature.
+A potential attack surface arises from the synchronization between tasks or threads that belong to different processes. To mitigate this risk, the feature request mandates the exclusive use of the :ref:`ipc_feature` for any inter-process synchronization. This communication feature has been previously evaluated with regard to its security impact on synchronization primitives and is considered secure. No alternative forms of exchange or synchronization between processes are permitted for this feature.
 
 By adhering to this design, the orchestration feature maintains a robust security posture, ensuring that inter-process communication is managed in a controlled and secure manner.
 
@@ -174,6 +180,10 @@ By adhering to this design, the orchestration feature maintains a robust securit
 
 Safety Impact
 =============
+
+.. note::
+
+   This section does not replace a formal safety impact analysis. This only guides the design thoughts behind safety related topics and is to be understood as a starting point for later workflows.
 
 The orchestration feature is designed under the assumption that all tasks within a single process share the same ASIL level. As a result, the internal task management must not mix different safety levels. In the section :ref:`how_to_enable_a_user_friendly_deterministic_interface_for_concurrent_programs`, the capability to define robust error handling mechanisms is described. These mechanisms are intended to serve as integral safety elements within an application's safety concept. Consequently, the feature must ensure that if error handling mechanisms are present, they are isolated from the effects of misbehaving tasks (for example, in the worst-case scenario where all threads in the pool become occupied by tasks in an infinite loop). This functionality shall be implemented in a configurable manner, recognizing that not all applications require safety mechanisms to be defined through the orchestration feature, and that ensuring guaranteed reactivity typically incurs a cost.
 
@@ -190,12 +200,12 @@ The solution includes the following key safety functionalities:
 
 .. admonition:: Related Requirements
 
-   - :need:`feat_req__orchestration__exclusive_use_of_ipc`
    - :need:`feat_req__orchestration__homogeneous_asil`
    - :need:`feat_req__orchestration__configurable_error`
    - :need:`feat_req__orchestration__external_supervision`
    - :need:`feat_req__orchestration__enforcement_of`
    - :need:`feat_req__orchestration__priority_based`
+   - :need:`feat_req__orchestration__exclusive_use_of_ipc`
 
 
 .. License Impact

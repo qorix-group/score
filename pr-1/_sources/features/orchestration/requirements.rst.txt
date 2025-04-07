@@ -146,7 +146,7 @@ Requirements
    :reqtype: Non-Functional
    :security: YES
    :safety: ASIL_B
-   :satisfies: stkh_req__execution_model__processes, stkh_req__dependability__security_features
+   :satisfies: stkh_req__execution_model__processes, stkh_req__dependability__security_features, stkh_req__communication__inter_process
    :status: invalid
 
    The system **SHALL** use the approved IPC feature exclusively for all inter-process synchronization.
