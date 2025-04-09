@@ -17,7 +17,7 @@ Workproducts Safety Analysis
 
 .. workproduct:: Feature Safety Analysis
    :id: wp__feature_safety_analysis
-   :status: draft
+   :status: valid
    :complies: std_wp__iso26262__analysis_851, std_wp__iso26262__software_752
 
    Bottom-Up Safety Analysis with e.g. FMEA method, verifies the feature architecture (as part of SW Safety Concept)
@@ -25,7 +25,7 @@ Workproducts Safety Analysis
 
 .. workproduct:: Feature DFA
    :id: wp__feature_dfa
-   :status: draft
+   :status: valid
    :complies: std_wp__iso26262__analysis_751, std_wp__iso26262__software_753
 
    Dependent Failure Analysis on platform/feature level
@@ -34,15 +34,15 @@ Workproducts Safety Analysis
 
 .. workproduct:: Component Safety Analysis
    :id: wp__sw_component_safety_analysis
-   :status: draft
-   :complies: std_wp__iso26262__analysis_851, std_wp__iso26262__software_752, std_wp__isopas8926__4524
+   :status: valid
+   :complies: std_wp__iso26262__analysis_851, std_wp__iso26262__software_752
 
    Bottom-Up Safety Analysis with e.g. FMEA method, verifies the component architecture (as part of SW Safety Concept)
    - Detection and prevention mitigations linked to Software Component Requirements or Assumptions of Use
 
 .. workproduct:: Component DFA
    :id: wp__sw_component_dfa
-   :status: draft
+   :status: valid
    :complies: std_wp__iso26262__analysis_751, std_wp__iso26262__software_753
 
    Dependent Failure Analysis on component/module level
@@ -52,7 +52,7 @@ Workproducts Safety Analysis
 
 .. workproduct:: Architecture Verification
    :id: wp__sw_arch_verification
-   :status: draft
+   :status: valid
    :complies: std_wp__iso26262__software_754
 
    Depends on architecture, FMEA and DFA tooling.

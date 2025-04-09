@@ -30,8 +30,8 @@ Inputs
 #. How to analyze existing safety measure/mechanism?
 #. How to add new safety measure/mechanisms?
 
-Stakeholders for the requirements
-=================================
+Stakeholders for the Safety Analysis
+====================================
 
 #. :need:`Committer <rl__committer>`
 
@@ -69,16 +69,24 @@ Also requirements of standards need to be taken into consideration:
 * ASPICE
 * ISO SAE 21434
 
-DFA
-***
+How to analyze?
+===============
 
-A DFA :need:`gd_temp__dfa` shall be used to proof the absence of dependent failures. For the analysis a checklist
+DFA
+^^^
+
+A DFA :need:`gd_guidl__safety_analysis` shall be used to proof the absence of dependent failures. For the analysis a checklist
 :need:`gd_chklst__dfa` is available.
 
 Safety Analysis
-***************
+^^^^^^^^^^^^^^^
 
 For the safety analyses the safety analyses :need:`gd_temp__safety_analysis` shall be used. The safety analysis
 is done on architectural diagrams (activity and/or sequence diagrams). Therefore fault models shall be used
-:need:`gd_guidl__fault_models`. Identified faults without a mechanism/measure stay open and were monitored in
+:need:`gd_guidl__fault_models`.
+
+How to add new safety measure/mechanisms?
+=========================================
+
+Identified faults without a mechanism/measure stay open and were monitored in
 the issue tracking sytem :need:`wp__issue_track_system` until there are closed.
