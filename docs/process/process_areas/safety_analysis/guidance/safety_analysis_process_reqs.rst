@@ -119,7 +119,7 @@ Process Safety Analysis Attributes
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
-   :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749
+   :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44431, std_req__isopas8926__44432
 
    Each measure shall have an statement if it's sufficient.
 
@@ -128,7 +128,7 @@ Process Safety Analysis Attributes
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
-   :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749
+   :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44433
 
    The argument shall describe why the measure is sufficient or not.
 
@@ -154,7 +154,7 @@ Safety Analysis Requirement Linkage
    :status: valid
    :tags: attribute, automated
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
-   :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749
+   :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44433
 
    It shall be possible to specify the measure coverage.
 
