@@ -19,7 +19,7 @@ Guidelines
 .. gd_guidl:: Safety Analysis Guideline
    :id: gd_guidl__safety_analysis
    :status: valid
-   :complies: std_req__iso26262__analysis_841, std_req__iso26262__analysis_842, std_req__iso26262__analysis_843, std_req__iso26262__analysis_844, std_req__iso26262__analysis_847, std_req__iso26262__analysis_848, std_req__iso26262__analysis_849, std_req__iso26262__analysis_8410, std_wp__iso26262__analysis_851
+   :complies: std_req__iso26262__analysis_841, std_req__iso26262__analysis_842, std_req__iso26262__analysis_843, std_req__iso26262__analysis_844, std_req__iso26262__analysis_847, std_req__iso26262__analysis_848, std_req__iso26262__analysis_849, std_req__iso26262__analysis_8410, std_req__isopas8926__44431, std_req__isopas8926__44432
 
 This document describes the general guidances for Safety Analysis based on the concept which is defined :need:`[[title]]<doc_concept__safety__analysis>`.
 
