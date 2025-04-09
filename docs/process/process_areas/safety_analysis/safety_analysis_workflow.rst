@@ -57,9 +57,12 @@ todo: need to add guidance and standard links
    | The safety analyses and DFA are monitored and verified.
    | The inspection shall be implemented as an integral part of the review tool.
 
-|
+
+
+
 RAS(IC) for Safety Analysis
 ***************************
+
 
 .. needtable:: RASIC Overview for Safety Analysis
    :tags: safety_analysis
