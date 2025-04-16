@@ -50,10 +50,4 @@ Workproducts Safety Analysis
    Perform analysis of safety related and non-safety related sub-elements or sub-elements with different ASIL.
    Perform analysis on interactions between safety related and non-safety related sub-components or sub-components with different ASIL of one component. Including potential influences from the other components in the component's module.
 
-.. workproduct:: Architecture Verification
-   :id: wp__sw_arch_verification
-   :status: valid
-   :complies: std_wp__iso26262__software_754
 
-   Depends on architecture, FMEA and DFA tooling.
-   May include several methods like inspection, modelling ... Which are selected in SW Development Plan.

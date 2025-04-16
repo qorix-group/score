@@ -18,9 +18,10 @@ Guidance
 .. toctree::
    :maxdepth: 1
 
-   dfa_checklist_template
-   dfa_template
-   fault_models_guideline
    safety_analysis_guideline
-   safety_analysis_process_reqs
+   fault_models_guideline
    safety_analysis_templates
+   dfa_template
+   dfa_checklist_template
+   safety_analysis_process_reqs
+

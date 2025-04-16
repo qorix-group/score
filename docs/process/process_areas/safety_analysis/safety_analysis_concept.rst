@@ -20,14 +20,14 @@ Concept Description
    :status: valid
    :tags: safety_analysis
 
-In this section a concept for the safety analyses will be discussed. Inputs for this concept are the requirements of ISO26262 Part-9.
+In this section a concept for the safety analyses will be discussed. Inputs for this concept are the requirements of ISO26262 Part 6 Chapter 7 and Part 9 Chapter 7 and 8.
 
 Inputs
 ******
 
 #. Stakeholders for the safety analysis?
 #. Who needs which information?
-#. How to analyze existing safety measure/mechanism?
+#. How to analyze existing safety measure?
 #. How to add new safety measure/mechanisms?
 
 Stakeholders for the Safety Analysis
@@ -82,7 +82,7 @@ Safety Analysis
 ^^^^^^^^^^^^^^^
 
 For the safety analyses the safety analyses :need:`gd_temp__safety_analysis` shall be used. The safety analysis
-is done on architectural diagrams (activity and/or sequence diagrams). Therefore fault models shall be used
+is done on architectural diagrams (state and sequence diagrams). Therefore fault models shall be used
 :need:`gd_guidl__fault_models`.
 
 How to add new safety measure/mechanisms?

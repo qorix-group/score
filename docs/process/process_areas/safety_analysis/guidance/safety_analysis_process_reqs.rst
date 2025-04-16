@@ -123,7 +123,7 @@ Process Safety Analysis Attributes
 
    Each measure shall have an statement if it's sufficient.
 
-.. gd_req:: Requirement attribute: argument
+.. gd_req:: Safety Analysis attribute: argument
    :id: gd_req__saf__attr_argument
    :status: valid
    :tags: attribute, mandatory
@@ -142,9 +142,9 @@ Safety Analysis Requirement Linkage
    :status: valid
    :tags: attribute, automated
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__analysis_842, std_req__iso26262__software_7410, std_req__iso26262__software_7411
 
-   Safety Analysis shall be linked to its adjacent level via the attribute mitigates.
+   Safety Analysis shall be linked to its adjacent level via the attribute verifies.
 
       * Feature Safety Analysis <-> feature architecture
       * Component Safety Analysis <-> component architecture
@@ -159,6 +159,18 @@ Safety Analysis Requirement Linkage
    It shall be possible to specify the measure coverage.
 
       * 0 to 100 percent
+
+.. gd_req:: Safety Analysis attribute: link to Requirements
+   :id: gd_req__saf__attr_requirements
+   :status: valid
+   :tags: attribute, automated
+   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :complies: std_req__iso26262__analysis_842, std_req__iso26262__software_7410, std_req__iso26262__software_7411
+
+   Safety Analysis shall be linked to its adjacent level via the attribute mitigates.
+
+      * Feature Safety Analysis <-> feature architecture
+      * Component Safety Analysis <-> component architecture
 
 .. gd_req:: Safety Analysis attribute: link to Aou
    :id: gd_req__saf__attr_aou
@@ -194,7 +206,7 @@ Process Requirements Checks
    It shall be checked if all mandatory attributes for each Safety Analysis is provided by the user. For all Safety Analysis following attributes shall be mandatory:
 
    .. needtable:: Overview mandatory Safety Analysis attributes
-      :filter: "mandatory" in tags and "attribute" in tags and "safety analysis" in tags and type == "gd_req"
+      :filter: "mandatory" in tags and "attribute" in tags and "safety_analysis" in tags and type == "gd_req"
       :style: table
       :columns: title
       :colwidths: 30
@@ -218,5 +230,5 @@ Process Requirements Checks
 
    It shall be checked that Safety Analysis (Safety != QM) can only be linked against elements with the same ASIL.
 
-.. needextend:: "process_areas/requirements_engineering" in docname
-   :+tags: safety analysis
+.. needextend:: "process_areas/safety_analysis" in docname
+   :+tags: safety_analysis

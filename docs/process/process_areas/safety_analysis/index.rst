@@ -20,9 +20,9 @@ Safety Analysis
 .. toctree::
    :maxdepth: 1
 
-   guidance/index
-   safety_analysis_concept
    safety_analysis_getstrt
+   safety_analysis_concept
+   guidance/index
    safety_analysis_roles
    safety_analysis_workflow
    safety_analysis_workproducts
