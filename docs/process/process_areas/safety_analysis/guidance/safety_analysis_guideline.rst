@@ -29,44 +29,13 @@ Workflow for Safety Analysis
 Detailed description which steps are need for implementation.
 
 #. To analyse the Feature Architecture a Safety Analysis and a DFA shall be executed.
-#. Perform Safety Analysis on the feature.
-#. Perform DFA on the feature.
+#. Perform Safety Analysis on the Feature Architecture.
+#. Perform DFA on the Feature Architecture.
 #. To analyse the Architecture a Safety Analysis and a DFA shall be executed.
-#. Perform Safety Analysis on the component.
-#. Perform DFA on the component.
+#. Perform Safety Analysis on the Component Architecture.
+#. Perform DFA on the Component Architecture.
 #. The performance of the Safety Analysis and DFA shall be monitored and verified.
-#. Open issues like from the Safety Analysis and DFA shall be monitored by the Issue Tracking system.
-#. The verification of the Architecture is completed when Safety Analysis and DFA are completed by using the checklist and all open issues are closed.
-
-
-Step-by-Step-approach DFA:
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The analysis is done by using the template <:need:`gd_temp__dfa`> on the feature or component architectural diagrams using a checklist <:need:`gd_chklst__dfa`>.
-
-**Step 1:**
-For each identified violation assign the violation by ID from the DFA checklist and document it as a sphinx-needs directive.
-Document the resulting violation causes and effect and the violated safety requirement.
-Document safety measure/mechanism to avoid or control the violation.
-
-**Step 2:**
-Judge if this is sufficient. If not, request to update the requirements with additional safety measure/mechanism to come to a sufficient outcome.
-The analysis is finished, if for each identified violation a mechanism/measure exists.
-Unless the attribute sufficient is yes, measure and argument attribute can be still empty.
-
-Alternatively the checklist template can be used. It can be filled out and is then the DFA report.
-
-**Example:**
-
-| .. feat_saf_dfa:: <Element descriptor>
-|    :id: feat_saf_DFA__<Feature>__<Element descriptor>
-|    :violation_id: "SR_01_05"
-|    :violation_cause: "Operating system including scheduler"
-|    :violates: FEAT_REQ__persistency_key_val_storage__creation
-|    :measure:
-|    :sufficient: no
-|    :argument:
-|    :status: valid
+#. Open issues like from the Safety Analysis and DFA shall be monitored by the Issue Tracking system. For safety relevant issues types a “safety” label is used.
 
 
 Step-by-Step-approach Safety Analysis:
@@ -107,4 +76,33 @@ Unless the attribute sufficient is yes, measure and argument attribute can be st
 |    :measure: FEAT_REQ_persistency_key_val_storage__error
 |    :sufficient: yes
 |    :argument: "Calling app gets error information"
+|    :status: valid
+
+Step-by-Step-approach DFA:
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+The analysis is done by using the template <:need:`gd_temp__dfa`> on the feature or component architectural diagrams using a checklist <:need:`gd_chklst__dfa`>.
+
+**Step 1:**
+For each identified violation assign the violation by ID from the DFA checklist and document it as a sphinx-needs directive.
+Document the resulting violation causes and effect and the violated safety requirement.
+Document safety measure/mechanism to avoid or control the violation.
+
+**Step 2:**
+Judge if this is sufficient. If not, request to update the requirements with additional safety measure/mechanism to come to a sufficient outcome.
+The analysis is finished, if for each identified violation a mechanism/measure exists.
+Unless the attribute sufficient is yes, measure and argument attribute can be still empty.
+
+Alternatively the checklist template can be used. It can be filled out and is then the DFA report.
+
+**Example:**
+
+| .. feat_saf_dfa:: <Element descriptor>
+|    :id: feat_saf_DFA__<Feature>__<Element descriptor>
+|    :violation_id: "SR_01_05"
+|    :violation_cause: "Operating system including scheduler"
+|    :violates: FEAT_REQ__persistency_key_val_storage__creation
+|    :measure:
+|    :sufficient: no
+|    :argument:
 |    :status: valid
