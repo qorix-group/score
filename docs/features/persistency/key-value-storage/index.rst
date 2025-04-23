@@ -115,7 +115,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__260, STKH_REQ__350
+   :satisfies: stkh_req__dev_experience__prog_languages, stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow concurrent access via C++ and Rust interfaces.
@@ -125,7 +125,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall have a maximum size defined at compile time.
@@ -135,7 +135,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow thread safe access per key.
@@ -145,7 +145,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow to instantiate multiple key-value storages per software architecture element.
@@ -155,7 +155,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow only UTF-8 encoded strings as keys.
@@ -165,7 +165,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow the storage of primitive and non-primitive datatypes as values.
@@ -176,7 +176,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall support default values for each key.
@@ -189,7 +189,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow the retrieval of a key's default value.
@@ -199,7 +199,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow the reset of a specific key or all keys to its/their default value(s).
@@ -209,7 +209,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall store the data persistent. It shall provide an API to trigger the persistency.
@@ -219,7 +219,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall detect data corruption. TODO: Dependent on AoUs.
@@ -229,7 +229,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall support the versioning of different layouts.
@@ -239,7 +239,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall implement a mechanism to support the update from one version to another version.
@@ -250,7 +250,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow the explicit creation of snapshots of a specific version and
@@ -264,7 +264,7 @@ Specification
    :reqtype: Non-Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: STKH_REQ__350
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall support tooling to view and modify key-value pairs for development and debugging purposes.
