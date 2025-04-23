@@ -15,7 +15,7 @@
 Key-value Storage
 #################
 
-.. document:: [Your Feature Name]
+.. document:: Persistency Key-Value-Store
    :id: DOC__Persistency_Kvs
    :status: draft
    :safety: ASIL_B
@@ -95,20 +95,6 @@ stored data or if not possible the previous snapshot.
 
 Specification
 =============
-
-.. note::
-   Todos:
-    - Key-Value Storage is needed because there are (legacy) applications which require a KVS
-    - There are multiple Key-Value Storages allowed per application
-    - There must be an update mechanism from different versions of a KVS to another version
-    - When are modifications persisted? Configurable?
-    - The same KVS should be read/writeable from C++ & Rust.
-    - Supported Datatypes: Primitive Datatypes & Non-Primitive Datatypes; To be coordinated with IPC/Communication CTF, to use the same datatypes
-    - Tooling to modify/access content of KVS "from the outside"
-    - KVS should store default values
-    - Integrity of the KVS should be checked
-    - Only allow keys that are predefined to avoid spelling errors
-    - Support tracing
 
 .. feat_req:: C++ & Rust Interoperability
    :id: FEAT_REQ__KVS__cpp_rust_interoperability
@@ -250,7 +236,7 @@ Specification
    :reqtype: Functional
    :security: no
    :safety: ASIL_B
-   :satisfies: stkh_req__functiona_req__support_of_store
+   :satisfies: stkh_req__functiona_req__support_of_store, stkh_req__dev_experience__reprocessing
    :status: valid
 
    The key-value storage shall allow the explicit creation of snapshots of a specific version and
@@ -269,13 +255,214 @@ Specification
 
    The key-value storage shall support tooling to view and modify key-value pairs for development and debugging purposes.
 
+.. feat_req:: Stable APIs
+   :id: FEAT_REQ__KVS__stable_api
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__overall_goals__reuse_of_app_soft, stkh_req__communication__stable_app_inter
+   :status: valid
+
+   The KVS API will be designed to provide a stable interface over the
+   lifecylcle without preventing new functionality from beeing implemented.
+
+.. feat_req:: Base on existing standards
+   :id: FEAT_REQ__KVS__existing_standards
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__overall_goals__enable_cooperation
+   :status: valid
+
+   The KVS will be based on existing standards like a dictionary compatible API
+   and a well-known storage format.
+
+.. feat_req:: Variant management support
+   :id: FEAT_REQ__KVS__variant_management
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__overall_goals__variant_management
+   :status: valid
+
+   The KVS ensures compatibilty between architectures and versions.
+
+.. feat_req:: IP Protection
+   :id: FEAT_REQ__KVS__ip_protection
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__overall_goals__ip_protection
+   :status: valid
+
+   The KVS will use a licensing model that allows to use it without having to
+   disclose IP. Also the used libraries will be carefully selected to ensure
+   this.
+
+.. feat_req:: Set default key values via file
+   :id: FEAT_REQ__KVS__default_value_file
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__functional_req__file_based
+   :status: valid
+
+   The KVS allows to configure default key values by using a file.
+
+.. feat_req:: Configure limits via file
+   :id: FEAT_REQ__KVS__config_file
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__functional_req__file_based
+   :status: valid
+
+   The KVS allows to configure memory and other limits by using a config file.
+
+.. feat_req:: Store persistent data
+   :id: FEAT_REQ__KVS__persist_data
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__functional_req__data_persistency
+   :status: valid
+
+   The KVS must be able to store and load its data to/from a persistent
+   storage.
+
+.. feat_req:: Support ASIL-B
+   :id: FEAT_REQ__KVS__safety_asil_b
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__dependability__automotive_safety
+   :status: valid
+
+   The KVS must support at least ASIL-B.
+
+.. feat_req:: Support engineering and field mode
+   :id: FEAT_REQ__KVS__dev_mode
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__dependability__safety_features
+   :status: valid
+
+   The KVS must support an engineering (developer) and a field mode. The
+   engineering must provide a way to to access all data without restrictions.
+
+.. feat_req:: Provide an async API
+   :id: FEAT_REQ__KVS__async_api
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__dependability__availability, stkh_req__app_architectures__support_request
+   :status: valid
+
+   The KVS must provide an async API.
+
+.. feat_req:: Separate data stores
+   :id: FEAT_REQ__KVS__access_control
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__dependability__security_features
+   :status: valid
+
+   The KVS must make sure that data stores can only be accessed by allowed components.
+
+.. feat_req:: Data-change events
+   :id: FEAT_REQ__KVS__events
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__app_architectures__support_data
+   :status: valid
+
+   The KVS must provide an API to register callbacks which will be called for
+   several events like keys are changed or removed.
+
+.. feat_req:: Fast access
+   :id: FEAT_REQ__KVS__fast_access
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__execution_model__short_app_cycles
+   :status: valid
+
+   The KVS must ensure that operations are usually done in under 5 ms.
+
+.. feat_req:: Fast startup
+   :id: FEAT_REQ__KVS__fast_startup
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__execution_model__startup_perf
+   :status: valid
+
+   The KVS must ensure that the startup time, besides the time that is needed
+   to read the files from the filesystem, must be very short in terms of
+   initial parsing and hash checking.
+
+.. feat_req:: Intra-process communication
+   :id: FEAT_REQ__KVS__intra_process_comm
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__communication__intra_process
+   :status: valid
+
+   The KVS must support concurrent access to the data.
+
+.. feat_req:: Multi-architecture support
+   :id: FEAT_REQ__KVS__multi_arch
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__hardware_support__chipset_support
+   :status: valid
+
+   The KVS must run on all S-CORE platforms.
+
+.. feat_req:: Logging and tracing
+   :id: FEAT_REQ__KVS__log_trace
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__dev_experience__logging_support
+   :status: valid
+
+   The KVS must use the provided S-CORE logging and tracing framework.
+
+.. feat_req:: Development steering
+   :id: FEAT_REQ__KVS__dev_steering
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__re_requirements__traceability
+   :status: valid
+
+   Requirements must be linked to top-level (Stakeholder) requirements.
+
+.. feat_req:: Document requirements as code
+   :id: FEAT_REQ__KVS__req_as_code
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: stkh_req__requirements__as_code
+   :status: valid
+
+   Requirements must be documented as code.
+
 
 Backwards Compatibility
 =======================
 
 The API for the specific language tries to represent the language specific
 implementation like hashmaps or dictionaries to be mostly backwards compatible
-to already existing key-value-storage usage cases.
+to already existing key-value-storage usage cases. Access without a safe error
+handling path, like the array-operator in Rust which can panic, must be
+avoided.
 
 
 Security Impact
@@ -289,8 +476,8 @@ only providing debug access when a debug firmware image is installed.
 Safety Impact
 =============
 
-.. note::
-  - One key-value storage should not be used within different processes (freedom from interference) -> To be added to AoUs?
+   .. note::
+      One key-value storage should not be used within different processes (freedom from interference) -> To be added to AoUs?
 
 [How could the safety be impacted by the new feature?]
 
