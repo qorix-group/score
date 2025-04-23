@@ -15,48 +15,29 @@
 Key-value Storage
 #################
 
-- Key-Value Storage is needed because there are (legacy) applications which require a KVS
-- There are multiple Key-Value Storages allowed per application
-- There must be an update mechanism from different versions of a KVS to another version
-- When are modifications persisted? Configurable?
-- The same KVS should be read/writeable from C++ & Rust.
-- Supported Datatypes: Primitive Datatypes & Non-Primitive Datatypes; To be coordinated with IPC/Communication CTF, to use the same datatypes
-- Tooling to modify/access content of KVS "from the outside"
-- KVS should store default values
-- Integrity of the KVS should be checked
-- Only allow keys that are predefined to avoid spelling errors
-
 .. document:: [Your Feature Name]
-   :id: DOC__Your_Feature_Name
+   :id: DOC__Persistency_Kvs
    :status: draft
-   :safety: ASIL_D
+   :safety: ASIL_B
    :tags: contribution_request, feature_request
-
-.. attention::
-    The above directive must be updated according to your Feature.
-
-    - Modify ``name`` to be your Feature Name
-    - Modify ``id`` to be your Feature Name in upper snake case preceded by ``DOC_``
-    - Adjust ``status`` to be ``valid``
-    - Adjust ``asil`` according to your needs
-    - Extend ``tags`` according to your needs, but please keep two default tags there
 
 
 Feature flag
 ============
 
-This feature is a standard feature that needs no special feature flag.
+To activate this feature, use the following feature flag:
+
+``persistency_kvs``
 
 
 Abstract
 ========
 
 This feature request describes the key-value storage that is needed by
-applications to store either temporary or permant data in an easy way that
+applications to store either temporary or permanent data in an easy way that
 conforms to most programming languages that provide a hash, hashmap, dictionary
-or similar. It provides support for commonly used datatypes and will be written
-in Rust. Access to the KVS is possible from any support language through
-language specific interfaces.
+or similar data structure. Access to the KVS is possible from any support
+language through language specific interfaces.
 
 
 Motivation
@@ -72,6 +53,10 @@ provide them as API to any language whilst still using Rust as the backend.
 
 A main USP of the solution will be the integration of a tracing framework that
 allows to understand how events also in the context of other events interact.
+
+A key-value storage is used within many applications to store e.g.
+configuration data and is therefore seen crucial for the Eclipse S-CORE
+platform.
 
 
 Rationale
@@ -111,12 +96,178 @@ stored data or if not possible the previous snapshot.
 Specification
 =============
 
-[Describe the requirements, architecture of any new feature.] or
-[Describe the change to requirements, architecture, implementation, process, documentation, infrastructure of any change request.]
+.. note::
+   Todos:
+    - Key-Value Storage is needed because there are (legacy) applications which require a KVS
+    - There are multiple Key-Value Storages allowed per application
+    - There must be an update mechanism from different versions of a KVS to another version
+    - When are modifications persisted? Configurable?
+    - The same KVS should be read/writeable from C++ & Rust.
+    - Supported Datatypes: Primitive Datatypes & Non-Primitive Datatypes; To be coordinated with IPC/Communication CTF, to use the same datatypes
+    - Tooling to modify/access content of KVS "from the outside"
+    - KVS should store default values
+    - Integrity of the KVS should be checked
+    - Only allow keys that are predefined to avoid spelling errors
+    - Support tracing
 
-   .. note::
-      A Feature Request shall specify the stakeholder requirements as part of our platform/project.
-      Thereby the :need:`RL_technical_lead` will approve these requirements as part of accepting the Feature Request (e.g. merging the PR with the Feature Request).
+.. feat_req:: C++ & Rust Interoperability
+   :id: FEAT_REQ__KVS__cpp_rust_interoperability
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__260, STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall allow concurrent access via C++ and Rust interfaces.
+
+.. feat_req:: Maximum Size
+   :id: FEAT_REQ__KVS__maximum_size
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall have a maximum size defined at compile time.
+
+.. feat_req:: Thread Safety
+   :id: FEAT_REQ__KVS__thread_safety
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall allow thread safe access per key.
+
+.. feat_req:: Multiple KVS per Software Architecture Element
+   :id: FEAT_REQ__KVS__multiple_kvs
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall allow to instantiate multiple key-value storages per software architecture element.
+
+.. feat_req:: Supported Datatypes (Keys)
+   :id: FEAT_REQ__KVS__supported_datatypes_keys
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall allow only UTF-8 encoded strings as keys.
+
+.. feat_req:: Supported Datatypes (Values)
+   :id: FEAT_REQ__KVS__supported_datatypes_values
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall allow the storage of primitive and non-primitive datatypes as values.
+   The allowed datatypes shall be identical to the ones in the IPC feature.
+
+.. feat_req:: Default Values
+   :id: FEAT_REQ__KVS__default_values
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall support default values for each key.
+   The default values shall be pre-defined in a configuration file.
+
+   Note: Not each key does require a default value.
+
+.. feat_req:: Default Value Retrieval
+   :id: FEAT_REQ__KVS__default_value_retrieval
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall allow the retrieval of a key's default value.
+
+.. feat_req:: Default Value Reset
+   :id: FEAT_REQ__KVS__default_value_reset
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall allow the reset of a specific key or all keys to its/their default value(s).
+
+.. feat_req:: Persistency
+   :id: FEAT_REQ__KVS__persistency
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall store the data persistent. It shall provide an API to trigger the persistency.
+
+.. feat_req:: Integrity Check
+   :id: FEAT_REQ__KVS__integrity_check
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall detect data corruption. TODO: Dependent on AoUs.
+
+.. feat_req:: Versioning
+   :id: FEAT_REQ__KVS__versioning
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall support the versioning of different layouts.
+
+.. feat_req:: Update Mechanism
+   :id: FEAT_REQ__KVS__update_mechanism
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall implement a mechanism to support the update from one version to another version.
+   In addition, multiple version jumps at once shall be supported.
+
+.. feat_req:: Snapshots
+   :id: FEAT_REQ__KVS__snapshots
+   :reqtype: Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall allow the explicit creation of snapshots of a specific version and
+   shall support the roll-back to previous snapshots, e.g. in case the integrity check fails or an rolled-back update.
+   The snapshots shall be associated with an unique ID to be referenced.
+
+   The key-value storage shall allow the deletion of snapshots.
+
+.. feat_req:: Tooling
+   :id: FEAT_REQ__KVS__tooling
+   :reqtype: Non-Functional
+   :security: no
+   :safety: ASIL_B
+   :satisfies: STKH_REQ__350
+   :status: valid
+
+   The key-value storage shall support tooling to view and modify key-value pairs for development and debugging purposes.
 
 
 Backwards Compatibility
@@ -138,6 +289,9 @@ only providing debug access when a debug firmware image is installed.
 Safety Impact
 =============
 
+.. note::
+  - One key-value storage should not be used within different processes (freedom from interference) -> To be added to AoUs?
+
 [How could the safety be impacted by the new feature?]
 
    .. note::
@@ -154,7 +308,9 @@ Safety Impact
 License Impact
 ==============
 
-[How could the copyright impacted by the license of the new contribution?]
+   .. note::
+      The key-value storage itself uses the Apache-2.0 license. Licenses of
+      used libraries are need to be checked.
 
 
 How to Teach This
