@@ -38,8 +38,8 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/modern.css?v=803738c0" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/score.css?v=dbf7d94f" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/score_needs.css?v=60b43b4f" />
@@ -459,11 +459,11 @@
                   
   <section id="key-value-storage">
 <h1>Key-value Storage<a class="headerlink" href="#key-value-storage" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-9ca0f9ba">
+<div class="need_container docutils container" id="SNCB-7c18dd7a">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="DOC__Persistency_Kvs">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
-<div class="line"><span><span class="needs_title"><span class="needs_data">[Your Feature Name]</span></span></span></div>
+<div class="line"><span><span class="needs_title"><span class="needs_data">Persistency Key-Value-Store</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
@@ -566,31 +566,14 @@ stored data or if not possible the previous snapshot.</p>
 </section>
 <section id="specification">
 <h2>Specification<a class="headerlink" href="#specification" title="Link to this heading">#</a></h2>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<dl class="simple">
-<dt>Todos:</dt><dd><ul class="simple">
-<li><p>Key-Value Storage is needed because there are (legacy) applications which require a KVS</p></li>
-<li><p>There are multiple Key-Value Storages allowed per application</p></li>
-<li><p>There must be an update mechanism from different versions of a KVS to another version</p></li>
-<li><p>When are modifications persisted? Configurable?</p></li>
-<li><p>The same KVS should be read/writeable from C++ &amp; Rust.</p></li>
-<li><p>Supported Datatypes: Primitive Datatypes &amp; Non-Primitive Datatypes; To be coordinated with IPC/Communication CTF, to use the same datatypes</p></li>
-<li><p>Tooling to modify/access content of KVS “from the outside”</p></li>
-<li><p>KVS should store default values</p></li>
-<li><p>Integrity of the KVS should be checked</p></li>
-<li><p>Only allow keys that are predefined to avoid spelling errors</p></li>
-<li><p>Support tracing</p></li>
-</ul>
-</dd>
-</dl>
-</div>
 </section>
 <section id="backwards-compatibility">
 <h2>Backwards Compatibility<a class="headerlink" href="#backwards-compatibility" title="Link to this heading">#</a></h2>
 <p>The API for the specific language tries to represent the language specific
 implementation like hashmaps or dictionaries to be mostly backwards compatible
-to already existing key-value-storage usage cases.</p>
+to already existing key-value-storage usage cases. Access without a safe error
+handling path, like the array-operator in Rust which can panic, must be
+avoided.</p>
 </section>
 <section id="security-impact">
 <h2>Security Impact<a class="headerlink" href="#security-impact" title="Link to this heading">#</a></h2>
@@ -600,12 +583,12 @@ only providing debug access when a debug firmware image is installed.</p>
 </section>
 <section id="safety-impact">
 <h2>Safety Impact<a class="headerlink" href="#safety-impact" title="Link to this heading">#</a></h2>
-<div class="admonition note">
+<blockquote>
+<div><div class="admonition note">
 <p class="admonition-title">Note</p>
-<ul class="simple">
-<li><p>One key-value storage should not be used within different processes (freedom from interference) -&gt; To be added to AoUs?</p></li>
-</ul>
+<p>One key-value storage should not be used within different processes (freedom from interference) -&gt; To be added to AoUs?</p>
 </div>
+</div></blockquote>
 <p>[How could the safety be impacted by the new feature?]</p>
 <blockquote>
 <div><div class="admonition note">
