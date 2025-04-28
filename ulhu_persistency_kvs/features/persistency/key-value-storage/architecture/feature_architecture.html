@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Architecture &#8212; Score 0.1 documentation</title>
+    <title>Feature Architecture : persistency/key_val_storage &#8212; Score 0.1 documentation</title>
   
   
   
@@ -62,7 +62,7 @@
     <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'features/persistency/key-value-storage/architecture/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'features/persistency/key-value-storage/architecture/feature_architecture';</script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -274,10 +274,8 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -378,6 +376,15 @@
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
@@ -413,7 +420,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Architecture</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Feature Architecture : persistency/key_val_storage</span></li>
   </ul>
 </nav>
 </div>
@@ -430,19 +437,41 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="architecture">
-<h1>Architecture<a class="headerlink" href="#architecture" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For now we store the component architecture in the feature tree, because multi-repo docs are not yet supported.
-Once this support becomes available the component architecture will be moved to the module.</p>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="feature_architecture.html">Feature Architecture : persistency/key_val_storage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="component_architecture.html">Component Architecture</a></li>
+  <section id="feature-architecture-persistency-key-val-storage">
+<h1>Feature Architecture : persistency/key_val_storage<a class="headerlink" href="#feature-architecture-persistency-key-val-storage" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>key_val_storage provides the capability to efficiently store, retrieve, and
+manage key-value pairs in a persistent storage system.</p></li>
 </ul>
-</div>
+</section>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>key_val_storage organize data as pairs, where each unique key is associated with a specific value.
+The key acts as a unique identifier for getting the value.</p></li>
+<li><p>The data is persisted in JSON format to the file system, providing a human-readable,
+and widely supported way to store and manage key-value pairs.</p></li>
+<li><p>The JSON data persisted is according to RFC-8259.</p></li>
+</ul>
+<section id="rationale-behind-architecture-decomposition">
+<h3>Rationale Behind Architecture Decomposition<a class="headerlink" href="#rationale-behind-architecture-decomposition" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The architecture is decomposed to include a dedicated JSON parser component (TinyJSON) to facilitate the persistent storage of data in JSON format.</p></li>
+<li><p>The architecture is decomposed to include a FileStorage component (fs) to read and write to the file system.</p></li>
+</ul>
+</section>
+</section>
+<section id="static-architecture">
+<h2>Static Architecture<a class="headerlink" href="#static-architecture" title="Link to this heading">#</a></h2>
+</section>
+<section id="dynamic-architecture">
+<h2>Dynamic Architecture<a class="headerlink" href="#dynamic-architecture" title="Link to this heading">#</a></h2>
+</section>
+<section id="logical-interfaces">
+<h2>Logical Interfaces<a class="headerlink" href="#logical-interfaces" title="Link to this heading">#</a></h2>
+</section>
 </section>
 
 
@@ -467,10 +496,29 @@ Once this support becomes available the component architecture will be moved to 
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#description">Description</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rationale-behind-architecture-decomposition">Rationale Behind Architecture Decomposition</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#static-architecture">Static Architecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dynamic-architecture">Dynamic Architecture</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#logical-interfaces">Logical Interfaces</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/eclipse-score/score/edit/main/docs/features/persistency/key-value-storage/architecture/index.rst">
+    <a href="https://github.com/eclipse-score/score/edit/main/docs/features/persistency/key-value-storage/architecture/feature_architecture.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -486,7 +534,7 @@ Once this support becomes available the component architecture will be moved to 
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../../_sources/features/persistency/key-value-storage/architecture/index.rst.txt"
+      <li><a href="../../../../_sources/features/persistency/key-value-storage/architecture/feature_architecture.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>

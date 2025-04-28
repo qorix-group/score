@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Architecture &#8212; Score 0.1 documentation</title>
+    <title>Component Architecture &#8212; Score 0.1 documentation</title>
   
   
   
@@ -62,7 +62,7 @@
     <script src="../../../../_static/sphinx-needs/libs/html/datatables.min.js?v=8a4aee21"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'features/persistency/key-value-storage/architecture/index';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'features/persistency/key-value-storage/architecture/component_architecture';</script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -274,10 +274,8 @@
       
       
       
-        
-      
       <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar hide-on-wide">
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -378,6 +376,15 @@
     
   </div>
   
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"></div>
+</nav></div>
+    </div>
+  
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
       <div class="sidebar-primary-item">
@@ -413,7 +420,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Architecture</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Component Architecture</span></li>
   </ul>
 </nav>
 </div>
@@ -430,19 +437,37 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="architecture">
-<h1>Architecture<a class="headerlink" href="#architecture" title="Link to this heading">#</a></h1>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For now we store the component architecture in the feature tree, because multi-repo docs are not yet supported.
-Once this support becomes available the component architecture will be moved to the module.</p>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="feature_architecture.html">Feature Architecture : persistency/key_val_storage</a></li>
-<li class="toctree-l1"><a class="reference internal" href="component_architecture.html">Component Architecture</a></li>
-</ul>
-</div>
+  <section id="component-architecture">
+<h1>Component Architecture<a class="headerlink" href="#component-architecture" title="Link to this heading">#</a></h1>
+<section id="technical-concept-description">
+<h2>Technical Concept Description<a class="headerlink" href="#technical-concept-description" title="Link to this heading">#</a></h2>
+<p>The key-value-storage feature (KVS) scope is very small so only the KVS itself
+and a another component to handle the persistent storage format are defined.</p>
+<p>The API is stable for major version releases. Any changes are discussed in the
+CFT. Whenever possible, the existing API is not changed and new functionality
+is provided by new function calls.</p>
+<section id="key-value-storage-kvs">
+<h3>Key-Value-Storage (KVS)<a class="headerlink" href="#key-value-storage-kvs" title="Link to this heading">#</a></h3>
+<p>The KVS is presented like a dictonary or hashmap implementation to the
+application with some extra APIs for flushing data, handling snapshots and
+other functionality. All API functions guarantee to not panic or throw
+exceptions that can’t be handled. Error handling has one of the highest
+priorities.</p>
+<p>All actions are log- and traceable. The component supports productive and
+develop environments.</p>
+<p>The KVS is multi-threading safe and allows concurrent access to the same store.
+Tracking changes can be done by subscribing to specified keys or the whole
+store.</p>
+<p>Values that are stored behind the keys can be numbers, text, null, arrays or
+objects. Objects and arrays can be used to nest values.</p>
+<p>A snapshot logic ensures rollback capabilities if something goes wrong.</p>
+</section>
+<section id="tinyjson">
+<h3>TinyJSON<a class="headerlink" href="#tinyjson" title="Link to this heading">#</a></h3>
+<p>TinyJSON is used to serialize and deserialize the data as the well-known format
+JSON to and from the permanent storage.</p>
+</section>
+</section>
 </section>
 
 
@@ -467,10 +492,26 @@ Once this support becomes available the component architecture will be moved to 
 
 
   <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#technical-concept-description">Technical Concept Description</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-value-storage-kvs">Key-Value-Storage (KVS)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tinyjson">TinyJSON</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/eclipse-score/score/edit/main/docs/features/persistency/key-value-storage/architecture/index.rst">
+    <a href="https://github.com/eclipse-score/score/edit/main/docs/features/persistency/key-value-storage/architecture/component_architecture.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
@@ -486,7 +527,7 @@ Once this support becomes available the component architecture will be moved to 
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../../../_sources/features/persistency/key-value-storage/architecture/index.rst.txt"
+      <li><a href="../../../../_sources/features/persistency/key-value-storage/architecture/component_architecture.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>
