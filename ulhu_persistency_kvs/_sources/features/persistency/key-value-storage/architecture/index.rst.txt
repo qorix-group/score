@@ -26,14 +26,14 @@ Rationale Behind Architecture Decomposition
 Static Architecture
 -------------------
 
-.. feat_arc_sta:: key_val_storage
+.. feat_arc_sta:: Static Architecture
    :id: FEAT_ARC_STA__persistency_key_val_storage__key_value_storage
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__creation
+   :satisfies: FEAT_REQ__KVS__safety_asil_b
    :status: valid
 
-.. uml:: _assets/kvs_static_view.puml
+   .. uml:: _assets/kvs_static_view.puml
 
 Dynamic Architecture
 --------------------
@@ -42,64 +42,73 @@ Dynamic Architecture
    :id: FEAT_ARC_DYN__persistency_key_val_storage__builder_pattern
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__creation,FEAT_REQ__persistency_key_val_storage__initialization,FEAT_REQ__persistency_key_val_storage__error,FEAT_REQ__persistency_key_val_storage__get_value
+   :satisfies: FEAT_REQ__KVS__safety_asil_b
    :status: valid
 
-.. uml:: _assets/kvs_dyn_builder.puml
+   .. uml:: _assets/kvs_dyn_builder.puml
 
 .. feat_arc_dyn:: Check if key contains default value
    :id: FEAT_ARC_DYN__persistency_key_val_storage__check_key_default_value
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__creation,FEAT_REQ__persistency_key_val_storage__initialization,FEAT_REQ__persistency_key_val_storage__error,FEAT_REQ__persistency_key_val_storage__get_value
+   :satisfies: FEAT_REQ__KVS__safety_asil_b,FEAT_REQ__KVS__default_values,FEAT_REQ__KVS__default_value_retrieval
    :status: valid
 
-.. uml:: _assets/kvs_dyn_check_value_default.puml
+   .. uml:: _assets/kvs_dyn_check_value_default.puml
 
 .. feat_arc_dyn:: Delete key from KVS instance
    :id: FEAT_ARC_DYN__persistency_key_val_storage__delete_key
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__creation,FEAT_REQ__persistency_key_val_storage__initialization,FEAT_REQ__persistency_key_val_storage__error,FEAT_REQ__persistency_key_val_storage__get_value
+   :satisfies: FEAT_REQ__KVS__safety_asil_b
    :status: valid
 
-.. uml:: _assets/kvs_dyn_delete_data_key.puml
+   .. uml:: _assets/kvs_dyn_delete_data_key.puml
 
 .. feat_arc_dyn:: Flush to permanent storage
    :id: FEAT_ARC_DYN__persistency_key_val_storage__flush
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__creation,FEAT_REQ__persistency_key_val_storage__initialization,FEAT_REQ__persistency_key_val_storage__error,FEAT_REQ__persistency_key_val_storage__get_value
+   :satisfies: FEAT_REQ__KVS__safety_asil_b,FEAT_REQ__KVS__persist_data,FEAT_REQ__KVS__persistency,FEAT_REQ__KVS__snapshots,FEAT_REQ__KVS__integrity_check,FEAT_REQ__KVS__snapshots
    :status: valid
 
-.. uml:: _assets/kvs_dyn_flush_local_repr_to_file.puml
+   .. uml:: _assets/kvs_dyn_flush_local_repr_to_file.puml
 
 .. feat_arc_dyn:: Read key value
    :id: FEAT_ARC_DYN__persistency_key_val_storage__read_key
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__creation,FEAT_REQ__persistency_key_val_storage__initialization,FEAT_REQ__persistency_key_val_storage__error,FEAT_REQ__persistency_key_val_storage__get_value
+   :satisfies: FEAT_REQ__KVS__safety_asil_b,FEAT_REQ__KVS__supported_datatypes_keys,FEAT_REQ__KVS__supported_datatypes_values,FEAT_REQ__KVS__default_values,FEAT_REQ__KVS__default_value_retrieval
    :status: valid
 
-.. uml:: _assets/kvs_dyn_read_data_key.puml
+   .. uml:: _assets/kvs_dyn_read_data_key.puml
 
 .. feat_arc_dyn:: Read data from permanent storage
    :id: FEAT_ARC_DYN__persistency_key_val_storage__read_data_from_perm_storage
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__creation,FEAT_REQ__persistency_key_val_storage__initialization,FEAT_REQ__persistency_key_val_storage__error,FEAT_REQ__persistency_key_val_storage__get_value
+   :satisfies: FEAT_REQ__KVS__safety_asil_b,FEAT_REQ__KVS__persist_data,FEAT_REQ__KVS__persistency,FEAT_REQ__KVS__integrity_check,FEAT_REQ__KVS__snapshots
    :status: valid
 
-.. uml:: _assets/kvs_dyn_read_file_into_local_repr.puml
+   .. uml:: _assets/kvs_dyn_read_file_into_local_repr.puml
 
 .. feat_arc_dyn:: Write value to key
    :id: FEAT_ARC_DYN__persistency_key_val_storage__write_key
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__creation,FEAT_REQ__persistency_key_val_storage__initialization,FEAT_REQ__persistency_key_val_storage__error,FEAT_REQ__persistency_key_val_storage__get_value
+   :satisfies: FEAT_REQ__KVS__safety_asil_b,FEAT_REQ__KVS__supported_datatypes_keys,FEAT_REQ__KVS__supported_datatypes_values
    :status: valid
 
-.. uml:: _assets/kvs_dyn_write_data_key.puml
+   .. uml:: _assets/kvs_dyn_write_data_key.puml
+
+.. feat_arc_dyn:: Restore snapshop
+   :id: FEAT_ARC_DYN__persistency_key_val_storage__snapshot_restore
+   :security: YES
+   :safety: ASIL_B
+   :satisfies: FEAT_REQ__KVS__safety_asil_b,FEAT_REQ__KVS__snapshots,FEAT_REQ__KVS__persist_data,FEAT_REQ__KVS__persistency
+   :status: valid
+
+   .. uml:: _assets/kvs_dyn_restore_snapshot.puml
 
 
 Logical Interfaces
@@ -109,8 +118,7 @@ Logical Interfaces
    :id: FEAT_ARC_INT__persistency_key_val_storage__keyvaluestorage
    :security: YES
    :safety: ASIL_B
-   :satisfies: FEAT_REQ__persistency_key_val_storage__get_keys,FEAT_REQ__persistency_key_val_storage__set_value,FEAT_REQ__persistency_key_val_storage__get_value,FEAT_REQ__persistency_key_val_storage__persistency,FEAT_REQ__persistency_key_val_storage__reset
+   :satisfies: FEAT_REQ__KVS__safety_asil_b,FEAT_REQ__KVS__stable_api
    :status: valid
 
-
-.. uml:: _assets/kvs_interface.puml
+   .. uml:: _assets/kvs_interface.puml
