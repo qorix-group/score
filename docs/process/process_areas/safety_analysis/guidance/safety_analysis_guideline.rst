@@ -34,8 +34,8 @@ Detailed description which steps are need for implementation.
 #. To analyse the Architecture a Safety Analysis and a DFA shall be executed.
 #. Perform Safety Analysis on the Component Architecture.
 #. Perform DFA on the Component Architecture.
-#. The performance of the Safety Analysis and DFA shall be monitored and verified.
-#. Open issues like from the Safety Analysis and DFA shall be monitored by the Issue Tracking system. For safety relevant issues types a “safety” label is used.
+#. The performance of the Safety Analysis and DFA (Feature and Component) shall be monitored and verified.
+#. Open issues like from the Safety Analysis and DFA shall be monitored by the Issue Tracking system. For safety relevant issues types a ``safety`` label is used.
 
 
 Step-by-Step-approach Safety Analysis:
@@ -78,6 +78,9 @@ Unless the attribute sufficient is yes, measure and argument attribute can be st
 |    :argument: "Calling app gets error information"
 |    :status: valid
 
+The example is also used in the building blocks <:ref:`building_block_example`>.
+
+
 Step-by-Step-approach DFA:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -106,3 +109,5 @@ Alternatively the checklist template can be used. It can be filled out and is th
 |    :sufficient: no
 |    :argument:
 |    :status: valid
+
+The example is also used in the building blocks <:ref:`building_block_example`>.

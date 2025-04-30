@@ -33,6 +33,10 @@ Inputs
 Stakeholders for the Safety Analysis
 ====================================
 
+#. :need:`Contributor <rl__contributor>`
+
+   * Contributes features and components to grow the **S-CORE** content
+
 #. :need:`Committer <rl__committer>`
 
    * Analyse the feature architecture by performing the safety analyses and DFA

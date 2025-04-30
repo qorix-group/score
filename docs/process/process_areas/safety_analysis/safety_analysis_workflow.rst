@@ -24,9 +24,9 @@ todo: need to add guidance and standard links
    :id: wf__analyse_featarch
    :status: draft
    :tags: safety_analysis
-   :responsible: rl__committer
+   :responsible: rl__safety_engineer
    :approved_by: rl__safety_manager
-   :supported_by: rl__technical_lead, rl__security_manager
+   :supported_by: rl__contributor, rl__committer, rl__security_manager
    :input: wp__requirements__feat, wp__feature_arch, wp__issue_track_system
    :output: wp__feature_safety_analysis, wp__feature_dfa
 
@@ -36,9 +36,9 @@ todo: need to add guidance and standard links
    :id: wf__analyse_comparch
    :status: draft
    :tags: safety_analysis
-   :responsible: rl__committer
+   :responsible: rl__safety_engineer
    :approved_by: rl__safety_manager
-   :supported_by: rl__module_lead, rl__security_manager
+   :supported_by: rl__contributor, rl__committer, rl__security_manager
    :input:  wp__requirements__comp, wp__component_arch, wp__issue_track_system
    :output: wp__sw_component_safety_analysis, wp__sw_component_dfa
 
@@ -48,9 +48,9 @@ todo: need to add guidance and standard links
    :id: wf__mr_vy_saf_analyses_dfa
    :status: draft
    :tags: safety_analysis
-   :responsible: rl__committer
+   :responsible: rl__safety_engineer
    :approved_by: rl__safety_manager
-   :supported_by: rl__technical_lead, rl__module_lead, rl__security_manager
+   :supported_by: rl__contributor, rl__committer, rl__security_manager
    :input: wp__feature_safety_analysis, wp__feature_dfa, wp__sw_component_safety_analysis, wp__sw_component_dfa
    :output: wp__sw_arch_verification, wp__issue_track_system
 
