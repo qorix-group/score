@@ -1,7 +1,7 @@
 @startuml
 allowmixing
 
-title Static View - key_val_storage
+title Static View - key_value_storage
 
 !include kvs_interface.puml
 
@@ -17,7 +17,7 @@ skinparam component {
 }
 
 ' Define Features
-package "key_val_storage" <<feature>> {
+package "key_value_storage" <<feature>> {
     component kvs <<component>>
     component fs <<component>>
     component tiny_json <<component>>

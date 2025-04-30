@@ -12,11 +12,11 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Key-value Storage
+Key-Value-Storage
 #################
 
-.. document:: Persistency Key-Value-Store
-   :id: DOC__Persistency_Kvs
+.. document:: Persistency Key-Value-Storage
+   :id: doc__persistency_key_value_storage
    :status: draft
    :safety: ASIL_B
    :tags: contribution_request, feature_request
