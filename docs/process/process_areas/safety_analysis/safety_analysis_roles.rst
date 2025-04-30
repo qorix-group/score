@@ -15,7 +15,48 @@
 Roles
 #####
 
-For requirements engineering no additional roles need to be defined.
+Roles
+-----
+
+.. role:: Safety Engineer
+   :id: rl__safety_engineer
+   :status: valid
+   :contains: rl__committer
+
+   The safety engineer is responsible for content and processing of all work products required in the project.
+
+   Required skills
+
+   * Degree: Master's degree in electrical engineering/computer science/mathematics, or similar degree, or comparable work experience
+   * Solid understanding of functional safety engineering including safety analysis
+   * Knowledge of safety management
+   * Deep understanding of quality criteria and the correlating methods and procedures to achieve and verify them
+   * Technical know-how of embedded systems
+   * Preferred training: Automotive Functional Safety Expert (AFSE) or similar
+
+   Knowledge of standards
+
+   * ISO 26262
+
+   Experience
+
+   * 2 years of experience in safety engineering
+   * Experience in automotive software development projects
+   * Experience in creation of workproducts according ISO 26262
+
+   Responsibility
+
+   * For content and processing of all work products required in the project
+   * Creating of Safety Analysis (FMEA, DFA)
+   * Support of Safety Manager
+   * Specialist contact person on engineering level for the project
+
+   Authority
+
+   * Escalation of planning topics to the safety manager
+   * Implementation of safety requirements
+   * Refusing the approval of work products as defined in the workflows
+
 
 Contributing Roles:
 
