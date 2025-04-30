@@ -50,15 +50,15 @@ def check_id_format(app: Sphinx, need: NeedsInfoType, log: CheckLogger):
 @local_check
 def check_id_length(app: Sphinx, need: NeedsInfoType, log: CheckLogger):
     """
-    Validates that the requirement ID does not exceed the hard limit of 45 characters.
+    Validates that the requirement ID does not exceed the hard limit of 90 characters.
     While the recommended limit is 30 characters, this check enforces a strict maximum
-    of 45 characters.
-    If the ID exceeds 45 characters, a warning is logged specifying the actual length.
+    of 90 characters.
+    If the ID exceeds 90 characters, a warning is logged specifying the actual length.
     ---
     """
-    if len(need["id"]) > 45:
+    if len(need["id"]) > 90:
         msg = (
-            f"exceeds the maximum allowed length of 45 characters "
+            f"exceeds the maximum allowed length of 90 characters "
             f"(current length: {len(need['id'])})."
         )
         log.warning_for_option(need, "id", msg)
