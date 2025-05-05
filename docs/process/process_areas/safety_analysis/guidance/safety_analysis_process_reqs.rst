@@ -12,10 +12,10 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _process_safety_analysis:
+.. _process_requirements_safety_analysis:
 
-Process Safety Analysis
-=======================
+Safety Analysis Process Requirements
+====================================
 
 .. gd_req:: Safety Analysis Structure
    :id: gd_req__saf__structure
@@ -31,7 +31,7 @@ Process Safety Analysis
       * Feature architecture
       * Component architecture
 
-.. _process_safety_analysis_attributes:
+.. _process_requirements_safety_analysis_attributes:
 
 Process Safety Analysis Attributes
 ----------------------------------
@@ -87,14 +87,14 @@ Process Safety Analysis Attributes
 
    Every DFA shall have a short description of the violation cause.
 
-.. gd_req:: FMEA attribute: failure node
-   :id: gd_req__saf__attr_fnode
+.. gd_req:: FMEA attribute: failure mode
+   :id: gd_req__saf__attr_fmode
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
    :complies:
 
-   Each FMEA shall have a failure node. The failure nod is used to identify the related fault <:need:`gd_guidl__fault_models`>.
+   Each FMEA shall have a failure mode. The failure nod is used to identify the related fault <:need:`gd_guidl__fault_models`>.
 
 .. gd_req:: FMEA attribute: failure effect
    :id: gd_req__saf__attr_veffect
@@ -105,14 +105,14 @@ Process Safety Analysis Attributes
 
    Every FMEA shall have a short description of the failure effect.
 
-.. gd_req:: Safety Analysis attribute: measure
-   :id: gd_req__saf_attr_measure
+.. gd_req:: Safety Analysis attribute: mitigation
+   :id: gd_req__saf_attr_mitigation
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_844, std_req__iso26262__analysis_746, std_req__iso26262__analysis_747
 
-   Each violation shall have a measure for it.
+   Each violation shall have a mitigation for it.
 
 .. gd_req:: Safety Analysis attribute: sufficient
    :id: gd_req__saf__attr_sufficient
@@ -121,7 +121,7 @@ Process Safety Analysis Attributes
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44431, std_req__isopas8926__44432
 
-   Each measure shall have an statement if it's sufficient.
+   Each mitigation shall have an statement if it's sufficient.
 
 .. gd_req:: Safety Analysis attribute: argument
    :id: gd_req__saf__attr_argument
@@ -130,9 +130,9 @@ Process Safety Analysis Attributes
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44433
 
-   The argument shall describe why the measure is sufficient or not.
+   The argument shall describe why the mitigation is sufficient or not.
 
-.. _process_safety_analysis_linkage:
+.. _process_requirements_safety_analysis_linkage:
 
 Safety Analysis Requirement Linkage
 '''''''''''''''''''''''''''''''''''
@@ -149,14 +149,14 @@ Safety Analysis Requirement Linkage
       * Feature Safety Analysis <-> feature architecture
       * Component Safety Analysis <-> component architecture
 
-.. gd_req:: Safety Analysis attribute: measure coverage
+.. gd_req:: Safety Analysis attribute: mitigation coverage
    :id: gd_req__saf__attr_saf_cov
    :status: valid
    :tags: attribute, automated
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44433
 
-   It shall be possible to specify the measure coverage.
+   It shall be possible to specify the mitigation coverage.
 
       * 0 to 100 percent
 
@@ -191,7 +191,7 @@ Safety Analysis Requirement Linkage
    It shall be possible to provide a versioning for Safety Analysis. It shall be possible to detect if any of the mandatory attributes differ from the versioning: :need:`gd_req__saf__attr_mandatory`
 
 
-.. _process_safety_analysis_checks:
+.. _process_requirements_safety_analysis_checks:
 
 Process Requirements Checks
 '''''''''''''''''''''''''''

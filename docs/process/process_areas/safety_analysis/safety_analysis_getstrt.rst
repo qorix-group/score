@@ -22,7 +22,6 @@ Getting Started
 
 This document describes the steps which are needed to perform safety analysis and also how to monitor/verify the results of the safety analysis.
 
-Therefore a guideline for :need:`gd_guidl__safety_analysis` is available.
 The concept of performing safety analysis is described in :need:`doc_concept__safety__analysis`.
 
 General Workflow

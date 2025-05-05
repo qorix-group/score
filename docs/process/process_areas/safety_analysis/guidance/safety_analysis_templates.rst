@@ -12,21 +12,40 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+.. _safety_analysis_templates:
 
-Safety Analysis Template
-========================
+Safety Analysis Templates
+=========================
 
-.. gd_temp:: Safety Analysis Templates
-   :id: gd_temp__safety_analysis
+.. gd_temp:: Feature Safety Analysis Template
+   :id: gd_temp__feat_saf_fmea
    :status: valid
    :complies: std_wp__iso26262__analysis_851, std_wp__iso26262__software_752, std_wp__isopas8926__4524, std_req__iso26262__software_7410, std_req__iso26262__software_7412, std_req__iso26262__analysis_841, std_req__iso26262__analysis_842, std_req__iso26262__analysis_843, std_req__iso26262__analysis_844, std_req__iso26262__analysis_845, std_req__iso26262__analysis_846, std_req__iso26262__analysis_847, std_req__iso26262__analysis_848, std_req__iso26262__analysis_849, std_req__iso26262__analysis_8410, std_req__isopas8926__44431
 
    | .. feat_saf_fmea:: <Element descriptor>
+   |    :verifies: <Feature architecture>
    |    :id: feat_saf_FMEA__<Feature>__<Element descriptor>
    |    :failure_mode: <ID from fault model :need:`gd_guidl__fault_models`>
    |    :failure_effect: "Failure mode similar to :need:`gd_guidl__fault_models`"
    |    :violates: <ID from Feature Requirement>
-   |    :measure: < NONE|ID from Feature Requirement>
+   |    :mitigation: < NONE|ID from Feature Requirement>
    |    :sufficient: <yes|no>
-   |    :argument: <text to argument why measure is sufficient>
+   |    :argument: <text to argument why mitigation is sufficient>
+   |    :status: <valid|invalid>
+
+
+.. gd_temp:: Component Safety Analysis Template
+   :id: gd_temp__comp_saf_fmea
+   :status: valid
+   :complies: std_wp__iso26262__analysis_851, std_wp__iso26262__software_752, std_wp__isopas8926__4524, std_req__iso26262__software_7410, std_req__iso26262__software_7412, std_req__iso26262__analysis_841, std_req__iso26262__analysis_842, std_req__iso26262__analysis_843, std_req__iso26262__analysis_844, std_req__iso26262__analysis_845, std_req__iso26262__analysis_846, std_req__iso26262__analysis_847, std_req__iso26262__analysis_848, std_req__iso26262__analysis_849, std_req__iso26262__analysis_8410, std_req__isopas8926__44431
+
+   | .. comp_saf_fmea:: <Element descriptor>
+   |    :verifies: <Component architecture>
+   |    :id: comp_saf_FMEA__<Component>__<Element descriptor>
+   |    :failure_mode: <ID from fault model :need:`gd_guidl__fault_models`>
+   |    :failure_effect: "Failure mode similar to :need:`gd_guidl__fault_models`"
+   |    :violates: <ID from Component Requirement>
+   |    :mitigation: < NONE|ID from Component Requirement>
+   |    :sufficient: <yes|no>
+   |    :argument: <text to argument why mitigation is sufficient>
    |    :status: <valid|invalid>
