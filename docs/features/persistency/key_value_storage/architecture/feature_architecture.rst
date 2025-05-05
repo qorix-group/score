@@ -44,7 +44,7 @@ Static Architecture
    :id: feat_arc_sta__key_value_storage__static
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b
+   :fulfils: feat_req__key_value_storage__safety_asil_b
    :status: valid
 
    .. uml:: _assets/kvs_static_view.puml
@@ -56,7 +56,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__key_value_storage__builder_pattern
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b
+   :fulfils: feat_req__key_value_storage__safety_asil_b
    :status: valid
 
    .. uml:: _assets/kvs_dyn_builder.puml
@@ -65,7 +65,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__key_value_storage__check_key_default
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__default_values,feat_req__kvs__default_value_retrieval
+   :fulfils: feat_req__key_value_storage__safety_asil_b,feat_req__key_value_storage__default_values,feat_req__key_value_storage__default_value_retrieval
    :status: valid
 
    .. uml:: _assets/kvs_dyn_check_value_default.puml
@@ -74,7 +74,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__key_value_storage__delete_key
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b
+   :fulfils: feat_req__key_value_storage__safety_asil_b
    :status: valid
 
    .. uml:: _assets/kvs_dyn_delete_data_key.puml
@@ -83,7 +83,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__key_value_storage__flush
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__persist_data,feat_req__kvs__persistency,feat_req__kvs__snapshots,feat_req__kvs__integrity_check,feat_req__kvs__snapshots
+   :fulfils: feat_req__key_value_storage__safety_asil_b,feat_req__key_value_storage__persist_data,feat_req__key_value_storage__persistency,feat_req__key_value_storage__snapshots,feat_req__key_value_storage__integrity_check,feat_req__key_value_storage__snapshots
    :status: valid
 
    .. uml:: _assets/kvs_dyn_flush_local_repr_to_file.puml
@@ -92,7 +92,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__key_value_storage__read_key
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__supported_datatypes_keys,feat_req__kvs__supported_datatypes_values,feat_req__kvs__default_values,feat_req__kvs__default_value_retrieval
+   :fulfils: feat_req__key_value_storage__safety_asil_b,feat_req__key_value_storage__supported_datatypes_keys,feat_req__key_value_storage__supported_datatypes_values,feat_req__key_value_storage__default_values,feat_req__key_value_storage__default_value_retrieval
    :status: valid
 
    .. uml:: _assets/kvs_dyn_read_data_key.puml
@@ -101,7 +101,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__key_value_storage__read_data_from_perm_storage
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__persist_data,feat_req__kvs__persistency,feat_req__kvs__integrity_check,feat_req__kvs__snapshots
+   :fulfils: feat_req__key_value_storage__safety_asil_b,feat_req__key_value_storage__persist_data,feat_req__key_value_storage__persistency,feat_req__key_value_storage__integrity_check,feat_req__key_value_storage__snapshots
    :status: valid
 
    .. uml:: _assets/kvs_dyn_read_file_into_local_repr.puml
@@ -110,7 +110,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__key_value_storage__write_key
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__supported_datatypes_keys,feat_req__kvs__supported_datatypes_values
+   :fulfils: feat_req__key_value_storage__safety_asil_b,feat_req__key_value_storage__supported_datatypes_keys,feat_req__key_value_storage__supported_datatypes_values
    :status: valid
 
    .. uml:: _assets/kvs_dyn_write_data_key.puml
@@ -119,7 +119,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__key_value_storage__snapshot_restore
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__snapshots,feat_req__kvs__persist_data,feat_req__kvs__persistency
+   :fulfils: feat_req__key_value_storage__safety_asil_b,feat_req__key_value_storage__snapshots,feat_req__key_value_storage__persist_data,feat_req__key_value_storage__persistency
    :status: valid
 
    .. uml:: _assets/kvs_dyn_restore_snapshot.puml
@@ -132,7 +132,7 @@ Logical Interfaces
    :id: feat_arc_int__key_value_storage__interface
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__stable_api
+   :fulfils: feat_req__key_value_storage__safety_asil_b,feat_req__key_value_storage__stable_api
    :status: valid
 
    .. uml:: _assets/kvs_interface.puml

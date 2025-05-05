@@ -19,8 +19,8 @@ Requirements
    :id: feat_req__key_value_storage__cpp_rust_interoperability
    :reqtype: Non-Functional
    :security: NO
-   :safety: ASIL_B
-   :satisfies: stkh_req__dev_experience__prog_languages, stkh_req__functiona_req__support_of_store
+   :safety: QM
+   :satisfies: stkh_req__dev_experience__prog_languages
    :status: valid
 
    The key-value storage shall allow concurrent access via C++ and Rust interfaces.
@@ -155,7 +155,7 @@ Requirements
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
-   :satisfies: stkh_req__functiona_req__support_of_store, stkh_req__dev_experience__reprocessing
+   :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
 
    The key-value storage shall allow the explicit creation of snapshots of a specific version and
@@ -178,45 +178,22 @@ Requirements
    :id: feat_req__key_value_storage__stable_api
    :reqtype: Non-Functional
    :security: NO
-   :safety: ASIL_B
-   :satisfies: stkh_req__overall_goals__reuse_of_app_soft, stkh_req__communication__stable_app_inter
+   :safety: QM
+   :satisfies: stkh_req__communication__stable_app_inter
    :status: valid
 
    The KVS API will be designed to provide a stable interface over the
    lifecylcle without preventing new functionality from beeing implemented.
 
-.. feat_req:: Base on existing standards
-   :id: feat_req__key_value_storage__existing_standards
-   :reqtype: Non-Functional
-   :security: NO
-   :safety: ASIL_B
-   :satisfies: stkh_req__overall_goals__enable_cooperation
-   :status: valid
-
-   The KVS will be based on existing standards like a dictionary compatible API
-   and a well-known storage format.
-
 .. feat_req:: Variant management support
    :id: feat_req__key_value_storage__variant_management
    :reqtype: Non-Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__overall_goals__variant_management
    :status: valid
 
    The KVS ensures compatibilty between architectures and versions.
-
-.. feat_req:: IP Protection
-   :id: feat_req__key_value_storage__ip_protection
-   :reqtype: Non-Functional
-   :security: NO
-   :safety: ASIL_B
-   :satisfies: stkh_req__overall_goals__ip_protection
-   :status: valid
-
-   The KVS will use a licensing model that allows to use it without having to
-   disclose IP. Also the used libraries will be carefully selected to ensure
-   this.
 
 .. feat_req:: Set default key values via file
    :id: feat_req__key_value_storage__default_value_file
