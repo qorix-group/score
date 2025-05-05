@@ -44,6 +44,7 @@ Static Architecture
    :id: feat_arc_sta__key_value_storage__static
    :security: YES
    :safety: ASIL_B
+   :includes: feat_arc_int__key_value_storage__interface
    :fulfils: feat_req__key_value_storage__safety_asil_b
    :status: valid
 

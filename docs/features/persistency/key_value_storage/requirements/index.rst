@@ -199,7 +199,7 @@ Requirements
    :id: feat_req__key_value_storage__default_value_file
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__functional_req__file_based
    :status: valid
 
@@ -209,7 +209,7 @@ Requirements
    :id: feat_req__key_value_storage__config_file
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__functional_req__file_based
    :status: valid
 
@@ -219,7 +219,7 @@ Requirements
    :id: feat_req__key_value_storage__persist_data
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__functional_req__data_persistency
    :status: valid
 
@@ -251,7 +251,7 @@ Requirements
    :id: feat_req__key_value_storage__async_api
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__dependability__availability, stkh_req__app_architectures__support_request
    :status: valid
 
@@ -261,7 +261,7 @@ Requirements
    :id: feat_req__key_value_storage__access_control
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__dependability__security_features
    :status: valid
 
@@ -282,7 +282,7 @@ Requirements
    :id: feat_req__key_value_storage__fast_access
    :reqtype: Non-Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__execution_model__short_app_cycles
    :status: valid
 
@@ -292,7 +292,7 @@ Requirements
    :id: feat_req__key_value_storage__fast_startup
    :reqtype: Non-Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__execution_model__startup_perf
    :status: valid
 
@@ -304,7 +304,7 @@ Requirements
    :id: feat_req__key_value_storage__intra_process_comm
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__communication__intra_process
    :status: valid
 
@@ -314,7 +314,7 @@ Requirements
    :id: feat_req__key_value_storage__multi_arch
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__hardware_support__chipset_support
    :status: valid
 
@@ -324,7 +324,7 @@ Requirements
    :id: feat_req__key_value_storage__log_trace
    :reqtype: Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__dev_experience__logging_support
    :status: valid
 
@@ -334,7 +334,7 @@ Requirements
    :id: feat_req__key_value_storage__dev_steering
    :reqtype: Non-Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__re_requirements__traceability
    :status: valid
 
@@ -344,7 +344,7 @@ Requirements
    :id: feat_req__key_value_storage__req_as_code
    :reqtype: Non-Functional
    :security: NO
-   :safety: ASIL_B
+   :safety: QM
    :satisfies: stkh_req__requirements__as_code
    :status: valid
 
