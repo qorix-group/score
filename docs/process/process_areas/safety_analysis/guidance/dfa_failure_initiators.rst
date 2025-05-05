@@ -12,13 +12,13 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _dfa checklist:
+.. _dfa failure initiators:
 
-DFA Checklist
-=============
+DFA failure initiators
+======================
 
-.. gd_chklst:: DFA Checklist
-    :id: gd_chklst__dfa
+.. gd_chklst:: DFA failure initiators
+    :id: gd_chklst__dfa_failure_initiators
     :status: valid
     :tags: safety analysis
 
@@ -27,12 +27,12 @@ DFA Checklist
     In order to identify all cascading and common cause failures, which may initiated from your feature or components to the platform, other features, components, etc.,
     use the following framework of dependent failure initiators to check your completeness of the analysis.
 
-    **Checklist**
+    **DFA failure initiators**
 
     | 2.1 Shared resources
     | Same software element instance used by the two functions which are therefore affected by the failure or unavailability of that shared resource.
 
-    .. list-table:: Requirement Inspection Checklist
+    .. list-table:: DFA shared resources
        :header-rows: 1
        :widths: 10,30,30,30
 
@@ -84,7 +84,7 @@ DFA Checklist
     | 2.2 Communication between the two elements:
     | Receiving function is affected by information that is false, lost, sent multiple times, or in the wrong order etc. from the sender.
 
-    .. list-table:: Requirement Inspection Checklist
+    .. list-table:: DFA communication between elements
        :header-rows: 1
        :widths: 10,30,30,30
 
@@ -131,7 +131,7 @@ DFA Checklist
     | 2.3 Shared information inputs
     | Same information consumed by the two functions even in absence of shared resources, i.e. from a functional perspective.
 
-    .. list-table:: Requirement Inspection Checklist
+    .. list-table:: DFA shared information inputs
        :header-rows: 1
        :widths: 10,30,30,30
 
@@ -168,7 +168,7 @@ DFA Checklist
     | 2.4 Unintended impact
     | Two functions affecting each other’s elements directly via an implicit, that is unintended, interface.
 
-    .. list-table:: Requirement Inspection Checklist
+    .. list-table:: DFA unintended impact
        :header-rows: 1
        :widths: 10,30,30,30
 
@@ -217,7 +217,7 @@ DFA Checklist
     | 2.5 Systematic coupling
     | Systematic causes from human or tool errors can lead to the simultaneous failure of more than one function.
 
-    .. list-table:: Requirement Inspection Checklist
+    .. list-table:: DFA systematic coupling
        :header-rows: 1
        :widths: 10,30,30,30
 

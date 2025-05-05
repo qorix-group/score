@@ -13,20 +13,38 @@
    # *******************************************************************************
 
 
-DFA Template
-============
+DFA Templates
+=============
 
-.. gd_temp:: DFA Templates
-   :id: gd_temp__dfa
+.. gd_temp:: Feature DFA Templates
+   :id: gd_temp__feat_saf_dfa
    :status: valid
    :complies: std_wp__iso26262__analysis_751, std_wp__iso26262__software_753, std_wp__isopas8926__4524, std_req__iso26262__software_7411, std_req__iso26262__analysis_741, std_req__iso26262__analysis_742, std_req__iso26262__analysis_743, std_req__iso26262__analysis_745, std_req__iso26262__analysis_746, std_req__iso26262__analysis_747, std_req__iso26262__analysis_748, std_req__iso26262__analysis_749, std_req__isopas8926__44432
 
    | .. feat_saf_dfa:: <Element descriptor>
+   |    :verifies: <Feature architecture>
    |    :id: feat_saf_DFA__<Feature>__<Element descriptor>
-   |    :violation_id: <ID from dfa checklist :need:`gd_chklst__dfa`>
-   |    :violation_cause: "Failure mode similar to :need:`gd_chklst__dfa`"
+   |    :violation_id: <ID from DFA failure initiators :need:`gd_chklst__dfa_failure_initiators`>
+   |    :violation_cause: "Failure initiator similar to :need:`gd_chklst__dfa_failure_initiators`"
    |    :violates: <ID from Feature Requirement>
-   |    :measure: < NONE|ID from Feature Requirement>
+   |    :mitigation: < NONE|ID from Feature Requirement>
    |    :sufficient: <yes|no>
-   |    :argument: <text to argument why measure is sufficient>
+   |    :argument: <text to argument why mitigation is sufficient>
+   |    :status: <valid|invalid>
+
+
+.. gd_temp:: Component DFA Templates
+   :id: gd_temp__comp_saf_dfa
+   :status: valid
+   :complies: std_wp__iso26262__analysis_751, std_wp__iso26262__software_753, std_wp__isopas8926__4524, std_req__iso26262__software_7411, std_req__iso26262__analysis_741, std_req__iso26262__analysis_742, std_req__iso26262__analysis_743, std_req__iso26262__analysis_745, std_req__iso26262__analysis_746, std_req__iso26262__analysis_747, std_req__iso26262__analysis_748, std_req__iso26262__analysis_749, std_req__isopas8926__44432
+
+   | .. comp_saf_dfa:: <Element descriptor>
+   |    :verifies: <Component architecture>
+   |    :id: comp_saf_DFA__<Component>__<Element descriptor>
+   |    :violation_id: <ID from DFA failure initiators :need:`gd_chklst__dfa_failure_initiators`>
+   |    :violation_cause: "Failure initiator similar to :need:`gd_chklst__dfa_failure_initiators`"
+   |    :violates: <ID from Component Requirement>
+   |    :mitigation: < NONE|ID from Component Requirement>
+   |    :sufficient: <yes|no>
+   |    :argument: <text to argument why mitigation is sufficient>
    |    :status: <valid|invalid>

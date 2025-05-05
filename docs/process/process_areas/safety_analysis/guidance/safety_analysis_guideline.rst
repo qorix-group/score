@@ -26,7 +26,7 @@ This document describes the general guidances for Safety Analysis based on the c
 Workflow for Safety Analysis
 ============================
 
-Detailed description which steps are need for implementation.
+Detailed description which steps are need for a safety analysis. In general the workflow is shown in :ref:`safety_analysis_workflow_fig`
 
 #. To analyse the Feature Architecture a Safety Analysis and a DFA shall be executed.
 #. Perform Safety Analysis on the Feature Architecture.
@@ -35,8 +35,7 @@ Detailed description which steps are need for implementation.
 #. Perform Safety Analysis on the Component Architecture.
 #. Perform DFA on the Component Architecture.
 #. The performance of the Safety Analysis and DFA (Feature and Component) shall be monitored and verified.
-#. Open issues like from the Safety Analysis and DFA shall be monitored by the Issue Tracking system. For safety relevant issues types a ``safety`` label is used.
-
+#. Open issues like from the Safety Analysis and DFA shall be monitored by the Issue Tracking system. For safety relevant issues types a ``safety`` label is used. Until there are open issues the safety analysis is "valid" and "not sufficient".
 
 Step-by-Step-approach Safety Analysis:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -48,32 +47,32 @@ The analysis considers single faults that can violate a safety requirement.
 **Step 1:**
 For each affected design element in scope of each diagram, assign the faults by ID from the fault model applicable and document it as a sphinx-needs directive.
 Document the resulting failure mode and effect and the violated safety requirement.
-Document safety measure/mechanism to avoid or control the failure.
+Document safety mitigation to avoid or control the failure.
 
 **Step 2:**
-Judge if this is sufficient. If not, request to update the diagram and the requirements with additional safety measure/mechanism to come to a sufficient outcome.
-The analysis is finished, if for each identified faults a mechanism/measure exists.
-Unless the attribute sufficient is yes, measure and argument attribute can be still empty.
+Judge if this is sufficient. If not, request to update the diagram and the requirements with additional safety mitigation to come to a sufficient outcome by creating an issue.
+The analysis is finished, if for each identified faults a mitigation exists.
+Unless the attribute sufficient is yes, mitigation and argument attribute can be still empty.
 
 **Examples:**
 
 
 | .. feat_saf_fmea:: OpenKVS
 |    :id: FEAT_SAF_FMEA__KVS__OpenKVS
-|    :failure_node: "MF_01_05"
+|    :failure_mode: "MF_01_05"
 |    :failure_effect: "message from calling app is corrupted"
 |    :violates: FEAT_REQ_persistency_key_val_storage__interface
-|    :measure:
+|    :mitigation:
 |    :sufficient: no
 |    :argument:
 |    :status: valid
 
 | .. feat_saf_fmea:: GetKeyValue
 |    :id: FEAT_SAF_FMEA__KVS__GetKeyValue
-|    :failure_node: "MF_01_05"
+|    :failure_mode: "MF_01_05"
 |    :failure_effect: "message is corrupted due to corrupted call open to OSAL"
 |    :violates: FEAT_REQ_persistency_key_val_storage__interface
-|    :measure: FEAT_REQ_persistency_key_val_storage__error
+|    :mitigation: FEAT_REQ_persistency_key_val_storage__error
 |    :sufficient: yes
 |    :argument: "Calling app gets error information"
 |    :status: valid
@@ -84,19 +83,19 @@ The example is also used in the building blocks <:ref:`building_block_example`>.
 Step-by-Step-approach DFA:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The analysis is done by using the template <:need:`gd_temp__dfa`> on the feature or component architectural diagrams using a checklist <:need:`gd_chklst__dfa`>.
+The analysis is done by using the template <:need:`gd_temp__dfa`> on the feature or component architectural diagrams using a list of DFA failure initiators <:need:`gd_chklst__dfa_failure_initiators`>.
 
 **Step 1:**
-For each identified violation assign the violation by ID from the DFA checklist and document it as a sphinx-needs directive.
+For each identified violation assign the violation by ID from the DFA failure initiators and document it as a sphinx-needs directive.
 Document the resulting violation causes and effect and the violated safety requirement.
-Document safety measure/mechanism to avoid or control the violation.
+Document safety mitigation to avoid or control the violation.
 
 **Step 2:**
-Judge if this is sufficient. If not, request to update the requirements with additional safety measure/mechanism to come to a sufficient outcome.
-The analysis is finished, if for each identified violation a mechanism/measure exists.
-Unless the attribute sufficient is yes, measure and argument attribute can be still empty.
+Judge if this is sufficient. If not, request to update the requirements with additional safety mitigation to come to a sufficient outcome.
+The analysis is finished, if for each identified violation a mitigation exists.
+Unless the attribute "sufficient" is "yes", mitigation and argument attribute can be still empty.
 
-Alternatively the checklist template can be used. It can be filled out and is then the DFA report.
+Alternatively the DFA failure initiator list can be used. It can be filled out and is then the DFA report.
 
 **Example:**
 
@@ -105,7 +104,7 @@ Alternatively the checklist template can be used. It can be filled out and is th
 |    :violation_id: "SR_01_05"
 |    :violation_cause: "Operating system including scheduler"
 |    :violates: FEAT_REQ__persistency_key_val_storage__creation
-|    :measure:
+|    :mitigation:
 |    :sufficient: no
 |    :argument:
 |    :status: valid

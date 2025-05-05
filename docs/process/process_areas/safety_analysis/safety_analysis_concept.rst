@@ -27,8 +27,8 @@ Inputs
 
 #. Stakeholders for the safety analysis?
 #. Who needs which information?
-#. How to analyze existing safety measure?
-#. How to add new safety measure/mechanisms?
+#. How to analyze existing safety mitigation?
+#. How to add new safety mitigations?
 
 Stakeholders for the Safety Analysis
 ====================================
@@ -79,18 +79,17 @@ How to analyze?
 DFA
 ^^^
 
-A DFA :need:`gd_guidl__safety_analysis` shall be used to proof the absence of dependent failures. For the analysis a checklist
-:need:`gd_chklst__dfa` is available.
+A DFA :need:`gd_guidl__safety_analysis` shall be used to proof the absence of dependent failures. For the analysis a list
+of DFA failure initiators :need:`gd_chklst__dfa_failure_initiators` is available.
 
 Safety Analysis
 ^^^^^^^^^^^^^^^
 
-For the safety analyses the safety analyses :need:`gd_temp__safety_analysis` shall be used. The safety analysis
-is done on architectural diagrams (state and sequence diagrams). Therefore fault models shall be used
-:need:`gd_guidl__fault_models`.
+For the safety analyses the templates :ref:`safety_analysis_templates` shall be used. For the safety analysis we selected
+the method FMEA on feature and component level. The safety analysis is done on architectural diagrams (state and sequence diagrams).
+For the safety analysis fault models shall be used :need:`gd_guidl__fault_models`.
 
-How to add new safety measure/mechanisms?
+How to add new safety mitigations?
 =========================================
 
-Identified faults without a mechanism/measure stay open and were monitored in
-the issue tracking sytem :need:`wp__issue_track_system` until there are closed.
+Identified faults without a mitigation stay open and are monitored in the issue tracking sytem :need:`wp__issue_track_system` until they are resolved.
