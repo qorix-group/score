@@ -16,7 +16,7 @@ Requirements
 ############
 
 .. feat_req:: C++ & Rust Interoperability
-   :id: feat_req__key_value_storage__cpp_rust_interoperability
+   :id: feat_req__kvs__cpp_rust_interoperability
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -26,7 +26,7 @@ Requirements
    The key-value storage shall allow concurrent access via C++ and Rust interfaces.
 
 .. feat_req:: Maximum Size
-   :id: feat_req__key_value_storage__maximum_size
+   :id: feat_req__kvs__maximum_size
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -36,7 +36,7 @@ Requirements
    The key-value storage shall have a maximum size defined at compile time.
 
 .. feat_req:: Thread Safety
-   :id: feat_req__key_value_storage__thread_safety
+   :id: feat_req__kvs__thread_safety
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -46,7 +46,7 @@ Requirements
    The key-value storage shall allow thread safe access per key.
 
 .. feat_req:: Multiple KVS per Software Architecture Element
-   :id: feat_req__key_value_storage__multiple_kvs
+   :id: feat_req__kvs__multiple_kvs
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -56,7 +56,7 @@ Requirements
    The key-value storage shall allow to instantiate multiple key-value storages per software architecture element.
 
 .. feat_req:: Supported Datatypes (Keys)
-   :id: feat_req__key_value_storage__supported_datatypes_keys
+   :id: feat_req__kvs__supported_datatypes_keys
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -66,7 +66,7 @@ Requirements
    The key-value storage shall allow only UTF-8 encoded strings as keys.
 
 .. feat_req:: Supported Datatypes (Values)
-   :id: feat_req__key_value_storage__supported_datatypes_values
+   :id: feat_req__kvs__supported_datatypes_values
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -77,7 +77,7 @@ Requirements
    The allowed datatypes shall be identical to the ones in the IPC feature.
 
 .. feat_req:: Default Values
-   :id: feat_req__key_value_storage__default_values
+   :id: feat_req__kvs__default_values
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -90,7 +90,7 @@ Requirements
    Note: Not each key does require a default value.
 
 .. feat_req:: Default Value Retrieval
-   :id: feat_req__key_value_storage__default_value_retrieval
+   :id: feat_req__kvs__default_value_retrieval
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -100,7 +100,7 @@ Requirements
    The key-value storage shall allow the retrieval of a key's default value.
 
 .. feat_req:: Default Value Reset
-   :id: feat_req__key_value_storage__default_value_reset
+   :id: feat_req__kvs__default_value_reset
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -110,7 +110,7 @@ Requirements
    The key-value storage shall allow the reset of a specific key or all keys to its/their default value(s).
 
 .. feat_req:: Persistency
-   :id: feat_req__key_value_storage__persistency
+   :id: feat_req__kvs__persistency
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -120,7 +120,7 @@ Requirements
    The key-value storage shall store the data persistent. It shall provide an API to trigger the persistency.
 
 .. feat_req:: Integrity Check
-   :id: feat_req__key_value_storage__integrity_check
+   :id: feat_req__kvs__integrity_check
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -130,7 +130,7 @@ Requirements
    The key-value storage shall detect data corruption. TODO: Dependent on AoUs.
 
 .. feat_req:: Versioning
-   :id: feat_req__key_value_storage__versioning
+   :id: feat_req__kvs__versioning
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -140,7 +140,7 @@ Requirements
    The key-value storage shall support the versioning of different layouts.
 
 .. feat_req:: Update Mechanism
-   :id: feat_req__key_value_storage__update_mechanism
+   :id: feat_req__kvs__update_mechanism
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -151,7 +151,7 @@ Requirements
    In addition, multiple version jumps at once shall be supported.
 
 .. feat_req:: Snapshots
-   :id: feat_req__key_value_storage__snapshots
+   :id: feat_req__kvs__snapshots
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -165,7 +165,7 @@ Requirements
    The key-value storage shall allow the deletion of snapshots.
 
 .. feat_req:: Tooling
-   :id: feat_req__key_value_storage__tooling
+   :id: feat_req__kvs__tooling
    :reqtype: Non-Functional
    :security: NO
    :safety: ASIL_B
@@ -175,7 +175,7 @@ Requirements
    The key-value storage shall support tooling to view and modify key-value pairs for development and debugging purposes.
 
 .. feat_req:: Stable APIs
-   :id: feat_req__key_value_storage__stable_api
+   :id: feat_req__kvs__stable_api
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -186,7 +186,7 @@ Requirements
    lifecylcle without preventing new functionality from beeing implemented.
 
 .. feat_req:: Variant management support
-   :id: feat_req__key_value_storage__variant_management
+   :id: feat_req__kvs__variant_management
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -196,7 +196,7 @@ Requirements
    The KVS ensures compatibilty between architectures and versions.
 
 .. feat_req:: Set default key values via file
-   :id: feat_req__key_value_storage__default_value_file
+   :id: feat_req__kvs__default_value_file
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -206,7 +206,7 @@ Requirements
    The KVS allows to configure default key values by using a file.
 
 .. feat_req:: Configure limits via file
-   :id: feat_req__key_value_storage__config_file
+   :id: feat_req__kvs__config_file
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -216,7 +216,7 @@ Requirements
    The KVS allows to configure memory and other limits by using a config file.
 
 .. feat_req:: Store persistent data
-   :id: feat_req__key_value_storage__persist_data
+   :id: feat_req__kvs__persist_data
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -227,7 +227,7 @@ Requirements
    storage.
 
 .. feat_req:: Support ASIL-B
-   :id: feat_req__key_value_storage__safety_asil_b
+   :id: feat_req__kvs__safety_asil_b
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -237,7 +237,7 @@ Requirements
    The KVS must support at least ASIL-B.
 
 .. feat_req:: Support engineering and field mode
-   :id: feat_req__key_value_storage__dev_mode
+   :id: feat_req__kvs__dev_mode
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -248,7 +248,7 @@ Requirements
    engineering must provide a way to to access all data without restrictions.
 
 .. feat_req:: Provide an async API
-   :id: feat_req__key_value_storage__async_api
+   :id: feat_req__kvs__async_api
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -258,7 +258,7 @@ Requirements
    The KVS must provide an async API.
 
 .. feat_req:: Separate data stores
-   :id: feat_req__key_value_storage__access_control
+   :id: feat_req__kvs__access_control
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -268,7 +268,7 @@ Requirements
    The KVS must make sure that data stores can only be accessed by allowed components.
 
 .. feat_req:: Data-change events
-   :id: feat_req__key_value_storage__events
+   :id: feat_req__kvs__events
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -279,7 +279,7 @@ Requirements
    several events like keys are changed or removed.
 
 .. feat_req:: Fast access
-   :id: feat_req__key_value_storage__fast_access
+   :id: feat_req__kvs__fast_access
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -289,7 +289,7 @@ Requirements
    The KVS must ensure that operations are usually done in under 5 ms.
 
 .. feat_req:: Fast startup
-   :id: feat_req__key_value_storage__fast_startup
+   :id: feat_req__kvs__fast_startup
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -301,7 +301,7 @@ Requirements
    initial parsing and hash checking.
 
 .. feat_req:: Intra-process communication
-   :id: feat_req__key_value_storage__intra_process_comm
+   :id: feat_req__kvs__intra_process_comm
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -311,7 +311,7 @@ Requirements
    The KVS must support concurrent access to the data.
 
 .. feat_req:: Multi-architecture support
-   :id: feat_req__key_value_storage__multi_arch
+   :id: feat_req__kvs__multi_arch
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -321,7 +321,7 @@ Requirements
    The KVS must run on all S-CORE platforms.
 
 .. feat_req:: Logging and tracing
-   :id: feat_req__key_value_storage__log_trace
+   :id: feat_req__kvs__log_trace
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -331,7 +331,7 @@ Requirements
    The KVS must use the provided S-CORE logging and tracing framework.
 
 .. feat_req:: Development steering
-   :id: feat_req__key_value_storage__dev_steering
+   :id: feat_req__kvs__dev_steering
    :reqtype: Non-Functional
    :security: NO
    :safety: QM
@@ -341,7 +341,7 @@ Requirements
    Requirements must be linked to top-level (Stakeholder) requirements.
 
 .. feat_req:: Document requirements as code
-   :id: feat_req__key_value_storage__req_as_code
+   :id: feat_req__kvs__req_as_code
    :reqtype: Non-Functional
    :security: NO
    :safety: QM

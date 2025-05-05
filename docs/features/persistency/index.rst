@@ -18,4 +18,4 @@ Persistency
 .. toctree::
 
    file-access/index.rst
-   key_value_storage/index.rst
+   kvs/index.rst

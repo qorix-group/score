@@ -16,7 +16,7 @@ Key-Value-Storage
 #################
 
 .. document:: Persistency Key-Value-Storage
-   :id: doc__persistency_key_value_storage
+   :id: doc__persistency_kvs
    :status: draft
    :safety: ASIL_B
    :tags: contribution_request, feature_request
