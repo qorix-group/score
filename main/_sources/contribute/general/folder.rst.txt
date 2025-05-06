@@ -110,4 +110,3 @@ The modules and components shall follow the folder structure which was presented
 
          tests/                        -> Feature level tests, consisting of
                                              integration tests [:need:`wp__verification__comp_int_test`]
-                                             verification tests [:need:`wp__verification__component_test`]

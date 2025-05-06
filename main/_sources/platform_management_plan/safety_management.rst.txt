@@ -448,7 +448,7 @@ Functional Safety Management SW Platform Work Products
       - :doc:`software_verification`
       - not started
 
-    * - :need:`wp__tool_verification`
+    * - :need:`wp__tool_verification_report`
       - :doc:`tool_management`
       - not started
       - <Link to issue>
