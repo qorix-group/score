@@ -49,7 +49,7 @@ Problem Resolution Execution
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Contributions in general to the **S-CORE** project are described here
-(compare :need:`gd_guidl__contr_request_guideline`).
+(compare :need:`doc__contr_guideline`).
 
 A Problem Resolution is a specific contribution, and
 it is the **ONLY** way to report problems in the **S-CORE** project.
@@ -57,7 +57,7 @@ it is the **ONLY** way to report problems in the **S-CORE** project.
 Problem Resolution Infrastructure
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:need:`GitHub Issues (ISSUE) <gd_guidl__issue_guideline>` are used for managing problems and their
+:need:`GitHub Issues (ISSUE) <doc__issue_guideline>` are used for managing problems and their
 potential resolution. The tool is used to create, analyse, initiate and to monitor the
 problem reported within **S-CORE**.
 

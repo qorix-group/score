@@ -68,7 +68,7 @@ Regarding the platform specifics:
 * all safety related SW in the project is developed according to ISO 26262 ASIL B
 
 The SW platform functionality consists of features, which are based on a set of requirements and are developed in parallel.
-These features are developed into SW components contained in "modules", which are another set of SEooCs (initiated by a contribution request).
+These features are developed into SW components contained in "modules", which are another set of SEooCs (initiated by a change request).
 A template exists to guide this: :need:`gd_temp__module_safety_plan`.
 
 Tailoring
@@ -78,7 +78,7 @@ Tailoring of safety activities:
 * The tailoring is divided into project wide and module specific rules.
 * Project wide tailoring is documented in this document - this is based on development of a platform SEooC.
 * Module SEooC specific tailoring is documented in the module development Safety Plans - this may be based on SEooC specifics or because component qualification according to ISO 26262 part 8 clause 12 (or ISO PAS 8926) is selected.
-* In case of a change request on an existing feature (i.e. a contribution request), the subsequent safety planning will be done based on an impact analysis.
+* In case of a change request on an existing feature (i.e. a change request), the subsequent safety planning will be done based on an impact analysis.
 
 The following  ISO 26262 defined safety work products are not relevant for the S-CORE SW platform development:
 

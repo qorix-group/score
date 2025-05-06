@@ -1,7 +1,7 @@
 # Improvement
 
 > [!IMPORTANT]
-> Use this template only for improvement that do not influence topics covered by contribution requests or bug fixes.
+> Use this template only for improvement that do not influence topics covered by change requests or bug fixes.
 
 > [!CAUTION]
 > Make sure to submit your pull-request as **Draft** until you are ready to have it reviewed by the Committers.

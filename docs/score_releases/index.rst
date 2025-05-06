@@ -44,7 +44,7 @@ SW Module List
      - Committer List
      - Release
      - Date
-     - Contribution Request
+     - Feature (Change) Request
      - Repo
      - GitHub Discussions
    * - IPC

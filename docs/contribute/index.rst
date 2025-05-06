@@ -39,7 +39,7 @@ Active Contributions to the S-CORE project are the basis for getting involved. T
 
 We aim to build a safety ready full stack architecture, where components fit to each other in automotive grade Software Quality and performance. To achieve this, we follow a strict :ref:`feature roadmap and architecture <releases>` and a :ref:`rigid software development process <process_description>` (currently under development).
 
-Contributions to the S-CORE project must therefore follow the technical direction of the project and the S-CORE architecture. For an introdcution on how to contribute, please check out our :need:`Contribution Request Guideline <gd_guidl__contr_request_guideline>`.
+Contributions to the S-CORE project must therefore follow the technical direction of the project and the S-CORE architecture. For an introduction on how to contribute, please check out our :need:`Contribution Guideline <doc__contr_guideline>`.
 
 Based on successful code contributions to the S-CORE roadmap, further steps in involvement (like becoming a committer) will be handled according to the rules of the Eclipse Foundation Project Handbook. We value real code based collaboration and will judge new potential contributors and committers mainly on the validity of their work. Active and sustaining contributions are the basis for the ability to shape S-CORE.
 

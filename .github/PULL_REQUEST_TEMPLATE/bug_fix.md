@@ -1,7 +1,7 @@
 # Bugfix
 
 > [!IMPORTANT]
-> Use this template only for bugfixes that do not influence topics covered by contribution requests or improvements.
+> Use this template only for bugfixes that do not influence topics covered by change requests or improvements.
 
 > [!CAUTION]
 > Make sure to submit your pull-request as **Draft** until you are ready to have it reviewed by the Committers.

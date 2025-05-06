@@ -12,15 +12,16 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _contribute_contribution_request:
+.. _contribute_contribution_guideline:
 
 How to Contribute?
 ##################
 
-.. gd_guidl:: Contribution Request Guideline
-  :id: gd_guidl__contr_request_guideline
-  :status: valid
-  :tags: contribution_management
+.. document:: Contribution Guideline
+   :id: doc__contr_guideline
+   :status: valid
+   :safety: QM
+   :tags: platform_management
 
 How we Work
 ===========
@@ -86,10 +87,11 @@ We're excited to have you on board. Together, we can shape S-CORE into a platfor
 What is a Pull Request (PR)?
 ============================
 
-.. gd_guidl:: Pull Request Guideline
-  :id: gd_guidl__pull_request_guideline
-  :status: valid
-  :tags: contribution_management
+.. document:: Pull Request Guideline
+   :id: doc__pull_request_guideline
+   :status: valid
+   :safety: QM
+   :tags: platform_management
 
 A Pull Request (**PR**) is the **ONLY** way to contribute **CODE** to the *S-CORE* project.
 
@@ -102,11 +104,11 @@ The figure below shows a simplified workflow for a PR.
 .. figure:: _assets/score_contribution_request_simple.drawio.svg
   :width: 600
   :align: center
-  :alt: Simple *PR* based contribution request workflow overview
+  :alt: Simple *PR* based contribution workflow overview
 
-  Simple *PR* based contribution request workflow overview
+  Simple *PR* based contribution workflow overview
 
-Content in general may contain features, requirements, architectural designs, modules, components, detailed designs, implementations and source code, tests, process descriptions, any documentations, guidelines, tutorials, tools, or infrastructure topics and more of the *S-CORE* project. In case of doubt or for any other input we strongly encourage to open a *GitHub Issue* (:need:`gd_guidl__issue_guideline`) first.
+Content in general may contain features, requirements, architectural designs, modules, components, detailed designs, implementations and source code, tests, process descriptions, any documentations, guidelines, tutorials, tools, or infrastructure topics and more of the *S-CORE* project. In case of doubt or for any other input we strongly encourage to open a *GitHub Issue* (:need:`doc__issue_guideline`) first.
 
 The *PR* should provide all required information of the new or changed content. Therefore the *S-CORE* project provides content specific templates, which the contributor (:need:`Contributor <rl__contributor>`) must use for his *PR* (ToDo link here to the templates overview). Templates may be *PR* templates, *GitHub Issue* templates and also additional document or work product templates.
 
@@ -155,10 +157,11 @@ At any point the contributor (:need:`Contributor <rl__contributor>`) may decide 
 What is a GitHub Issue?
 =======================
 
-.. gd_guidl:: Issue Guideline
-  :id: gd_guidl__issue_guideline
-  :status: valid
-  :tags: contribution_management
+.. document:: Issue Guideline
+   :id: doc__issue_guideline
+   :status: valid
+   :safety: QM
+   :tags: platform_management
 
 A *GitHub Issue* is the way to report bugs or propose improvements without knowing the solution and to request features (incl. scope changes).
 
