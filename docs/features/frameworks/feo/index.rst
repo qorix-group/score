@@ -19,10 +19,10 @@ Fixed execution order framework (FEO)
    :id: doc__feo
    :status: valid
    :safety: ASIL_B
-   :tags: contribution_request, feature_request
+   :tags: feature_request
 
-`Contribution Request Guideline <https://eclipse-score.github.io/score/process/guidance/contribution_request/index.html>`_
-and `Feature Request Template  <https://eclipse-score.github.io/score/process/guidance/contribution_request/templates/feature_request_template.html>`_.
+:need:`Change Request Guideline <gd_guidl__change__change_request>`
+and :need:`Feature Request Template <gd_temp__change__feature_request>`.
 
 .. toctree::
    :hidden:
