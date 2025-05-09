@@ -24,6 +24,7 @@ Key-Value-Storage
 .. toctree::
    :hidden:
 
+   architecture/index.rst
    requirements/index.rst
 
 
