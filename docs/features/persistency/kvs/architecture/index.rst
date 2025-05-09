@@ -23,3 +23,4 @@ Architecture
    :titlesonly:
 
    feature_architecture
+   component_architecture
