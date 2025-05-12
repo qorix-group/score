@@ -4,15 +4,12 @@ title Sequence Diagram: Restore Snapshot
 
 participant "User" as actor
 participant "«component» :kvs" as kvs
-participant "«component» :snapshot" as snapshot
 
 actor -> kvs: Restore snapshot
 
-alt snapshot-found
-    snapshot --> kvs: Snapshot restored into local representation
+alt snapshot-restore-success
     kvs --> actor: Snapshot restored successfully
-else snapshot-error
-    snapshot --> kvs: Snapshot-Not-Available-Error
+else snapshot-restore-error
     kvs --> actor: Snapshot-Not-Available-Error
 end
 
