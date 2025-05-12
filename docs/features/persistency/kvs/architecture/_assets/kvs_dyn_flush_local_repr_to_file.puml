@@ -4,10 +4,8 @@ title Sequence Diagram: Flush Local Representation to Data File
 
 participant "User" as actor
 participant "«component» :kvs" as kvs
-participant "«component» :snapshot" as snapshot
 participant "«component» :TinyJSON" as json_parser
 participant "«component» :fs" as fs
-participant "«component» :Adler32" as hasher
 
 actor -> kvs: Flush KVS
 
@@ -20,21 +18,19 @@ else json-string-error
     kvs --> actor: JSON generator error
 end
 
-kvs -> snapshot: Rotate snapshots
+kvs -> kvs: Rotate snapshots
 
-alt snapshot-rotate
-    snapshot -> kvs: Snapshots rotated
+alt snapshot-rotate-success
+    kvs --> kvs: Snapshots rotated
 else snapshot-rotate-error
-    snapshot --> kvs: Snapshot-Rotate-Error
     kvs --> actor: Snapshot-Rotate-Error
 end
 
-kvs -> hasher: Create JSON data string hash
+kvs -> kvs: Create JSON data hash
 
-alt hash-created
-    hasher --> kvs: Data hash
+alt hash-created-success
+    kvs -> kvs: Data hash
 else hash-create-error
-    hasher --> kvs: Hash-Calc-Error
     kvs --> actor: Hash-Calc-Error
 end
 
