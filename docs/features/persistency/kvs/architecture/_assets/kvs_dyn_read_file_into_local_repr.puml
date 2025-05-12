@@ -6,7 +6,6 @@ participant "Builder" as actor
 participant "«component» :kvs" as kvs
 participant "«component» :TinyJSON" as json_parser
 participant "«component» :fs" as fs
-participant "«component» :Adler32" as hasher
 
 actor -> kvs: Open KVS
 
@@ -28,10 +27,9 @@ else file-based-error
     kvs -> actor: File-Error
 end
 
-kvs -> hasher: Generate defaults file hash
-hasher --> kvs: Defaults file generated hash
+kvs -> kvs: Generate defaults file hash
 
-alt hash-matches
+alt hash-match-success
     kvs -> json_parser: Parse JSON data
 else hash-match-error
     kvs -> actor: Hash-Error
