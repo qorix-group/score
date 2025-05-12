@@ -44,8 +44,8 @@ Static Architecture
    :id: feat_arc_sta__kvs__static
    :security: YES
    :safety: ASIL_B
-   :includes: feat_arc_int__kvs__interface
-   :fulfils: feat_req__kvs__safety_asil_b
+   :includes: logic_arc_int__kvs__interface
+   :fulfils:
    :status: valid
 
    .. uml:: _assets/kvs_static_view.puml
@@ -53,20 +53,11 @@ Static Architecture
 Dynamic Architecture
 --------------------
 
-.. feat_arc_dyn:: KVS Builder
-   :id: feat_arc_dyn__kvs__builder_pattern
-   :security: YES
-   :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b
-   :status: valid
-
-   .. uml:: _assets/kvs_dyn_builder.puml
-
 .. feat_arc_dyn:: Check if key contains default value
    :id: feat_arc_dyn__kvs__check_key_default
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__default_values,feat_req__kvs__default_value_retrieval
+   :fulfils: feat_req__kvs__default_values,feat_req__kvs__default_value_retrieval
    :status: valid
 
    .. uml:: _assets/kvs_dyn_check_value_default.puml
@@ -75,7 +66,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__kvs__delete_key
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b
+   :fulfils: feat_req__kvs__events
    :status: valid
 
    .. uml:: _assets/kvs_dyn_delete_data_key.puml
@@ -84,7 +75,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__kvs__flush
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__persist_data,feat_req__kvs__persistency,feat_req__kvs__snapshots,feat_req__kvs__integrity_check,feat_req__kvs__snapshots
+   :fulfils: feat_req__kvs__persist_data,feat_req__kvs__persistency,feat_req__kvs__snapshots,feat_req__kvs__integrity_check,feat_req__kvs__snapshots
    :status: valid
 
    .. uml:: _assets/kvs_dyn_flush_local_repr_to_file.puml
@@ -93,7 +84,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__kvs__read_key
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__supported_datatypes_keys,feat_req__kvs__supported_datatypes_values,feat_req__kvs__default_values,feat_req__kvs__default_value_retrieval
+   :fulfils: feat_req__kvs__supported_datatypes_keys,feat_req__kvs__supported_datatypes_values,feat_req__kvs__default_values,feat_req__kvs__default_value_retrieval
    :status: valid
 
    .. uml:: _assets/kvs_dyn_read_data_key.puml
@@ -102,7 +93,7 @@ Dynamic Architecture
    :id: feat_arc_dyn__kvs__read_data_from_storage
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__persist_data,feat_req__kvs__persistency,feat_req__kvs__integrity_check,feat_req__kvs__snapshots
+   :fulfils: feat_req__kvs__persist_data,feat_req__kvs__persistency,feat_req__kvs__integrity_check,feat_req__kvs__snapshots
    :status: valid
 
    .. uml:: _assets/kvs_dyn_read_file_into_local_repr.puml
@@ -111,16 +102,16 @@ Dynamic Architecture
    :id: feat_arc_dyn__kvs__write_key
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__supported_datatypes_keys,feat_req__kvs__supported_datatypes_values
+   :fulfils: feat_req__kvs__supported_datatypes_keys,feat_req__kvs__supported_datatypes_values
    :status: valid
 
    .. uml:: _assets/kvs_dyn_write_data_key.puml
 
-.. feat_arc_dyn:: Restore snapshop
+.. feat_arc_dyn:: Restore snapshot
    :id: feat_arc_dyn__kvs__snapshot_restore
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__snapshots,feat_req__kvs__persist_data,feat_req__kvs__persistency
+   :fulfils: feat_req__kvs__snapshots,feat_req__kvs__persist_data,feat_req__kvs__persistency
    :status: valid
 
    .. uml:: _assets/kvs_dyn_restore_snapshot.puml
@@ -129,11 +120,11 @@ Dynamic Architecture
 Logical Interfaces
 ------------------
 
-.. feat_arc_int:: Ikvs
-   :id: feat_arc_int__kvs__interface
+.. logic_arc_int:: Ikvs
+   :id: logic_arc_int__kvs__interface
    :security: YES
    :safety: ASIL_B
-   :fulfils: feat_req__kvs__safety_asil_b,feat_req__kvs__stable_api
+   :fulfils: feat_req__kvs__stable_api
    :status: valid
 
    .. uml:: _assets/kvs_interface.puml
