@@ -54,7 +54,7 @@ Change Request Execution
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
 Contributions in general to the **S-CORE** project are described here
-(compare :need:`gd_guidl__contr_request_guideline`).
+(compare :need:`doc__contr_guideline`).
 
 A Change Request is a specific contribution, and
 it is the **ONLY** way to contribute new features/components or to modify the scope of existing
@@ -63,10 +63,10 @@ features/components in the **S-CORE** project.
 Change Request Infrastructure and Types
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:need:`GitHub Issues (ISSUE) <gd_guidl__issue_guideline>` are used for managing Change Requests.
+:need:`GitHub Issues (ISSUE) <doc__issue_guideline>` are used for managing Change Requests.
 The tool is used to create, plan, control, and monitor Change Requests within **S-CORE**.
 
-:need:`GitHub Pull Requests (PR) <gd_guidl__pull_request_guideline>` are used for the implementation
+:need:`GitHub Pull Requests (PR) <doc__pull_request_guideline>` are used for the implementation
 of Change Requests. The tool is used to implement and verify Change Requests within **S-CORE**.
 
 The next figure gives an overview, how Change Requests are realized in **S-CORE**. An ISSUE is
@@ -202,7 +202,7 @@ status ``OPEN``.
 The realisation parts of the Change Request are reviewed according the checklists of the affected
 work products. Verification of the realisation parts must be successful.
 If the verification is not sufficient, the related PR is kept in status ``OPEN`` or may changed
-back to ``DRAFT`` (compare :need:`gd_guidl__issue_guideline`).
+back to ``DRAFT`` (compare :need:`doc__issue_guideline`).
 
 Change request status: ``in review`` is implemented as
 ISSUE status ``OPEN`` and PR status ``OPEN``.

@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -72,11 +72,11 @@
         </script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Risk management" href="risk_management.html" />
-    <link rel="prev" title="Stakeholder Management" href="stakeholder_management.html" />
+    <link rel="next" title="Quality management" href="quality_management.html" />
+    <link rel="prev" title="Project management plan" href="project_management.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.1" />
   </head>
   
   
@@ -447,9 +447,7 @@
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Content</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="project_management.html">Project management plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="stakeholder_management.html">Stakeholder Management</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Safety management / Platform Safety Plan</a></li>
-<li class="toctree-l1"><a class="reference internal" href="risk_management.html">Risk management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="quality_management.html">Quality management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="config_management.html">Config management / Configuration Management Plan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tool_management.html">Tool Management/ Tool Management Plan</a></li>
@@ -520,7 +518,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="need_container docutils container" id="SNCB-053bb146">
+  <div class="need_container docutils container" id="SNCB-5c72fb04">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__platform_safety_plan">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -611,7 +609,7 @@ Responsibilities for development, implementation, integration and verification a
 <li><p>all safety related SW in the project is developed according to ISO 26262 ASIL B</p></li>
 </ul>
 <p>The SW platform functionality consists of features, which are based on a set of requirements and are developed in parallel.
-These features are developed into SW components contained in “modules”, which are another set of SEooCs (initiated by a contribution request).
+These features are developed into SW components contained in “modules”, which are another set of SEooCs (initiated by a change request).
 A template exists to guide this: <a class="reference internal" href="../process/process_areas/safety_management/guidance/template_module_safety_plan.html#gd_temp__module_safety_plan" title="gd_temp__module_safety_plan"><em class="xref need">Module Safety Plan Template (gd_temp__module_safety_plan)</em></a>.</p>
 </section>
 <section id="tailoring">
@@ -621,7 +619,7 @@ A template exists to guide this: <a class="reference internal" href="../process/
 <li><p>The tailoring is divided into project wide and module specific rules.</p></li>
 <li><p>Project wide tailoring is documented in this document - this is based on development of a platform SEooC.</p></li>
 <li><p>Module SEooC specific tailoring is documented in the module development Safety Plans - this may be based on SEooC specifics or because component qualification according to ISO 26262 part 8 clause 12 (or ISO PAS 8926) is selected.</p></li>
-<li><p>In case of a change request on an existing feature (i.e. a contribution request), the subsequent safety planning will be done based on an impact analysis.</p></li>
+<li><p>In case of a change request on an existing feature (i.e. a change request), the subsequent safety planning will be done based on an impact analysis.</p></li>
 </ul>
 <p>The following  ISO 26262 defined safety work products are not relevant for the S-CORE SW platform development:</p>
 <p>Because these are in responsibility of the system integrator: <a class="reference internal" href="../process/standards/iso26262/iso26262.html#std_wp__iso26262__management_751" title="std_wp__iso26262__management_751"><em class="xref need">management_751 (std_wp__iso26262__management_751)</em></a>,
@@ -649,7 +647,7 @@ When used, OSS components are qualified and external SEooCs are integrated in th
 <p>Because in the S-CORE SW platform interfacing of out of scope of ISO 26262 applications is not planned: <a class="reference internal" href="../process/standards/iso26262/iso26262.html#std_wp__iso26262__support_1551" title="std_wp__iso26262__support_1551"><em class="xref need">support_1551 (std_wp__iso26262__support_1551)</em></a></p>
 <p>Because in the S-CORE SW platform integration of safety-related systems not developed according to ISO 26262 is not planned: <a class="reference internal" href="../process/standards/iso26262/iso26262.html#std_wp__iso26262__support_1651" title="std_wp__iso26262__support_1651"><em class="xref need">support_1651 (std_wp__iso26262__support_1651)</em></a></p>
 <p>Because in the S-CORE SW platform no ASIL decomposition is planned: <a class="reference internal" href="../process/standards/iso26262/iso26262.html#std_wp__iso26262__analysis_551" title="std_wp__iso26262__analysis_551"><em class="xref need">analysis_551 (std_wp__iso26262__analysis_551)</em></a>, <a class="reference internal" href="../process/standards/iso26262/iso26262.html#std_wp__iso26262__analysis_552" title="std_wp__iso26262__analysis_552"><em class="xref need">analysis_552 (std_wp__iso26262__analysis_552)</em></a></p>
-<div class="need_container docutils container" id="SNCB-40394bca">
+<div class="need_container docutils container" id="SNCB-8e0f4d13">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workproduct table" id="wp__tailoring_platform">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1047,10 +1045,20 @@ Generic project wide work products are defined below.</p>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_realizes"><p></p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Documentation Management Plan</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Contribution Guideline</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/contribution_request/index.html#doc__contr_guideline">doc__contr_guideline</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_realizes"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_title"><p>Documentation Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="documentation_management.html#doc__documentation_mgt_plan">doc__documentation_mgt_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_realizes"><p>wp__document_mgt_plan</p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Issue Guideline</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/contribution_request/index.html#doc__issue_guideline">doc__issue_guideline</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_realizes"><p></p></td>
 </tr>
 <tr class="need row-odd"><td class="needs_title"><p>Platform Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="index.html#doc__platform_mgt_plan">doc__platform_mgt_plan</a></p></td>
@@ -1072,22 +1080,27 @@ Generic project wide work products are defined below.</p>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_realizes"><p>wp__project_mgt</p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_title"><p>Release Management Plan</p></td>
+<tr class="need row-odd"><td class="needs_title"><p>Pull Request Guideline</p></td>
+<td class="needs_id"><p><a class="reference internal" href="../contribute/contribution_request/index.html#doc__pull_request_guideline">doc__pull_request_guideline</a></p></td>
+<td class="needs_status"><p>valid</p></td>
+<td class="needs_realizes"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_title"><p>Release Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="release_management.html#doc__platform_release_management_plan">doc__platform_release_management_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_realizes"><p></p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Software Development Plan</p></td>
+<tr class="need row-odd"><td class="needs_title"><p>Software Development Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="software_development.html#doc__software_development_plan">doc__software_development_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_realizes"><p>wp__sw_development_plan</p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_title"><p>Software Verification Plan</p></td>
+<tr class="need row-even"><td class="needs_title"><p>Software Verification Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="software_verification.html#doc__verification_plan">doc__verification_plan</a></p></td>
 <td class="needs_status"><p>draft</p></td>
 <td class="needs_realizes"><p>wp__verification__plan</p></td>
 </tr>
-<tr class="need row-even"><td class="needs_title"><p>Tool Management Plan</p></td>
+<tr class="need row-odd"><td class="needs_title"><p>Tool Management Plan</p></td>
 <td class="needs_id"><p><a class="reference internal" href="tool_management.html#doc__platform_tool_management_plan">doc__platform_tool_management_plan</a></p></td>
 <td class="needs_status"><p>valid</p></td>
 <td class="needs_realizes"><p>wp__tlm_plan</p></td>
@@ -1111,20 +1124,20 @@ Generic project wide work products are defined below.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="stakeholder_management.html"
+       href="project_management.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Stakeholder Management</p>
+        <p class="prev-next-title">Project management plan</p>
       </div>
     </a>
     <a class="right-next"
-       href="risk_management.html"
+       href="quality_management.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Risk management</p>
+        <p class="prev-next-title">Quality management</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1227,7 +1240,7 @@ Generic project wide work products are defined below.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

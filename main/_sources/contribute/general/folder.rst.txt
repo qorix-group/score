@@ -27,7 +27,7 @@ The following shows the folder structure of the platform repository (ordered alp
     docs/                              -> Global documentation of the platform
         contribute/                    -> Description on how to contribute
         features/                      -> All features of the platform
-            <feature_name>/            -> Features including sub-folders and contribution request
+            <feature_name>/            -> Features including sub-folders and feature (change) request
                docs/                   -> Documentation of the feature
                    architecture/       -> Feature architecture [:need:`wp__feature_arch`]
                    requirements/       -> Feature requirements [:need:`wp__requirements__feat`]

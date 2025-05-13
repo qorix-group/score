@@ -31,7 +31,7 @@ Inputs
 Use Cases which require architectural information
 =================================================
 
-#. **Contribution Request**
+#. **Change Request**
 
    * Platform High Level Architecture
    * Graphical Feature Description

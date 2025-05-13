@@ -67,7 +67,7 @@ Safety Management Guideline
    |
    | The planning of safety activities is divided into the
    | * platform SEooC planning, dealing with all work products needed only once for the platform. This is included in :need:`wp__platform_safety_plan`
-   | * module SEooC planning, dealing with all work products needed for each module development (initiated by a contribution request), included in :need:`wp__module_safety_plan`. This module safety planning also includes the planning of OSS component qualification based on :need:`gd_guidl__component_classification`.
+   | * module SEooC planning, dealing with all work products needed for each module development (initiated by a change request), included in :need:`wp__module_safety_plan`. This module safety planning also includes the planning of OSS component qualification based on :need:`gd_guidl__component_classification`.
    | A template exists to guide this: :need:`gd_temp__module_safety_plan`.
    |
    | **Planning supporting processes:**
