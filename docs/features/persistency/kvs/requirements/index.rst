@@ -38,7 +38,7 @@ Requirements
 .. feat_req:: Thread Safety
    :id: feat_req__kvs__thread_safety
    :reqtype: Functional
-   :security: NO
+   :security: YES
    :safety: ASIL_B
    :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
