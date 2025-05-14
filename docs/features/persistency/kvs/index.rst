@@ -19,11 +19,9 @@ Key-Value-Storage
    :id: doc__persistency_kvs
    :status: draft
    :safety: ASIL_B
-   :tags: contribution_request, feature_request
+   :tags: feature_request, persistency_kvs
 
 .. toctree::
-   :hidden:
-
    architecture/index.rst
    requirements/index.rst
 
@@ -68,38 +66,20 @@ platform.
 Rationale
 =========
 
-1. There are multiple key-value storages allowed per application.
+1. | Requirement 1: Multiple key-value storages per application
+   | Solution: Allow each application to have multiple key-value storages (KVS) to enable data separation and different levels of security.
+2. | Requirement 2: Update mechanism for KVS versions
+   | Solution: Implement an update mechanism to ensure compatibility through updates and rollbacks of different KVS versions.
+3. | Requirement 3: Language-agnostic KVS interface
+   | Solution: Design a flexible interface that allows the KVS to be read and written from multiple programming languages, including C++, Rust, and others.
+4. | Requirement 4: Default values for KVS
+   | Solution: Configure the KVS to store default values for all keys, returning either the default value or an error if the key needs to be written first.
+5. | Requirement 5: Simple data representation for KVS
+   | Solution: Utilize a simple data representation, such as JSON or Cap'n Proto, that supports versioned up- and downgrading and is easily debuggable by developers.
+6. | Requirement 6: KVS integrity checking
+   | Solution: Ensure the KVS maintains a consistent state, providing either the currently stored data or the previous snapshot if data retrieval is not possible.
 
-To allow for data separation and different levels of security, each application
-is allowed to have multiple KVS.
-
-2. There must be an update mechanism from different versions of a KVS to another version.
-
-Staying compatible through updates and rollbacks is a main requirement for the
-project.
-
-3. The same KVS should be read/writable from C++ & Rust and any other language.
-
-Having a flexible interface allows to focus on solutions where the language
-fits the needs.
-
-4. KVS should store default values.
-
-If possible, all keys should return a configurable default value or the access
-should return an error if the key needs to be written first.
-
-5. KVS should use a simple data representation.
-
-The KVS should use a data representation that supports versioned up- and
-downgrading like JSON or Cap'n Proto and is easily debuggable by the developer.
-
-6. Integrity of the KVS should be checked.
-
-The KVS is always be in a consistent state that either provides the currently
-stored data or if not possible the previous snapshot.
-
-
-Backwards Compatibility
+Backwards Compatibility	
 =======================
 
 The API for the specific language tries to represent the language specific
@@ -112,9 +92,7 @@ avoided.
 Security Impact
 ===============
 
-Access to the key-value-storage would allow a malicious user to control the
-behaviour of the device so it needs to be secured as much as possible, like
-only providing debug access when a debug firmware image is installed.
+Access to the key-value-storage would allow a malicious user to control the behaviour of the device, so it must be secured to prevent unauthorized access. To achieve this, debug access should only be provided when a debug firmware image is installed.
 
 
 Safety Impact
