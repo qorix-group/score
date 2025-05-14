@@ -14,8 +14,8 @@
 
 .. _releases:
 
-SCORE Releases Overview
-=======================
+S-CORE Releases Overview
+========================
 
 Roadmap
 --------
@@ -29,22 +29,22 @@ Roadmap is a living document.
 Overview
 --------
 
-.. image:: _assets/score_v_05.svg
-   :width: 900
+.. image:: _assets/architecture.drawio.svg
+   :width: 1000
    :alt: Infrastructure overview
    :align: center
 
 SW Module List
 --------------
 
-.. list-table:: SCORE software modules overview
+.. list-table:: S-CORE software modules overview
    :header-rows: 1
 
    * - SW Module Name
      - Committer List
      - Release
      - Date
-     - Contribution Request
+     - Feature (Change) Request
      - Repo
      - GitHub Discussions
    * - IPC

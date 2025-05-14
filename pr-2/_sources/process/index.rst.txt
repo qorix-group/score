@@ -1,6 +1,6 @@
 ..
    # *******************************************************************************
-   # Copyright (c) 2024 Contributors to the Eclipse Foundation
+   # Copyright (c) 2025 Contributors to the Eclipse Foundation
    #
    # See the NOTICE file(s) distributed with this work for additional
    # information regarding copyright ownership.
@@ -17,7 +17,7 @@
 Process
 =======
 
-Processes are the basis to describe the way of working within the SCORE project.
+Processes are the basis to describe the way of working within the S-CORE project.
 
 Introduction
 ------------
@@ -31,15 +31,41 @@ Introduction
 
 Process Model
 -------------
-The SCORE process model is described by workflows, executed by roles and is creating work products.
+The S-CORE process model is described by workflows, executed by roles and is creating work products.
 Workflow activities are supported by guidances.
+
+.. figure:: _assets/score_process_area_overview.drawio.svg
+  :width: 100%
+  :align: center
+  :alt: Process area overview for **S-CORE** platform
+
+  Process area overview for **S-CORE** platform
+
+General Concepts
+~~~~~~~~~~~~~~~~
+
+General concepts like traceability of work products, life cycle model, buidling blocks can be found here:
+
+.. toctree::
+   :maxdepth: 1
+
+   general_concepts/index.rst
+
+Process Areas
+~~~~~~~~~~~~~
+
+The process description for the S-CORE project (e.g. requirements, architecture, safety management) can be found here:
+
+.. toctree::
+   :maxdepth: 1
+
+   process_areas/index.rst
 
 Process Role definition
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. toctree::
    :maxdepth: 1
-   :glob:
 
    roles/index.rst
 
@@ -48,7 +74,6 @@ Workproducts
 
 .. toctree::
    :maxdepth: 1
-   :glob:
 
    workproducts/index.rst
 
@@ -57,17 +82,22 @@ Workflows
 
 .. toctree::
    :maxdepth: 1
-   :glob:
 
    workflows/index.rst
 
-Process Guidances
+How To Contribute
 -----------------
 
-The guidance for the SCORE project (e.g. templates, guidelines, checklists) can be found here:
+How to contribute to the S-CORE project (e.g. naming convention, folder structure, IDE setup) can be found here:
+
+:ref:`contribute`
+
+Standards
+---------
+
+The the standard references the S-CORE project's processes are derived from can be found here:
 
 .. toctree::
    :maxdepth: 1
-   :glob:
 
-   guidance/index.rst
+   standards/index.rst

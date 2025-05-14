@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Safety Analysis &#8212; Score 0.1 documentation</title>
+    <title>Safety Analysis &#8212; S-CORE 0.1 documentation</title>
   
   
   
@@ -32,6 +32,9 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -39,11 +42,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=dbf7d94f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=60b43b4f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7fdb06ad" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -63,13 +63,20 @@
     <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'process/workflows/safety_analysis';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Guidance" href="../guidance/index.html" />
-    <link rel="prev" title="Architecture Design" href="architecture_design.html" />
+    <link rel="next" title="Standards" href="../standards/index.html" />
+    <link rel="prev" title="Quality Management" href="quality_management.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.1" />
   </head>
   
   
@@ -131,7 +138,7 @@
   
   
   
-    <p class="title logo__title">Eclipse SCORE Docs</p>
+    <p class="title logo__title">Eclipse S-CORE</p>
   
 </a></div>
     
@@ -145,6 +152,13 @@
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../requirements/index.html">
     Requirements
@@ -160,8 +174,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../guidance/index.html">
-    Guidance
+  <a class="nav-link nav-internal" href="../../contribute/index.html">
+    Contribute
   </a>
 </li>
 
@@ -169,13 +183,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../score_releases/index.html">
     Releases
-  </a>
-</li>
-
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="../index.html">
-    Process
   </a>
 </li>
 
@@ -187,16 +194,16 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../platform_management_plan/index.html">
-    PMP
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../index.html">
+    Process
   </a>
 </li>
 
 
 <li class=" ">
-  <a class="nav-link dropdown-item nav-external" href="https://eclipse-score.github.io">
-    SCORE
+  <a class="nav-link dropdown-item nav-internal" href="../../platform_management_plan/index.html">
+    PMP
   </a>
 </li>
 
@@ -253,6 +260,26 @@
         </li>
 </ul></div>
       
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
     </div>
     
   </div>
@@ -300,6 +327,13 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../requirements/index.html">
     Requirements
   </a>
@@ -314,8 +348,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../guidance/index.html">
-    Guidance
+  <a class="nav-link nav-internal" href="../../contribute/index.html">
+    Contribute
   </a>
 </li>
 
@@ -337,13 +371,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../platform_management_plan/index.html">
     PMP
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://eclipse-score.github.io">
-    SCORE
   </a>
 </li>
 
@@ -388,6 +415,26 @@
         </li>
 </ul></div>
         
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
       </div>
     
   </div>
@@ -401,6 +448,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
 </ul>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts/index.html">General concepts</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../process_areas/index.html">Process Areas</a></li>
+</ul>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../roles/index.html">Roles</a></li>
 </ul>
 <ul class="nav bd-sidenav">
@@ -409,18 +462,13 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Workflows</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="process_management.html">Process Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="platform_management.html">Platform Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety_management.html">Safety Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="change_management.html">Change Management</a></li>
 <li class="toctree-l2"><a class="reference internal" href="quality_management.html">Quality Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements_management.html">Requirements Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture_design.html">Architecture Design</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Safety Analysis</a></li>
 </ul>
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../guidance/index.html">Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standards/index.html">Standards</a></li>
 </ul>
 </div>
 </nav></div>
@@ -489,21 +537,21 @@
 <section id="workflows">
 <h2>Workflows<a class="headerlink" href="#workflows" title="Link to this heading">#</a></h2>
 <p>todo: need to add guidance and standard links</p>
-<div class="need_container docutils container" id="SNCB-dc06ddb8">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_ANALYSE_FeatArch">
+<div class="need_container docutils container" id="SNCB-e0ffb152">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__analyse_featarch">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Analyse Feature Architecture</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -511,11 +559,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety_analysis</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_ANALYSE_FeatArch">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_safety_manager" title="WF_ANALYSE_FeatArch">RL_safety_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_ANALYSE_FeatArch">RL_technical_lead</a>, <a class="reference internal" href="../roles/index.html#RL_security_manager" title="WF_ANALYSE_FeatArch">RL_security_manager</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_FEATURE_SAFETY_ANALYSES" title="WF_ANALYSE_FeatArch">WP_FEATURE_SAFETY_ANALYSES</a>, <a class="reference internal" href="../workproducts/index.html#WP_FEATURE_DFA" title="WF_ANALYSE_FeatArch">WP_FEATURE_DFA</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_FEATURE_REQ" title="WF_ANALYSE_FeatArch">WP_FEATURE_REQ</a>, <a class="reference internal" href="../workproducts/index.html#WP_FEATURE_ARCHITECTURE" title="WF_ANALYSE_FeatArch">WP_FEATURE_ARCHITECTURE</a>, <a class="reference internal" href="../workproducts/index.html#WP_ISSUE_TRACK_SYSTEM" title="WF_ANALYSE_FeatArch">WP_ISSUE_TRACK_SYSTEM</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__feat" title="wf__analyse_featarch">wp__requirements__feat</a>, <a class="reference internal" href="../process_areas/architecture_design/architecture_workproducts.html#wp__feature_arch" title="wf__analyse_featarch">wp__feature_arch</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__analyse_featarch">wp__issue_track_system</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__feature_safety_analysis" title="wf__analyse_featarch">wp__feature_safety_analysis</a>, <a class="reference internal" href="../workproducts/index.html#wp__feature_dfa" title="wf__analyse_featarch">wp__feature_dfa</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__analyse_featarch">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../process_areas/safety_management/roles.html#rl__safety_manager" title="wf__analyse_featarch">rl__safety_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__analyse_featarch">rl__technical_lead</a>, <a class="reference internal" href="../roles/index.html#rl__security_manager" title="wf__analyse_featarch">rl__security_manager</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -527,7 +575,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_ANALYSE_FeatArch" title="WF_ANALYSE_FeatArch">WF_ANALYSE_FeatArch</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__analyse_featarch" title="wf__analyse_featarch">wf__analyse_featarch</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -540,21 +588,21 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-87314edc">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_ANALYSE_CompArch">
+<div class="need_container docutils container" id="SNCB-b17ae4ed">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__analyse_comparch">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Analyse Component Architecture</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -562,11 +610,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety_analysis</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_ANALYSE_CompArch">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_safety_manager" title="WF_ANALYSE_CompArch">RL_safety_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_module_lead" title="WF_ANALYSE_CompArch">RL_module_lead</a>, <a class="reference internal" href="../roles/index.html#RL_security_manager" title="WF_ANALYSE_CompArch">RL_security_manager</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_SW_COMPONENT_SAFETY_ANALYSES" title="WF_ANALYSE_CompArch">WP_SW_COMPONENT_SAFETY_ANALYSES</a>, <a class="reference internal" href="../workproducts/index.html#WP_SW_COMPONENT_DFA" title="WF_ANALYSE_CompArch">WP_SW_COMPONENT_DFA</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_SW_COMPONENT_REQ" title="WF_ANALYSE_CompArch">WP_SW_COMPONENT_REQ</a>, <a class="reference internal" href="../workproducts/index.html#WP_SW_COMPONENT_ARCHITECTURE" title="WF_ANALYSE_CompArch">WP_SW_COMPONENT_ARCHITECTURE</a>, <a class="reference internal" href="../workproducts/index.html#WP_ISSUE_TRACK_SYSTEM" title="WF_ANALYSE_CompArch">WP_ISSUE_TRACK_SYSTEM</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__comp" title="wf__analyse_comparch">wp__requirements__comp</a>, <a class="reference internal" href="../process_areas/architecture_design/architecture_workproducts.html#wp__component_arch" title="wf__analyse_comparch">wp__component_arch</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__analyse_comparch">wp__issue_track_system</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__sw_component_safety_analysis" title="wf__analyse_comparch">wp__sw_component_safety_analysis</a>, <a class="reference internal" href="../workproducts/index.html#wp__sw_component_dfa" title="wf__analyse_comparch">wp__sw_component_dfa</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__analyse_comparch">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../process_areas/safety_management/roles.html#rl__safety_manager" title="wf__analyse_comparch">rl__safety_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__module_lead" title="wf__analyse_comparch">rl__module_lead</a>, <a class="reference internal" href="../roles/index.html#rl__security_manager" title="wf__analyse_comparch">rl__security_manager</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -578,7 +626,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_ANALYSE_CompArch" title="WF_ANALYSE_CompArch">WF_ANALYSE_CompArch</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__analyse_comparch" title="wf__analyse_comparch">wf__analyse_comparch</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -591,21 +639,21 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-48e84063">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_MR_VY_SAF_ANALYSES_DFA">
+<div class="need_container docutils container" id="SNCB-c389ee1a">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__mr_vy_saf_analyses_dfa">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Monitor/Verify Safety Analyses and DFA</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -613,11 +661,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">safety_analysis</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_MR_VY_SAF_ANALYSES_DFA">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_safety_manager" title="WF_MR_VY_SAF_ANALYSES_DFA">RL_safety_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_MR_VY_SAF_ANALYSES_DFA">RL_technical_lead</a>, <a class="reference internal" href="../roles/index.html#RL_module_lead" title="WF_MR_VY_SAF_ANALYSES_DFA">RL_module_lead</a>, <a class="reference internal" href="../roles/index.html#RL_security_manager" title="WF_MR_VY_SAF_ANALYSES_DFA">RL_security_manager</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_SW_ARCH_VERIFICATION" title="WF_MR_VY_SAF_ANALYSES_DFA">WP_SW_ARCH_VERIFICATION</a>, <a class="reference internal" href="../workproducts/index.html#WP_ISSUE_TRACK_SYSTEM" title="WF_MR_VY_SAF_ANALYSES_DFA">WP_ISSUE_TRACK_SYSTEM</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_FEATURE_SAFETY_ANALYSES" title="WF_MR_VY_SAF_ANALYSES_DFA">WP_FEATURE_SAFETY_ANALYSES</a>, <a class="reference internal" href="../workproducts/index.html#WP_FEATURE_DFA" title="WF_MR_VY_SAF_ANALYSES_DFA">WP_FEATURE_DFA</a>, <a class="reference internal" href="../workproducts/index.html#WP_SW_COMPONENT_SAFETY_ANALYSES" title="WF_MR_VY_SAF_ANALYSES_DFA">WP_SW_COMPONENT_SAFETY_ANALYSES</a>, <a class="reference internal" href="../workproducts/index.html#WP_SW_COMPONENT_DFA" title="WF_MR_VY_SAF_ANALYSES_DFA">WP_SW_COMPONENT_DFA</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__feature_safety_analysis" title="wf__mr_vy_saf_analyses_dfa">wp__feature_safety_analysis</a>, <a class="reference internal" href="../workproducts/index.html#wp__feature_dfa" title="wf__mr_vy_saf_analyses_dfa">wp__feature_dfa</a>, <a class="reference internal" href="../workproducts/index.html#wp__sw_component_safety_analysis" title="wf__mr_vy_saf_analyses_dfa">wp__sw_component_safety_analysis</a>, <a class="reference internal" href="../workproducts/index.html#wp__sw_component_dfa" title="wf__mr_vy_saf_analyses_dfa">wp__sw_component_dfa</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../process_areas/architecture_design/architecture_workproducts.html#wp__sw_arch_verification" title="wf__mr_vy_saf_analyses_dfa">wp__sw_arch_verification</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__mr_vy_saf_analyses_dfa">wp__issue_track_system</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__mr_vy_saf_analyses_dfa">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../process_areas/safety_management/roles.html#rl__safety_manager" title="wf__mr_vy_saf_analyses_dfa">rl__safety_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__mr_vy_saf_analyses_dfa">rl__technical_lead</a>, <a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__module_lead" title="wf__mr_vy_saf_analyses_dfa">rl__module_lead</a>, <a class="reference internal" href="../roles/index.html#rl__security_manager" title="wf__mr_vy_saf_analyses_dfa">rl__security_manager</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -630,7 +678,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_MR_VY_SAF_ANALYSES_DFA" title="WF_MR_VY_SAF_ANALYSES_DFA">WF_MR_VY_SAF_ANALYSES_DFA</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__mr_vy_saf_analyses_dfa" title="wf__mr_vy_saf_analyses_dfa">wf__mr_vy_saf_analyses_dfa</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -657,20 +705,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="architecture_design.html"
+       href="quality_management.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Architecture Design</p>
+        <p class="prev-next-title">Quality Management</p>
       </div>
     </a>
     <a class="right-next"
-       href="../guidance/index.html"
+       href="../standards/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Guidance</p>
+        <p class="prev-next-title">Standards</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -746,7 +794,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>

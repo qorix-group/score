@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Quality Management &#8212; Score 0.1 documentation</title>
+    <title>Quality Management &#8212; S-CORE 0.1 documentation</title>
   
   
   
@@ -32,6 +32,9 @@
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=940e959b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=e97392eb" />
+    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7199c97b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
@@ -39,11 +42,8 @@
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=678fb11e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-needs/modern.css?v=803738c0" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score.css?v=dbf7d94f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_needs.css?v=60b43b4f" />
-    <link rel="stylesheet" type="text/css" href="../../_static/css/score_design.css?v=7fdb06ad" />
   
   <!-- So that users can add custom icons -->
   <script src="../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
@@ -63,13 +63,20 @@
     <script src="../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'process/workflows/quality_management';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner =
+            false;
+        </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Requirements Management" href="requirements_management.html" />
-    <link rel="prev" title="Change Management" href="change_management.html" />
+    <link rel="next" title="Safety Analysis" href="safety_analysis.html" />
+    <link rel="prev" title="Process Management" href="process_management.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
+  <meta name="docsearch:version" content="0.1" />
   </head>
   
   
@@ -131,7 +138,7 @@
   
   
   
-    <p class="title logo__title">Eclipse SCORE Docs</p>
+    <p class="title logo__title">Eclipse S-CORE</p>
   
 </a></div>
     
@@ -145,6 +152,13 @@
 <nav>
   <ul class="bd-navbar-elements navbar-nav">
     
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../requirements/index.html">
     Requirements
@@ -160,8 +174,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../guidance/index.html">
-    Guidance
+  <a class="nav-link nav-internal" href="../../contribute/index.html">
+    Contribute
   </a>
 </li>
 
@@ -169,13 +183,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../score_releases/index.html">
     Releases
-  </a>
-</li>
-
-
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="../index.html">
-    Process
   </a>
 </li>
 
@@ -187,16 +194,16 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class=" ">
-  <a class="nav-link dropdown-item nav-internal" href="../../platform_management_plan/index.html">
-    PMP
+<li class=" current active">
+  <a class="nav-link dropdown-item nav-internal" href="../index.html">
+    Process
   </a>
 </li>
 
 
 <li class=" ">
-  <a class="nav-link dropdown-item nav-external" href="https://eclipse-score.github.io">
-    SCORE
+  <a class="nav-link dropdown-item nav-internal" href="../../platform_management_plan/index.html">
+    PMP
   </a>
 </li>
 
@@ -253,6 +260,26 @@
         </li>
 </ul></div>
       
+        <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+      
     </div>
     
   </div>
@@ -300,6 +327,13 @@
   <ul class="bd-navbar-elements navbar-nav">
     
 <li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../introduction/index.html">
+    Introduction
+  </a>
+</li>
+
+
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="../../requirements/index.html">
     Requirements
   </a>
@@ -314,8 +348,8 @@
 
 
 <li class="nav-item ">
-  <a class="nav-link nav-internal" href="../../guidance/index.html">
-    Guidance
+  <a class="nav-link nav-internal" href="../../contribute/index.html">
+    Contribute
   </a>
 </li>
 
@@ -337,13 +371,6 @@
 <li class="nav-item ">
   <a class="nav-link nav-internal" href="../../platform_management_plan/index.html">
     PMP
-  </a>
-</li>
-
-
-<li class="nav-item ">
-  <a class="nav-link nav-external" href="https://eclipse-score.github.io">
-    SCORE
   </a>
 </li>
 
@@ -388,6 +415,26 @@
         </li>
 </ul></div>
         
+          <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-3"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-3"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-3"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-3">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+        
       </div>
     
   </div>
@@ -401,6 +448,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../introduction/index.html">Introduction</a></li>
 </ul>
 <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../general_concepts/index.html">General concepts</a></li>
+</ul>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../process_areas/index.html">Process Areas</a></li>
+</ul>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../roles/index.html">Roles</a></li>
 </ul>
 <ul class="nav bd-sidenav">
@@ -409,18 +462,13 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Workflows</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="process_management.html">Process Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="platform_management.html">Platform Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="safety_management.html">Safety Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="change_management.html">Change Management</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Quality Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="requirements_management.html">Requirements Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="architecture_design.html">Architecture Design</a></li>
 <li class="toctree-l2"><a class="reference internal" href="safety_analysis.html">Safety Analysis</a></li>
 </ul>
 </details></li>
 </ul>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../guidance/index.html">Guidance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../standards/index.html">Standards</a></li>
 </ul>
 </div>
 </nav></div>
@@ -489,21 +537,21 @@
 <section id="workflows">
 <h2>Workflows<a class="headerlink" href="#workflows" title="Link to this heading">#</a></h2>
 <p>todo: need to add guidance and standard links</p>
-<div class="need_container docutils container" id="SNCB-1c851b5d">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_CR_MT_QLM_PLAN">
+<div class="need_container docutils container" id="SNCB-b60d6bf1">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__cr_mt_qlm_plan">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Create/Maintain Quality Plan</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -511,23 +559,23 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_CR_MT_QLM_PLAN">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_quality_manager" title="WF_CR_MT_QLM_PLAN">RL_quality_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_CR_MT_QLM_PLAN">RL_technical_lead</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_QMS" title="WF_CR_MT_QLM_PLAN">WP_QMS</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_POLICIES" title="WF_CR_MT_QLM_PLAN">WP_POLICIES</a>, <a class="reference internal" href="../workproducts/index.html#WP_ISSUE_TRACK_SYSTEM" title="WF_CR_MT_QLM_PLAN">WP_ISSUE_TRACK_SYSTEM</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__policies" title="wf__cr_mt_qlm_plan">wp__policies</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__cr_mt_qlm_plan">wp__issue_track_system</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__cr_mt_qlm_plan">wp__qms</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__cr_mt_qlm_plan">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__cr_mt_qlm_plan">rl__quality_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__cr_mt_qlm_plan">rl__technical_lead</a></span></span></div>
 </span></div>
 </div>
 </td>
 <td class="meta" colspan="3"></td>
 </tr>
 <tr class="content row-odd"><td class="content" colspan="6"><div class="line-block">
-<div class="line">The quality plan is created and maintained by a <a class="reference internal" href="../roles/index.html#RL_committer" title="RL_committer"><em class="xref need">Committer (RL_committer)</em></a>.</div>
+<div class="line">The quality plan is created and maintained by a <a class="reference internal" href="../roles/index.html#rl__committer" title="rl__committer"><em class="xref need">Committer (rl__committer)</em></a>.</div>
 </div>
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_CR_MT_QLM_PLAN" title="WF_CR_MT_QLM_PLAN">WF_CR_MT_QLM_PLAN</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__cr_mt_qlm_plan" title="wf__cr_mt_qlm_plan">wf__cr_mt_qlm_plan</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -540,21 +588,21 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-f181a0a1">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_VY_AP_PltRelease">
+<div class="need_container docutils container" id="SNCB-95eddf08">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__vy_ap_pltrelease">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Verify/Approve Platform Release</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -562,11 +610,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_VY_AP_PltRelease">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_quality_manager" title="WF_VY_AP_PltRelease">RL_quality_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_VY_AP_PltRelease">RL_technical_lead</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_PLATFORM_SW_RELEASE_NOTE" title="WF_VY_AP_PltRelease">WP_PLATFORM_SW_RELEASE_NOTE</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_QMS" title="WF_VY_AP_PltRelease">WP_QMS</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__vy_ap_pltrelease">wp__qms</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../process_areas/release_management/release_workproducts.html#wp__platform_sw_release_note" title="wf__vy_ap_pltrelease">wp__platform_sw_release_note</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__vy_ap_pltrelease">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__vy_ap_pltrelease">rl__quality_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__vy_ap_pltrelease">rl__technical_lead</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -578,7 +626,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_VY_AP_PltRelease" title="WF_VY_AP_PltRelease">WF_VY_AP_PltRelease</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__vy_ap_pltrelease" title="wf__vy_ap_pltrelease">wf__vy_ap_pltrelease</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -591,21 +639,21 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-6fa80742">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_EXE_PltProcess_Audit">
+<div class="need_container docutils container" id="SNCB-2943064a">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__exe_pltprocess_audit">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Execute Platform Process Audit</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -613,11 +661,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_quality_manager" title="WF_EXE_PltProcess_Audit">RL_quality_manager</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_EXE_PltProcess_Audit">RL_technical_lead</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_safety_manager" title="WF_EXE_PltProcess_Audit">RL_safety_manager</a>, <a class="reference internal" href="../roles/index.html#RL_security_manager" title="WF_EXE_PltProcess_Audit">RL_security_manager</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_PROCESS_IMPR_REPORT" title="WF_EXE_PltProcess_Audit">WP_PROCESS_IMPR_REPORT</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_QMS" title="WF_EXE_PltProcess_Audit">WP_QMS</a>, <a class="reference internal" href="../workproducts/index.html#WP_PROCESS_DEFINITION" title="WF_EXE_PltProcess_Audit">WP_PROCESS_DEFINITION</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__exe_pltprocess_audit">wp__qms</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_definition" title="wf__exe_pltprocess_audit">wp__process_definition</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__process_impr_report" title="wf__exe_pltprocess_audit">wp__process_impr_report</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__exe_pltprocess_audit">rl__quality_manager</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__exe_pltprocess_audit">rl__technical_lead</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/safety_management/roles.html#rl__safety_manager" title="wf__exe_pltprocess_audit">rl__safety_manager</a>, <a class="reference internal" href="../roles/index.html#rl__security_manager" title="wf__exe_pltprocess_audit">rl__security_manager</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -629,7 +677,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_EXE_PltProcess_Audit" title="WF_EXE_PltProcess_Audit">WF_EXE_PltProcess_Audit</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__exe_pltprocess_audit" title="wf__exe_pltprocess_audit">wf__exe_pltprocess_audit</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -642,21 +690,21 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-799c9e43">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_EXE_FeatProcess_Compliance_Checks">
+<div class="need_container docutils container" id="SNCB-b30a51a2">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__exe_featprocess_compliance_checks">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Execute Feature Process Compliance Checks</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -664,11 +712,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_EXE_FeatProcess_Compliance_Checks">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_quality_manager" title="WF_EXE_FeatProcess_Compliance_Checks">RL_quality_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_EXE_FeatProcess_Compliance_Checks">RL_technical_lead</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_QMS_REPORT" title="WF_EXE_FeatProcess_Compliance_Checks">WP_QMS_REPORT</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_QMS" title="WF_EXE_FeatProcess_Compliance_Checks">WP_QMS</a>, <a class="reference internal" href="../workproducts/index.html#WP_FEAT_REQUEST" title="WF_EXE_FeatProcess_Compliance_Checks">WP_FEAT_REQUEST</a>, <a class="reference internal" href="../workproducts/index.html#WP_PROCESS_DEFINITION" title="WF_EXE_FeatProcess_Compliance_Checks">WP_PROCESS_DEFINITION</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__exe_featprocess_compliance_checks">wp__qms</a>, <a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__feat_request" title="wf__exe_featprocess_compliance_checks">wp__feat_request</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_definition" title="wf__exe_featprocess_compliance_checks">wp__process_definition</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__qms_report" title="wf__exe_featprocess_compliance_checks">wp__qms_report</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__exe_featprocess_compliance_checks">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__exe_featprocess_compliance_checks">rl__quality_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__exe_featprocess_compliance_checks">rl__technical_lead</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -680,7 +728,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_EXE_FeatProcess_Compliance_Checks" title="WF_EXE_FeatProcess_Compliance_Checks">WF_EXE_FeatProcess_Compliance_Checks</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__exe_featprocess_compliance_checks" title="wf__exe_featprocess_compliance_checks">wf__exe_featprocess_compliance_checks</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -693,21 +741,21 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-5e158fd7">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_EXE_FeatWP_Review">
+<div class="need_container docutils container" id="SNCB-deaf9073">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__exe_featwp_review">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Execute Feature Work Product Reviews</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -715,11 +763,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_EXE_FeatWP_Review">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_quality_manager" title="WF_EXE_FeatWP_Review">RL_quality_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_EXE_FeatWP_Review">RL_technical_lead</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_PLATFORM_SW_VERIFICATION_REPORT" title="WF_EXE_FeatWP_Review">WP_PLATFORM_SW_VERIFICATION_REPORT</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_QMS" title="WF_EXE_FeatWP_Review">WP_QMS</a>, <a class="reference internal" href="../workproducts/index.html#WP_PROCESS_DEFINITION" title="WF_EXE_FeatWP_Review">WP_PROCESS_DEFINITION</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__exe_featwp_review">wp__qms</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_definition" title="wf__exe_featwp_review">wp__process_definition</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../process_areas/verification/workproducts.html#wp__verification__platform_ver_report" title="wf__exe_featwp_review">wp__verification__platform_ver_report</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__exe_featwp_review">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__exe_featwp_review">rl__quality_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__exe_featwp_review">rl__technical_lead</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -731,7 +779,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_EXE_FeatWP_Review" title="WF_EXE_FeatWP_Review">WF_EXE_FeatWP_Review</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__exe_featwp_review" title="wf__exe_featwp_review">wf__exe_featwp_review</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -744,21 +792,21 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-5a85b4c7">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_CONSULT_EXE_QLY_TRAINING">
+<div class="need_container docutils container" id="SNCB-3d2e36fc">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__consult_exe_qly_training">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Consult and Execute Quality Trainings</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -766,11 +814,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_CONSULT_EXE_QLY_TRAINING">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_quality_manager" title="WF_CONSULT_EXE_QLY_TRAINING">RL_quality_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_CONSULT_EXE_QLY_TRAINING">RL_technical_lead</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_TRAINING_PATH" title="WF_CONSULT_EXE_QLY_TRAINING">WP_TRAINING_PATH</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_QMS" title="WF_CONSULT_EXE_QLY_TRAINING">WP_QMS</a>, <a class="reference internal" href="../workproducts/index.html#WP_POLICIES" title="WF_CONSULT_EXE_QLY_TRAINING">WP_POLICIES</a>, <a class="reference internal" href="../workproducts/index.html#WP_PROCESS_DEFINITION" title="WF_CONSULT_EXE_QLY_TRAINING">WP_PROCESS_DEFINITION</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__consult_exe_qly_training">wp__qms</a>, <a class="reference internal" href="../workproducts/index.html#wp__policies" title="wf__consult_exe_qly_training">wp__policies</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_definition" title="wf__consult_exe_qly_training">wp__process_definition</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#wp__training_path" title="wf__consult_exe_qly_training">wp__training_path</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__consult_exe_qly_training">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__consult_exe_qly_training">rl__quality_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__consult_exe_qly_training">rl__technical_lead</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -782,7 +830,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_CONSULT_EXE_QLY_TRAINING" title="WF_CONSULT_EXE_QLY_TRAINING">WF_CONSULT_EXE_QLY_TRAINING</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__consult_exe_qly_training" title="wf__consult_exe_qly_training">wf__consult_exe_qly_training</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -795,21 +843,21 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-9eb880bc">
-<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="WF_MR_IMP_QLM_PLAN_PROCESSES">
+<div class="need_container docutils container" id="SNCB-389f9c71">
+<div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_workflow table" id="wf__mr_imp_qlm_plan_processes">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
 <div class="line"><span><span class="needs_title"><span class="needs_data">Monitor/Improve Quality Activities</span></span></span></div>
 </div>
 </td>
 <td class="head_center" colspan="2"><div class="needs_head line-block">
-<div class="line"><span>status: </span><strong><span><span class="needs_status"><span class="needs_data">draft</span></span></span></strong></div>
-<div class="line"><span>security: </span><strong><span></span></strong></div>
-<div class="line"><span>safety: </span><strong><span></span></strong></div>
+<div class="line"><span><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></span></div>
+<div class="line"><span></span></div>
+<div class="line"><span></span></div>
 </div>
 </td>
 <td class="head_right" colspan="2"><div class="needs_head_right line-block">
-<div class="line"><span><span class="needs needs_collapse" id="target__hide__meta"><span class="needs collapsed collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span> </span></div>
+<div class="line"><span><span class="needs needs_collapse" id="target__show__meta"><span class="needs collapsed"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg></span><span class="needs visible collapse_is_hidden"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg></span></span></span></div>
 </div>
 </td>
 </tr>
@@ -817,11 +865,11 @@
 <div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
 <div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">quality_management</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#RL_committer" title="WF_MR_IMP_QLM_PLAN_PROCESSES">RL_committer</a></span></span></div>
-<div class="line">approving: <span class="approver"><span><a class="reference internal" href="../roles/index.html#RL_quality_manager" title="WF_MR_IMP_QLM_PLAN_PROCESSES">RL_quality_manager</a></span></span></div>
-<div class="line">supporting: <span class="supporter"><span><a class="reference internal" href="../roles/index.html#RL_technical_lead" title="WF_MR_IMP_QLM_PLAN_PROCESSES">RL_technical_lead</a></span></span></div>
-<div class="line">has output: <span class="output"><span><a class="reference internal" href="../workproducts/index.html#WP_ISSUE_TRACK_SYSTEM" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_ISSUE_TRACK_SYSTEM</a></span></span></div>
-<div class="line">has input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#WP_QMS" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_QMS</a>, <a class="reference internal" href="../workproducts/index.html#WP_PLATFORM_SW_RELEASE_NOTE" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_PLATFORM_SW_RELEASE_NOTE</a>, <a class="reference internal" href="../workproducts/index.html#WP_MODULE_SW_RELEASE_NOTE" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_MODULE_SW_RELEASE_NOTE</a>, <a class="reference internal" href="../workproducts/index.html#WP_PROCESS_IMPR_REPORT" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_PROCESS_IMPR_REPORT</a>, <a class="reference internal" href="../workproducts/index.html#WP_QMS_REPORT" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_QMS_REPORT</a>, <a class="reference internal" href="../workproducts/index.html#WP_PLATFORM_SW_VERIFICATION_REPORT" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_PLATFORM_SW_VERIFICATION_REPORT</a>, <a class="reference internal" href="../workproducts/index.html#WP_MODULE_SW_VERIFICATION_REPORT" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_MODULE_SW_VERIFICATION_REPORT</a>, <a class="reference internal" href="../workproducts/index.html#WP_TRAINING_PATH" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WP_TRAINING_PATH</a></span></span></div>
+<div class="line"><span><div class="line">needs input: <span class="input"><span><a class="reference internal" href="../workproducts/index.html#wp__qms" title="wf__mr_imp_qlm_plan_processes">wp__qms</a>, <a class="reference internal" href="../process_areas/release_management/release_workproducts.html#wp__platform_sw_release_note" title="wf__mr_imp_qlm_plan_processes">wp__platform_sw_release_note</a>, <a class="reference internal" href="../process_areas/release_management/release_workproducts.html#wp__module_sw_release_note" title="wf__mr_imp_qlm_plan_processes">wp__module_sw_release_note</a>, <a class="reference internal" href="../workproducts/index.html#wp__process_impr_report" title="wf__mr_imp_qlm_plan_processes">wp__process_impr_report</a>, <a class="reference internal" href="../workproducts/index.html#wp__qms_report" title="wf__mr_imp_qlm_plan_processes">wp__qms_report</a>, <a class="reference internal" href="../process_areas/verification/workproducts.html#wp__verification__platform_ver_report" title="wf__mr_imp_qlm_plan_processes">wp__verification__platform_ver_report</a>, <a class="reference internal" href="../process_areas/verification/workproducts.html#wp__verification__module_ver_report" title="wf__mr_imp_qlm_plan_processes">wp__verification__module_ver_report</a>, <a class="reference internal" href="../workproducts/index.html#wp__training_path" title="wf__mr_imp_qlm_plan_processes">wp__training_path</a></span></span></div>
+<div class="line">outputs: <span class="output"><span><a class="reference internal" href="../process_areas/change_management/change_management_workproducts.html#wp__issue_track_system" title="wf__mr_imp_qlm_plan_processes">wp__issue_track_system</a></span></span></div>
+<div class="line">responsible: <span class="responsible"><span><a class="reference internal" href="../roles/index.html#rl__committer" title="wf__mr_imp_qlm_plan_processes">rl__committer</a></span></span></div>
+<div class="line">approved by: <span class="approved_by"><span><a class="reference internal" href="../roles/index.html#rl__quality_manager" title="wf__mr_imp_qlm_plan_processes">rl__quality_manager</a></span></span></div>
+<div class="line">supported by: <span class="supported_by"><span><a class="reference internal" href="../process_areas/platform_management/platform_management_roles.html#rl__technical_lead" title="wf__mr_imp_qlm_plan_processes">rl__technical_lead</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -834,7 +882,7 @@
 </td>
 </tr>
 <tr class="footer row-even"><td class="footer_left" colspan="2"><div class="needs_footer_left line-block">
-<div class="line"><span><span class="needs-id"><a class="reference internal" href="#WF_MR_IMP_QLM_PLAN_PROCESSES" title="WF_MR_IMP_QLM_PLAN_PROCESSES">WF_MR_IMP_QLM_PLAN_PROCESSES</a></span></span></div>
+<div class="line"><span><span class="needs-id"><a class="reference internal" href="#wf__mr_imp_qlm_plan_processes" title="wf__mr_imp_qlm_plan_processes">wf__mr_imp_qlm_plan_processes</a></span></span></div>
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
@@ -861,20 +909,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="change_management.html"
+       href="process_management.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Change Management</p>
+        <p class="prev-next-title">Process Management</p>
       </div>
     </a>
     <a class="right-next"
-       href="requirements_management.html"
+       href="safety_analysis.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Requirements Management</p>
+        <p class="prev-next-title">Safety Analysis</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -950,7 +998,7 @@
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
     <br/>
   </p>
 </div>
