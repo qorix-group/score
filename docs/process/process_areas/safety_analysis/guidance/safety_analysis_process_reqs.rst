@@ -20,14 +20,15 @@ Safety Analysis Process Requirements
 .. gd_req:: Safety Analysis Structure
    :id: gd_req__saf__structure
    :status: valid
-   :tags: structure
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :tags: safety_analysis
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies:
 
    Safety Analysis shall be hierarchically grouped into different levels.
 
    Following levels are defined:
 
+      * Platform architecture
       * Feature architecture
       * Component architecture
 
@@ -40,7 +41,7 @@ Process Safety Analysis Attributes
    :id: gd_req__saf__attr_uid
    :status: valid
    :tags: attribute, mandatory
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies:
 
    Each Safety Analysis shall have a unique ID. It shall be in a format which is also human readable and consists of
@@ -55,34 +56,25 @@ Process Safety Analysis Attributes
    :id: gd_req__saf_attr_title
    :status: valid
    :tags: attribute, mandatory
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies:
 
    The title of the Safety Analysis shall provide a short summary of the description
-
-.. gd_req:: Safety Analysis attribute: description
-   :id: gd_req__saf_attr_description
-   :status: valid
-   :tags: attribute, mandatory
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
-   :complies:
-
-   Each Safety Analysis shall have a description. With this another person should be able to recognize the results of the Safety Analysis
 
 .. gd_req:: DFA attribute: violation ID
    :id: gd_req__saf__attr_vid
    :status: valid
    :tags: attribute, mandatory
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies:
 
-   Each DFA shall have a violation ID. The violation ID is used to identify the related fault <:need:`gd_guidl__fault_models`>.
+   Each DFA shall have a violation ID. The violation ID is used to identify the related fault <:need:`gd_guidl__dfa_failure_initiators`>.
 
 .. gd_req:: DFA attribute: violation cause
    :id: gd_req__saf__attr_vcause
    :status: valid
    :tags: attribute, mandatory
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies:
 
    Every DFA shall have a short description of the violation cause.
@@ -109,16 +101,26 @@ Process Safety Analysis Attributes
    :id: gd_req__saf_attr_mitigation
    :status: valid
    :tags: attribute, mandatory
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_844, std_req__iso26262__analysis_746, std_req__iso26262__analysis_747
 
-   Each violation shall have a mitigation for it.
+   Each violation shall have a mitigation for it. None can be used until a mitigation is developed.
+
+.. gd_req:: Safety Analysis attribute: mitigation issue
+   :id: gd_req__saf_attr_mitigation_issue
+   :status: valid
+   :tags: attribute, mandatory
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
+   :complies: std_req__iso26262__analysis_844, std_req__iso26262__analysis_746, std_req__iso26262__analysis_747
+
+   For every mitigation that is needed a issue shall be created. If a mitigation is allready implemented without
+   an issue, please remark it so this can be reconstructed.
 
 .. gd_req:: Safety Analysis attribute: sufficient
    :id: gd_req__saf__attr_sufficient
    :status: valid
    :tags: attribute, mandatory
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44431, std_req__isopas8926__44432
 
    Each mitigation shall have an statement if it's sufficient.
@@ -127,10 +129,20 @@ Process Safety Analysis Attributes
    :id: gd_req__saf__attr_argument
    :status: valid
    :tags: attribute, mandatory
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44433
 
-   The argument shall describe why the mitigation is sufficient or not.
+   The argument shall describe why the mitigation is sufficient or not. If it's not sufficient the argument shall describe how the mitigation
+   can be improved to be sufficient.
+
+.. gd_req:: Safety Analysis attribute: status
+   :id: gd_req__saf__attr_status
+   :status: valid
+   :tags: attribute, mandatory
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
+   :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44431, std_req__isopas8926__44432
+
+   Each safety analysis shall have the status invalid until the analysis is finished. The status shall be set to valid if the analysis is finished and all issues are closed.
 
 .. _process_requirements_safety_analysis_linkage:
 
@@ -141,11 +153,12 @@ Safety Analysis Requirement Linkage
    :id: gd_req__saf__linkage
    :status: valid
    :tags: attribute, automated
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_842, std_req__iso26262__software_7410, std_req__iso26262__software_7411
 
    Safety Analysis shall be linked to its adjacent level via the attribute verifies.
 
+      * Platform Safety Analysis <-> platform architecture
       * Feature Safety Analysis <-> feature architecture
       * Component Safety Analysis <-> component architecture
 
@@ -153,7 +166,7 @@ Safety Analysis Requirement Linkage
    :id: gd_req__saf__attr_saf_cov
    :status: valid
    :tags: attribute, automated
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749, std_req__isopas8926__44433
 
    It shall be possible to specify the mitigation coverage.
@@ -164,11 +177,12 @@ Safety Analysis Requirement Linkage
    :id: gd_req__saf__attr_requirements
    :status: valid
    :tags: attribute, automated
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_842, std_req__iso26262__software_7410, std_req__iso26262__software_7411
 
    Safety Analysis shall be linked to its adjacent level via the attribute mitigates.
 
+      * Platform Safety Analysis <-> platform architecture
       * Feature Safety Analysis <-> feature architecture
       * Component Safety Analysis <-> component architecture
 
@@ -185,7 +199,7 @@ Safety Analysis Requirement Linkage
    :id: gd_req__saf__attr_hash
    :status: valid
    :tags: attribute, automated
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies:
 
    It shall be possible to provide a versioning for Safety Analysis. It shall be possible to detect if any of the mandatory attributes differ from the versioning: :need:`gd_req__saf__attr_mandatory`
@@ -200,7 +214,7 @@ Process Requirements Checks
    :id: gd_req__saf__attr_mandatory
    :status: valid
    :tags: attribute, check
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749
 
    It shall be checked if all mandatory attributes for each Safety Analysis is provided by the user. For all Safety Analysis following attributes shall be mandatory:
@@ -215,17 +229,17 @@ Process Requirements Checks
    :id: gd_req__saf__linkage_fulfill
    :status: valid
    :tags: attribute, check
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749
 
-   Every feature- and component Safety Analysis shall be linked to at least one parent feature architecture.
+   Every Safety Analysis shall be linked to at least one parent architecture.
 
 
 .. gd_req:: Safety Analysis linkage safety
    :id: gd_req__saf__linkage_safety
    :status: valid
    :tags: attribute, check
-   :satisfies: wf__analyse_featarch, wf__analyse_comparch
+   :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
    :complies: std_req__iso26262__analysis_848, std_req__iso26262__analysis_749
 
    It shall be checked that Safety Analysis (Safety != QM) can only be linked against elements with the same ASIL.

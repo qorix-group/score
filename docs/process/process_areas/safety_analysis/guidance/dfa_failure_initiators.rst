@@ -17,10 +17,15 @@
 DFA failure initiators
 ======================
 
-.. gd_chklst:: DFA failure initiators
-    :id: gd_chklst__dfa_failure_initiators
-    :status: valid
-    :tags: safety analysis
+.. gd_guidl:: DFA failure initiators
+  :id: gd_guidl__dfa_failure_initiators
+  :status: valid
+  :complies: std_wp__iso26262__software_751, std_wp__iso26262__software_753
+
+
+:note: Use the failure initiators to ensure a structed analysis. If a fault model doesn't apply, please fill in a short desciption in the
+       violation cause so it could be recognized that the analysis is done. If there are additional failure initiators needed, please
+       enlage the list of fault models.
 
     **Purpose**
 
@@ -30,7 +35,6 @@ DFA failure initiators
     **DFA failure initiators**
 
     | 2.1 Shared resources
-    | Same software element instance used by the two functions which are therefore affected by the failure or unavailability of that shared resource.
 
     .. list-table:: DFA shared resources
        :header-rows: 1
@@ -68,10 +72,6 @@ DFA failure initiators
         - Configuration data
         -
         -
-      * - SR_01_08
-        - Calibration data
-        -
-        -
       * - SR_01_09
         - Execution time
         -
@@ -90,7 +90,7 @@ DFA failure initiators
 
       * - ID
         - Violation cause
-          Shared resource used by several components
+          communication between elements
         - Avoidance, or detection and mitigation of the fault
         - Comment
       * - CO_01_01
@@ -128,6 +128,9 @@ DFA failure initiators
         -
         -
 
+    | (*) These issues are taken from the arguments on freedom from interference between software elements.
+    |     In that respect, the dependent failure initiators Unintended Impact and Communication represent causes of violation of freedom from interference for software.
+
     | 2.3 Shared information inputs
     | Same information consumed by the two functions even in absence of shared resources, i.e. from a functional perspective.
 
@@ -140,10 +143,6 @@ DFA failure initiators
           Shared resource used by several components
         - Avoidance, or detection and mitigation of the fault
         - Comment
-      * - SI_01_01
-        - Calibration data
-        -
-        -
       * - SI_01_02
         - Configuration data
         -
@@ -215,7 +214,6 @@ DFA failure initiators
     |     In that respect, the dependent failure initiators Unintended Impact and Communication represent causes of violation of freedom from interference for software.
 
     | 2.5 Systematic coupling
-    | Systematic causes from human or tool errors can lead to the simultaneous failure of more than one function.
 
     .. list-table:: DFA systematic coupling
        :header-rows: 1
@@ -226,17 +224,11 @@ DFA failure initiators
           Shared resources used by several components
         - Avoidance, or detection and mitigation of the fault
         - Comment
-      * - SC_01_01
-        - Manufacturing fault / repair fault (e.g. false flashing,
-          false calibration reference for sensors)
-        -
-        -
       * - SC_01_02
         - Non-diverse development approaches including:
           - same software tools (e.g. IDE, compiler, linker)
           - same algorithms
           - same programming and/or modelling language used
-          - same complier/linker used
         -
         -
       * - SC_01_03

@@ -16,106 +16,16 @@ Fault Models
 ============
 
 .. gd_guidl:: Fault Models
-   :id: gd_guidl__fault_models
-   :status: valid
-   :complies: std_wp__iso26262__software_752, std_req__iso26262__analysis_846
+  :id: gd_guidl__fault_models
+  :status: valid
+  :complies: std_wp__iso26262__software_752, std_req__iso26262__analysis_846
 
-    Fault Models for activity diagrams
+  | Fault Model for sequence diagrams
 
-    .. list-table:: Fault Models for activity diagrams
-       :header-rows: 1
-       :widths: 15,6,30,30,15
+:note: Use the fault models to ensure a structed analysis. If a fault model doesn't apply, please fill in a short desciption in the
+          violation cause so it could be recognized that the analysis is done. If there are additional fault models needed, please
+          enlage the list of fault models.
 
-      * - Element
-        - ID
-        - Failure Mode
-        - Simplification
-        - Importance
-      * - data storage
-        - DS_01_01
-        - stored data changed
-          (before read operation)
-        -
-        - High
-      * - data storage
-        - DS_01_02
-        - new data not stored (keeps old data)
-          / stuck-at (specific value)
-        -
-        - High
-      * - data flow
-        - DF_01_01
-        - transferred data changed
-        - DS_01_01 if there is one data flow to the data store
-        - Medium
-      * - data flow
-        - DF_01_02
-        - transferred data lost
-        - DS_01_02 if there is one data flow to the data store
-        - Medium
-      * - data flow
-        - DF_01_03
-        - transferred to wrong data store
-        - DS_01_01 unless point in time of change is important
-        - Low
-      * - data flow
-        - DF_01_04
-        - data stored at wrong location in data store
-        - relevant only for arrays/complex types
-        - High
-      * - processing
-        - PS_01_01
-        - process calculates wrong result(s)
-        - DS_01_01 unless process affects multiple data stores
-        - High
-      * - processing
-        - PS_01_02
-        - processing too slow/fast
-        - relevant only if timing is considered, infinite loop->CF01_01
-        - Low
-      * - control flow
-        - CF_01_01
-        - control flow stops
-        -
-        - High
-      * - control flow
-        - CF_01_02
-        - control flow skips process
-        - PS_01_01 and PS_01_02
-        - Medium
-      * - control flow
-        - CF_01_03
-        - control flow proceeds to wrong process
-        - CF_01_02 or limited to specific process
-        - Low
-      * - fork
-        - FK_01_01
-        - some but not all outgoing concurrent processes are triggered
-        -
-        - Medium
-      * - fork
-        - FK_01_02
-        - concurrent processes are triggered despite incoming process has not yet been completed
-        - similar to CF_01_02
-        - Low
-      * - fork
-        - FK_01_03
-        - none of the outgoing concurrent processes is triggered
-        - similar to CF_01_01
-        - Low
-      * - join
-        - JF_01_01
-        - execution proceeds before all joining processes have been completed
-        - similar to CF_01_02
-        - High
-      * - join
-        - JF_01_02
-        - execution does not proceed despite all joining processes have been completed
-        - similar to CF_01_01
-        - Medium
-
-
-   | Fault Model for sequence diagrams
 
     .. list-table:: Fault Models for sequence diagrams
        :header-rows: 1
@@ -125,7 +35,7 @@ Fault Models
         - ID
         - Failure Mode
         - Simplification
-        - Importance
+        - Importance (can be used for priorisation)
       * - message
         - MF_01_01
         - message is not received
@@ -181,25 +91,3 @@ Fault Models
         - processing is not complete (infinite loop)
         -
         - Low
-      * - frame (*)
-        - FE_01_01
-        - frame not entered as specified
-        -
-        - Medium
-      * - frame (*)
-        - FE_01_02
-        - frame not exited as specified
-        -
-        - Medium
-      * - frame (*)
-        - FE_01_03
-        - frame entered differently than specified
-        -
-        - Medium
-      * - frame (*)
-        - FE_01_04
-        - frame exited differently than specified
-        -
-        - Medium
-
-   | (*) frame is a reference to another diagram, which describes more detailed aspects. Entry- and Exit points define the order of transitions.

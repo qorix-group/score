@@ -70,7 +70,6 @@ Standard Requirements
 Also requirements of standards need to be taken into consideration:
 
 * ISO26262
-* ASPICE
 * ISO SAE 21434
 
 How to analyze?
@@ -80,7 +79,7 @@ DFA
 ^^^
 
 A DFA :need:`gd_guidl__safety_analysis` shall be used to proof the absence of dependent failures. For the analysis a list
-of DFA failure initiators :need:`gd_chklst__dfa_failure_initiators` is available.
+of DFA failure initiators :need:`gd_guidl__dfa_failure_initiators` is available.
 
 Safety Analysis
 ^^^^^^^^^^^^^^^
