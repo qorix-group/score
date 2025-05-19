@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -518,7 +518,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <div class="need_container docutils container" id="SNCB-2fe01c7d">
+  <div class="need_container docutils container" id="SNCB-494f7bda">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__project_mgt_plan">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -621,13 +621,11 @@ teams. Each <em>Community</em> has a <em>Community Lead</em>, who is nominated b
 in order to achieve milestones on time. All important architectural decisions
 should be reported to the project as <em>Feature Request</em> to get the final approvement from the <em>Technical lead circle</em>.</p>
 </li>
-<li><p><strong>Cross functional teams</strong></p>
-<p><em>Cross functional teams</em> are responsible for some piece
-of work from the beginning (e.g. definition of the architecture) till the end
-(e.g. integration tests) and are usually assigned to the <em>S-CORE</em> main integration project or to one particular software module. <em>Cross-functional teams</em> work independently from each other on <em>GitHub Issues</em> in the assigned software module. <em>Cross-functional teams</em> consist of the contributors, who can specify requirements, define architecture, develop source code and implement tests afterwards. <em>Project Leads</em> and <em>Committers</em> are also <em>Contributors</em> and effectively work on processing of <em>GitHub Issues</em>.</p>
-<p><em>Cross-functional team</em> usually consists of the following roles: Project Lead, Safety Manager, Quality Manager, Security Manager, Committers and Contributors. Every <em>cross-functional</em> team has at least one committer who can approve and merge the Pull Requests of the Contributors.</p>
-<p>In case <em>Cross-functional team</em> needs to request a new repository, this can be done be extending the <a class="reference external" href="https://github.com/eclipse-score/.eclipsefdn/blob/main/otterdog/eclipse-score.jsonnet">otterdog configuration file</a> and creating a new PR, that should be approved by the <em>Eclipse Project Security Team</em>.</p>
-<p>The <em>GitHub Discussions</em> for cross-functional teams can be found in the <a class="reference external" href="https://github.com/orgs/eclipse-score/discussions">Cross-functional teams section</a> of the main <em>S-CORE</em> project.</p>
+<li><p><strong>Feature Teams</strong></p>
+<p><em>Feature Teams</em> have end-to-end responsibility for specific functionalities. This includes all aspects beginning with the architecture definition to the integration test. They are usually assigned to the <em>S-CORE</em> main integration project or to one particular software module. <em>Feature Teams</em> work independently of each other on <em>GitHub Issues</em> in the assigned software module. <em>Feature Teams</em> consist of the contributors, who can specify requirements, define architecture, develop source code and implement tests afterwards. <em>Project Leads</em> and <em>Committers</em> are also <em>Contributors</em> and effectively work on processing of <em>GitHub Issues</em>.</p>
+<p><em>Feature Team</em> usually consists of the following roles: Project Lead, Safety Manager, Quality Manager, Security Manager, Committers and Contributors. Every <em>Feature Team</em> has at least one committer who can approve and merge the Pull Requests of the Contributors.</p>
+<p>In case a <em>Feature Team</em> needs to request a new repository, this can be done be extending the <a class="reference external" href="https://github.com/eclipse-score/.eclipsefdn/blob/main/otterdog/eclipse-score.jsonnet">otterdog configuration file</a> and creating a new PR, that has to be approved by the <em>Eclipse Project Security Team</em>.</p>
+<p>The <em>GitHub Discussions</em> for feature teams can be found in the <a class="reference external" href="https://github.com/orgs/eclipse-score/discussions">Feature Teams section</a> of the main <em>S-CORE</em> project.</p>
 </li>
 </ul>
 </section>
@@ -854,7 +852,7 @@ As next step, a <em>GitHub Issue</em> of type <em>epic</em> is created as sub-is
 and gets assigned to one of the <em>Communities</em> for refinement. The state of the saga changes from “Open” to “In Specification”.</p>
 <a class="reference internal image-reference" href="../_images/saga_status_workflow.svg"><img alt="Planning workflow" class="align-center" src="../_images/saga_status_workflow.svg" style="width: 900px;" />
 </a>
-<p>The members of the <em>Responsible Community</em> define or refine feature, process or tool requirements. They may also create feature architecture and high level component requirements for every involved software component. Depending on the feature scope, one of the cross-functional team can be requested to make a POC in the <a class="reference external" href="https://eclipse-score.github.io/score/features/integration/index.html#incubation-repositories">incubation repository</a>. Finally, <em>Responsible Community</em> does the break down of the corresponding <em>saga</em> to the tickets that can be assigned to the individual software modules or <em>communities</em>.
+<p>The members of the <em>Responsible Community</em> define or refine feature, process or tool requirements. They may also create feature architecture and high level component requirements for every involved software component. Depending on the feature scope, one of the feature team can be requested to make a POC in the <a class="reference external" href="https://eclipse-score.github.io/score/features/integration/index.html#incubation-repositories">incubation repository</a>. Finally, <em>Responsible Community</em> does the break down of the corresponding <em>saga</em> to the tickets that can be assigned to the individual software modules or <em>communities</em>.
 As most of the software modules will have their own separate repository,
 then the detailed tracking of their work will also happen inside of that repository.
 However, the corresponding saga of the S-CORE repository will still have a sub-issue of type epic,
