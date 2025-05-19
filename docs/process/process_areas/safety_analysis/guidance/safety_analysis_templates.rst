@@ -26,9 +26,10 @@ Safety Analysis Templates
    |    :verifies: <Feature architecture>
    |    :id: feat_saf_FMEA__<Feature>__<Element descriptor>
    |    :failure_mode: <ID from fault model :need:`gd_guidl__fault_models`>
-   |    :failure_effect: "Failure mode similar to :need:`gd_guidl__fault_models`"
-   |    :violates: <ID from Feature Requirement>
+   |    :failure_effect: "description of failure effect of the failure initiator on the element"
    |    :mitigation: < NONE|ID from Feature Requirement>
+   |    :mitigation_issue: <ID from Issue Tracker| None if no issue needed>
+   |    :mitigation_coverage: <0..100%>
    |    :sufficient: <yes|no>
    |    :argument: <text to argument why mitigation is sufficient>
    |    :status: <valid|invalid>
@@ -43,9 +44,10 @@ Safety Analysis Templates
    |    :verifies: <Component architecture>
    |    :id: comp_saf_FMEA__<Component>__<Element descriptor>
    |    :failure_mode: <ID from fault model :need:`gd_guidl__fault_models`>
-   |    :failure_effect: "Failure mode similar to :need:`gd_guidl__fault_models`"
-   |    :violates: <ID from Component Requirement>
+   |    :failure_effect: "description of failure effect of the failure initiator on the element"
    |    :mitigation: < NONE|ID from Component Requirement>
+   |    :mitigation_issue: <ID from Issue Tracker| None if no issue needed>
+   |    :mitigation_coverage: <0..100%>
    |    :sufficient: <yes|no>
    |    :argument: <text to argument why mitigation is sufficient>
    |    :status: <valid|invalid>
