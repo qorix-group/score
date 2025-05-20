@@ -44,8 +44,8 @@ Static Architecture
    :id: feat_arc_sta__kvs__static
    :security: YES
    :safety: ASIL_B
-   :includes: feat_arc_int__kvs__interface
-   :fulfils: feat_req__kvs__safety_asil_b
+   :includes: logic_arc_int__kvs__interface
+   :fulfils: feat_req__kvs__default_value_retrieval,feat_req__kvs__default_values,feat_req__kvs__events,feat_req__kvs__integrity_check,feat_req__kvs__persist_data,feat_req__kvs__persistency,feat_req__kvs__snapshots,feat_req__kvs__stable_api,feat_req__kvs__supported_datatypes_keys,feat_req__kvs__supported_datatypes_values
    :status: valid
 
    .. uml:: _assets/kvs_static_view.puml
