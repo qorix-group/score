@@ -79,7 +79,7 @@ Rationale
 6. | Requirement 6: KVS integrity checking
    | Solution: Ensure the KVS maintains a consistent state, providing either the currently stored data or the previous snapshot if data retrieval is not possible.
 
-Backwards Compatibility	
+Backwards Compatibility
 =======================
 
 The API for the specific language tries to represent the language specific
