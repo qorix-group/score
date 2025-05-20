@@ -45,7 +45,7 @@ Static Architecture
    :security: YES
    :safety: ASIL_B
    :includes: logic_arc_int__kvs__interface
-   :fulfils:
+   :fulfils: feat_req__kvs__persistency
    :status: valid
 
    .. uml:: _assets/kvs_static_view.puml

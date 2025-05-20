@@ -9,7 +9,7 @@ title Static View - kvs
 skinparam package {
     BackgroundColor #E0E0D0
     BorderColor Black
-    backgroundColor<<feature>> yellow
+    backgroundColor<<module>> lightgreen
 }
 
 skinparam component {
@@ -17,13 +17,15 @@ skinparam component {
 }
 
 ' Define Features
-package "kvs" <<feature>> {
+package "persistency" <<module>> {
     component kvs <<component>>
     component fs <<component>>
     component tiny_json <<component>>
 }
 
-kvs -u- Kvs
+
+
+kvs  -->  IKvs : implements
 
 kvs  ..>  tiny_json : use
 kvs  ..>  fs : use
