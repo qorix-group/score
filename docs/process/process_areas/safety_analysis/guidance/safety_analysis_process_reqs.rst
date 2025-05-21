@@ -22,7 +22,7 @@ Safety Analysis Process Requirements
    :status: valid
    :tags: safety_analysis
    :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__support_6432
 
    Safety Analysis shall be hierarchically grouped into different levels.
 
@@ -42,7 +42,7 @@ Process Safety Analysis Attributes
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__support_6425, std_req__iso26262__support_6432
 
    Each Safety Analysis shall have a unique ID. It shall be in a format which is also human readable and consists of
 
@@ -57,7 +57,7 @@ Process Safety Analysis Attributes
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__support_6424
 
    The title of the Safety Analysis shall provide a short summary of the description
 
@@ -66,7 +66,7 @@ Process Safety Analysis Attributes
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__support_6425, std_req__iso26262__support_6432
 
    Each DFA shall have a violation ID. The violation ID is used to identify the related fault <:need:`gd_guidl__dfa_failure_initiators`>.
 
@@ -75,7 +75,7 @@ Process Safety Analysis Attributes
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__analysis_742
 
    Every DFA shall have a short description of the violation cause.
 
@@ -84,7 +84,7 @@ Process Safety Analysis Attributes
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__analysis_848
 
    Each FMEA shall have a failure mode. The failure nod is used to identify the related fault <:need:`gd_guidl__fault_models`>.
 
@@ -93,7 +93,7 @@ Process Safety Analysis Attributes
    :status: valid
    :tags: attribute, mandatory
    :satisfies: wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__analysis_849
 
    Every FMEA shall have a short description of the failure effect.
 
@@ -200,7 +200,7 @@ Safety Analysis Requirement Linkage
    :status: valid
    :tags: attribute, automated
    :satisfies: wf__analyse_platarch, wf__analyse_featarch, wf__analyse_comparch
-   :complies:
+   :complies: std_req__iso26262__support_6425, std_req__iso26262__support_6434
 
    It shall be possible to provide a versioning for Safety Analysis. It shall be possible to detect if any of the mandatory attributes differ from the versioning: :need:`gd_req__saf__attr_mandatory`
 

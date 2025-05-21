@@ -52,7 +52,7 @@ The analysis considers single faults that can mitigate a safety requirement.
 
 | For each affected design element in scope of each diagram, assign the faults by ID from the fault model applicable and document it as a sphinx-needs directive.
 | Document the resulting failure mode and effect and the mitigated safety requirement. Document safety mitigation to avoid or control the failure.
-| The mitigation coverage shall be estimated in percent. The attributes of the template are described in :ref:`_process_requirements_safety_analysis_attributes'.
+| The mitigation coverage shall be estimated in percent. The attributes of the template are described in :ref:`process_requirements_safety_analysis_attributes`
 
 **Step 2:**
 
@@ -103,7 +103,7 @@ So it could be shown that the analysis was done and no fault model is applicable
 For each identified violation assign the violation by ID from the DFA failure initiators and document it as a sphinx-needs directive.
 Document the resulting violation causes and effect and the mitigated safety requirement.
 Document safety mitigation to avoid or control the violation. The mitigation coverage shall be estimated in percent.
-The attributes of the template are described in :ref:`_process_requirements_safety_analysis_attributes'.
+The attributes of the template are described in :ref:`process_requirements_safety_analysis_attributes`.
 
 **Step 2:**
 

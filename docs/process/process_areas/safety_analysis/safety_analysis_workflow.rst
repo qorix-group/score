@@ -25,7 +25,7 @@ Workflow Safety Analysis
    :responsible: rl__safety_engineer
    :approved_by: rl__safety_manager
    :supported_by: rl__contributor, rl__committer, rl__security_manager
-   :input: wp__requirements__stkh, wp__platform_arch, wp__issue_track_system
+   :input: wp__requirements__stkh, wp__issue_track_system
    :output: wp__platform_dfa
    :contains: gd_guidl__dfa_failure_initiators, gd_temp__feat_saf_dfa
    :has: doc_concept__safety__analysis, doc_getstrt__safety_analysis

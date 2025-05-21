@@ -22,7 +22,7 @@ Getting Started
 
 This document describes the steps which are needed to perform safety analysis and also how to monitor and verify the results of the safety analysis.
 The concept of performing safety analysis is described in :need:`doc_concept__safety__analysis`. The verification of the architecure is described
-in :need:`doc_concept__architecture_verification`.
+in :need:`doc_concept__arch__process`.
 
 General Workflow
 ****************
