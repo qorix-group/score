@@ -101,20 +101,23 @@ image is installed.
 Safety Impact
 =============
 
-   .. note::
-      One key-value storage should not be used within different processes (freedom from interference) -> To be added to AoUs?
+The expected ASIL level is ASIL-B. To reach this goal we will apply the S-CORE
+development process. Key elements of it are listed in the process descriptions
+of safety management and safety analysis. In the safety analysis we will
+analyze the impact of the feature.
 
-[How could the safety be impacted by the new feature?]
+ .. note::
+    TODO: Link to safety analysis.
 
-   .. note::
-      If there are safety concerns in relation to the Feature Request, those concerns should be explicitly written out to make sure reviewers of the Feature Request are aware of them.
-      ToDo - Link to the Safety Impact Method
+We use an iterative development process and apply results from the next steps
+back to the feature request. For TinyJSON we will perform a software component
+classification.
 
-[What is the expected ASIL level?]
-[What is the expected classification of the contribution?]
+  .. note::
+    TODO: Link to component classification.
 
-   .. note::
-      Use the component classification method here to classify your component, if it shall to be used in a safety context: (TODO: add link to component classification).
+To ensure the freedom of interference the feature key-value storage should not
+be used within different processes.
 
 
 License Impact
