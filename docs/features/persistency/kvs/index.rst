@@ -92,7 +92,10 @@ avoided.
 Security Impact
 ===============
 
-Access to the key-value-storage would allow a malicious user to control the behaviour of the device, so it must be secured to prevent unauthorized access. To achieve this, debug access should only be provided when a debug firmware image is installed.
+Access to the key-value-storage would allow a malicious user to control the
+behaviour of the device, so it must be secured to prevent unauthorized access.
+To achieve this, debug access should only be provided when a debug firmware
+image is installed.
 
 
 Safety Impact
