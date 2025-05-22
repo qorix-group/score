@@ -34,6 +34,17 @@ DFA failure initiators
 
     **DFA failure initiators**
 
+my list of dependent failure initiators:
+identical/similar SW components
+SW components using the same input
+CPU time depletion
+memory depletion
+other HW unavailability
+shared memory usage
+SW component execution flow (sequence, delay, ...)
+
+
+
     | 2.1 Shared resources
 
     .. list-table:: DFA shared resources
