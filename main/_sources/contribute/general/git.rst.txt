@@ -12,6 +12,12 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+.. document:: Git Guidelines
+   :id: doc__git_coding_guidelines
+   :status: valid
+   :safety: ASIL_B
+   :realizes: wp__sw_development_plan
+
 .. _git_guidelines:
 
 ################
