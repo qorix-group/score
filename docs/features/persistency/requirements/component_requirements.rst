@@ -23,10 +23,10 @@ Component Requirements
    :satisfies: feat_req__kvs__supported_datatypes_keys
    :status: valid
 
-   The key must contain only alphanumerical characters, underscores and dashes.
-   The key must be valid UTF-8.
-   The key must be unique.
-   The key must have a maximum length of 32 bytes.
+   The system shall ensure that each key consists solely of alphanumeric characters, underscores, or dashes.
+   The system shall ensure that each key is encoded as valid UTF-8.
+   The system shall guarantee the uniqueness of each key.
+   The system shall limit the maximum length of a key to 32 bytes.
 
 .. comp_req:: Value Handling
    :id: comp_req__kvs__value_handling
@@ -36,11 +36,11 @@ Component Requirements
    :satisfies: feat_req__kvs__supported_datatypes_values,feat_req__kvs__default_values
    :status: valid
 
-   The value must have one of these datatypes: Number, String, Null, Array[Value], Dictionary{Key:Value}.
-   The value must be serializable and deserializable to JSON.
-   The value must have a maximum length of 1024 bytes.
-   The value can be no-set and provide a default value for this case.
-   If the value has a default value assigned it must be resetable to the default value.
+   The system shall only accept values of the following data types: Number, String, Null, Array[Value], or Dictionary{Key:Value}.
+   The system shall ensure that all values can be serialized to and deserialized from JSON.
+   The system shall restrict the maximum length of a value to 1024 bytes.
+   The system shall support unset values and provide a default value in such cases.
+   The system shall ensure that, if a value has a default, it is possible to reset the value to its default.
 
 .. comp_req:: Default Value Handling
    :id: comp_req__kvs__default_value_handling
@@ -50,11 +50,11 @@ Component Requirements
    :satisfies: feat_req__kvs__default_values,feat_req__kvs__default_value_retrieval,feat_req__kvs__default_value_reset,feat_req__kvs__default_value_file
    :status: valid
 
-   The default value can be available.
-   The default value must contain any of the valid value datatypes.
-   The default value must be retrieval through an extra API.
-   The default value must be configurable either in code or in a separate file.
-   If the default value is stored in a file the file must be secured by a checksum file.
+   The system may provide default values.
+   The system shall ensure that each default value is of a permitted value data type.
+   The system shall provide an additional API to retrieve default values.
+   The system shall allow configuration of default values either in code or in a separate configuration file.
+   The system shall, if default values are stored in a file, secure this file with an associated checksum file.
 
 .. comp_req:: Constraint Configuration
    :id: comp_req__kvs__constraints
@@ -64,8 +64,7 @@ Component Requirements
    :satisfies: feat_req__kvs__config_file
    :status: valid
 
-   The KVS constraints must be configurable at compile-time
-   through source code constants or dynamically at runtime with a config file.
+   The system shall allow configuration of KVS constraints at compile-time using source code constants or at runtime using a configuration file.
 
 .. comp_req:: Language Agnostic
    :id: comp_req__kvs__language_agnostic
@@ -75,9 +74,7 @@ Component Requirements
    :satisfies: feat_req__kvs__cpp_rust_interoperability
    :status: valid
 
-   The KVS must either provide an API that can be bind to other
-   languages or use a storage and memory exchange-format that can be adapted to
-   other languages.
+   The system shall either provide an API that supports bindings to other languages or use a storage and memory exchange format that is adaptable to other languages.
 
 .. comp_req:: Concurrency
    :id: comp_req__kvs__concurrency
@@ -87,8 +84,7 @@ Component Requirements
    :satisfies: feat_req__kvs__intra_process_comm
    :status: valid
 
-   The KVS must implement thread-safe mechanisms to allow
-   concurrent access to the data without data races.
+   The system shall implement thread-safe mechanisms to enable concurrent access to data without data races.
 
 .. comp_req:: Multi-Instance
    :id: comp_req__kvs__multi_instance
@@ -98,9 +94,7 @@ Component Requirements
    :satisfies: feat_req__kvs__multiple_kvs
    :status: valid
 
-   The KVS must manage all runtime variables in an instance so
-   that multiple instances with different KVS can be spawned and
-   used at the same time per software architecture element.
+   The system shall manage all runtime variables within an instance, such that multiple KVS instances can be created and used concurrently within a single software architecture element.
 
 .. comp_req:: Persistent Data Storage
    :id: comp_req__kvs__persistent_data_storage
@@ -110,10 +104,9 @@ Component Requirements
    :satisfies: feat_req__kvs__persistency,feat_req__kvs__integrity_check,feat_req__kvs__persist_data
    :status: valid
 
-   The KVS must use the file API and the JSON data format for
-   persistent data storage.
-   A checksum must be build over the data file and stored next to the data.
-   On data load the checksum must be verified.
+   The system shall use the file API and the JSON data format to persist data.
+   The system shall generate a checksum for each data file and store it alongside the data.
+   The system shall verify the checksum upon loading data.
 
 .. comp_req:: Persistent Data Schema Handling
    :id: comp_req__kvs__persistent_data_schema
@@ -123,9 +116,8 @@ Component Requirements
    :satisfies: feat_req__kvs__versioning,feat_req__kvs__update_mechanism
    :status: valid
 
-   The KVS doesn't support versioning directly.
-   The used JSON file storage format allows the application to implement
-   versioning, including up- and down-paths, by itself.
+   The system shall not provide built-in versioning.
+   The chosen JSON file storage format shall enable the application to implement versioning, including upgrade and downgrade paths, as needed.
 
 .. comp_req:: Snapshots
    :id: comp_req__kvs__snapshots
@@ -135,12 +127,12 @@ Component Requirements
    :satisfies: feat_req__kvs__snapshots
    :status: valid
 
-   The KVS must write a snapshot whenever the data is stored.
-   It must maintain a configurable maximum number of snapshots.
-   Each new snapshot has id 1 and all older snapshots get their id increased..
-   After the maximum snapshot number is reached the snapshots are rotated and the oldest snapshot is dropped.
-   Each snapshot can be restored by it's id.
-   Snapshots must be deletable.
+   The system shall create a snapshot each time data is stored.
+   The system shall maintain a configurable maximum number of snapshots.
+   The system shall assign the ID 1 to the newest snapshot and increment the IDs of older snapshots accordingly.
+   The system shall rotate and delete the oldest snapshot when the maximum number is reached.
+   The system shall allow restoration of a snapshot by its ID.
+   The system shall allow deletion of individual snapshots.
 
 .. comp_req:: Develop Mode
    :id: comp_req__kvs__dev_mode
@@ -150,9 +142,7 @@ Component Requirements
    :satisfies: feat_req__kvs__dev_mode
    :status: valid
 
-   The KVS must provide a developer mode which can be enabled
-   during build time. This mode can be used to show debug and other internal
-   information.
+   The system shall provide a developer mode that can be enabled during build time to display debugging and internal information.
 
 .. comp_req:: Async API
    :id: comp_req__kvs__async_api
@@ -162,8 +152,7 @@ Component Requirements
    :satisfies: feat_req__kvs__async_api
    :status: valid
 
-   Additional to the normal API the KVS must provide an Async
-   API.
+   The system shall provide, in addition to the standard API, an asynchronous API.
 
 .. comp_req:: Permission Handling
    :id: comp_req__kvs__permission_handling
@@ -173,10 +162,8 @@ Component Requirements
    :satisfies: feat_req__kvs__access_control
    :status: valid
 
-   The KVS must not implement access and permission handling.
-   This is left to the underlying filesystem implementation.
-   The KVS must report access and permission errors that are
-   thrown by the filesystem to the application.
+   The system shall not implement its own access or permission controls but shall rely on the underlying filesystem for permission management.
+   The system shall report any access or permission errors encountered at the filesystem level to the application.
 
 .. comp_req:: Callback Support
    :id: comp_req__kvs__callback_support
@@ -186,5 +173,4 @@ Component Requirements
    :satisfies: feat_req__kvs__events
    :status: valid
 
-   The KVS must provide an API to register callbacks for
-   data-change events.
+   The system shall provide an API for registering callbacks that are triggered by data change events.
