@@ -72,8 +72,41 @@ Also requirements of standards need to be taken into consideration:
 * ISO26262
 * ISO SAE 21434
 
+
+
 How to analyze?
 ===============
+
+The safety analysis is done on the feature and component architecture. The safety analysis shall be done accompanying to the development.
+So the results can directly be used for the development of the feature and component. With a iterative approach it's neeeded to proof
+the evidence of the functional safety of the functions.
+
+The analysis starts at platform level. With a DFA shall be analysed if there are dependent failures which have to be considered. The analysis
+shall be done in the way that we use the static and dynamic diagrams. The following picture shall show the perspective of the User.
+
+.. _safety_analysis_feature_example:
+
+.. figure:: _assets/safety_analysis_feature.drawio.svg
+   :align: center
+   :width: 80%
+   :name: safety_analysis_feature_fig
+
+   Safety Analysis Feature Perspective
+
+At feature level you can see from the user perspective that the feature persistency consists of two components kvstorage and jason_al.
+In the dynamic diagram you can see that the user can call kvstorage and the following communication because of this call. There might be 
+more diagrams, for the concept discription only this will be used.
+
+.. figure:: _assets/safety_analysis_component.drawio.svg
+   :align: center
+   :width: 80%
+   :name: safety_analysis_component_fig
+
+   Safety Analysis Component Perspective
+
+At component level you can see inside of the component when the component consists of two or more subcomponents. If the component consists of 
+only one subcomponent there results of the analysis are the same as for the feature level. So no additional consideration is needed.
+The component kvstorage consists of two subcomponents, kvs and fs. The dynamic diagram shows the communication between the subcomponents.
 
 DFA
 ^^^
@@ -89,6 +122,9 @@ the method FMEA on feature and component level. The safety analysis is done on a
 For the safety analysis fault models shall be used :need:`gd_guidl__fault_models`.
 
 How to add new safety mitigations?
-=========================================
+==================================
 
 Identified faults without a mitigation stay open and are monitored in the issue tracking sytem :need:`wp__issue_track_system` until they are resolved.
+
+
+

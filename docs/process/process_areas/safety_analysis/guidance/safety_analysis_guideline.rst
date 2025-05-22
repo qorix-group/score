@@ -28,15 +28,16 @@ Workflow for Safety Analysis
 
 Detailed description which steps are need for a safety analysis. In general the workflow is shown in :ref:`safety_analysis_workflow_fig`
 
-#. To analyse the Feature Architecture a Safety Analysis and a DFA shall be executed.
+#. To analyse the Platform Architecture DFA shall be executed.
 #. Perform DFA on the Platform Architecture.
+#. To analyse the Feature Architecture a Safety Analysis and a DFA shall be executed.
 #. Perform Safety Analysis on the Feature Architecture.
 #. Perform DFA on the Feature Architecture.
 #. To analyse the Component Architecture a Safety Analysis and a DFA shall be executed. This only applies if the component architecture is not already covered by the feature architecture.
 #. Perform Safety Analysis on the Component Architecture.
 #. Perform DFA on the Component Architecture.
 #. The performance of the Safety Analysis and DFA (Feature and Component) shall be monitored.
-#. Open issues like from the Safety Analysis and DFA shall be monitored by the Issue Tracking system. For safety relevant issues types a ``safety`` label is used. Until there are open issues the safety analysis is "valid" and "not sufficient".
+#. For open issues like from the Safety Analysis and DFA and Issue shall be created in the Issue Tracking system. For safety relevant issues types a ``safety`` label is used. Until there are open issues the safety analysis is "valid" and "not sufficient".
 #. If the analysis is completed, a verification of the analysis shall be done and a report therfore shall be created.
 
 Step-by-Step-approach Safety Analysis:
@@ -50,15 +51,14 @@ The analysis considers single faults that can mitigate a safety requirement.
 
 **Step 1:**
 
-| For each affected design element in scope of each diagram, assign the faults by ID from the fault model applicable and document it as a sphinx-needs directive.
+| For each affected design element in scope of each diagram, assign the faults by ID from the fault model and document it as a sphinx-needs directive.
 | Document the resulting failure mode and effect and the mitigated safety requirement. Document safety mitigation to avoid or control the failure.
 | The mitigation coverage shall be estimated in percent. The attributes of the template are described in :ref:`process_requirements_safety_analysis_attributes`
 
 **Step 2:**
 
 Judge if this is sufficient. If not, request to update the diagram and the requirements with additional safety mitigation to come to a sufficient outcome by creating an issue.
-The analysis is finished, if for each identified faults a mitigation exists.
-Unless the attribute sufficient is yes, mitigation and argument attribute can be still empty.
+The analysis is finished, if for each identified faults a sufficient mitigation exists. Unless the attribute sufficient is yes, mitigation and argument attribute can be still empty.
 The verification is done by appling the safety analysis checklist :need:`gd_chklst__safety_analysis`.
 
 **Examples:**
@@ -126,4 +126,4 @@ The verification is done by appling the safety analysis checklist :need:`gd_chkl
 |    :argument:
 |    :status: valid
 
-The example is also used in the building blocks <:ref:`building_block_example`>.
+The example is also used in the concept description <:ref:`safety_analysis_feature_example`> and also in the building blocks <:ref:`building_block_example`>.
