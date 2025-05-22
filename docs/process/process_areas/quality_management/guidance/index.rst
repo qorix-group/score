@@ -18,8 +18,11 @@ Guidance
 .. toctree::
    :maxdepth: 1
 
-   quality_plan_guideline
-   quality_plan_template
    quality_review_checklist
-   quality_process_reqs
-   quality_work_product_review_guideline
+   quality_management_guideline
+   quality_plan_guideline
+   quality_process_reqs 
+   quality_work_product_review_guideline      
+   quality_plan_template
+
+  

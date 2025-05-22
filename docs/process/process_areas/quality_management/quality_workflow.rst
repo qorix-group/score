@@ -17,15 +17,13 @@
 Workflows
 ---------
 
-todo: need to add guidance and standard links
-
 .. workflow:: Create/Maintain Quality Management Plan
    :id: wf__cr_mt_qlm_plan
    :status: valid
    :responsible: rl__quality_manager
    :approved_by: rl__technical_lead
    :supported_by:
-   :input: wp__policies, wp__issue_track_system
+   :input: wp__policies, wp__issue_track_system, wp__platform_mgmt
    :output: wp__qms_plan
    :contains: gd_guidl__qlm_plan_definitions, gd_temp__qlm_plan
    :has: doc_concept__quality__process, doc_getstrt__quality__process
@@ -40,7 +38,7 @@ todo: need to add guidance and standard links
    :supported_by: rl__quality_manager
    :input: wp__qms_plan
    :output: wp__platform_sw_release_note
-   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist_template
+   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist
    :has: doc_concept__quality__process, doc_getstrt__quality__process
 
    | The project/platform release is verified and approved.
@@ -53,7 +51,7 @@ todo: need to add guidance and standard links
    :supported_by: rl__safety_manager, rl__security_manager
    :input: wp__qms_plan, wp__process_definition
    :output: wp__process_impr_report
-   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist_template
+   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist
    :has: doc_concept__quality__process, doc_getstrt__quality__process
 
    | The project/platform processes are audited.
@@ -66,7 +64,7 @@ todo: need to add guidance and standard links
    :supported_by: rl__safety_manager, rl__security_manager
    :input: wp__qms_plan, wp__feat_request, wp__process_definition
    :output: wp__qms_report
-   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist_template
+   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist
    :has: doc_concept__quality__process, doc_getstrt__quality__process
 
    | The conformance of the feature contribution is checked.
@@ -79,10 +77,10 @@ todo: need to add guidance and standard links
    :supported_by: rl__committer
    :input: wp__qms_plan, wp__process_definition
    :output: wp__verification__platform_ver_report
-   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist_template, gd_guidl__wp_review
+   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist, gd_guidl__wp_review
    :has: doc_concept__quality__process, doc_getstrt__quality__process
 
-   | The quality of the work products is assured.
+   | The quality of the work products is assured. All work products are listed under :ref:`workproduct_list_quality_review`.
 
 .. workflow:: Consult and Execute Quality Trainings
    :id: wf__consult_exe_qly_training
@@ -105,7 +103,7 @@ todo: need to add guidance and standard links
    :supported_by: rl__safety_manager, rl__security_manager
    :input: wp__qms_plan, wp__platform_sw_release_note, wp__module_sw_release_note, wp__process_impr_report, wp__qms_report, wp__verification__platform_ver_report, wp__verification__module_ver_report, wp__training_path
    :output: wp__issue_track_system
-   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist_template, gd_req__qlm_report
+   :contains: gd_guidl__qlm_plan_definitions, gd_chklst__review_checklist, gd_req__qlm_report
    :has: doc_concept__quality__process, doc_getstrt__quality__process
 
    | The Quality Manager is responsible for the monitoring of the activities against the quality management plan.

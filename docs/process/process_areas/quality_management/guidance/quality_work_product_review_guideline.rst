@@ -33,7 +33,7 @@ Process
 
 | Step  1: Create issue with label ``q_wp_review`` in status OPEN
 | Step  2: Identify which work products will be checked during the review and document it in the created issue
-| Step  3: Adjust :need:`gd_chklst__review_checklist_template` based on specified work products to review, which contains acceptance criteria for all work products
+| Step  3: Adjust :need:`gd_chklst__review_checklist` based on specified work products to review, which contains acceptance criteria for all work products
 | Step  4: Create PR, Link the stored checklist in the PR to the issue
 | Step  5: Perform review according to checklist
 | Step  6: Report deviations from the acceptance criteria in the issue tracking system with label ``bug`` and link it to the review issue and the checklist

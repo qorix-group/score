@@ -19,7 +19,7 @@ Workproducts
    :id: wp__qms_plan
    :status: valid
    :tags: quality_management
-   :complies: std_wp__iso26262__management_553, std_req__iso26262__management_5423, std_req__aspice_40__SUP-1-BP1, std_req__aspice_40__SUP-1-BP2, std_req__aspice_40__SUP-1-BP3, std_req__aspice_40__SUP-1-BP4, std_req__aspice_40__SUP-1-BP7, std_req__aspice_40__PIM-3-BP1, std_req__aspice_40__PIM-3-BP2, std_req__aspice_40__PIM-3-BP3, std_req__aspice_40__PIM-3-BP4, std_req__aspice_40__PIM-3-BP5, std_req__aspice_40__PIM-3-BP6, std_req__aspice_40__PIM-3-BP7
+   :complies: std_wp__iso26262__management_553, std_req__iso26262__management_5423
 
    | Quality Management Plan to define the quality aspects like:
    | * Quality strategy
@@ -33,7 +33,7 @@ Workproducts
    :id: wp__qms_report
    :status: valid
    :tags: quality_management
-   :complies: std_req__aspice_40__SUP-1-BP5, std_req__aspice_40__SUP-1-BP6, std_req__aspice_40__PIM-3-BP8, std_req__aspice_40__iic-13-19
+   :complies: std_req__aspice_40__iic-13-19
 
    | Evidence of quality conformance:
    | * Identifies what tasks/activities/processes produce the information
@@ -46,7 +46,7 @@ Workproducts
    :id: wp__process_impr_report
    :status: valid
    :tags: quality_management
-   :complies: std_req__aspice_40__PIM-3-BP1, std_req__aspice_40__PIM-3-BP2, std_req__aspice_40__PIM-3-BP3, std_req__aspice_40__PIM-3-BP4, std_req__aspice_40__PIM-3-BP5, std_req__aspice_40__PIM-3-BP6, std_req__aspice_40__PIM-3-BP7, std_req__aspice_40__PIM-3-BP8, std_req__aspice_40__iic-07-04, std_req__aspice_40__iic-15-13
+   :complies: std_req__aspice_40__iic-07-04, std_req__aspice_40__iic-15-13
 
    | Process Improvement Report that describes the improvement with description of:
    | * Description of used methods, assumptions, involved persons, etc.

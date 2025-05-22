@@ -14,8 +14,8 @@
 
 .. _quality templates:
 
-Templates
-=========
+Template Quality Plan
+=====================
 
 .. gd_temp:: Quality Management Plan Template
    :id: gd_temp__qlm_plan

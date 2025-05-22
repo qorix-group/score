@@ -29,16 +29,26 @@ The purpose of this document is to is to define a quality strategy and an approa
 This includes an approach to providing an independent and objective assurance that work products and processes
 comply with predefined provisions and plans and that non-conformances are resolved and further prevented.
 This document includes quality assurance activities, roles and responsibilities, goals, schedule, etc. and a
-general strategy to implement quality assurance process in this platform. The quality assurance is
+general strategy to implement a quality assurance process in this platform. The quality assurance is
 ensured by automated checks and restrictions, manual checks which inculdes to proof that there is no manipulation
 of the workflows.
 
 Statement of Independence
 -------------------------
 
-The :need:`rl__quality_manager` provides only support to the project with consulting them to improve the
-quality of the project/platform product. Although the quality report is also sent to the :need:`rl__technical_lead`,
-the :need:`rl__quality_manager` is independent of the delivery of the product.
+There could be a conflict of interest between the project lead :need:`rl__project_lead` and the quality manager 
+:need:`rl__quality_manager`, as both roles are responsible for the project. The project lead is responsible for 
+the project and the quality manager is responsible for the quality of the project. 
+
+Therefore we define that the quality manager only support the project with consulting. So the project itself 
+shall improve the quality of the project/platform product. The combination of both shall found the best solution 
+for the project. The quality report is sent to the :need:`rl__technical_lead` so that conflicts can be solved
+in the steering committees.
+
+The objectives and scope of the quality management, also the measures and checklists are transparent for everyone.
+So the project itself can improve the quality of the project/platform product with the support of the knowledge of
+the quality manager. 
+
 
 Objectives and scope
 --------------------
@@ -80,7 +90,7 @@ Objectives and scope
       - Platform Process audit
       - Once for every platform release or on demand
     * - 2
-      - Feature Process conformance checks
+      - Feature Process compliance checks
       - Once for every feature release
     * - 3
       - Feature Work product review
@@ -177,7 +187,7 @@ Objectives and scope
         | All tool requirements have bidirectional traceability to and from process requirements or guidance
       - 100%
       - None
-      - Ensured by process configuration and tool management, only valid requirements can be merged, review required, script based check
+      - Ensured by process configuration and tool management, only verified and valid documents can be merged, review required
     * - 4
       - :need:`wp__requirements__feat`
       - | All feature requirements are reviewed and valid
@@ -219,7 +229,7 @@ Objectives and scope
       - | All requirements were inspected by review with inspection checklist.
       - 100%
       - None
-      - Ensured by process configuration and tool management, only valid requirements can be merged, review required, script based check
+      - Ensured by process configuration and tool management, only verified and valid documents can be merged, review required
     * - 10
       - :need:`wp__feature_arch`
       - | All feature architectures are reviewed and valid
@@ -460,19 +470,7 @@ and security is part of our documentation. The project will be under the Eclipse
 
 **Project Roles**
 
-The project roles are defined in the processes and are aligned to Eclipse roles.
-
-.. needtable::
-   :style: table
-   :columns: title;id;tags
-   :colwidths: 25,25,25
-   :sort: title
-
-   results = []
-
-   for need in needs.filter_types(["role"]):
-                results.append(need)
-
+The role of the :need:`rl__quality_manager` is defined.
 
 | **Critical dependencies**
 
@@ -910,27 +908,3 @@ None
           - n/a
           - :need:`wp__verification__sw_unit_test`
           - valid
-
-
-.. Jetzt kommt eine neue Tabelle
-
-
-.. .. needtable:: Quality related work products Quality Management
-..    :style: table
-..    :columns: id;tags;title;status;Link to WP
-..    :colwidths: 20,20,20,20,20
-..    :sort: id
-
-..    results = []
-
-..    for need in needs.filter_types(["workproduct"]):
-..       for tags_id in need['tags']:
-..           if tags_id == 'quality_management':
-..                 results.append(need)
-..       for tags_id in need['tags']:
-..           if tags_id == 'requirements_engineering':
-..                 results.append(need)
-..    for need in needs.filter_types(["doc_concept"]):
-..       for tags_id in need['tags']:
-..           if tags_id == 'implementation':
-..                 results.append(need)

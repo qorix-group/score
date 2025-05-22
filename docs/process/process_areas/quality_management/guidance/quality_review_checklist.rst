@@ -14,11 +14,11 @@
 
 .. _quality workproduct review checklist:
 
-Quality Work Product Review Checklist Template
-==============================================
+Checklist Quality Work Product Review  
+=====================================
 
-.. gd_chklst:: Quality Work Product Review Checklist Template
-   :id: gd_chklst__review_checklist_template
+.. gd_chklst:: Quality Work Product Review Checklist
+   :id: gd_chklst__review_checklist
    :status: valid
    :tags: quality_management
 
