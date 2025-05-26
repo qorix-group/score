@@ -45,7 +45,7 @@ DFA Templates
    |    :violation_id: <ID from DFA failure initiators :need:`gd_guidl__dfa_failure_initiators`>
    |    :violation_cause: "description of failure effect of the failure initiator on the element"
    |    :mitigation: < NONE|ID from Feature Requirement>
-      | :mitigation_issue: <ID from Issue Tracker| None if no issue needed>
+   |    :mitigation_issue: <ID from Issue Tracker| None if no issue needed>
    |    :mitigation_coverage: <0..100%>
    |    :sufficient: <yes|no>
    |    :argument: <text to argument why mitigation is sufficient>

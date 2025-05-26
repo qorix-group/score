@@ -49,17 +49,19 @@ model to the diagram and document the results in the template. If a fault model 
 vialoation cause that it's not apllicable. So it could be shown that the analysis was done and no fault model is applicable.
 The analysis considers single faults that can mitigate a safety requirement.
 
-**Step 1:**
+**Steps:**
 
-| For each affected design element in scope of each diagram, assign the faults by ID from the fault model and document it as a sphinx-needs directive.
-| Document the resulting failure mode and effect and the mitigated safety requirement. Document safety mitigation to avoid or control the failure.
-| The mitigation coverage shall be estimated in percent. The attributes of the template are described in :ref:`process_requirements_safety_analysis_attributes`
-
-**Step 2:**
-
-Judge if this is sufficient. If not, request to update the diagram and the requirements with additional safety mitigation to come to a sufficient outcome by creating an issue.
-The analysis is finished, if for each identified faults a sufficient mitigation exists. Unless the attribute sufficient is yes, mitigation and argument attribute can be still empty.
-The verification is done by appling the safety analysis checklist :need:`gd_chklst__safety_analysis`.
+* For each affected design element in scope of each diagram, assign the faults by ID from the fault model and document it as a sphinx-needs directive.
+* Document the resulting failure mode and effect and the mitigated safety requirement. 
+* Document safety mitigation to avoid or control the failure.
+* The mitigation coverage shall be estimated in percent. 
+* The attributes of the template are described in :ref:`process_requirements_safety_analysis_attributes`.
+* Judge if this is sufficient. 
+* If not, request to update the diagram and the requirements with additional safety mitigation to come to a sufficient outcome by creating an issue.
+* The analysis is finished, if for each identified faults a sufficient mitigation exists. 
+* Unless the attribute sufficient is yes, mitigation and argument attribute can be still empty.
+* Coninue the analysis until all gault models are checked.
+* The verification is done by appling the safety analysis checklist :need:`gd_chklst__safety_analysis`.
 
 **Examples:**
 
@@ -98,19 +100,17 @@ The analysis is done by using the template :ref:`dfa_templates` on the feature o
 If a element of the failure initiators is not applicable, fill in a short remark in the vialoation cause that it's not apllicable.
 So it could be shown that the analysis was done and no fault model is applicable.
 
-**Step 1:**
+**Steps:**
 
-For each identified violation assign the violation by ID from the DFA failure initiators and document it as a sphinx-needs directive.
-Document the resulting violation causes and effect and the mitigated safety requirement.
-Document safety mitigation to avoid or control the violation. The mitigation coverage shall be estimated in percent.
-The attributes of the template are described in :ref:`process_requirements_safety_analysis_attributes`.
-
-**Step 2:**
-
-Judge if this is sufficient. If not, request to update the requirements with additional safety mitigation to come to a sufficient outcome.
-The analysis is finished, if for each identified violation a mitigation exists.
-Unless the attribute "sufficient" is "yes", mitigation and argument attribute can be still empty.
-The verification is done by appling the safety analysis checklist :need:`gd_chklst__safety_analysis`.
+* For each failure initiator assign the violation by ID from the DFA failure initiators and document it as a sphinx-needs directive.
+* Document the resulting violation causes and effect and the mitigated safety requirement. 
+* The mitigation coverage shall be estimated in percent.
+* The attributes of the template are described in :ref:`process_requirements_safety_analysis_attributes`.
+* Judge if the mitigation is sufficient. If not, request to update the requirements with additional safety mitigation to come to a sufficient outcome.
+* The analysis is finished, if for each identified violation a mitigation exists.
+* Unless the attribute "sufficient" is "yes", mitigation and argument attribute can be still empty.
+* Coninue the analysis until all failure initiators are checked.
+* The verification is done by appling the safety analysis checklist :need:`gd_chklst__safety_analysis`.
 
 **Examples:**
 
