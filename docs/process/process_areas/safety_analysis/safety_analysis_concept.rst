@@ -93,9 +93,9 @@ shall be done in the way that we use the static and dynamic diagrams. The follow
 
    Safety Analysis Feature Perspective
 
-At feature level you can see from the user perspective that the feature persistency consists of two components kvstorage and jason_al.
-In the dynamic diagram you can see that the user can call kvstorage and the following communication because of this call. There might be 
-more diagrams, for the concept discription only this will be used.
+The safety analysis is done with the shown diagrams. The interface 1 and 2 are the interfaces of the feature. This interfaces shall be analyses with the
+fault models :need:`gd_guidl__fault_models` that here could be applied. With the dynamic diagram the communication between the components and also the dependencies
+of the components can be analysed. For violations a failure mitigation shall be defined. 
 
 .. figure:: _assets/safety_analysis_component.drawio.svg
    :align: center
@@ -111,15 +111,21 @@ The component kvstorage consists of two subcomponents, kvs and fs. The dynamic d
 DFA
 ^^^
 
-A DFA :need:`gd_guidl__safety_analysis` shall be used to proof the absence of dependent failures. For the analysis a list
-of DFA failure initiators :need:`gd_guidl__dfa_failure_initiators` is available.
+A DFA :ref:`dfa_templates` shall be used to proof the absence of dependent failures. For the analysis a list
+of DFA failure initiators :need:`gd_guidl__dfa_failure_initiators` is available. A step by step approach is recommended to
+ensure that all dependent failures are identified :need:`gd_guidl__safety_analysis`. Every failure initiator shall be checked
+and if it applies to the feature or component, a mitigation shall be defined. If the failure initiator doesn't apply, a short description
+shall be added to the violation cause of the analysis so it could be recognized that the analysis is done. 
 
 Safety Analysis
 ^^^^^^^^^^^^^^^
 
 For the safety analyses the templates :ref:`safety_analysis_templates` shall be used. For the safety analysis we selected
 the method FMEA on feature and component level. The safety analysis is done on architectural diagrams (state and sequence diagrams).
-For the safety analysis fault models shall be used :need:`gd_guidl__fault_models`.
+For the safety analysis fault models shall be used :need:`gd_guidl__fault_models`.  A step by step approach is recommended to
+ensure that all dependent failures are identified :need:`gd_guidl__safety_analysis`. Every fault model shall be checked
+and if it applies to the feature or component, a mitigation shall be defined. If the fault model doesn't apply, a short description
+shall be added to the violation cause of the analysis so it could be recognized that the analysis is done.
 
 How to add new safety mitigations?
 ==================================

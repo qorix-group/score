@@ -23,238 +23,214 @@ DFA failure initiators
   :complies: std_wp__iso26262__software_751, std_wp__iso26262__software_753
 
 
-:note: Use the failure initiators to ensure a structed analysis. If a fault model doesn't apply, please fill in a short desciption in the
-       violation cause so it could be recognized that the analysis is done. If there are additional failure initiators needed, please
-       enlage the list of fault models.
+:note: Use the failure initiators to ensure a structured analysis. If a failure doesn't apply, please fill in a short desciption in the violation cause of the analysis so it could be recognized that the analysis is done. If there are additional failure initiators needed, please enlage the list of fault models.
 
-    **Purpose**
+**Purpose**
 
-    In order to identify all cascading and common cause failures, which may initiated from your feature or components to the platform, other features, components, etc.,
-    use the following framework of dependent failure initiators to check your completeness of the analysis.
+In order to identify all cascading and common cause failures, which may initiated from your feature or components to the platform, other features, components, etc.,
+use the following framework of dependent failure initiators to check your completeness of the analysis.
 
-    **DFA failure initiators**
+DFA failure initiators
+======================
 
-my list of dependent failure initiators:
-identical/similar SW components
-SW components using the same input
-CPU time depletion
-memory depletion
-other HW unavailability
-shared memory usage
-SW component execution flow (sequence, delay, ...)
+2.1 Shared resources
+
+.. list-table:: DFA shared resources
+  :header-rows: 1
+  :widths: 10,30,30,30
+
+  * - ID
+    - Violation cause shared resources
+    - Simplification
+    - Importance (can be used for priorisation)
+  * - SR_01_01
+    - Reused software modules
+    -
+    - Medium
+  * - SR_01_02
+    - Libraries
+    - SR_01_01
+    - Medium
+  * - SR_01_04
+    - Basic software
+    - 
+    - Medium
+  * - SR_01_05
+    - Operating system including scheduler
+    -
+    - Medium
+  * - SR_01_06
+    - Any service stack, e.g. communication stack
+    -
+    - Medium
+  * - SR_01_07
+    - Configuration data
+    -
+    - Medium
+  * - SR_01_09
+    - Execution time
+    -
+    - Medium
+  * - SR_01_10
+    - Allocated memory
+    -
+    - Medium
 
 
+| 2.2 Communication between the two elements:
+| Receiving function is affected by information that is false, lost, sent multiple times, or in the wrong order etc. from the sender.
 
-    | 2.1 Shared resources
+.. list-table:: DFA communication between elements
+  :header-rows: 1
+  :widths: 10,30,30,30
 
-    .. list-table:: DFA shared resources
-       :header-rows: 1
-       :widths: 10,30,30,30
+  * - ID
+    - Violation cause communication between elements
+    - Simplification
+    - Importance (can be used for priorisation)
+  * - CO_01_01
+    - Information passed via argument through a function call, or via writing/reading a variable being global to the two software functions (data flow)
+    -
+    - Medium
+  * - CO_01_02
+    - Data or message corruption / repetition / loss / delay / masquerading or incorrect addressing of information
+    -
+    - Medium
+  * - CO_01_03
+    - Insertion / sequence of information
+    -
+    - Medium
+  * - CO_01_04
+    - Corruption of information, inconsistent data
+    -
+    - Medium
+  * - CO_01_05
+    - Asymmetric information sent from a sender to multiple receivers, so that not all defined receivers have the same informations
+    -
+    - Medium
+  * - CO_01_06
+    - Information from a sender received by only a subset of the receivers
+    -
+    - Medium
+  * - CO_01_07
+    - Blocking access to a communication channel
+    -
+    - Medium
 
-      * - ID
-        - Violation cause shared resource used by several components
-        - Avoidance, or detection and mitigation of the fault
-        - Comment
-      * - SR_01_01
-        - Reused standard software modules
-        -
-        -
-      * - SR_01_02
-        - Libraries
-        -
-        -
-      * - SR_01_03
-        - Middleware
-        -
-        -
-      * - SR_01_04
-        - Basic software
-        -
-        -
-      * - SR_01_05
-        - Operating system including scheduler
-        -
-        -
-      * - SR_01_06
-        - Any service stack, e.g. communication stack
-        -
-        -
-      * - SR_01_07
-        - Configuration data
-        -
-        -
-      * - SR_01_09
-        - Execution time
-        -
-        -
-      * - SR_01_10
-        - Allocated memory
-        -
-        -
+| 2.3 Shared information inputs
+| Same information input used by multiple functions.
 
-    | 2.2 Communication between the two elements:
-    | Receiving function is affected by information that is false, lost, sent multiple times, or in the wrong order etc. from the sender.
+.. list-table:: DFA shared information inputs
+  :header-rows: 1
+  :widths: 10,30,30,30
 
-    .. list-table:: DFA communication between elements
-       :header-rows: 1
-       :widths: 10,30,30,30
+  * - ID
+    - Violation cause shared information inputs
+    - Simplification
+    - Importance (can be used for priorisation)
+  * - SI_01_02
+    - Configuration data
+    -
+    - Medium
+  * - SI_01_03
+    - Constants, or variables, being global to the two software functions
+    -
+    - Medium
+  * - SI_01_04
+    - Basic software passes data (read from hardware register and converted into logical information) to two applications software functions
+    -
+    - Medium
+  * - SI_01_05
+    - Data / function parameter arguments / messages delivered by software function to more than one other function
+    -
+    - Medium
 
-      * - ID
-        - Violation cause
-          communication between elements
-        - Avoidance, or detection and mitigation of the fault
-        - Comment
-      * - CO_01_01
-        - Information passed via argument through a function call,
-          or via writing/reading a variable being global to the
-          two software functions (data flow)
-        -
-        -
-      * - CO_01_02
-        - Data or message corruption / repetition (*) / loss (*) /
-          delay (*) / masquerading or incorrect addressing of
-          information (*)
-        -
-        -
-      * - CO_01_03
-        - Insertion (*) / sequence of information (*)
-        -
-        -
-      * - CO_01_04
-        - Corruption of information, inconsistent data (*)
-        -
-        -
-      * - CO_01_05
-        - Asymmetric information sent from a sender to multiple
-          receivers (*)
-        -
-        -
-      * - CO_01_06
-        - Information from a sender received by only a subset of the
-          receivers (*)
-        -
-        -
-      * - CO_01_07
-        - Blocking access to a communication channel (*)
-        -
-        -
+| 2.4 Unintended impact
+| Unintended impacts to function due to various failures.
 
-    | (*) These issues are taken from the arguments on freedom from interference between software elements.
-    |     In that respect, the dependent failure initiators Unintended Impact and Communication represent causes of violation of freedom from interference for software.
+.. list-table:: DFA unintended impact
+  :header-rows: 1
+  :widths: 10,30,30,30
 
-    | 2.3 Shared information inputs
-    | Same information consumed by the two functions even in absence of shared resources, i.e. from a functional perspective.
+  * - ID
+    - Violation cause unintended impact
+    - Simplification
+    - Importance (can be used for priorisation)
+  * - UI_01_01
+    - Memory miss-allocation and leaks
+    -
+    - Medium
+  * - UI_01_02
+    - Read/Write access to memory allocated to another software element
+    -
+    - Medium
+  * - UI_01_03
+    - Stack/Buffer under-/overflow
+    -
+    - Medium
+  * - UI_01_04
+    - Deadlocks
+    - 
+    - Medium
+  * - UI_01_05
+    - Livelocks
+    -
+    - Medium
+  * - UI_01_06
+    - Blocking of execution
+    -
+    - Medium
+  * - UI_01_07
+    - Incorrect allocation of execution time
+    -
+    - Medium
+  * - UI_01_08
+    - Incorrect execution flow
+    -
+    - Medium
+  * - UI_01_09
+    - Incorrect synchronization between software elements
+    -
+    - Medium
+  * - UI_01_10
+    - CPU time depletion
+    -
+    - Medium
+  * - UI_01_11
+    - Memory depletion
+    -
+    - Medium
+  * - UI_01_12
+    - Other HW unavailability
+    -         
+    - Medium
 
-    .. list-table:: DFA shared information inputs
-       :header-rows: 1
-       :widths: 10,30,30,30
+| Development failure initiators
+| Secition is **only aplicable if a divers SW development is needed** due to decomposition.
 
-      * - ID
-        - Violation cause
-          Shared resource used by several components
-        - Avoidance, or detection and mitigation of the fault
-        - Comment
-      * - SI_01_02
-        - Configuration data
-        -
-        -
-      * - SI_01_03
-        - Constants, or variables, being global to the two software
-          functions
-        -
-        -
-      * - SI_01_04
-        - Basic software passes data (read from hardware register and
-          converted into logical information) to two applications
-          software functions
-        -
-        -
-      * - SI_01_05
-        - Data / function parameter arguments / messages delivered by
-          software function to more than one other function
-        -
-        -
+:note: Section shall be applied on platform level. Results shall be implemented in general to the S-CORE development definitions.
 
-    | 2.4 Unintended impact
-    | Two functions affecting each other’s elements directly via an implicit, that is unintended, interface.
+.. list-table:: DFA development failure initiators
+  :header-rows: 1
+  :widths: 10,30,30,30
 
-    .. list-table:: DFA unintended impact
-       :header-rows: 1
-       :widths: 10,30,30,30
-
-      * - ID
-        - Violation cause
-          Shared resources used by several components
-        - Avoidance, or detection and mitigation of the fault
-        - Comment
-      * - UI_01_01
-        - Memory miss-allocation and leaks
-        -
-        -
-      * - UI_01_02
-        - Read/Write access to memory allocated to another software
-          element (*)
-        -
-        -
-      * - UI_01_03
-        - Stack/Buffer under-/overflow (*)
-        -
-        -
-      * - UI_01_04
-        - Deadlocks (*)
-        -
-        -
-      * - UI_01_05
-        - Livelocks (*)
-        -
-        -
-      * - UI_01_06
-        - Blocking of execution (*)
-        -
-        -
-      * - UI_01_07
-        - Incorrect allocation of execution time (*)
-        -
-        -
-      * - UI_01_08
-        - Incorrect synchronization between software elements (*)
-        -
-        -
-
-    | (*) These issues are taken from the arguments on freedom from interference between software elements.
-    |     In that respect, the dependent failure initiators Unintended Impact and Communication represent causes of violation of freedom from interference for software.
-
-    | 2.5 Systematic coupling
-
-    .. list-table:: DFA systematic coupling
-       :header-rows: 1
-       :widths: 10,30,30,30
-
-      * - ID
-        - Violation cause
-          Shared resources used by several components
-        - Avoidance, or detection and mitigation of the fault
-        - Comment
-      * - SC_01_02
-        - Non-diverse development approaches including:
-          - same software tools (e.g. IDE, compiler, linker)
-          - same algorithms
-          - same programming and/or modelling language used
-        -
-        -
-      * - SC_01_03
-        - Same personal
-        -
-        -
-      * - SC_01_04
-        - Same social-cultural context (even if different personnel)
-        -
-        -
-      * - SC_01_05
-        - Development fault, e.g.
-          - human error
-          - insufficiently qualified personnel
-          - process weaknesses
-          - insufficient methods
-        -
-        -
+  * - ID
+    - Violation cause development failure initiators
+    - Simplification
+    - Importance (can be used for priorisation)
+  * - SC_01_02
+    - Same development approaches (e.g. IDE, programming and/or modelling language)
+    -
+    - Medium
+  * - SC_01_03
+    - Same personal
+    -
+    - Medium
+  * - SC_01_04
+    - Same social-cultural context (even if different personnel). Only applicable if diverse development is needed.
+    -
+    - Medium
+  * - SC_01_05
+    - Development fault (e.g. human error, insufficient qualification, insufficient methods). Only applicable if diverse development is needed.
+    -
+    - Medium

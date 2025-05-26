@@ -22,9 +22,8 @@ Fault Models
 
   | Fault Model for sequence diagrams
 
-:note: Use the fault models to ensure a structed analysis. If a fault model doesn't apply, please fill in a short desciption in the
-          violation cause so it could be recognized that the analysis is done. If there are additional fault models needed, please
-          enlage the list of fault models.
+
+:note: Use the fault models to ensure a structed analysis. If a fault model doesn't apply, please fill in a short desciption in the violation cause of the analysis so it could be recognized that the analysis is done. If there are additional fault models needed, please enlage the list of fault models.
 
 
     .. list-table:: Fault Models for sequence diagrams
@@ -40,7 +39,7 @@ Fault Models
         - MF_01_01
         - message is not received
         - MF_01_05
-        - Low
+        - High
       * - message
         - MF_01_02
         - message received too late
@@ -55,10 +54,20 @@ Fault Models
         - MF_01_04
         - message not received correctly by all recipients (different messages or messages partly lost)
         - only relevant if the same message goes to multiple recipients
-        - Low
+        - High
       * - message
         - MF_01_05
         - message is corrupted
+        -
+        - High
+      * - message
+        - MF_01_06
+        - message is not sent
+        -
+        - High
+      * - message
+        - MF_01_07
+        - message is unintended sent
         -
         - High
       * - duration/time constraint
@@ -78,16 +87,26 @@ Fault Models
         - High
       * - execution
         - EX_01_02
-        - processing too slow/fast
+        - processing too slow
         - relevant only if timing is considered
-        - Low
+        - Medium
       * - execution
         - EX_01_03
-        - processing changes to arbitrary process
-        -
-        - Low
+        - processing too fast
+        - relevant only if timing is considered
+        - Medium
       * - execution
         - EX_01_04
+        - loss of execution
+        - 
+        - High
+      * - execution
+        - EX_01_05
+        - processing changes to arbitrary process
+        -
+        - Medium
+      * - execution
+        - EX_01_06
         - processing is not complete (infinite loop)
         -
-        - Low
+        - High
