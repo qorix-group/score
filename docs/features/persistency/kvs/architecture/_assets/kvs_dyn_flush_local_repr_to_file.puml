@@ -4,7 +4,7 @@ title Sequence Diagram: Flush Local Representation to Data File
 
 participant "User" as actor
 participant "«component» :kvs" as kvs
-participant "«component» :TinyJSON" as json_parser
+participant "«component» :json" as json_parser
 participant "«component» :fs" as fs
 
 actor -> kvs: Flush KVS

@@ -33,7 +33,7 @@ Description
 Rationale Behind Architecture Decomposition
 *******************************************
 
-- The architecture is decomposed to include a dedicated JSON parser component (TinyJSON) to facilitate the persistent storage of data in JSON format.
+- The architecture is decomposed to include a dedicated JSON parser component (json) to facilitate the persistent storage of data in JSON format.
 - The architecture is decomposed to include a FileStorage component (fs) to read and write to the file system.
 
 

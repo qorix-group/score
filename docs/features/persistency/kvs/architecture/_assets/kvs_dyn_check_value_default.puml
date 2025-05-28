@@ -5,7 +5,7 @@ title Sequence Diagram: Check if Key contains Default Value
 participant "User" as actor
 participant "«component» :kvs" as kvs
 
-actor -> kvs: Does key has default value
+actor -> kvs: Does key have default value
 
 alt default-key-exists
     alt key-exists

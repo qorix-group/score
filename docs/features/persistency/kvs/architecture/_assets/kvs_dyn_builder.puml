@@ -1,6 +1,6 @@
 @startuml
 
-title Sequence Diagram: KVS Builder
+title Sequence Diagram: Build KVS Instance
 
 participant "User" as actor
 participant "«component» :kvs" as kvs
