@@ -16,8 +16,6 @@ interface IKvs {
     snapshot_count
     snapshot_max_count
     snapshot_restore
-    get_kvs_filename
-    get_hash_filename
 }
 
 @enduml

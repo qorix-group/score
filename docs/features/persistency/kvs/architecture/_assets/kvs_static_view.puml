@@ -20,14 +20,14 @@ skinparam component {
 package "persistency" <<module>> {
     component kvs <<component>>
     component fs <<component>>
-    component tiny_json <<component>>
+    component json <<component>>
 }
 
 
 
 kvs  -->  IKvs : implements
 
-kvs  ..>  tiny_json : use
+kvs  ..>  json : use
 kvs  ..>  fs : use
 
 
