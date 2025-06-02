@@ -25,6 +25,7 @@ Key-Value-Storage
    :hidden:
 
    requirements/index.rst
+   architecture/index.rst
 
 
 Feature flag
