@@ -31,8 +31,8 @@ Feature Safety Planning
       - :need:`gd_temp__change__feature_request`
       - :ndf:`copy('status', need_id='gd_temp__change__feature_request')`
       - https://github.com/eclipse-score/score/issues/760
-      - :need:`doc__feature_name`
-      - :ndf:`copy('status', need_id='doc__feature_name')`
+      - :need:`doc__persistency_kvs`
+      - :ndf:`copy('status', need_id='doc__persistency_kvs')`
 
     * - :need:`wp__requirements__feat`
       - :need:`gd_temp__req__feat_req`
@@ -59,14 +59,14 @@ Feature Safety Planning
       - <link to process>
       - <automated>
       - https://github.com/eclipse-score/score/issues/965
-      - :doc:`../safety_analysis/doc__persistency_safety_analysis`
+      - :need:`doc__persistency_safety_analysis`
       - <automated>
 
     * - :need:`wp__feature_dfa`
       - <Link to process>
       - <Process status>
       - https://github.com/eclipse-score/score/issues/965
-      - :doc:`../safety_analysis/doc__persistency_dfa`
+      - :need:`doc__persistency_dfa`
       - <automated>
 
     * - :need:`wp__requirements__inspect`
