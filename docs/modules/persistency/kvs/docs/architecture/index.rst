@@ -69,13 +69,13 @@ The components are designed to cover the expectations from the feature architect
 (i.e. if already exists a definition it should be taken over and enriched).
 
 .. comp_arc_sta:: Component Name (Static View)
-   :id: comp_arc_sta__persistency_kvs__static_view
+   :id: comp_arc_sta__persistency__static_view
    :security: YES
    :safety: ASIL_D
    :status: invalid
-   :implements: logic_arc_int__feature_name__interface_name
-   :fulfils: comp_req__persistency_kvs__some_title
-   :includes: comp_arc_sta__persistency_kvs__2
+   :implements: 
+   :fulfils: 
+   :includes: comp_arc_sta__persistency__2
 
    .. needarch::
       :scale: 50
@@ -87,11 +87,11 @@ Dynamic Architecture
 --------------------
 
 .. comp_arc_dyn:: Dynamic View
-   :id: comp_arc_dyn__persistency_kvs__dynamic_view
+   :id: comp_arc_dyn__persistency__dynamic_view
    :security: YES
    :safety: ASIL_D
    :status: invalid
-   :fulfils: comp_req__persistency_kvs__some_title
+   :fulfils: 
 
    put here a sequence diagram
 
@@ -112,11 +112,11 @@ Lower Level Components
 ----------------------
 
 .. comp_arc_sta:: Component Name 2
-   :id: comp_arc_sta__persistency_kvs__2
+   :id: comp_arc_sta__persistency__2
    :status: invalid
    :safety: ASIL_D
    :security: YES
-   :implements: logic_arc_int__feature_name__interface_name
+   :implements: 
 
    no architecture but detailed design
 

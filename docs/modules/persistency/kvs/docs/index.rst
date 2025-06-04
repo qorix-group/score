@@ -20,7 +20,7 @@ KVS (Key Value Store)
 .. note:: Document header
 
 .. document:: Persistency KVS
-   :id: doc__PersistencyKvs
+   :id: doc__persistencykvs
    :status: draft
    :safety: ASIL_B
    :realizes: wp__cmpt_request

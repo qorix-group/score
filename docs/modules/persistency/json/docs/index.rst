@@ -20,7 +20,7 @@ Tiny JSON
 .. note:: Document header
 
 .. document:: Persistency JSON
-   :id: doc__PersistencyJson
+   :id: doc__persistencyjson
    :status: draft
    :safety: ASIL_B
    :realizes: wp__cmpt_request

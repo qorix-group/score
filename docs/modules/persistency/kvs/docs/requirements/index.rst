@@ -47,7 +47,7 @@ Component Requirements
    :reqtype: Functional
    :security: NO
    :safety: QM
-   :satisfies: feat_req__persistency__default_values,feat_req__persistency__default_value_retrieval,feat_req__persistency__default_value_reset,feat_req__persistency__default_value_file
+   :satisfies: feat_req__persistency__default_values,feat_req__persistency__default_value_get,feat_req__persistency__default_value_reset,feat_req__persistency__default_value_file
    :status: valid
 
    The component shall accept default values of only permitted value data types.
@@ -70,7 +70,7 @@ Component Requirements
    :reqtype: Functional
    :security: NO
    :safety: QM
-   :satisfies: feat_req__persistency__cpp_rust_interoperability
+   :satisfies: feat_req__persistency__cpp_rust_interop
    :status: valid
 
    The component shall provide an API that supports bindings to other languages or shall use a storage and memory exchange format that is adaptable to other languages.
