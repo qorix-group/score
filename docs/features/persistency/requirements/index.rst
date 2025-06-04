@@ -15,7 +15,6 @@
 Requirements
 ############
 
-<<<<<<< HEAD:docs/features/persistency/requirements/index.rst
 .. feat_req:: C++ & Rust Interoperability
    :id: feat_req__persistency__cpp_rust_interop
    :reqtype: Non-Functional
@@ -271,10 +270,3 @@ Requirements
    :status: valid
 
    The KVS shall support concurrent intra-process data access.
-=======
-.. toctree::
-   :titlesonly:
-
-   feature_requirements
-   component_requirements
->>>>>>> 13a7ca4ac (persistency_kvs: component requirements):docs/features/persistency/kvs/requirements/index.rst

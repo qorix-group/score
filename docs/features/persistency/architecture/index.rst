@@ -52,7 +52,6 @@ Static Architecture
 
 Dynamic Architecture
 --------------------
-
 .. feat_arc_dyn:: Check if key contains default value
    :id: feat_arc_dyn__persistency__check_key_default
    :security: YES
@@ -90,7 +89,7 @@ Dynamic Architecture
    .. uml:: _assets/kvs_dyn_read_data_key.puml
 
 .. feat_arc_dyn:: Read data from permanent storage
-   :id: feat_arc_dyn__persistency__read_data_from_storage
+   :id: feat_arc_dyn__persistency__read_from_storage
    :security: YES
    :safety: ASIL_B
    :fulfils: feat_req__persistency__persist_data,feat_req__persistency__persistency,feat_req__persistency__integrity_check,feat_req__persistency__snapshots
