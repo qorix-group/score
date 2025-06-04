@@ -12,17 +12,17 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _component_template:
+.. _component_PersistencyKvs:
 
 KVS (Key Value Store)
 #####################
 
 .. note:: Document header
 
-.. document:: [Your Component Name]
-   :id: doc__component_name
+.. document:: Persistency KVS
+   :id: doc__PersistencyKvs
    :status: draft
-   :safety: ASIL_D
+   :safety: ASIL_B
    :realizes: wp__cmpt_request
    :tags: template
 

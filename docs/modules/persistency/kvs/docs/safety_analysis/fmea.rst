@@ -16,10 +16,10 @@
 Safety Analysis : FMEA
 ======================
 
-.. document:: [Your Component Name] FMEA
-   :id: doc__component_name_fmea
-   :status: draft
-   :safety: ASIL_D
+.. document:: KVS FMEA
+   :id: doc__kvs_fmea
+   :status: valid
+   :safety: ASIL_B
    :realizes: wp__sw_component_safety_analysis
    :tags: template
 

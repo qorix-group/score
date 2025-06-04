@@ -12,15 +12,15 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _component_architecture_template:
+.. _component_architecture_PersistencyKvs:
 
 Component Architecture
 ======================
 
-.. document:: [Your Component Name] Architecture
-   :id: doc__component_name_architecture
+.. document:: Persistency KVS Architecture
+   :id: doc__persistency_kvs_architecture
    :status: draft
-   :safety: ASIL_D
+   :safety: ASIL_B
    :realizes: wp__component_arch
    :tags: template
 
@@ -69,13 +69,13 @@ The components are designed to cover the expectations from the feature architect
 (i.e. if already exists a definition it should be taken over and enriched).
 
 .. comp_arc_sta:: Component Name (Static View)
-   :id: comp_arc_sta__component_name__static_view
+   :id: comp_arc_sta__persistency_kvs__static_view
    :security: YES
    :safety: ASIL_D
    :status: invalid
    :implements: logic_arc_int__feature_name__interface_name
-   :fulfils: comp_req__component_name__some_title
-   :includes: comp_arc_sta__component_name__2
+   :fulfils: comp_req__persistency_kvs__some_title
+   :includes: comp_arc_sta__persistency_kvs__2
 
    .. needarch::
       :scale: 50
@@ -87,11 +87,11 @@ Dynamic Architecture
 --------------------
 
 .. comp_arc_dyn:: Dynamic View
-   :id: comp_arc_dyn__component_name__dynamic_view
+   :id: comp_arc_dyn__persistency_kvs__dynamic_view
    :security: YES
    :safety: ASIL_D
    :status: invalid
-   :fulfils: comp_req__component_name__some_title
+   :fulfils: comp_req__persistency_kvs__some_title
 
    put here a sequence diagram
 
@@ -112,7 +112,7 @@ Lower Level Components
 ----------------------
 
 .. comp_arc_sta:: Component Name 2
-   :id: comp_arc_sta__component_name__2
+   :id: comp_arc_sta__persistency_kvs__2
    :status: invalid
    :safety: ASIL_D
    :security: YES

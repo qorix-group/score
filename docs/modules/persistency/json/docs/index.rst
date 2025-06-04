@@ -12,17 +12,17 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _component_template:
+.. _component_PersistencyJson:
 
 Tiny JSON
 #########
 
 .. note:: Document header
 
-.. document:: [Your Component Name]
-   :id: doc__component_name
+.. document:: Persistency JSON
+   :id: doc__PersistencyJson
    :status: draft
-   :safety: ASIL_D
+   :safety: ASIL_B
    :realizes: wp__cmpt_request
    :tags: template
 
@@ -173,8 +173,4 @@ Footnotes
 .. toctree::
    :hidden:
 
-   requirements/index.rst
-   architecture/index.rst
-   safety_analysis/fmea.rst
-   safety_analysis/dfa.rst
    component_classification.rst
