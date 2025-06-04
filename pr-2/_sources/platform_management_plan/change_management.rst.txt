@@ -19,6 +19,8 @@
    :tags: platform_management
    :realizes: wp__chm_plan
 
+.. _change_mgmt_plan:
+
 Change Management / Change Management Plan
 ------------------------------------------
 
@@ -138,6 +140,8 @@ description.
 
 :need:`[[title]] <gd_req__change__attr_milestone>` is defined by the Milestone of a ISSUE.
 
+
+.. _change_mgmt_workflow:
 
 Change Request Workflow
 ^^^^^^^^^^^^^^^^^^^^^^^

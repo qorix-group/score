@@ -53,3 +53,6 @@ Interfaces
    :safety: ASIL_B
    :status: valid
    :fulfils: feat_req__ipc__interfaces
+
+.. needextend:: "communication/ipc/architecture" in docname
+   :+tags: ipc
