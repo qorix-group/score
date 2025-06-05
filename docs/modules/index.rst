@@ -20,6 +20,3 @@ Module
 .. toctree::
    :maxdepth: 1
    :glob:
-
-   */docs/index
-   */*/docs/index
