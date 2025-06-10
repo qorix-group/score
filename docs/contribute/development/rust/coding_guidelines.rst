@@ -20,7 +20,7 @@ Writing Rust Code
    :status: valid
 
 Coding Guidelines
-#################
+=================
 
 The Rust consortium has decided that there will be no official coding guidelines provided by the Rust consortium.
 However, the Rust community has a set of guidelines that are widely accepted and used.
