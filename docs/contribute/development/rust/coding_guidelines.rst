@@ -19,12 +19,23 @@ Writing Rust Code
    :id: doc__rust_coding_guidelines
    :status: valid
 
+
 Coding Guidelines
 =================
 
-The Safety-Critical Rust Consortium plans to develop guidelines, linters,
-libraries, static analysis tools, formal methods and language subsets to meet
-industrial and legal requirements.
+The Safety-Critical Rust Consortium aims to make Rust suitable for use in
+automotive and other safety-critical environments by building and maintaining a
+set of essential tools that are vetted by the community for certification
+purposes. They track the development status of these tools and document their
+progress. The consortium is considering whether to develop specialized training
+materials for safety-critical Rust, though this may require a separate group.
+Their current activities include supporting a qualified compiler (with
+Ferrocene available for some targets), developing a certified core library,
+working on tools for coding style verification, and assessing the need for
+static analysis and code metrics tools. Some tools, such as MC/DC coverage
+reporting and code metrics generators, are still unavailable, and the
+consortium is evaluating what further tooling and support are necessary to
+enable certification and safe use of Rust in automotive applications.
 
 `Safety-Critical Rust Consortium <https://rustfoundation.org/safety-critical-rust-consortium>`_
 
@@ -34,29 +45,63 @@ industrial and legal requirements.
 
 `Rust language <https://doc.rust-lang.org/book/ch20-01-unsafe-rust.html>`_
 
+
 State of Rust Safety-Critical Tooling
 #####################################
 
-An actual state of Rust safety critical tooling can be found in the following document:
+The linked document provides a current overview of the tooling landscape for
+certifying Rust in safety-critical applications, presenting a
+community-approved list of essential tools and tracking their development
+status. It also explores whether developing specialized training curricula for
+safety-critical Rust is necessary, potentially requiring a separate
+subcommittee. The document details the state of specific tools—such as
+compilers and analysis utilities—by outlining their intended purposes,
+certification requirements, and their availability or progress. While some
+tools, such as the Ferrocene compiler, are already available or being actively
+developed, others remain under evaluation or are not yet accessible.
 
-`Mission statement Rust safety critical tooling <https://github.com/rustfoundation/safety-critical-rust-consortium/blob/main/subcommittee/tooling/mission-statement.md>`_
+`Mission Statement - Tooling Subcommittee <https://github.com/rustfoundation/safety-critical-rust-consortium/blob/main/subcommittee/tooling/mission-statement.md>`_
 
 
 Explanation of ARA Applications in Rust
 #######################################
 
-Autosar also shares a public availabe document that explains how to use Rust in ARA applications.
+AUTOSAR also shares a public availabe document that explains how to use Rust in
+ARA applications as Rust is offering safety and performance advantages. While
+ecosystem support is still maturing, Rust-based ARA applications can lead to
+safer, more reliable automotive software, especially in safety-critical and
+high-performance domains.
 
-`Autosar Rust ARA applications <https://www.autosar.org/fileadmin/standards/R24-11/AP/AUTOSAR_AP_EXP_ARARustApplications.pdf>`_
+`AUTOSAR ARA Applications in Rust <https://www.autosar.org/fileadmin/standards/R24-11/AP/AUTOSAR_AP_EXP_ARARustApplications.pdf>`_
 
 
 MISRA vs Cert
 #############
 
+This issue contrasts the MISRA and CERT coding standards, highlighting their
+different approaches to software safety and security. MISRA is noted for its
+restrictive language subsetting and complex compliance process, often imposing
+outdated or ineffective rules that do not guarantee improved safety or
+security. This can create unnecessary work for developers without clear
+benefits and is sometimes inconsistent across languages. CERT, on the other
+hand, is praised for its focus on practical, consensus-based rules that target
+real security vulnerabilities in existing code, avoiding excessive constraints.
+The overall recommendation is to favor guidelines like CERT’s—practical,
+evidence-based, and focused on real-world issues—over rigid, untested standards
+that hinder adoption and developer productivity.
+
 `MISRA vs Cert <https://github.com/rustfoundation/safety-critical-rust-coding-guidelines/issues/75/>`_
+
 
 Link to Clippy
 ##############
+
+Rust Clippy is a collection of lints (code style and correctness checks) for
+the Rust programming language. It helps developers identify common mistakes,
+improve code quality, and follow best practices by providing warnings and
+suggestions as part of the Rust toolchain. Clippy can be run on Rust projects
+to catch issues that the standard compiler might miss, making it an essential
+tool for writing clean, idiomatic, and efficient Rust code.
 
 `Link to Clippy <https://github.com/rustfoundation/safety-critical-rust-coding-guidelines/issues/78/>`_
 
