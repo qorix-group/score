@@ -22,11 +22,13 @@ Writing Rust Code
 Coding Guidelines
 =================
 
-The Rust consortium has decided that there will be no official coding guidelines provided by the Rust consortium.
-However, the Rust community has a set of guidelines that are widely accepted and used.
-These guidelines can be found in the official Rust documentation and are recommended for all Rust projects.
+The Safety-Critical Rust Consortium plans to develop guidelines, linters,
+libraries, static analysis tools, formal methods and language subsets to meet
+industrial and legal requirements.
 
-`Safety Critical Rust Consortium <https://github.com/rustfoundation/safety-critical-rust-consortium/tree/main/subcommittee/coding-guidelines/>`_
+`Safety-Critical Rust Consortium <https://rustfoundation.org/safety-critical-rust-consortium>`_
+
+`Safety-Critical Rust Consortium Guidelines <https://github.com/rustfoundation/safety-critical-rust-consortium/tree/main/subcommittee/coding-guidelines/>`_
 
 `Learn unsafe Rust <https://google.github.io/learn_unsafe_rust/>`_
 
@@ -62,7 +64,12 @@ Link to Clippy
 Conclusions for S-CORE
 ######################
 
-During the S-CORE project, we will not enforce any coding guidelines for Rust.
-However, we will follow the guidelines provided by the Rust community and the Rust consortium.
-We will also follow the guidelines provided by the Rust Foundation and the Safety Critical Rust Consortium.
-The adaption of these guidelines will be documented in the S-CORE project documentation.
+During the S-CORE project only formatting and clippy checks are enforced. Also
+the code should compile with zero warnings. Additional guidelines by the Rust
+Community, the Rust Foundation and the Safety-Critical Rust Consortium are
+applied where applicable but not enforced. If possible the usage of `unsafe` is
+avoided. To keep the code `panic`-free only APIs with a proper return value
+should be used.
+
+The adaption of these guidelines will be documented in the S-CORE project
+documentation.
