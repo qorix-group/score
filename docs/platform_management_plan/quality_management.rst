@@ -19,7 +19,7 @@ Quality Management / Platform Quality Management Plan
    :id: doc__platform_quality_plan
    :status: valid
    :safety: ASIL_B
-   :realizes: wp__qms_plan
+   :realizes: PROCESS_wp__qms_plan
    :tags: platform_management
 
 Purpose
@@ -36,18 +36,18 @@ of the workflows.
 Statement of Independence
 -------------------------
 
-There could be a conflict of interest between the project lead :need:`PROCESS_rl__project_lead` and the quality manager 
-:need:`PROCESS_rl__quality_manager`, as both roles are responsible for the project. The project lead is responsible for 
-the project and the quality manager is responsible for the quality of the project. 
+There could be a conflict of interest between the project lead :need:`PROCESS_rl__project_lead` and the quality manager
+:need:`PROCESS_rl__quality_manager`, as both roles are responsible for the project. The project lead :need:`PROCESS_rl__project_lead` is responsible for
+the project and the quality manager :need:`PROCESS_rl__quality_manager` is responsible for the quality of the project.
 
-Therefore we define that the quality manager only support the project with consulting. So the project itself 
-shall improve the quality of the project/platform product. The combination of both shall found the best solution 
+Therefore we define that the quality manager :need:`PROCESS_rl__quality_manager` only support the project with consulting. So the project itself
+shall improve the quality of the project/platform product. The combination of both shall found the best solution
 for the project. The quality report is sent to the :need:`PROCESS_rl__technical_lead` so that conflicts can be solved
-in the steering committees.
+in the steering committees :need:`doc__project_mgt_plan`.
 
 The objectives and scope of the quality management, also the measures and checklists are transparent for everyone.
 So the project itself can improve the quality of the project/platform product with the support of the knowledge of
-the quality manager.  
+the quality manager :need:`PROCESS_rl__quality_manager`.
 
 Objectives and scope
 --------------------
@@ -483,7 +483,7 @@ Organization and management system is currently not mature.
 
 **Skills**
 
-The main quality related project roles are the project manager and the quality manager and these also have to have
+The main quality related project roles are the project lead :need:`PROCESS_rl__project_lead` and the quality manager :need:`PROCESS_rl__quality_manager` and these also have to have
 the (Eclipse) committer role. As defined in `Committer Training <https://www.eclipse.org/projects/training/>`_ the
 committers are elected in a meritrocratic manner, meaning those have to show their skills and understanding of the
 project processes in several previous pull requests.
@@ -491,7 +491,7 @@ project processes in several previous pull requests.
 As each project can adopt additional criteria for the committers election, we define that each committer has to prove
 his knowledge in quality SW development by:
 
-- by attending the project's ASPICE 4.0 SW management and development training (given by a project lead, quality manager or safety team member)
+- by attending the project's ASPICE 4.0 SW management and development training
 
 Additionally the project repository is organized in "CODEOWNER" sections. These "CODEOWNERS" need to approve any pull
 request modifying a file in their area before it is merged. In case of quality related "CODEOWNER" sections (e.g.
@@ -499,19 +499,19 @@ any documentation artefacts) the persons having "CODEOWNER" rights need to have:
 
 - At least one year of professional practice of quality related SW development (or management) relevant for the section content with demonstrable and verifiable results.
 
-The successful checking of committers and CODEOWNERS skills is ensured by the project and quality manager and documented
+The successful checking of committers and CODEOWNERS skills is ensured by the project lead :need:`PROCESS_rl__project_lead` and quality manager :need:`PROCESS_rl__quality_manager` and documented
 in the role assignment document.
 
-.. note:: The identity of the committer by applying the GitHub digital signature mechanism will be used to confirm the authenticity of the quality manager role for the approvals
+.. note:: The identity of the committer by applying the GitHub digital signature mechanism will be used to confirm the authenticity of the quality manager :need:`PROCESS_rl__quality_manager` role for the approvals
 
 4 Quality Management Planning
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4.1 Quality Resources
 """"""""""""""""""""""
-A dedicated Quality Manager is defined as part of the cross functional teams as defined in :doc:`project_management`. The Quality Manager, supported by the
-Project Manager, and all other stakeholders, will ensure that quality activities are actively planned, developed,
+A dedicated Quality Manager :need:`PROCESS_rl__quality_manager` is defined as part of the cross functional feature teams as defined in :doc:`project_management`. The Quality Manager :need:`PROCESS_rl__quality_manager`, supported by the
+Project Lead :need:`PROCESS_rl__project_lead`, and all other stakeholders, will ensure that quality activities are actively planned, developed,
 analyzed, verified and tested and managed throughout the life cycle of the project. As all the implementation
-takes place within feature development, there is a quality manager appointed in the feature development plan.
+takes place within feature development, there is a quality manager :need:`PROCESS_rl__quality_manager` appointed in the feature development plan.
 
 Resources and milestones are planned in Github Issues for all activities. There are issue templates for sagas
 (covering one feature development) and for epics (covering one development workproduct each). Resource and
@@ -538,16 +538,16 @@ Ad-hoc quality related meetings are set up for clarification topics.
 **Reporting**
 
 The quality management status is reported as defined in the platform management plan. The status report includes
-at least the defined Quality Criteria defined in this document.
+at least the defined Quality Criteria defined in this document :need:`PROCESS_wp__qms_report`.
 
 **Escalation**
 
-- Quality Manager to Steering Council
+- Quality Manager :need:`PROCESS_rl__quality_manager` to steering committees :need:`doc__project_mgt_plan`.
 
 **Examples for valid escalation causes are:**
 
 - Quality issues cannot be resolved on feature level or with the available resources.
-- There are conflicting points of view between the Project Manager, Safety Manager and the Quality Manager
+- There are conflicting points of view between the Project Lead :need:`PROCESS_rl__project_lead`, Safety Manager :need:`PROCESS_rl__safety_manager` and the Quality Manager :need:`PROCESS_rl__quality_manager`
 
 4.3 Quality Management Specifics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
