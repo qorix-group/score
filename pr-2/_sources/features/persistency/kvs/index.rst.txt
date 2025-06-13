@@ -23,6 +23,7 @@ Key-Value-Storage
 
 .. toctree::
    requirements/index.rst
+   architecture/index.rst
 
 
 Feature flag

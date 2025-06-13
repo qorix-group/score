@@ -34,15 +34,15 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score.css?v=940e959b" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_needs.css?v=e97392eb" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_design.css?v=7199c97b" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/css/score_design.css?v=d9fd870c" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -63,16 +63,9 @@
     <script src="../../../../_static/sphinx-needs/libs/html/datatables_loader.js?v=a2cae175"></script>
     <script src="../../../../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js?v=dca66431"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'features/persistency/kvs/requirements/index';</script>
-    <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
-        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://eclipse-score.github.io/score/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
-        DOCUMENTATION_OPTIONS.show_version_warning_banner =
-            false;
-        </script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
-    <link rel="next" title="Module" href="../../../../modules/index.html" />
+    <link rel="next" title="Feature Architecture : persistency/kvs" href="../architecture/index.html" />
     <link rel="prev" title="Key-Value-Storage" href="../index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -260,26 +253,6 @@
         </li>
 </ul></div>
       
-        <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-2"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-2"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-2"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-2">
-    <!-- dropdown will be populated by javascript on page load -->
-  </div>
-</div></div>
-      
     </div>
     
   </div>
@@ -415,26 +388,6 @@
         </li>
 </ul></div>
         
-          <div class="navbar-item">
-<div class="version-switcher__container dropdown pst-js-only">
-  <button id="pst-version-switcher-button-3"
-    type="button"
-    class="version-switcher__button btn btn-sm dropdown-toggle"
-    data-bs-toggle="dropdown"
-    aria-haspopup="listbox"
-    aria-controls="pst-version-switcher-list-3"
-    aria-label="Version switcher list"
-  >
-    Choose version  <!-- this text may get changed later by javascript -->
-    <span class="caret"></span>
-  </button>
-  <div id="pst-version-switcher-list-3"
-    class="version-switcher__menu dropdown-menu list-group-flush py-0"
-    role="listbox" aria-labelledby="pst-version-switcher-button-3">
-    <!-- dropdown will be populated by javascript on page load -->
-  </div>
-</div></div>
-        
       </div>
     
   </div>
@@ -453,6 +406,7 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Persistency</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Key-Value-Storage</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Requirements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../architecture/index.html">Feature Architecture : persistency/kvs</a></li>
 </ul>
 </details></li>
 </ul>
@@ -525,7 +479,7 @@
                   
   <section id="requirements">
 <h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-7656466a">
+<div class="need_container docutils container" id="SNCB-459dde8c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__cpp_rust_interop">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -571,7 +525,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-3b53f966">
+<div class="need_container docutils container" id="SNCB-d15868a9">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__maximum_size">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -617,7 +571,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-ecc19440">
+<div class="need_container docutils container" id="SNCB-7ebb57db">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__multiple_kvs">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -663,7 +617,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-0976b846">
+<div class="need_container docutils container" id="SNCB-8972da39">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__support_datatype_keys">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -688,6 +642,7 @@
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functiona_req__support_of_store" title="feat_req__persistency__support_datatype_keys">stkh_req__functiona_req__support_of_store</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__support_datatype_keys">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__read_key" title="feat_req__persistency__support_datatype_keys">feat_arc_dyn__persistency__read_key</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__write_key" title="feat_req__persistency__support_datatype_keys">feat_arc_dyn__persistency__write_key</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -709,7 +664,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-bf25aad8">
+<div class="need_container docutils container" id="SNCB-5dfb3791">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__support_datatype_value">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -734,6 +689,7 @@
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functiona_req__support_of_store" title="feat_req__persistency__support_datatype_value">stkh_req__functiona_req__support_of_store</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__support_datatype_value">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__read_key" title="feat_req__persistency__support_datatype_value">feat_arc_dyn__persistency__read_key</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__write_key" title="feat_req__persistency__support_datatype_value">feat_arc_dyn__persistency__write_key</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -756,7 +712,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-ca638846">
+<div class="need_container docutils container" id="SNCB-36d6769d">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__default_values">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -781,6 +737,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functiona_req__support_of_store" title="feat_req__persistency__default_values">stkh_req__functiona_req__support_of_store</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__default_values">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__check_key_default" title="feat_req__persistency__default_values">feat_arc_dyn__persistency__check_key_default</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__read_key" title="feat_req__persistency__default_values">feat_arc_dyn__persistency__read_key</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -802,7 +759,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-3b77b5e1">
+<div class="need_container docutils container" id="SNCB-98b50726">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__default_value_get">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -827,6 +784,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functiona_req__support_of_store" title="feat_req__persistency__default_value_get">stkh_req__functiona_req__support_of_store</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__default_value_get">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__check_key_default" title="feat_req__persistency__default_value_get">feat_arc_dyn__persistency__check_key_default</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__read_key" title="feat_req__persistency__default_value_get">feat_arc_dyn__persistency__read_key</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -848,7 +806,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-d404027f">
+<div class="need_container docutils container" id="SNCB-3a2f976b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__default_value_reset">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -894,7 +852,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-4df96467">
+<div class="need_container docutils container" id="SNCB-a3785f84">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__persistency">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -919,6 +877,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functiona_req__support_of_store" title="feat_req__persistency__persistency">stkh_req__functiona_req__support_of_store</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__persistency">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__flush" title="feat_req__persistency__persistency">feat_arc_dyn__persistency__flush</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__read_from_storage" title="feat_req__persistency__persistency">feat_arc_dyn__persistency__read_from_storage</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__snapshot_restore" title="feat_req__persistency__persistency">feat_arc_dyn__persistency__snapshot_restore</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -940,7 +899,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-b0fbde4d">
+<div class="need_container docutils container" id="SNCB-b316f1d3">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__integrity_check">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -965,6 +924,7 @@ The supported datatypes shall match those used by the IPC feature.</p></td>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functiona_req__support_of_store" title="feat_req__persistency__integrity_check">stkh_req__functiona_req__support_of_store</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__integrity_check">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__flush" title="feat_req__persistency__integrity_check">feat_arc_dyn__persistency__flush</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__read_from_storage" title="feat_req__persistency__integrity_check">feat_arc_dyn__persistency__read_from_storage</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -987,7 +947,7 @@ Note: Implementation depends on AoUs.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-00d7abc1">
+<div class="need_container docutils container" id="SNCB-47e75f7c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__versioning">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1033,7 +993,7 @@ Note: Implementation depends on AoUs.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-8d1344a9">
+<div class="need_container docutils container" id="SNCB-cc6d7679">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__update_mechanism">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1079,7 +1039,7 @@ Note: Implementation depends on AoUs.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-7025af0a">
+<div class="need_container docutils container" id="SNCB-ba4307ff">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__snapshots">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1104,6 +1064,7 @@ Note: Implementation depends on AoUs.</p></td>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functiona_req__support_of_store" title="feat_req__persistency__snapshots">stkh_req__functiona_req__support_of_store</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__snapshots">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__flush" title="feat_req__persistency__snapshots">feat_arc_dyn__persistency__flush</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__read_from_storage" title="feat_req__persistency__snapshots">feat_arc_dyn__persistency__read_from_storage</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__snapshot_restore" title="feat_req__persistency__snapshots">feat_arc_dyn__persistency__snapshot_restore</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -1126,7 +1087,7 @@ Snapshots shall also be deletable.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-dd09ea68">
+<div class="need_container docutils container" id="SNCB-7851083c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__tooling">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1172,7 +1133,7 @@ Snapshots shall also be deletable.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-37f7f29b">
+<div class="need_container docutils container" id="SNCB-477992cf">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__stable_api">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1197,6 +1158,7 @@ Snapshots shall also be deletable.</p></td>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__communication__stable_app_inter" title="feat_req__persistency__stable_api">stkh_req__communication__stable_app_inter</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__stable_api">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#logic_arc_int__persistency__interface" title="feat_req__persistency__stable_api">logic_arc_int__persistency__interface</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -1218,7 +1180,7 @@ Snapshots shall also be deletable.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-62898b07">
+<div class="need_container docutils container" id="SNCB-6cdd218b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__variant_management">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1264,7 +1226,7 @@ Snapshots shall also be deletable.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-ed4969a1">
+<div class="need_container docutils container" id="SNCB-e9815df3">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__default_value_file">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1310,7 +1272,7 @@ Snapshots shall also be deletable.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-d202d50f">
+<div class="need_container docutils container" id="SNCB-a9e1b0ec">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__config_file">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1356,7 +1318,7 @@ Snapshots shall also be deletable.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-13566984">
+<div class="need_container docutils container" id="SNCB-b40fa23a">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__persist_data">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1381,6 +1343,7 @@ Snapshots shall also be deletable.</p></td>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functional_req__data_persistency" title="feat_req__persistency__persist_data">stkh_req__functional_req__data_persistency</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__persist_data">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__flush" title="feat_req__persistency__persist_data">feat_arc_dyn__persistency__flush</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__read_from_storage" title="feat_req__persistency__persist_data">feat_arc_dyn__persistency__read_from_storage</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__snapshot_restore" title="feat_req__persistency__persist_data">feat_arc_dyn__persistency__snapshot_restore</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -1402,7 +1365,7 @@ Snapshots shall also be deletable.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-6458bca5">
+<div class="need_container docutils container" id="SNCB-606a60dc">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__dev_mode">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1449,7 +1412,7 @@ The engineering mode shall allow unrestricted data access.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-42dd0b1c">
+<div class="need_container docutils container" id="SNCB-27d51703">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__async_api">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1495,7 +1458,7 @@ The engineering mode shall allow unrestricted data access.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c021a665">
+<div class="need_container docutils container" id="SNCB-d7cf176f">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__access_control">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1541,7 +1504,7 @@ The engineering mode shall allow unrestricted data access.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-31e59ac0">
+<div class="need_container docutils container" id="SNCB-419a839d">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__events">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1566,6 +1529,7 @@ The engineering mode shall allow unrestricted data access.</p></td>
 <div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__app_architectures__support_data" title="feat_req__persistency__events">stkh_req__app_architectures__support_data</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#feat_arc_sta__persistency__static" title="feat_req__persistency__events">feat_arc_sta__persistency__static</a>, <a class="reference internal" href="../architecture/index.html#feat_arc_dyn__persistency__delete_key" title="feat_req__persistency__events">feat_arc_dyn__persistency__delete_key</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -1589,7 +1553,7 @@ such as when keys are changed or removed.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-767cfb60">
+<div class="need_container docutils container" id="SNCB-3021bf06">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__fast_access">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1635,7 +1599,7 @@ such as when keys are changed or removed.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-52c67632">
+<div class="need_container docutils container" id="SNCB-429050ad">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__persistency__intra_process_comm">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1703,11 +1667,11 @@ such as when keys are changed or removed.</p></td>
       </div>
     </a>
     <a class="right-next"
-       href="../../../../modules/index.html"
+       href="../architecture/index.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Module</p>
+        <p class="prev-next-title">Feature Architecture : persistency/kvs</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1726,7 +1690,7 @@ such as when keys are changed or removed.</p></td>
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/eclipse-score/score/edit/main/docs/features/persistency/kvs/requirements/index.rst">
+    <a href="https://github.com/dummy/dummy/edit/main/docs/features/persistency/kvs/requirements/index.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
