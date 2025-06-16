@@ -37,30 +37,47 @@ KVS (Key Value Store)
 Abstract
 ========
 
-[A short (~200 word) description of the contribution being addressed.]
+This feature request describes the key-value storage (KVS) that is needed by
+applications to store either temporary or permanent data in an easy way that
+conforms to most programming languages that provide a hash, hashmap, dictionary
+or similar data structure. Access to the KVS is possible from any support
+language through language specific interfaces.
 
 
 Motivation
 ==========
 
-[Clearly explain why the existing platform/project solution is inadequate to address the topic that the CR solves.]
+The current solutions available mostly don't meet the specific needs of the
+S-CORE project like storing specific datatypes without a BASE64 conversation or
+having no rollback/replay feature. Also the integration into analysis tools is
+simpler when the solution grows with the needs instead having to adapt existing
+data structures through wrapppers. Especially in the focus of security it will
+be possible to build a system that integrates the layers from scratch and
+provide them as API to any language whilst still using Rust as the backend.
 
-    .. note::
-     The motivation is critical for CRs that want to change the existing components.
-     It should clearly explain why the existing solution is inadequate to address the topic that the CR solves.
-     Motivation may based on criteria as resource requirements, scheduling issues, risks, benefits, etc.
-     CRs submissions without sufficient motivation may be rejected.
+A main USP of the solution will be the integration of a tracing framework that
+allows to understand how events also in the context of other events interact.
 
+A key-value storage is used within many applications to store e.g.
+configuration data and is therefore seen crucial for the Eclipse S-CORE
+platform.
 
 
 Rationale
 =========
 
-[Describe why particular design decisions were made.]
-
-
-   .. note::
-      The rationale should provide evidence of consensus within the community and discuss important objections or concerns raised during discussion.
+1. | Requirement 1: Multiple key-value storages per application
+   | Solution: Allow each application to have multiple key-value storages (KVS) to enable data separation and different levels of security.
+2. | Requirement 2: Update mechanism for KVS versions
+   | Solution: Implement an update mechanism to ensure compatibility through updates and rollbacks of different KVS versions.
+3. | Requirement 3: Language-agnostic KVS interface
+   | Solution: Design a flexible interface that allows the KVS to be read and written from multiple programming languages, including C++, Rust, and others.
+4. | Requirement 4: Default values for KVS
+   | Solution: Configure the KVS to store default values for all keys, returning either the default value or an error if the key needs to be written first.
+5. | Requirement 5: Simple data representation for KVS
+   | Solution: Utilize a simple data representation, such as JSON or Cap'n Proto, that supports versioned up- and downgrading and is easily debuggable by developers.
+6. | Requirement 6: KVS integrity checking
+   | Solution: Ensure the KVS maintains a consistent state, providing either the currently stored data or the previous snapshot if data retrieval is not possible.
 
 
 Specification
@@ -74,83 +91,51 @@ Specification
       Thereby the :need:`PROCESS_rl__module_lead` will approve these requirements as part of accepting the CR (e.g. merging the PR with the CR).
 
 
-
 Backwards Compatibility
 =======================
 
-[Describe potential impact (especially including safety and security impacts) and severity on pre-existing platform/project elements.]
+The API for the specific language tries to represent the language specific
+implementation like hashmaps or dictionaries to be mostly backwards compatible
+to already existing key-value-storage usage cases. Access without a safe error
+handling path, like the array-operator in Rust which can panic, must be
+avoided.
 
 
 Security Impact
 ===============
 
-[How could a malicious user take advantage of this new/modified component?]
-
-   .. note::
-      If there are security concerns in relation to the CR, those concerns should be explicitly written out to make sure reviewers of the CR are aware of them.
-
-Which security requirements are affected or has to be changed?
-Could the new/modified component enable new threat scenarios?
-Could the new/modified component enable new attack paths?
-Could the new/modified component impact functional safety?
-If applicable, which additional security measures must be implemented to mitigate the risk?
-
-    .. note::
-     Use Security Software Critically Analysis, Vulnerability Analysis.
-     [Methods will be defined later in Process area Security Analysis]
+Access to the key-value-storage would allow a malicious user to control the
+behaviour of the device, so it must be secured to prevent unauthorized access.
+To achieve this, debug access should only be provided when a debug firmware
+image is installed.
 
 
 Safety Impact
 =============
 
-[How could the safety be impacted by the new/modified component?]
+The expected ASIL level is ASIL-B. To reach this goal we will apply the S-CORE
+development process. Key elements of it are listed in the process descriptions
+of safety management and safety analysis. In the safety analysis we will
+analyze the impact of the feature.
 
-   .. note::
-      If there are safety concerns in relation to the CR, those concerns should be explicitly written out to make sure reviewers of the CR are aware of them.
+:need:`doc__persistency_safety_analysis`
 
-Which safety requirements are affected or has to be changed?
-Could the new/modified component be a potential common cause or cascading failure initiator?
-If applicable, which additional safety measures must be implemented to mitigate the risk?
+We use an iterative development process and apply results from the next steps
+back to the feature request. For TinyJSON we will perform a software component
+classification.
 
-    .. note::
-     Use Dependency Failure Analysis and/or Safety Software Critically Analysis.
-     [Methods will be defined later in Process area Safety Analysis]
+:need:`doc__persistency_component_classification`
 
-For new feature/component contributions:
+To ensure the freedom of interference the feature key-value storage should not
+be used within different processes.
 
-[What is the expected ASIL level?]
-[What is the expected classification of the contribution?]
-
-   .. note::
-      Use the component classification method here to classify your component, if it shall to be used in a safety context: :need:`PROCESS_gd_temp__component_classification`.
 
 License Impact
 ==============
 
-[How could the copyright impacted by the license of the new contribution?]
-
-
-How to Teach This
-=================
-
-[How to teach users, new and experienced, how to apply the CR to their work.]
-
    .. note::
-      For a CR that adds new functionality or changes behavior, it is helpful to include a section on how to teach users, new and experienced, how to apply the CR to their work.
-
-
-
-Rejected Ideas
-==============
-
-[Why certain ideas that were brought while discussing this CR were not ultimately pursued.]
-
-   .. note::
-      Throughout the discussion of a CR, various ideas will be proposed which are not accepted.
-      Those rejected ideas should be recorded along with the reasoning as to why they were rejected.
-      This both helps record the thought process behind the final version of the CR as well as preventing people from bringing up the same rejected idea again in subsequent discussions.
-      In a way this section can be thought of as a breakout section of the Rationale section that is focused specifically on why certain ideas were not ultimately pursued.
-
+      The key-value storage itself uses the Apache-2.0 license. Licenses of
+      used libraries are need to be checked.
 
 
 Open Issues
@@ -177,4 +162,3 @@ Footnotes
    architecture/index.rst
    safety_analysis/fmea.rst
    safety_analysis/dfa.rst
-   component_classification.rst
