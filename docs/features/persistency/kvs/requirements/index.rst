@@ -225,17 +225,27 @@ Requirements
    The Key-Value-Storage shall support storing and loading its data to and from
    persistent storage.
 
-.. feat_req:: Support engineering and field mode
-   :id: feat_req__persistency__dev_mode
+.. feat_req:: Support engineering mode
+   :id: feat_req__persistency__eng_mode
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
    :satisfies: stkh_req__dependability__safety_features
    :status: valid
 
-   The Key-Value-Storage shall provide both engineering (developer) and field
-   modes.
+   The Key-Value-Storage shall an engineering (developer) mode.
    The engineering mode shall allow unrestricted data access.
+
+.. feat_req:: Support field mode
+   :id: feat_req__persistency__field_mode
+   :reqtype: Functional
+   :security: NO
+   :safety: ASIL_B
+   :satisfies: stkh_req__dependability__safety_features
+   :status: valid
+
+   The Key-Value-Storage shall a field mode.
+   The field mode should enforce the most restrictive data access controls feasible.
 
 .. feat_req:: Provide an async API
    :id: feat_req__persistency__async_api
