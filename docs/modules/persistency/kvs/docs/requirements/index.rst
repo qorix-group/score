@@ -198,7 +198,7 @@ Component Requirements
    single software architecture element.
 
 .. comp_req:: Persistent Data Storage Components
-   :id: comp_req__persistency__persist_data_storage_comp
+   :id: comp_req__persistency__persist_data_store_com
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -208,7 +208,7 @@ Component Requirements
    The component shall use the file API and the JSON data format to persist data.
 
 .. comp_req:: Persistent Data Storage Checksum
-   :id: comp_req__persistency__persist_data_storage_checksum
+   :id: comp_req__persistency__pers_data_store_csum
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -220,7 +220,7 @@ Component Requirements
    The component shall verify the checksum when loading data.
 
 .. comp_req:: Persistent Data Storage Backend
-   :id: comp_req__persistency__persist_data_storage_backend
+   :id: comp_req__persistency__pers_data_store_bend
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -230,7 +230,7 @@ Component Requirements
    The component shall use the file API to persist data.
 
 .. comp_req:: Persistent Data Storage Format
-   :id: comp_req__persistency__persist_data_storage_format
+   :id: comp_req__persistency__pers_data_store_fmt
    :reqtype: Functional
    :security: NO
    :safety: QM
@@ -240,7 +240,7 @@ Component Requirements
    The component shall use the JSON data format to persist data.
 
 .. comp_req:: Persistent Data Versioning
-   :id: comp_req__persistency__persistent_data_versioning
+   :id: comp_req__persistency__pers_data_version
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -250,7 +250,7 @@ Component Requirements
    The component shall not provide built-in versioning.
 
 .. comp_req:: Persistent Data Schema
-   :id: comp_req__persistency__persistent_data_schema
+   :id: comp_req__persistency__pers_data_schema
    :reqtype: Functional
    :security: NO
    :safety: ASIL_B
@@ -366,7 +366,7 @@ Component Requirements
    controls.
 
 .. comp_req:: Permission Error Handling
-   :id: comp_req__persistency__permission_err_handling
+   :id: comp_req__persistency__permission_err_handle
    :reqtype: Functional
    :security: NO
    :safety: QM
