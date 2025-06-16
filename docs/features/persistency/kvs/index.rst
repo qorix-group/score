@@ -117,15 +117,13 @@ development process. Key elements of it are listed in the process descriptions
 of safety management and safety analysis. In the safety analysis we will
 analyze the impact of the feature.
 
- .. note::
-    TODO: Link to safety analysis.
+:need:`doc__persistency_safety_analysis`
 
 We use an iterative development process and apply results from the next steps
 back to the feature request. For TinyJSON we will perform a software component
 classification.
 
-  .. note::
-    TODO: Link to component classification.
+:need:`doc__persistency_component_classification`
 
 To ensure the freedom of interference the feature key-value storage should not
 be used within different processes.
@@ -137,7 +135,3 @@ License Impact
    .. note::
       The key-value storage itself uses the Apache-2.0 license. Licenses of
       used libraries are need to be checked.
-
-
-How to Teach This
-=================
