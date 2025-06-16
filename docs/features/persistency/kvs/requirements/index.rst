@@ -32,7 +32,7 @@ Requirements
    :security: NO
    :safety: ASIL_B
    :satisfies: stkh_req__functiona_req__support_of_store
-   :status: invalid
+   :status: valid
 
    The Key-Value-Storage shall support specification of its maximum size at
    compile time.
