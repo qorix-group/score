@@ -27,7 +27,7 @@ Abstract
 ========
 
 Persistency is a critical feature that ensures the long-term storage and
-retrieval of data within the system. It provides a reliable mechanism for
+retrieval of data within the S-CORE. It provides a reliable mechanism for
 preserving information, allowing the application to maintain its state and data
 integrity over time. This feature is essential for enabling the system to
 resume operations seamlessly, even in the event of unexpected shutdowns or
