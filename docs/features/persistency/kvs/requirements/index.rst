@@ -34,7 +34,7 @@ Requirements
    :satisfies: stkh_req__functiona_req__support_of_store
    :status: invalid
 
-   The Key-Value-Storage shall support specification of its maximum capacity at
+   The Key-Value-Storage shall support specification of its maximum size at
    compile time.
 
 .. feat_req:: Multiple KVS per Software Architecture Element
