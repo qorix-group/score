@@ -170,17 +170,6 @@ Requirements
    The Key-Value-Storage shall provide tooling support for viewing and
    modifying key-value pairs during development and debugging.
 
-.. feat_req:: Stable APIs
-   :id: feat_req__persistency__stable_api
-   :reqtype: Non-Functional
-   :security: NO
-   :safety: QM
-   :satisfies: stkh_req__communication__stable_app_inter
-   :status: valid
-
-   The Key-Value-Storage API shall remain stable throughout its lifecycle while
-   enabling the addition of new functionalities.
-
 .. feat_req:: Variant management support
    :id: feat_req__persistency__variant_management
    :reqtype: Non-Functional
@@ -289,8 +278,8 @@ Requirements
    :satisfies: stkh_req__execution_model__short_app_cycles
    :status: valid
 
-   The Key-Value-Storage shall ensure that key operations are typically
-   completed within 5 milliseconds.
+   The Key-Value-Storage shall ensure that key operations are completed within
+   5 milliseconds.
 
 .. feat_req:: Intra-Process Data Access
    :id: feat_req__persistency__intra_process_comm
