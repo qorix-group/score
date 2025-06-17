@@ -12,8 +12,17 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+
+.. _feature_requirements_PersistencyKvs:
+
 Requirements
 ############
+
+.. document:: Persistency KVS Feature Requirements
+   :id: doc__persistency_kvs_feat_reqs
+   :status: valid
+   :safety: ASIL_B
+   :realizes: wp__feature_reqs
 
 .. feat_req:: C++ & Rust Interoperability
    :id: feat_req__persistency__cpp_rust_interop

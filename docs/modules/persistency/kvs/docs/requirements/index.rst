@@ -12,8 +12,14 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Component Requirements
-######################
+Requirements
+############
+
+.. document:: Persistency KVS Module Requirements
+   :id: doc__persistency_kvs_mod_req
+   :status: valid
+   :safety: ASIL_B
+   :realizes: wp__component_req
 
 .. comp_req:: Key Naming
    :id: comp_req__persistency__key_naming
