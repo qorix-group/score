@@ -14,23 +14,14 @@
 
 .. _component_architecture_PersistencyKvs:
 
-Component Architecture
-======================
+Architecture
+============
 
-.. document:: Persistency KVS Architecture
-   :id: doc__persistency_kvs_architecture
+.. document:: Persistency KVS Module Architecture
+   :id: doc__persistency_kvs_mod_arch
    :status: draft
    :safety: ASIL_B
    :realizes: wp__component_arch
-   :tags: template
-
-.. attention::
-    The above directive must be updated according to your needs.
-
-    - Modify ``Your Component Name`` to be your Component Name
-    - Modify ``id`` to be your Component Name in upper snake case preceded by ``doc__`` and followed by ``_architecture``
-    - Adjust ``status`` to be ``valid``
-    - Adjust ``safety`` and ``tags`` according to your needs
 
 Overview
 --------
