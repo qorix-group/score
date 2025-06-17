@@ -19,6 +19,7 @@ Quality Management / Platform Quality Management Plan
    :id: doc__platform_quality_plan
    :status: valid
    :safety: ASIL_B
+   :security: YES
    :realizes: PROCESS_wp__qms_plan
    :tags: platform_management
 
@@ -45,8 +46,8 @@ the :need:`PROCESS_rl__quality_manager` is independent of the delivery of the pr
      :alt: Project Organization
      :align: center
 
-In SCORE we have different Tier and OEM stakeholder involved: Every solution will be checked by the other stakeholders.
-This is another strong independent mechanism to ensure Quality.
+In S-CORE we have different Tier and OEM stakeholder involved: Every solution will be checked by the other stakeholders.
+This is another strong independent mechanism to ensure quality.
 
 Objectives and scope
 --------------------
@@ -235,17 +236,16 @@ the (Eclipse) committer role. As defined in `Committer Training <https://www.ecl
 committers are elected in a meritrocratic manner, meaning those have to show their skills and understanding of the
 project processes in several previous pull requests.
 
-As each project can adopt additional criteria for the committers election, S-Core defines that each committer has to prove
+As each project can adopt additional criteria for the committers election, S-CORE defines that each committer has to prove
 his knowledge in quality SW development by:
 
 - by attending the project's ASPICE 4.0 SW management and development training.
 
-Additionally, the project repository is organized in "CODEOWNER" sections. These "CODEOWNERS" need to approve any pull
-request modifying a file in their area of responsibility before it gets merged. In case of quality related "CODEOWNER" sections (e.g.
-any documentation artefacts) the persons having "CODEOWNER" rights need to be qualified according to the roles description
-Quality Manager :need:`PROCESS_rl__quality_manager`.
+Additionally, the project repository shall be organized in a way that independent roles (to the technical solution)
+ have to approve any pull request before it's merged. The persons who are able to approve need to be qualified
+ according to the roles description Quality Manager :need:`PROCESS_rl__quality_manager`.
 
-The successful checking of committers and CODEOWNERS skills is ensured by the Project and Quality Manager :need:`PROCESS_rl__quality_manager` and documented
+The successful checking of the skills of the committers and independent roles is ensured by the Project and Quality Manager :need:`PROCESS_rl__quality_manager` and documented
 in the role assignment document.
 
 .. note:: The identity of the committer by applying the GitHub digital signature mechanism will be used to confirm the authenticity of the Quality Manager :need:`PROCESS_rl__quality_manager` role for the approvals
@@ -291,7 +291,7 @@ The quality management status :need:`PROCESS_wp__qms_report` is reported as defi
 **Examples for valid escalation causes are:**
 
 - Quality issues cannot be resolved on feature level or with the available resources.
-- There are conflicting points of view between the Project Lead :need:`PROCESS_rl__project_lead`, Safety Manager :need:`PROCESS_rl__safety_manager`, Security Manager :need:`PROCESS_rl__security_manager` and the Quality Manager :need:`PROCESS_rl__quality_manager`
+- There are conflicting points of view between the Project Lead :need:`PROCESS_rl__project_lead`, Technical Lead :need:`PROCESS_rl__technical_lead`, Safety Manager :need:`PROCESS_rl__safety_manager`, Security Manager :need:`PROCESS_rl__security_manager` and the Quality Manager :need:`PROCESS_rl__quality_manager`
 
 4.3 Quality Management Specifics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -313,7 +313,7 @@ None
           - :need:`PROCESS_gd_guidl__saf_plan_definitions`
           - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
           - `#470 <https://github.com/eclipse-score/score/issues/470>`_
-          - <Link to WP>
+          - :need:`doc__platform_change_management_plan`
           - <automated>
 
         * - :need:`PROCESS_wp__chm_plan`
@@ -341,7 +341,7 @@ None
           - :need:`PROCESS_gd_guidl__documentation`
           - :ndf:`copy('status', need_id='PROCESS_gd_guidl__documentation')`
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__documentation_mgt_plan`
           - <automated>
 
         * - :need:`PROCESS_wp__fdr_reports`
@@ -355,7 +355,7 @@ None
           - :need:`PROCESS_gd_guidl__change__change_request`
           - :ndf:`copy('status', need_id='PROCESS_gd_guidl__change__change_request')`
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__logging`, :need:`doc__com`, :need:`doc__feo`, :need:`doc__persistency_kvs`
           - <automated>
 
         * - :need:`PROCESS_wp__feature_arch`
@@ -382,13 +382,6 @@ None
         * - :need:`PROCESS_wp__hsi`
           - n/a
           - draft
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
-
-        * - :need:`PROCESS_wp__issue_track_system`
-          - :need:`PROCESS_gd_guidl__change__change_request`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__change__change_request')`
           - <Link to issue>
           - <Link to WP>
           - <automated>
@@ -523,7 +516,7 @@ None
           - :need:`PROCESS_gd_guidl__qlm_plan_definitions`
           - :ndf:`copy('status', need_id='PROCESS_gd_guidl__qlm_plan_definitions')`
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__platform_quality_plan`
           - <automated>
 
         * - :need:`PROCESS_wp__qms_report`
@@ -635,7 +628,7 @@ None
           - :need:`PROCESS_doc_concept__tool__process`
           - :ndf:`copy('status', need_id='PROCESS_doc_concept__tool__process')`
           - <Link to issue>
-          - <Link to WP>
+          - :need:`doc__platform_tool_management_plan`
           - <automated>
 
         * - :need:`PROCESS_wp__tool_verification_report`
