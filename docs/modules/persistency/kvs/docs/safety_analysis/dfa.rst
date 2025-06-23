@@ -21,33 +21,6 @@ Dependent Failure Analysis
    :status: valid
    :safety: ASIL_B
    :realizes: wp__sw_component_dfa
-   :tags: template
+   :tags: Persistency KVS
 
-.. attention::
-    The above directive must be updated according to your Component.
-
-    - Modify ``Your Component Name`` to be your Component Name
-    - Modify ``id`` to be your Component Name in upper snake case preceded by ``doc__`` and succeeded by ``_dfa``
-    - Adjust ``status`` to be ``valid``
-    - Adjust ``safety`` and ``tags`` according to your needs
-
-Dependent Failure Intitiators
------------------------------
-
-.. code-block:: rst
-
-   .. comp_saf_dfa:: <Element descriptor>
-      :id: comp_saf_DFA__<Component>__<Element descriptor>
-      :violation_id: <ID from Dependent Failure Initiators list :need:`gd_guidl__dfi`>
-      :violation_effect: <Effect caused by the initiator (leading to a violation of a safety goal)>
-      :verifies: <ID from Component Architecture>
-      :mitigated_by: < NONE|ID from Component Requirement>
-      :sufficient: <yes|no>
-      :argument: <text to argument why measure is sufficient>
-      :status: <valid|invalid>
-
-.. attention::
-    The above directive must be updated according to your component DFA.
-
-    - Remove the ``code-block``
-    - Fill in all the needed information in the <brackets>
+Because there is no sub-components in KVS, the results of the FMEA are the same as on feature level :need:`doc__persistency_dfa`.

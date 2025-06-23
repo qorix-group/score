@@ -75,6 +75,7 @@ Requirements
    :safety: ASIL_B
    :satisfies: stkh_req__functiona_req__support_of_store
    :status: valid
+   :tags: persistency
 
    The Key-Value-Storage shall support storing both primitive and non-primitive
    datatypes as values. The supported datatypes shall match those used by the
@@ -300,6 +301,8 @@ Requirements
 
    The Key-Value-Storage shall support concurrent intra-process data access.
 
+.. needextend:: docname is not None
+   :+tags: persistency
 
 AoU Requirements
 ################
@@ -310,6 +313,7 @@ AoU Requirements
    :security: NO
    :safety: ASIL_B
    :status: valid
+   :tags: environment
 
    The application shall handle if the feature persistency is not available.
 
@@ -319,6 +323,7 @@ AoU Requirements
    :security: NO
    :safety: ASIL_B
    :status: valid
+   :tags: environment
 
    The application shall be designed in a way that deadlocks are avoided.
 
@@ -328,5 +333,6 @@ AoU Requirements
    :security: NO
    :safety: ASIL_B
    :status: valid
+   :tags: environment
 
-   The exceution of persistency shall not be blocked by the application.
+   The execution of persistency shall not be blocked by the application.
