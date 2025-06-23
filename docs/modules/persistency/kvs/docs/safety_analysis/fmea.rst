@@ -21,33 +21,6 @@ Safety Analysis : FMEA
    :status: valid
    :safety: ASIL_B
    :realizes: wp__sw_component_safety_analysis
-   :tags: template
+   :tags: Persistency KVS
 
-.. attention::
-    The above directive must be updated according to your Component.
-
-    - Modify ``Your Component Name`` to be your Component Name
-    - Modify ``id`` to be your Component Name in upper snake case preceded by ``doc__`` and succeeded by ``_fmea``
-    - Adjust ``status`` to be ``valid``
-    - Adjust ``safety`` and ``tags`` according to your needs
-
-Failure Mode List
------------------
-
-.. code-block:: rst
-
-   .. comp_saf_fmea:: <Element descriptor>
-      :id: comp_saf_FMEA__<Component>__<Element descriptor>
-      :failure_mode: <ID from fault model :need:`gd_guidl__fault_models`>
-      :failure_effect: <Effect caused by the failure (leading to a violation of a safety goal)>
-      :verifies: <ID from Component Architecture>
-      :mitigated_by: < NONE|ID from Component Requirement>
-      :sufficient: <yes|no>
-      :argument: <text to argument why measure is sufficient>
-      :status: <valid|invalid>
-
-.. attention::
-    The above directive must be updated according to your component FMEA.
-
-    - Remove the ``code-block``
-    - Fill in all the needed information in the <brackets>
+Because there is no sub-components in KVS, the results of the FMEA are the same as on feature level :need:`doc__persistency_safety_analysis`.

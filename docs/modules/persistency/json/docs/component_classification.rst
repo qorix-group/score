@@ -17,17 +17,17 @@ Component Classification
 
 .. document:: Persistency Component Classification
    :id: doc__persistency_component_classification
-   :status: draft
+   :status: valid
    :safety: ASIL_B
-   :realizes: wp__sw_component_class   
+   :realizes: wp__sw_component_class
    :tags: feature_persistency
 
-| Classification of tiny json
+| Classification of Tiny JSON
 |
-| `tiny jason <https://github.com/rhysd/tinyjson>`_ V.2.5.1
+| `Tiny JSON <https://github.com/rhysd/tinyjson>`_ V.2.5.1
 |
 | Additional documentation considered:
-| `Documentation for tiny jason <https://docs.rs/tinyjson/latest/tinyjson/>`_
+| `Documentation for Tiny JSON <https://docs.rs/tinyjson/latest/tinyjson/>`_
 
 
 Step 1: Determine (P): the uncertainty of the Processes applied
@@ -55,12 +55,12 @@ Step 1: Determine (P): the uncertainty of the Processes applied
         * - 2
           - Are requirements available?
           - PE
-          - n/a. Tinyjson is a library to parse/generate JSON format document. So this is the main requirement.
+          - n/a. Tiny JSON is a library to parse/generate JSON format document. So this is the main requirement.
 
         * - 3
           - Are specifications for functionalities and properties available (architecture)?
           - PE
-          - Yes in the documentation of tinyjson.
+          - Yes in the documentation of Tiny JSON.
 
         * - 4
           - Are design specifications available?
@@ -70,7 +70,7 @@ Step 1: Determine (P): the uncertainty of the Processes applied
         * - 5
           - Are configuration specification and data available, if applicable?
           - PE
-          - Yes in the documentation of tinyjson.
+          - Yes in the documentation of Tiny JSON.
 
         * - 6
           - Are verification measures including tests and reports available?
@@ -83,7 +83,7 @@ Step 1: Determine (P): the uncertainty of the Processes applied
 |       the risk of systematic faults due to these gaps is sufficiently low or manageable by mitigating the gaps.
 | (P=3) in all other cases.
 
-Tinyjson determined as P=2.
+Tiny JSON determined as P=2.
 
 
 Step 2: Determine (C): the uncertainty of finding systematic faults based on the Complexity
@@ -117,7 +117,7 @@ Step 2: Determine (C): the uncertainty of finding systematic faults based on the
       - Count:
             * LoUC+N: lines of unsafe code with safety note
             * LoUC  : lines of unsafe code, no safety note
-      - NH. Tinyjson is written in Safe Rust.
+      - NH. Tiny JSON is written in Safe Rust.
       - 0
 
     * - 3
@@ -146,7 +146,7 @@ Step 2: Determine (C): the uncertainty of finding systematic faults based on the
 | (C=3) in all other cases.
 |
 
-Tinyjson is determined as C=1
+Tiny JSON is determined as C=1
 
 
 Step 3: Determine (CLAS_OUT): the classification outcome
@@ -166,7 +166,7 @@ Step 3: Determine (CLAS_OUT): the classification outcome
 | 3     |  QR   | QR    | NQ    |
 +-------+-------+-------+-------+
 
-Tinyjson is classified as CLAS_OUT=Q
+Tiny JSON is classified as CLAS_OUT=Q
 
 
 Step 4: Document all results and rationale for choosing (P) and (C) and (CLAS_OUT)

@@ -391,3 +391,6 @@ Requirements
    :status: valid
 
    The component shall provide an API for registering callbacks that are triggered by data change events.
+
+.. needextend:: docname is not None
+   :+tags: persistencykvs
