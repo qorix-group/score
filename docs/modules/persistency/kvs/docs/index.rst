@@ -17,22 +17,12 @@
 KVS (Key Value Store)
 #####################
 
-.. note:: Document header
-
 .. document:: Persistency KVS
    :id: doc__persistencykvs
    :status: draft
    :safety: ASIL_B
    :realizes: wp__cmpt_request
-   :tags: template
-
-.. attention::
-    The above directive must be updated according to your Component.
-
-    - Modify ``document`` to be your Component Name
-    - Modify ``id`` to be your Component Name in upper snake case preceded by ``doc__``
-    - Adjust ``status`` to be ``valid``
-    - Adjust ``safety`` and ``tags`` according to your needs
+   :tags: Persistency KVS
 
 Abstract
 ========

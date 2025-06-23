@@ -15,25 +15,15 @@
 Verification Report
 ===================
 
-.. note:: Document header
-
-.. document:: [Your Module Name] Verification Report
-   :id: doc__module_name_verification_report
+.. document:: Persistency Verification Report
+   :id: doc__persistency_verification_report
    :status: draft
-   :safety: ASIL_D
+   :safety: ASIL_B
    :realizes: wp__verification__module_ver_report
-   :tags: template
-
-.. attention::
-    The above directive must be updated according to your Module.
-
-    - Modify ``Your Module Name`` to be your Module Name
-    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and succeeded by ``verification_report``
-    - Adjust ``status`` to be ``valid``
-    - Adjust ``safety`` and ``tags`` according to your needs
+   :tags: persistency
 
 
-This verification report is based on the verfication plan.
+This verification report is based on the verification plan.
 It covers all the components of the above stated module.
 
 Verification Report contains:

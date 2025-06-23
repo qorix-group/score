@@ -17,7 +17,7 @@
 Feature Safety Planning
 =======================
 
-.. list-table:: Feature <feature> Workproducts
+.. list-table:: Feature persistency Workproducts
     :header-rows: 1
 
     * - Workproduct Id
@@ -38,63 +38,58 @@ Feature Safety Planning
       - :need:`PROCESS_gd_temp__req__feat_req`
       - :ndf:`copy('status', need_id='PROCESS_gd_temp__req__feat_req')`
       - https://github.com/eclipse-score/score/issues/960
-      - :doc:`../requirements/index`
-      - see below
+      - :ref:`feature_requirements_PersistencyKvs`
+      - valid
 
     * - :need:`PROCESS_wp__requirements__feat_aou`
       - :need:`PROCESS_gd_temp__req__aou_req`
       - :ndf:`copy('status', need_id='PROCESS_gd_temp__req__aou_req')`
       - https://github.com/eclipse-score/score/issues/960
-      - :doc:`../requirements/index`
-      - see below
+      - :ref:`feature_requirements_PersistencyKvs`
+      - valid
 
     * - :need:`PROCESS_wp__feature_arch`
       - :need:`PROCESS_gd_temp__arch__feature`
       - :ndf:`copy('status', need_id='PROCESS_gd_temp__arch__feature')`
       - https://github.com/eclipse-score/score/issues/1020
-      - :doc:`../architecture/index`
-      - see below
+      - :ref:`feature_architecture_PersistencyKvs`
+      - valid
 
     * - :need:`PROCESS_wp__feature_safety_analysis`
-      - <link to process>
-      - <automated>
+      - :need:`PROCESS_gd_guidl__safety_analysis`
+      - :ndf:`copy('status', need_id='PROCESS_gd_guidl__safety_analysis')`
       - https://github.com/eclipse-score/score/issues/965
       - :need:`doc__persistency_safety_analysis`
-      - <automated>
+      - valid
 
     * - :need:`PROCESS_wp__feature_dfa`
-      - <Link to process>
-      - <Process status>
+      - :need:`PROCESS_gd_guidl__safety_analysis`
+      - :ndf:`copy('status', need_id='PROCESS_gd_guidl__safety_analysis')`
       - https://github.com/eclipse-score/score/issues/965
       - :need:`doc__persistency_dfa`
-      - <automated>
+      - valid
 
     * - :need:`PROCESS_wp__requirements__inspect`
       - :need:`PROCESS_gd_chklst__req__inspection`
       - :ndf:`copy('status', need_id='PROCESS_gd_chklst__req__inspection')`
-      - n/a
-      - Checklist used in Pull Request Review
-      - n/a
+      - https://github.com/eclipse-score/score/issues/960
+      - :need:`doc__req_inspection_persistency`
+      - valid
 
     * - :need:`PROCESS_wp__sw_arch_verification`
       - :need:`PROCESS_gd_chklst__arch__inspection_checklist`
       - :ndf:`copy('status', need_id='PROCESS_gd_chklst__arch__inspection_checklist')`
-      - n/a
+      - https://github.com/eclipse-score/score/issues/1020
       - Checklist used in Pull Request Review
       - n/a
 
     * - :need:`PROCESS_wp__verification__feat_int_test`
       - :need:`PROCESS_gd_guidl__verification_guide`
       - :ndf:`copy('status', need_id='PROCESS_gd_guidl__verification_guide')`
-      - <link to issue>
       - https://github.com/eclipse-score/score/issues/964
+      - Checklist used in Pull Request Review
       - <automated>
 
-.. attention::
-    The above table must be updated according to your feature safety planning.
-
-    - Create and link the issues to plan the work products (according to :need:`PROCESS_gd_guidl__saf_plan_definitions`)
-    - Fill the work producs links and add their status (also possible below) to create the safety package (according to :need:`PROCESS_gd_guidl__saf_package`)
 
 Feature Requirements Status
 ---------------------------
@@ -102,7 +97,7 @@ Feature Requirements Status
 .. needtable::
    :style: table
    :types: feat_req
-   :tags: feature_name
+   :tags: persistency
    :columns: id;status
    :colwidths: 25,25
    :sort: title
@@ -113,7 +108,7 @@ Feature AoU Status
 .. needtable::
    :style: table
    :types: aou_req
-   :tags: feature_name
+   :tags: persistency
    :columns: id;status
    :colwidths: 25,25
    :sort: title
@@ -124,7 +119,8 @@ Feature Architecture Status
 .. needtable::
    :style: table
    :types: feat_arc_sta; feat_arc_dyn
-   :tags: feature_name
+   :tags: persistency
    :columns: id;status
    :colwidths: 25,25
    :sort: title
+
