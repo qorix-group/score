@@ -12,13 +12,10 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-
 .. toctree::
    :titlesonly:
 
-      component_classification.rst
-
-
+   component_classification
 
 .. _component_PersistencyJson:
 
