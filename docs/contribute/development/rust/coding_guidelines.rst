@@ -66,7 +66,7 @@ developed, others remain under evaluation or are not yet accessible.
 Explanation of ARA Applications in Rust
 #######################################
 
-AUTOSAR also shares a public availabe document that explains how to use Rust in
+AUTOSAR also shares a public available document that explains how to use Rust in
 ARA applications as Rust is offering safety and performance advantages. While
 ecosystem support is still maturing, Rust-based ARA applications can lead to
 safer, more reliable automotive software, especially in safety-critical and
@@ -106,14 +106,23 @@ tool for writing clean, idiomatic, and efficient Rust code.
 `Link to Clippy <https://github.com/rustfoundation/safety-critical-rust-coding-guidelines/issues/78/>`_
 
 
+Link to Miri
+############
+
+Miri is an Undefined Behavior detection tool for Rust. It can run binaries
+and test suites of cargo projects and detect unsafe code that fails to
+uphold its safety requirements.
+
+`Link to Miri <https://github.com/rust-lang/miri>`_
+
 Conclusions for S-CORE
 ######################
 
-During the S-CORE project only formatting and clippy checks are enforced. Also
-the code should compile with zero warnings. Additional guidelines by the Rust
-Community, the Rust Foundation and the Safety-Critical Rust Consortium are
-applied where applicable but not enforced. If possible the usage of `unsafe` is
-avoided. To keep the code `panic`-free only APIs with a proper return value
+During the S-CORE project formatting and clippy checks are enforced. Miri can
+be used to detect undefined behaviors. Also the code should compile with zero warnings.
+Additional guidelines by the Rust Community, the Rust Foundation and the Safety-Critical
+Rust Consortium are applied where applicable but not enforced. If possible the usage
+of `unsafe` is avoided. To keep the code `panic`-free only APIs with a proper return value
 should be used.
 
 The adaption of these guidelines will be documented in the S-CORE project
