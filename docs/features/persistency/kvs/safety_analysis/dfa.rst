@@ -21,6 +21,17 @@ Persistency DFA
    :safety: ASIL_B
    :tags: feature_persistency
 
+   .. feat_saf_dfa:: Persistency
+      :verifies: feat_arc_sta__persistency__static
+      :id: feat_saf_DFA__persistency__SR_01_01
+      :violation_id: SR_01_01
+      :violation_cause: Reused software module
+      :mitigation: NONE
+      :mitigation_issue: NONE
+      :sufficient: yes
+      :argument: There are no reused software modules, so no mitigation is needed.
+      :status: valid
+
    | .. feat_saf_dfa:: Persistency
    |    :verifies: feat_arc_sta__persistency__static
    |    :id: feat_saf_DFA__persistency__SR_01_01
