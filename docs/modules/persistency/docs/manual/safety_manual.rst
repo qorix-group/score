@@ -12,8 +12,8 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Safety Manual Template
-======================
+Safety Manual
+=============
 
 .. document:: Persistency Safety Manual
    :id: doc__persistency_safety_manual
