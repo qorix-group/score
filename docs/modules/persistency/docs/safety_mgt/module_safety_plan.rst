@@ -111,8 +111,8 @@ Module Workproducts List
           - <WP status (manual)>
 
         * - :need:`PROCESS_wp__module_sw_build_config`
-          - `doc__software_development_plan`
-          - `copy('status', need_id='doc__software_development_plan')`
+          - `PROCESS_gd_temp__software_development_plan`
+          - `copy('status', need_id='PROCESS_doc__software_development_plan')`
           - <Link to issue>
           - <Link to WP>
           - <automated>

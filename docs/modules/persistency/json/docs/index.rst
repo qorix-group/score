@@ -14,12 +14,11 @@
 
 
 .. toctree::
-   :maxdepth: 1
-   :glob:
+   :titlesonly:
 
-   component_classification.rst
+      component_classification.rst
 
-   
+
 
 .. _component_PersistencyJson:
 
