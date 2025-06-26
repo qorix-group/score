@@ -118,7 +118,7 @@ Requirements
    :id: comp_req__persistency__default_value_types
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__default_values,feat_req__persistency__default_value_get,feat_req__persistency__default_value_reset,feat_req__persistency__default_value_file
    :status: valid
 
@@ -129,7 +129,7 @@ Requirements
    :id: comp_req__persistency__default_value_query
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__default_values,feat_req__persistency__default_value_get,feat_req__persistency__default_value_reset,feat_req__persistency__default_value_file
    :status: valid
 
@@ -139,7 +139,7 @@ Requirements
    :id: comp_req__persistency__default_value_config
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__default_values,feat_req__persistency__default_value_get,feat_req__persistency__default_value_reset,feat_req__persistency__default_value_file
    :status: valid
 
@@ -150,7 +150,7 @@ Requirements
    :id: comp_req__persistency__default_value_checksum
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__default_values,feat_req__persistency__default_value_get,feat_req__persistency__default_value_reset,feat_req__persistency__default_value_file
    :status: valid
 
@@ -161,30 +161,18 @@ Requirements
    :id: comp_req__persistency__constraints
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__config_file
    :status: valid
 
    The component shall allow configuration of KVS constraints at compile-time
    using source code constants or at runtime using a configuration file.
 
-.. comp_req:: Language Agnostic
-   :id: comp_req__persistency__language_agnostic
-   :reqtype: Functional
-   :security: NO
-   :safety: QM
-   :satisfies: feat_req__persistency__cpp_rust_interop
-   :status: valid
-
-   The component shall provide an API that supports bindings to other languages
-   or shall use a storage and memory exchange format that is adaptable to other
-   languages.
-
 .. comp_req:: Concurrency
    :id: comp_req__persistency__concurrency
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__intra_process_comm
    :status: valid
 
@@ -207,29 +195,38 @@ Requirements
    :id: comp_req__persistency__persist_data_store_com
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__persistency,feat_req__persistency__integrity_check,feat_req__persistency__persist_data
    :status: valid
 
    The component shall use the file API and the JSON data format to persist data.
 
-.. comp_req:: Persistent Data Storage Checksum
-   :id: comp_req__persistency__pers_data_store_csum
+.. comp_req:: Persistent Data Storage Checksum Write
+   :id: comp_req__persistency__pers_data_csum_write
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__persistency,feat_req__persistency__integrity_check,feat_req__persistency__persist_data
    :status: valid
 
    The component shall generate a checksum for each data file and shall store
    it alongside the data.
+
+.. comp_req:: Persistent Data Storage Checksum Verify
+   :id: comp_req__persistency__pers_data_csum_verify
+   :reqtype: Functional
+   :security: NO
+   :safety: ASIL_B
+   :satisfies: feat_req__persistency__persistency,feat_req__persistency__integrity_check,feat_req__persistency__persist_data
+   :status: valid
+
    The component shall verify the checksum when loading data.
 
 .. comp_req:: Persistent Data Storage Backend
    :id: comp_req__persistency__pers_data_store_bend
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__persistency,feat_req__persistency__integrity_check,feat_req__persistency__persist_data
    :status: valid
 
@@ -239,7 +236,7 @@ Requirements
    :id: comp_req__persistency__pers_data_store_fmt
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__persistency,feat_req__persistency__integrity_check,feat_req__persistency__persist_data
    :status: valid
 
@@ -353,7 +350,7 @@ Requirements
    :id: comp_req__persistency__async_api
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__async_api
    :status: valid
 
@@ -363,7 +360,7 @@ Requirements
    :id: comp_req__persistency__permission_control
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__access_control
    :status: valid
 
@@ -375,7 +372,7 @@ Requirements
    :id: comp_req__persistency__permission_err_handle
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: feat_req__persistency__access_control
    :status: valid
 
