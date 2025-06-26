@@ -195,7 +195,7 @@ Requirements
    :id: feat_req__persistency__default_value_file
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: stkh_req__functional_req__file_based
    :status: valid
 
@@ -206,7 +206,7 @@ Requirements
    :id: feat_req__persistency__config_file
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: stkh_req__functional_req__file_based
    :status: valid
 
@@ -217,7 +217,7 @@ Requirements
    :id: feat_req__persistency__persist_data
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: stkh_req__functional_req__data_persistency
    :status: valid
 
@@ -250,7 +250,7 @@ Requirements
    :id: feat_req__persistency__async_api
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: stkh_req__dependability__availability, stkh_req__app_architectures__support_request
    :status: valid
 
@@ -261,7 +261,7 @@ Requirements
    :id: feat_req__persistency__access_control
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: stkh_req__dependability__security_features
    :status: valid
 
@@ -295,7 +295,7 @@ Requirements
    :id: feat_req__persistency__intra_process_comm
    :reqtype: Functional
    :security: NO
-   :safety: QM
+   :safety: ASIL_B
    :satisfies: stkh_req__communication__intra_process
    :status: valid
 
