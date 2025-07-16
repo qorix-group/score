@@ -19,7 +19,7 @@ Component Classification
    :id: doc__persistency_component_classification
    :status: valid
    :safety: ASIL_B
-   :realizes: wp__sw_component_class
+   :realizes: PROCESS_wp__sw_component_class
    :tags: feature_persistency
 
 | Classification of Tiny JSON

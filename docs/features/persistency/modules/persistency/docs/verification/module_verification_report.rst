@@ -19,7 +19,7 @@ Verification Report
    :id: doc__persistency_verification_report
    :status: draft
    :safety: ASIL_B
-   :realizes: wp__verification__module_ver_report
+   :realizes: PROCESS_wp__verification__module_ver_report
    :tags: persistency
 
 

@@ -21,7 +21,7 @@ KVS (Key Value Store)
    :id: doc__persistencykvs
    :status: draft
    :safety: ASIL_B
-   :realizes: wp__cmpt_request
+   :realizes: PROCESS_wp__cmpt_request
    :tags: Persistency KVS
 
 Abstract
