@@ -28,7 +28,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__message_nreived
+    :id: feat_saf_fmea__persistency__message_nreived
     :violation_id: MF_01_01
     :violation_cause: Message is not received.
     :mitigates: aou_req__persistency__error_handling
@@ -39,7 +39,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__late_message
+    :id: feat_saf_fmea__persistency__late_message
     :violation_id: MF_01_02
     :violation_cause: message received too late.
     :mitigates: aou_req__persistency__error_handling
@@ -50,7 +50,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__corrupted_message
+    :id: feat_saf_fmea__persistency__corrupted_message
     :violation_id: MF_01_05
     :violation_cause: message is corrupted.
     :mitigates: aou_req__persistency__error_handling
@@ -61,7 +61,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__not_sent
+    :id: feat_saf_fmea__persistency__not_sent
     :violation_id: MF_01_06
     :violation_cause: message is not sent.
     :mitigates: aou_req__persistency__error_handling
@@ -72,7 +72,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__unintendend
+    :id: feat_saf_fmea__persistency__unintendend
     :violation_id: MF_01_07
     :violation_cause: message is unintended sent.
     :mitigates: aou_req__persistency__error_handling
@@ -83,7 +83,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__calc_wrong
+    :id: feat_saf_fmea__persistency__calc_wrong
     :violation_id: EX_01_01
     :violation_cause: Process calculates wrong result(s).
     :mitigates: aou_req__persistency__error_handling
@@ -94,7 +94,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__too_slow
+    :id: feat_saf_fmea__persistency__too_slow
     :violation_id: EX_01_02
     :violation_cause: processing too slow.
     :mitigates: aou_req__persistency__error_handling
@@ -105,10 +105,10 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__too_fast
+    :id: feat_saf_fmea__persistency__too_fast
     :violation_id: EX_01_03
     :violation_cause: processing too fast.
-    :mitigates:
+    :mitigates: aou_req__persistency__error_handling
     :sufficient: yes
     :status: valid
 
@@ -116,7 +116,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__err_handl
+    :id: feat_saf_fmea__persistency__err_handl
     :violation_id: EX_01_04
     :violation_cause: loss of execution.
     :mitigates: aou_req__persistency__error_handling
@@ -127,10 +127,10 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__arbitrary
+    :id: feat_saf_fmea__persistency__arbitrary
     :violation_id: EX_01_05
     :violation_cause: processing changes to arbitrary process.
-    :mitigates:
+    :mitigates: aou_req__persistency__error_handling
     :sufficient: yes
     :status: valid
 
@@ -138,7 +138,7 @@ Persistency Safety Analysis
 
 .. feat_saf_fmea:: Persistency
     :verifies: feat_arc_dyn__persistency__check_key_default, feat_arc_dyn__persistency__delete_key, feat_arc_dyn__persistency__flush, feat_arc_dyn__persistency__read_key, feat_arc_dyn__persistency__read_from_storage, feat_arc_dyn__persistency__write_key, feat_arc_dyn__persistency__snapshot_restore
-    :id: feat_saf_FMEA__persistency__infinite
+    :id: feat_saf_fmea__persistency__infinite
     :violation_id: EX_01_06
     :violation_cause: processing is not complete (infinite loop).
     :mitigates: aou_req__persistency__error_handling
