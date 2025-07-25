@@ -17,9 +17,6 @@
 Modules
 =======
 
-.. image:: _assets/module_architecture.drawio.svg
-   :alt: Module Architecture
-
 
 .. note::
    For now, we store the modules documentation in the modules tree, because multi-repo docs are not yet supported.
@@ -30,5 +27,8 @@ Modules
 .. toctree::
    :maxdepth: 1
    :glob:
+   :titlesonly:
 
-   ./*/index
+   persistency/docs/index
+   persistency/json/docs/index
+   persistency/kvs/docs/index
