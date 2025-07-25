@@ -46,6 +46,14 @@ conforms to most programming languages that provide a hash, hashmap, dictionary
 or similar data structure. Access to the KVS is possible from any support
 language through language specific interfaces.
 
+In the scope of S-CORE, an application can range from a system service to an
+end-user visible UI. The application uses the KVS as an external memory store
+to read and persist data as needed. For example, an application that controls
+the air conditioning system in a car could use the KVS to store the current
+temperature setting. When the car is started again, the application can
+retrieve the temperature setting from the persistent KVS storage, providing a
+seamless user experience by restoring the previous state.
+
 
 Motivation
 ==========
