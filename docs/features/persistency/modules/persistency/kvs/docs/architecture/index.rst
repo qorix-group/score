@@ -21,7 +21,7 @@ Architecture
    :id: doc__persistency_kvs_mod_arch
    :status: draft
    :safety: ASIL_B
-   :realizes: wp__component_arch
+   :realizes: PROCESS_wp__component_arch
 
 Overview
 --------

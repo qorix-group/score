@@ -19,7 +19,7 @@ Module Safety Plan
    :id: doc__persistency_safety_plan
    :status: valid
    :safety: ASIL_B
-   :realizes: wp__module_safety_plan
+   :realizes: PROCESS_wp__module_safety_plan
    :tags: persistency
 
 Functional Safety Management Context
@@ -165,13 +165,6 @@ Component <name> Workproducts List
           - :need:`doc__persistency_kvs_mod_req`
           - :ndf:`copy('status', need_id='doc__persistency_kvs_mod_req')` & WP below
 
-        * - :need:`PROCESS_wp__hsi`
-          - <Link to process>
-          - <automated>
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
-
         * - :need:`PROCESS_wp__requirements__inspect`
           - :need:`PROCESS_gd_chklst__req__inspection`
           - :ndf:`copy('status', need_id='PROCESS_gd_chklst__req__inspection')`
@@ -268,10 +261,6 @@ If the OSS element is classified as a
         * - :need:`PROCESS_wp__requirements__comp_aou`
           - https://github.com/eclipse-score/score/issues/952?issue=eclipse-score%7Cscore%7C960
           - Always needed (for Q and QR classification) and also improves process Id 5
-
-        * - :need:`PROCESS_wp__hsi`
-          - n/a
-          - OSS needing special HW is an extreme exception.
 
         * - :need:`PROCESS_wp__requirements__inspect`
           - n/a

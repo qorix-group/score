@@ -26,7 +26,7 @@ Tiny JSON
    :id: doc__persistencyjson
    :status: draft
    :safety: ASIL_B
-   :realizes: wp__cmpt_request
+   :realizes: PROCESS_wp__cmpt_request
    :tags: template
 
 
