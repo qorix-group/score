@@ -62,10 +62,10 @@ The components are designed to cover the expectations from the feature architect
 .. comp_arc_sta:: Component Name (Static View)
    :id: comp_arc_sta__persistency__static_view
    :security: YES
-   :safety: ASIL_D
+   :safety: ASIL_B
    :status: invalid
-   :implements: 
-   :fulfils: 
+   :implements:
+   :fulfils:
    :includes: comp_arc_sta__persistency__2
 
    .. needarch::
@@ -80,9 +80,9 @@ Dynamic Architecture
 .. comp_arc_dyn:: Dynamic View
    :id: comp_arc_dyn__persistency__dynamic_view
    :security: YES
-   :safety: ASIL_D
+   :safety: ASIL_B
    :status: invalid
-   :fulfils: 
+   :fulfils:
 
    put here a sequence diagram
 
@@ -95,7 +95,7 @@ Interfaces
    .. real_arc_int:: <Title>
       :id: real_arc_int__<component>__<Title>
       :security: <YES|NO>
-      :safety: <QM|ASIL_B|ASIL_D>
+      :safety: <QM|ASIL_B|ASIL_B>
       :fulfils: <link to component requirement id>
       :language: cpp
 
@@ -105,9 +105,9 @@ Lower Level Components
 .. comp_arc_sta:: Component Name 2
    :id: comp_arc_sta__persistency__2
    :status: invalid
-   :safety: ASIL_D
+   :safety: ASIL_B
    :security: YES
-   :implements: 
+   :implements:
 
    no architecture but detailed design
 

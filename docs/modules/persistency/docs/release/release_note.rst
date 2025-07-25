@@ -15,26 +15,14 @@
 Release Note
 ============
 
-.. note:: Document header
-
-.. document:: [Your Module Name] Release Note
-   :id: doc__module_name_release_note
+.. document:: Persistency Release Note
+   :id: doc__persistency_release_note
    :status: draft
-   :safety: ASIL_D
+   :safety: ASIL_B
    :realizes: wp__module_sw_release_note
-   :tags: template
+   :tags: persistency
 
-.. attention::
-    The above directive must be updated according to your Module.
-
-    - Modify ``Your Module Name`` to be your Module Name
-    - Modify ``id`` to be your Module Name in upper snake case preceded by ``doc_`` and succeeded by ``release_note``
-    - Adjust ``status`` to be ``valid``
-    - Adjust ``safety`` and ``tags`` according to your needs
-
-
-
-| Module Name: [Module Name]
+| Module Name: Persistency
 | Release Tag: vX.Y.Z
 | Release Commit Hash: a1b2c3d4e5f6g7h8i9j0
 | Release Date: YYYY-MM-DD

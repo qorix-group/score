@@ -24,9 +24,11 @@ Key-Value-Storage
 .. toctree::
    requirements/index.rst
    architecture/index.rst
+   requirements/chklst_req_inspection.rst
    safety_analysis/fmea.rst
    safety_analysis/dfa.rst
    safety_planning/index.rst
+
 
 
 Feature flag

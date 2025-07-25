@@ -17,3 +17,7 @@ Safety Management
 
 .. toctree::
    :titlesonly:
+
+   module_safety_plan
+   module_safety_plan_fdr
+   module_safety_package_fdr
