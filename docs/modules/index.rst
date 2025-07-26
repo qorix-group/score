@@ -33,3 +33,5 @@ Modules
 
    ./*/index
    persistency/*/index
+   persistency/json/*/index
+   persistency/kvs/*/index
