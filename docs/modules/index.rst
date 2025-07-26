@@ -33,3 +33,4 @@ Modules
 
    ./*/index
    ./*/*/index
+   ./*/*/*/index
