@@ -32,4 +32,4 @@ Modules
    :glob:
 
    ./*/index
-   persitency/*/index
+   persistency/*/index
