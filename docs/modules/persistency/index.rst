@@ -1,6 +1,6 @@
 ..
    # *******************************************************************************
-   # Copyright (c) 2024 Contributors to the Eclipse Foundation
+   # Copyright (c) 2025 Contributors to the Eclipse Foundation
    #
    # See the NOTICE file(s) distributed with this work for additional
    # information regarding copyright ownership.
@@ -12,23 +12,21 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _modules:
-
-Modules
-=======
-
-.. image:: _assets/module_architecture.drawio.svg
-   :alt: Module Architecture
-
-
-.. note::
-   For now, we store the modules documentation in the modules tree, because multi-repo docs are not yet supported.
-   Once this support becomes available it will be moved to the right repo.
-
-
+KVS Module
+##########
 
 .. toctree::
+   :titlesonly:
+   :maxdepth: 2
+
+   ./docs/index
+
+Components
+==========
+
+.. toctree::
+   :titlesonly:
    :maxdepth: 1
    :glob:
 
-   ./*/index
+   ./*/docs/index
