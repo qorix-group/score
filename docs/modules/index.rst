@@ -32,3 +32,4 @@ Modules
    :glob:
 
    ./*/index
+   ./*/*/index
