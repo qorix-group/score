@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Requirements &#8212; S-CORE 0.1 documentation</title>
+    <title>Requirements &#8212; S-CORE  documentation</title>
   
   
   
@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -53,7 +53,7 @@
 
     <script src="../../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script src="../../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
@@ -66,7 +66,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://qorix-group.github.io/score/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -218,6 +218,13 @@
 <li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://projects.eclipse.org/projects/automotive.score">
     Eclipse
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../design_decisions/index.html">
+    Decision Records
   </a>
 </li>
 
@@ -395,6 +402,13 @@
   </a>
 </li>
 
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../design_decisions/index.html">
+    Decision Records
+  </a>
+</li>
+
   </ul>
 </nav></div>
           
@@ -459,6 +473,7 @@
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../ai_platform/index.html">AI Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../analysis-infra/index.html">Analysis Infrastructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../baselibs/index.html">Base Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../communication/index.html">Communication</a></li>
@@ -470,8 +485,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../../frameworks/index.html">Frameworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../infrastructure/index.html">Infrastructure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../integration/index.html">Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../lifecycle/index.html">Lifecycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../orchestration/index.html">Orchestration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../persistency/index.html">Persistency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../time/index.html">Time</a></li>
 </ul>
 </div>
 </nav></div>
@@ -539,7 +556,7 @@
 <span id="diagnostics-requirements"></span><h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
 <section id="diagnostic-and-fault-management">
 <h2>Diagnostic and Fault Management<a class="headerlink" href="#diagnostic-and-fault-management" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-01b01373">
+<div class="need_container docutils container" id="SNCB-62a7d4ae">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__sovd_std">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -558,10 +575,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__via_sovd" title="feat_req__diagnostics__sovd_std">stkh_req__diagnostics__via_sovd</a></span></span></div>
 </span></div>
@@ -585,7 +599,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-3d07d4f2">
+<div class="need_container docutils container" id="SNCB-479b208f">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__sovd_server">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -604,10 +618,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__via_sovd" title="feat_req__diagnostics__sovd_server">stkh_req__diagnostics__via_sovd</a>, <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__secure_access" title="feat_req__diagnostics__sovd_server">stkh_req__diagnostics__secure_access</a></span></span></div>
 </span></div>
@@ -631,7 +642,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-757e9d93">
+<div class="need_container docutils container" id="SNCB-46674ef8">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__sovd_config">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -650,10 +661,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__via_sovd" title="feat_req__diagnostics__sovd_config">stkh_req__diagnostics__via_sovd</a></span></span></div>
 </span></div>
@@ -677,7 +685,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-2da17cb6">
+<div class="need_container docutils container" id="SNCB-67aff04b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__sovd_config_mgr">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -696,10 +704,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__via_sovd" title="feat_req__diagnostics__sovd_config_mgr">stkh_req__diagnostics__via_sovd</a></span></span></div>
 </span></div>
@@ -723,7 +728,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c33446de">
+<div class="need_container docutils container" id="SNCB-cfba75c0">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__sovd_auth_mgr">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -742,10 +747,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__secure_access" title="feat_req__diagnostics__sovd_auth_mgr">stkh_req__diagnostics__secure_access</a></span></span></div>
 </span></div>
@@ -769,7 +771,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-e7601d28">
+<div class="need_container docutils container" id="SNCB-b3a51708">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__sovd_gateway">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -788,10 +790,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__distributed_support" title="feat_req__diagnostics__sovd_gateway">stkh_req__diagnostics__distributed_support</a></span></span></div>
 </span></div>
@@ -815,7 +814,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-af6c4d2d">
+<div class="need_container docutils container" id="SNCB-29eb52fe">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__sovd_client">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -834,10 +833,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__via_sovd" title="feat_req__diagnostics__sovd_client">stkh_req__diagnostics__via_sovd</a>, <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__secure_access" title="feat_req__diagnostics__sovd_client">stkh_req__diagnostics__secure_access</a></span></span></div>
 </span></div>
@@ -861,7 +857,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-746ad447">
+<div class="need_container docutils container" id="SNCB-edc1ceba">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__sovd_client_core">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -880,10 +876,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__via_sovd" title="feat_req__diagnostics__sovd_client_core">stkh_req__diagnostics__via_sovd</a></span></span></div>
 </span></div>
@@ -907,7 +900,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-749d1b95">
+<div class="need_container docutils container" id="SNCB-983c46e6">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__service_app">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -926,10 +919,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__custom_services" title="feat_req__diagnostics__service_app">stkh_req__diagnostics__custom_services</a></span></span></div>
 </span></div>
@@ -953,7 +943,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-f304d3ee">
+<div class="need_container docutils container" id="SNCB-7096dffd">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__oem_plugin">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -972,10 +962,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__custom_services" title="feat_req__diagnostics__oem_plugin">stkh_req__diagnostics__custom_services</a></span></span></div>
 </span></div>
@@ -999,7 +986,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-b17bd95e">
+<div class="need_container docutils container" id="SNCB-b45fffaa">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__fault_lib">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1018,10 +1005,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__fault_reporting" title="feat_req__diagnostics__fault_lib">stkh_req__diagnostics__fault_reporting</a></span></span></div>
 </span></div>
@@ -1045,7 +1029,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-0c613ca3">
+<div class="need_container docutils container" id="SNCB-4bdf812c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__fault_lib_debounce">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1064,10 +1048,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__fault_reporting" title="feat_req__diagnostics__fault_lib_debounce">stkh_req__diagnostics__fault_reporting</a></span></span></div>
 </span></div>
@@ -1091,7 +1072,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-f4c4a77c">
+<div class="need_container docutils container" id="SNCB-0cd9d7be">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__fault_manager">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1110,10 +1091,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__fault_reporting" title="feat_req__diagnostics__fault_manager">stkh_req__diagnostics__fault_reporting</a>, <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__dtc_read_sovd" title="feat_req__diagnostics__fault_manager">stkh_req__diagnostics__dtc_read_sovd</a></span></span></div>
 </span></div>
@@ -1137,7 +1115,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-9fd6fef7">
+<div class="need_container docutils container" id="SNCB-b3deae56">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__db">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1156,10 +1134,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__fault_reporting" title="feat_req__diagnostics__db">stkh_req__diagnostics__fault_reporting</a>, <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__dtc_read_sovd" title="feat_req__diagnostics__db">stkh_req__diagnostics__dtc_read_sovd</a></span></span></div>
 </span></div>
@@ -1183,7 +1158,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-81e5db36">
+<div class="need_container docutils container" id="SNCB-4eb5dbbc">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__db_persistence">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1202,10 +1177,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__fault_reporting" title="feat_req__diagnostics__db_persistence">stkh_req__diagnostics__fault_reporting</a></span></span></div>
 </span></div>
@@ -1229,7 +1201,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-ae35ba88">
+<div class="need_container docutils container" id="SNCB-f27be93f">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__classic_adapter">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1248,10 +1220,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__uds_ecus" title="feat_req__diagnostics__classic_adapter">stkh_req__diagnostics__uds_ecus</a></span></span></div>
 </span></div>
@@ -1275,7 +1244,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-9970b415">
+<div class="need_container docutils container" id="SNCB-f9850c27">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__classic_adapter_odx">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1294,10 +1263,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__uds_ecus" title="feat_req__diagnostics__classic_adapter_odx">stkh_req__diagnostics__uds_ecus</a></span></span></div>
 </span></div>
@@ -1321,7 +1287,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-12b6abe7">
+<div class="need_container docutils container" id="SNCB-a561f4be">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__uds2sovd_proxy">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1340,10 +1306,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__uds_tester_compat" title="feat_req__diagnostics__uds2sovd_proxy">stkh_req__diagnostics__uds_tester_compat</a></span></span></div>
 </span></div>
@@ -1367,7 +1330,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-4bd03afa">
+<div class="need_container docutils container" id="SNCB-93c8a3eb">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__uds2sovd_odx">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1386,10 +1349,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__uds_tester_compat" title="feat_req__diagnostics__uds2sovd_odx">stkh_req__diagnostics__uds_tester_compat</a></span></span></div>
 </span></div>
@@ -1413,7 +1373,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-a63f4266">
+<div class="need_container docutils container" id="SNCB-da876f97">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__diagnostics__internal_com">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1432,10 +1392,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">QM</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">YES</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__via_sovd" title="feat_req__diagnostics__internal_com">stkh_req__diagnostics__via_sovd</a>, <a class="reference internal" href="../../../requirements/stakeholder/index.html#stkh_req__diagnostics__dtc_read_sovd" title="feat_req__diagnostics__internal_com">stkh_req__diagnostics__dtc_read_sovd</a></span></span></div>
 </span></div>

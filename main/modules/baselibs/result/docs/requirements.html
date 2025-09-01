@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Requirements &#8212; S-CORE 0.1 documentation</title>
+    <title>Requirements &#8212; S-CORE  documentation</title>
   
   
   
@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
-    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-needs/modern.css?v=803738c0" />
   
   <!-- So that users can add custom icons -->
@@ -53,7 +53,7 @@
 
     <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
     <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-    <script src="../../../../_static/documentation_options.js?v=2709fde1"></script>
+    <script src="../../../../_static/documentation_options.js?v=5929fcd5"></script>
     <script src="../../../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../../../_static/design-tabs.js?v=f930bc37"></script>
@@ -66,7 +66,7 @@
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.16.1';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://qorix-group.github.io/score/versions.json';
-        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '0.1';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = '';
         DOCUMENTATION_OPTIONS.show_version_warning_banner =
             false;
         </script>
@@ -218,6 +218,13 @@
 <li class=" ">
   <a class="nav-link dropdown-item nav-external" href="https://projects.eclipse.org/projects/automotive.score">
     Eclipse
+  </a>
+</li>
+
+
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../../../../design_decisions/index.html">
+    Decision Records
   </a>
 </li>
 
@@ -395,6 +402,13 @@
   </a>
 </li>
 
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../../../design_decisions/index.html">
+    Decision Records
+  </a>
+</li>
+
   </ul>
 </nav></div>
           
@@ -480,7 +494,8 @@
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../communication/index.html">Communication Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../feo/index.html">feo Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feo/index.html">FEO Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lifecycle/index.html">Lifecycle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../logging/index.html">Logging Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../os/index.html">OS Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../persistency/index.html">KVS Module</a></li>
@@ -553,7 +568,7 @@
                   
   <section id="requirements">
 <h1>Requirements<a class="headerlink" href="#requirements" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-dc3ffcef">
+<div class="need_container docutils container" id="SNCB-47afe30c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__result_lib_requirements">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -572,11 +587,9 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">draft</span></span></div>
-<div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">requirements</span><span class="needs_spacer">, </span><span class="needs_data">result_library</span></span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_tags"><span class="needs_label">tags: </span><span class="needs_data_container"><span class="needs_data">requirements</span><span class="needs_spacer">, </span><span class="needs_data">result_library</span></span></span></div>
 </span></span></div>
-<div class="line"><span><div class="line">realizes: <span class="realizes"><span><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements__comp">PROCESS_wp__requirements__comp</a></span></span></div>
+<div class="line"><span><div class="line">realizes: <span class="realizes"><span><a class="external_link reference external" href="https://eclipse-score.github.io/process_description//main/process_areas/requirements_engineering/requirements_workproducts.html#wp__requirements_comp">PROCESS_wp__requirements_comp</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -600,7 +613,7 @@
 </div>
 <section id="functional-requirements">
 <h2>Functional Requirements<a class="headerlink" href="#functional-requirements" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-027d4d38">
+<div class="need_container docutils container" id="SNCB-c58b755c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_req table" id="comp_req__result__error_handling">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -619,10 +632,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__core_utilities" title="comp_req__result__error_handling">feat_req__baselibs__core_utilities</a>, <a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__result_library" title="comp_req__result__error_handling">feat_req__baselibs__result_library</a>, <a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__safety" title="comp_req__result__error_handling">feat_req__baselibs__safety</a></span></span></div>
 </span></div>
@@ -646,7 +656,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-81f7ebf9">
+<div class="need_container docutils container" id="SNCB-69b0b056">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_req table" id="comp_req__result__domain_error_information">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -665,10 +675,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__core_utilities" title="comp_req__result__domain_error_information">feat_req__baselibs__core_utilities</a>, <a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__result_library" title="comp_req__result__domain_error_information">feat_req__baselibs__result_library</a>, <a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__safety" title="comp_req__result__domain_error_information">feat_req__baselibs__safety</a></span></span></div>
 </span></div>
@@ -692,7 +699,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-efe984c8">
+<div class="need_container docutils container" id="SNCB-8e954838">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_req table" id="comp_req__result__type_safety">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -711,10 +718,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__consistent_apis" title="comp_req__result__type_safety">feat_req__baselibs__consistent_apis</a>, <a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__safety" title="comp_req__result__type_safety">feat_req__baselibs__safety</a></span></span></div>
 </span></div>
@@ -738,7 +742,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-32ff5a84">
+<div class="need_container docutils container" id="SNCB-ad8d0a40">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_req table" id="comp_req__result__std_integration">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -757,10 +761,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__consistent_apis" title="comp_req__result__std_integration">feat_req__baselibs__consistent_apis</a>, <a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__safety" title="comp_req__result__std_integration">feat_req__baselibs__safety</a></span></span></div>
 </span></div>
@@ -787,7 +788,7 @@
 </section>
 <section id="non-functional-requirements">
 <h2>Non-Functional Requirements<a class="headerlink" href="#non-functional-requirements" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-0ce8a768">
+<div class="need_container docutils container" id="SNCB-c4b6036c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_req table" id="comp_req__result__deterministic_behavior">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -806,10 +807,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Non-Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Non-Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__core_utilities" title="comp_req__result__deterministic_behavior">feat_req__baselibs__core_utilities</a>, <a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__safety" title="comp_req__result__deterministic_behavior">feat_req__baselibs__safety</a></span></span></div>
 </span></div>
@@ -833,7 +831,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-5241362a">
+<div class="need_container docutils container" id="SNCB-c4229022">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_comp_req table" id="comp_req__result__exception_free_operation">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -852,10 +850,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Non-Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Non-Functional</span></span></div>
 </span></span></div>
 <div class="line"><span><div class="line">satisfies: <span class="satisfies"><span><a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__core_utilities" title="comp_req__result__exception_free_operation">feat_req__baselibs__core_utilities</a>, <a class="reference internal" href="../../../../features/baselibs/docs/requirements/index.html#feat_req__baselibs__safety" title="comp_req__result__exception_free_operation">feat_req__baselibs__safety</a></span></span></div>
 </span></div>
@@ -882,7 +877,7 @@
 </section>
 <section id="assumptions-of-use-aou">
 <h2>Assumptions of Use (AoU)<a class="headerlink" href="#assumptions-of-use-aou" title="Link to this heading">#</a></h2>
-<div class="need_container docutils container" id="SNCB-62f40c0c">
+<div class="need_container docutils container" id="SNCB-a7620c34">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_aou_req table" id="aou_req__result__error_domain_implementation">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -901,10 +896,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span></span></div>
 </div>
@@ -918,7 +910,7 @@
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Assumption of Use</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Assumption of Use Requirement</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -927,7 +919,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-cdb0bd91">
+<div class="need_container docutils container" id="SNCB-0cff6e22">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_aou_req table" id="aou_req__result__value_handling">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -946,10 +938,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Functional</span></span></div>
 </span></span></div>
 <div class="line"><span></span></div>
 </div>
@@ -963,7 +952,7 @@
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Assumption of Use</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Assumption of Use Requirement</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -972,7 +961,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-cb4d74ce">
+<div class="need_container docutils container" id="SNCB-980e8011">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_aou_req table" id="aou_req__result__thread_safety">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -991,10 +980,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Non-Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Non-Functional</span></span></div>
 </span></span></div>
 <div class="line"><span></span></div>
 </div>
@@ -1008,7 +994,7 @@
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Assumption of Use</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Assumption of Use Requirement</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
@@ -1017,7 +1003,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-5bf1ed36">
+<div class="need_container docutils container" id="SNCB-0003b41b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_aou_req table" id="aou_req__result__resource_lifetime">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1036,10 +1022,7 @@
 </td>
 </tr>
 <tr class="meta row-even"><td class="meta" colspan="3"><div class="needs_meta_left line-block">
-<div class="line"><span><span><div class="line"><span class="needs_status"><span class="needs_label">status: </span><span class="needs_data">valid</span></span></div>
-<div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Non-Functional</span></span></div>
-<div class="line"><span class="needs_safety"><span class="needs_label">safety: </span><span class="needs_data">ASIL_B</span></span></div>
-<div class="line"><span class="needs_security"><span class="needs_label">security: </span><span class="needs_data">NO</span></span></div>
+<div class="line"><span><span><div class="line"><span class="needs_reqtype"><span class="needs_label">reqtype: </span><span class="needs_data">Non-Functional</span></span></div>
 </span></span></div>
 <div class="line"><span></span></div>
 </div>
@@ -1053,7 +1036,7 @@
 </div>
 </td>
 <td class="footer" colspan="2"><div class="needs_footer line-block">
-<div class="line"><span><span class="needs_type_name"><span class="needs_data">Assumption of Use</span></span></span></div>
+<div class="line"><span><span class="needs_type_name"><span class="needs_data">Assumption of Use Requirement</span></span></span></div>
 </div>
 </td>
 <td class="footer_right" colspan="2"></td>
