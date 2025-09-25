@@ -12,7 +12,6 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-.. _feature_safety_wp_template:
 
 Feature Safety Planning
 =======================
