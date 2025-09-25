@@ -20,6 +20,7 @@ DFA (Dependent Failure Analysis)
    :id: doc__orchestration_dfa
    :status: draft
    :safety: ASIL_B
+   :security: YES
    :realizes: PROCESS_wp__feature_dfa
    :tags: orchestration
 

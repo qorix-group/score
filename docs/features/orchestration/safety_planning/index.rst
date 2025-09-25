@@ -21,6 +21,7 @@ Feature Safety Planning
    :id: doc__orchestration_safety_wp
    :status: draft
    :safety: ASIL_B
+   :security: YES
    :realizes: PROCESS_wp__platform_safety_plan
    :tags: orchestration
 
