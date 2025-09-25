@@ -19,6 +19,7 @@ Module Safety Plan
    :id: doc__persistency_safety_plan
    :status: valid
    :safety: ASIL_B
+   :security: NO
    :realizes: PROCESS_wp__module_safety_plan
    :tags: persistency
 
