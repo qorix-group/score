@@ -21,6 +21,7 @@ Orchestration
    :id: doc__orchestration
    :status: valid
    :safety: ASIL_B
+   :security: YES
    :realizes: PROCESS_wp__feat_request
    :tags: feature_request, change_management, orchestration
 

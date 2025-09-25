@@ -21,6 +21,7 @@ Feature Architecture
    :id: doc__orchestration_architecture
    :status: draft
    :safety: ASIL_B
+   :security: YES
    :realizes: PROCESS_wp__feature_arch
    :tags: orchestration
 

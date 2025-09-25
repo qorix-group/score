@@ -19,6 +19,7 @@ Requirements
    :id: doc__orchestration_requirements
    :status: valid
    :safety: ASIL_B
+   :security: YES
    :realizes: PROCESS_wp__requirements_feat
    :tags: orchestration
 
