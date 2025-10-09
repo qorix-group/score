@@ -242,11 +242,11 @@ his knowledge in quality SW development by:
 - by attending the project's ASPICE 4.0 SW management and development training.
 
 Additionally, the project repository shall be organized in a way that independent roles (to the technical solution)
- have to approve any pull request before it's merged. The persons who are able to approve need to be qualified
- according to the roles description Quality Manager :need:`PROCESS_rl__quality_manager`.
+have to approve any pull request before it's merged. The persons who are able to approve need to be qualified
+according to the roles description Quality Manager :need:`PROCESS_rl__quality_manager`.
 
-The successful checking of the skills of the committers and independent roles is ensured by the Project and Quality Manager :need:`PROCESS_rl__quality_manager` and documented
-in the role assignment document.
+The successful checking of the skills of the committers and independent roles is ensured by the Project Leader :need:`PROCESS_rl__project_lead`
+and Quality Manager :need:`PROCESS_rl__quality_manager` and documented in the role assignment document.
 
 .. note:: The identity of the committer by applying the GitHub digital signature mechanism will be used to confirm the authenticity of the Quality Manager :need:`PROCESS_rl__quality_manager` role for the approvals
 
@@ -254,10 +254,9 @@ in the role assignment document.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4.1 Quality Resources
 """"""""""""""""""""""
-A dedicated Quality Manager is defined as part of the cross functional feature teams as defined in :doc:`project_management`. The Quality Manager :need:`PROCESS_rl__quality_manager`, supported by the
+The Quality Manager :need:`PROCESS_rl__quality_manager` are norminated for the project. The Quality Manager :need:`PROCESS_rl__quality_manager`, supported by the
 Project Lead :need:`PROCESS_rl__project_lead`, and all other stakeholders, will ensure that quality activities are actively planned, developed,
-analyzed, verified, tested, and managed throughout the life cycle of the project. As all the implementation
-takes place within feature development, there is a Quality Manager :need:`PROCESS_rl__quality_manager` appointed in the feature development plan.
+analyzed, verified, tested, and managed throughout the life cycle of the project.
 
 Resources and milestones are planned in Github Issues for all activities. Resource and
 milestone planning is done as defined in the :doc:`project_management`.
@@ -291,7 +290,7 @@ The quality management status :need:`PROCESS_wp__qms_report` is reported as defi
 **Examples for valid escalation causes are:**
 
 - Quality issues cannot be resolved on feature level or with the available resources.
-- There are conflicting points of view between the Project Lead :need:`PROCESS_rl__project_lead`, Technical Lead :need:`PROCESS_rl__technical_lead`, Safety Manager :need:`PROCESS_rl__safety_manager`, Security Manager :need:`PROCESS_rl__security_manager` and the Quality Manager :need:`PROCESS_rl__quality_manager`
+- There are conflicting points of view between the Project Lead :need:`PROCESS_rl__project_lead`, Technical Lead :need:`PROCESS_rl__technical_lead`, Safety Manager :need:`PROCESS_rl__safety_manager`, Security Manager :need:`PROCESS_rl__security_manager` and the Quality Manager :need:`PROCESS_rl__quality_manager`.
 
 4.3 Quality Management Specifics
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -303,172 +302,76 @@ None
         :header-rows: 1
 
         * - Workproduct Id
-          - Link to process
-          - Process status
-          - Link to issue
           - Link to WP
-          - WP status
 
         * - :need:`PROCESS_wp__audit_report`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - `#470 <https://github.com/eclipse-score/score/issues/470>`_
           - :need:`doc__platform_change_management_plan`
-          - <automated>
 
         * - :need:`PROCESS_wp__chm_plan`
-          - :need:`PROCESS_gd_guidl__change_change_request`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__change_change_request')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__cmpt_request`
-          - :need:`PROCESS_gd_guidl__change_change_request`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__change_change_request')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__component_arch`
-          - :need:`PROCESS_gd_guidl__arch_design`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__arch_design')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__document_mgt_plan`
-          - :need:`PROCESS_gd_guidl__documentation`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__documentation')`
-          - <Link to issue>
           - :need:`doc__documentation_mgt_plan`
-          - <automated>
 
         * - :need:`PROCESS_wp__fdr_reports`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__feat_request`
-          - :need:`PROCESS_gd_guidl__change_change_request`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__change_change_request')`
-          - <Link to issue>
-          - :need:`doc__logging`, :need:`doc__com`, :need:`doc__frameworks_feo`, :need:`doc__persistency_kvs`
-          - <automated>
+          - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__feature_arch`
-          - :need:`PROCESS_gd_guidl__arch_design`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__arch_design')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__feature_dfa`
-          - :need:`PROCESS_gd_guidl__safety_analysis`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__safety_analysis')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__module_safety_manual`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`_documents_docs_modules`
 
         * - :need:`PROCESS_wp__module_safety_package`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`_documents_docs_modules`
 
         * - :need:`PROCESS_wp__module_safety_plan`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`_documents_docs_modules`
 
         * - :need:`PROCESS_wp__module_sw_release_note`
-          - :need:`PROCESS_gd_guidl__rel_management`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__rel_management')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__module_sw_release_plan`
-          - :need:`PROCESS_gd_guidl__rel_management`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__rel_management')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`_documents_docs_modules`
 
         * - :need:`PROCESS_wp__platform_dfa`
-          - :need:`PROCESS_gd_guidl__safety_analysis`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__safety_analysis')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__platform_safety_manual`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__platform_safety_plan`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__platform_safety_package`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__platform_sw_build_config`
-          - n/a
-          - draft
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__platform_sw_release_note`
-          - :need:`PROCESS_gd_guidl__rel_management`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__rel_management')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__platform_sw_release_plan`
-          - :need:`PROCESS_gd_guidl__rel_management`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__rel_management')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__policies`
-          - n/a
-          - draft
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__prm_plan`
-          - :need:`PROCESS_gd_guidl__problem_problem`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__problem_problem')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__process_description`
           - n/a
@@ -478,11 +381,7 @@ None
           - <automated>
 
         * - :need:`PROCESS_wp__process_impr_report`
-          - :need:`PROCESS_gd_guidl__platform_mgmt_plan`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__platform_mgmt_plan')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__process_strategy`
           - n/a
@@ -492,198 +391,85 @@ None
           - <automated>
 
         * - :need:`PROCESS_wp__project_mgt`
-          - :need:`PROCESS_gd_guidl__platform_mgmt_plan`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__platform_mgmt_plan')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__qms_plan`
-          - :need:`PROCESS_gd_guidl__qlm_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__qlm_plan_definitions')`
-          - <Link to issue>
-          - :need:`doc__platform_quality_plan`
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__qms_report`
-          - :need:`PROCESS_gd_guidl__qlm_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__qlm_plan_definitions')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__requirements_comp`
-          - :need:`PROCESS_gd_guidl__req_engineering`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__req_engineering')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__requirements_comp_aou`
-          - :need:`PROCESS_gd_guidl__req_engineering`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__req_engineering')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__requirements_feat`
-          - :need:`PROCESS_gd_guidl__req_engineering`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__req_engineering')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__requirements_feat_aou`
-          - :need:`PROCESS_gd_guidl__req_engineering`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__req_engineering')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__requirements_inspect`
-          - :need:`PROCESS_gd_guidl__req_engineering`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__req_engineering')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__requirements_stkh`
-          - :need:`PROCESS_gd_guidl__req_engineering`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__req_engineering')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__sw_arch_verification`
-          - :need:`PROCESS_gd_guidl__arch_design`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__arch_design')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__sw_component_class`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__sw_component_dfa`
-          - :need:`PROCESS_gd_guidl__safety_analysis`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__safety_analysis')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__sw_component_fmea`
-          - :need:`PROCESS_gd_guidl__safety_analysis`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__safety_analysis')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__sw_component_dfa`
-          - :need:`PROCESS_gd_guidl__safety_analysis`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__safety_analysis')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__sw_development_plan`
-          - :need:`PROCESS_gd_guidl__implementation`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__implementation')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__sw_implementation`
-          - :need:`PROCESS_gd_guidl__implementation`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__implementation')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__sw_implementation_inspection`
-          - :need:`PROCESS_gd_guidl__implementation`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__implementation')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__tailoring`
-          - :need:`PROCESS_gd_guidl__saf_plan_definitions`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__saf_plan_definitions')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__tlm_plan`
-          - :need:`PROCESS_doc_concept__tool_process`
-          - :ndf:`copy('status', need_id='PROCESS_doc_concept__tool_process')`
-          - <Link to issue>
           - :need:`doc__platform_tool_management_plan`
-          - <automated>
 
         * - :need:`PROCESS_wp__tool_verification_report`
-          - :need:`PROCESS_doc_concept__tool_process`
-          - :ndf:`copy('status', need_id='PROCESS_doc_concept__tool_process')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__training_path`
-          - n/a
-          - draft
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
-
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__verification_comp_int_test`
-          - :need:`PROCESS_gd_guidl__verification_guide`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__verification_guide')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__verification_feat_int_test`
-          - :need:`PROCESS_gd_guidl__verification_guide`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__verification_guide')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__verification_module_ver_report`
-          - :need:`PROCESS_gd_guidl__verification_guide`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__verification_guide')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`_documents_docs_modules`
 
         * - :need:`PROCESS_wp__verification_plan`
-          - :need:`PROCESS_gd_guidl__verification_guide`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__verification_guide')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__verification_platform_test`
-          - :need:`PROCESS_gd_guidl__verification_guide`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__verification_guide')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__verification_platform_ver_report`
-          - :need:`PROCESS_gd_guidl__verification_guide`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__verification_guide')`
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__verification_sw_unit_test`
-          - :need:`PROCESS_gd_guidl__verification_guide`
-          - :ndf:`copy('status', need_id='PROCESS_gd_guidl__verification_guide')`
-          - <Link to issue>
           - <Link to WP>
-          - <automated>
