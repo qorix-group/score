@@ -79,7 +79,7 @@ Objectives and scope
 3.2 Quality Performance Objectives
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. list-table:: Quality assurance activities and frequence of performing them
+.. list-table:: Quality assurance activities and frequency of performing them
     :header-rows: 1
 
     * - #
@@ -233,7 +233,7 @@ Organization and management system is currently not mature.
 
 The main quality related project roles are the Quality Manager :need:`PROCESS_rl__quality_manager` and the Technical Lead :need:`PROCESS_rl__technical_lead`. These also have to have
 the (Eclipse) committer role. As defined in `Committer Training <https://www.eclipse.org/projects/training/>`_ the
-committers are elected in a meritrocratic manner, meaning those have to show their skills and understanding of the
+committers are elected in a meritocratic manner, meaning those have to show their skills and understanding of the
 project processes in several previous pull requests.
 
 As each project can adopt additional criteria for the committers election, S-CORE defines that each committer has to prove
@@ -254,7 +254,9 @@ and Quality Manager :need:`PROCESS_rl__quality_manager` and documented in the ro
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4.1 Quality Resources
 """"""""""""""""""""""
-The Quality Manager :need:`PROCESS_rl__quality_manager` are norminated for the project. The Quality Manager :need:`PROCESS_rl__quality_manager`, supported by the
+A dedicated Quality Manager :need:`PROCESS_rl__quality_manager` is elected by :need:`PROCESS_rl__project_lead` for the project.
+
+The Quality Manager :need:`PROCESS_rl__quality_manager`, supported by the
 Project Lead :need:`PROCESS_rl__project_lead`, and all other stakeholders, will ensure that quality activities are actively planned, developed,
 analyzed, verified, tested, and managed throughout the life cycle of the project.
 
@@ -305,7 +307,7 @@ None
           - Link to WP
 
         * - :need:`PROCESS_wp__audit_report`
-          - :need:`doc__platform_change_management_plan`
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__chm_plan`
           - :ref:`project_documents_list`
@@ -317,10 +319,10 @@ None
           - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__document_mgt_plan`
-          - :need:`doc__documentation_mgt_plan`
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__fdr_reports`
-          - <Link to WP>
+          - :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__feat_request`
           - :ref:`documents_docs_features`
@@ -332,19 +334,19 @@ None
           - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__module_safety_manual`
-          - :ref:`_documents_docs_modules`
+          - :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__module_safety_package`
-          - :ref:`_documents_docs_modules`
+          - :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__module_safety_plan`
-          - :ref:`_documents_docs_modules`
+          - :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__module_sw_release_note`
-          - <Link to WP>
+          - :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__module_sw_release_plan`
-          - :ref:`_documents_docs_modules`
+          - :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__platform_dfa`
           - :ref:`project_documents_list`
@@ -412,13 +414,13 @@ None
           - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__requirements_inspect`
-          - <Link to WP>
+          - :ref:`project_documents_list`, :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__requirements_stkh`
           - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__sw_arch_verification`
-          - <Link to WP>
+          - :ref:`project_documents_list`, :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__sw_component_class`
           - :ref:`documents_docs_modules_components`
@@ -436,19 +438,19 @@ None
           - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__sw_implementation`
-          - <Link to WP>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__sw_implementation_inspection`
-          - <Link to WP>
+          - :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__tailoring`
-          - <Link to WP>
+          - :ref:`project_documents_list`, :ref:`documents_docs_features`, :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__tlm_plan`
-          - :need:`doc__platform_tool_management_plan`
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__tool_verification_report`
-          - <Link to WP>
+          - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__training_path`
           - :ref:`project_documents_list`
@@ -460,10 +462,10 @@ None
           - :ref:`documents_docs_features`
 
         * - :need:`PROCESS_wp__verification_module_ver_report`
-          - :ref:`_documents_docs_modules`
+          - :ref:`documents_docs_modules`
 
         * - :need:`PROCESS_wp__verification_plan`
-          - :ref:`project_documents_list`
+          - :ref:`project_documents_list`, :ref:`documents_docs_features`, :ref:`documents_docs_modules_components`
 
         * - :need:`PROCESS_wp__verification_platform_test`
           - :ref:`project_documents_list`
@@ -472,4 +474,4 @@ None
           - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__verification_sw_unit_test`
-          - <Link to WP>
+          - :ref:`documents_docs_modules_components`
