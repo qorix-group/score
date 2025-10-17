@@ -12,21 +12,26 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
+Architecture
+============
+
 .. document:: Orchestration Architecture
-   :id: doc__orch_architecture
+   :id: doc__orchestration_architecture
    :status: valid
+   :security: YES
    :safety: ASIL_B
-   :tags: feature_request
+   :realizes: PROCESS_wp__feature_arch
+   :tags: feature_request, orchestration
 
 Overview
 --------
 
-An brief overview of orchestration is described.
+The orchestration feature provides frameworks for deterministic, scalable, and maintainable execution of mixed-criticality software applications. It introduces two main abstractions: the **Executor**, which offers cooperative user-space multitasking with configurable thread pools, and the **Orchestrator**, which enables declarative modeling of cause-effect chains, timing constraints, and fault handling logic. These frameworks are designed to improve integration, timing predictability, and validation of cross-component timing chains, supporting robust system integration in automotive and safety-critical environments.
 
 Description
 -----------
 
-A description of the orchestration module is located.
+The orchestration framework is structured in layers, separating application logic from deployment and resource management. The **Executor** manages cooperative and preemptive tasks, dedicated threads for blocking operations, and provides observability hooks for system monitoring. The **Orchestrator** allows developers to define Programs as runtime-static execution graphs, specifying control flow, timing contracts, event-based synchronization, and fault handling. The API is code-first, enabling direct integration with application logic and improved debuggability. Observability is a key aspect, with tracing and metrics exposed at the Orchestrator, Executor, and kernel levels. The design enforces that inter-process communication and synchronization are exclusively handled via secure IPC mechanisms, ensuring safety and security in multi-process environments.
 
 .. _orch_static_architecture:
 
@@ -57,17 +62,22 @@ API Components
 The API is split into three key components:
 
 1. **Design**
+
    - Provides a way to register all application callables (functions, async functions, objects, etc.)
+
    - Allows the creation of an application task flow in the `config-by-code` case
 
 2. **Deployment**
+
    - Provides a way to bind specific application actions to concrete implementations in the current system:
 
       #. Binding events to Local/Remote/Timers
       #. Configuring certain threads for callables
 
 3. **Orchestration**
+
    - Acts as the central API for managing designs and transitioning them into a deployment-ready state
+
    - Handles the creation of programs and their orchestration
 
 Purpose of Orchestration, Design, and Deployment Split

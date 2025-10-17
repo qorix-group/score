@@ -13,11 +13,19 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Frontend Architecture
-*********************
+Component Architecture
+=======================
 
-.. comp_arc_sta:: orchestration
-   :id: comp_arc_sta__orch__orchestration
+.. document:: Orchestrator Architecture
+   :id: doc__orchestrator_architecture
+   :status: valid
+   :safety: ASIL_B
+   :security: YES
+   :realizes: PROCESS_wp__component_arch
+   :tags: orchestration, orchestrator
+
+.. comp_arc_sta:: Orchestrator
+   :id: comp_arc_sta__orch__orchestrator
    :security: YES
    :safety:  ASIL_B
    :status: valid
@@ -131,3 +139,7 @@ Frontend Architecture
    :safety: ASIL_B
    :status: valid
    :included_by: logic_arc_int__orchestration__deployment
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:

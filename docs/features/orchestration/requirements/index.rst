@@ -13,16 +13,48 @@
    # *******************************************************************************
 
 Requirements
+<<<<<<<< HEAD:docs/features/orchestration/requirements/index.rst
 ############
+========
+============
+>>>>>>>> 16083d15be (doc: Update Orchestration architecture):docs/features/orchestration/docs/requirements/index.rst
 
 .. document:: Orchestration Requirements
    :id: doc__orchestration_requirements
    :status: valid
+   :security: YES
    :safety: ASIL_B
+<<<<<<<< HEAD:docs/features/orchestration/requirements/index.rst
    :security: YES
    :realizes: PROCESS_wp__requirements_feat
    :tags: orchestration
 
+========
+   :realizes: PROCESS_wp__requirements_feat
+   :tags: feature_request, orchestration
+
+.. evaluate following sth requirements:
+.. com driven:
+.. stkh_req__app_architectures__support_time
+.. stkh_req__app_architectures__support_data
+.. stkh_req__app_architectures__support_request
+.. stkh_req__communication__service_quality
+
+.. compute driven:
+.. stkh_req__execution_model__processes
+.. stkh_req__dev_experience__tracing_of_exec
+
+.. safety:
+.. stkh_req__dependability__automotive_safety
+.. stkh_req__functional_req__safe_comput
+
+.. security:
+.. stkh_req__dependability__security_features
+
+.. accelerators:
+.. stkh_req__functional_req__hardware_comput
+.. stkh_req__functional_req__comp_subsystem
+>>>>>>>> 16083d15be (doc: Update Orchestration architecture):docs/features/orchestration/docs/requirements/index.rst
 
 Executor
 ========

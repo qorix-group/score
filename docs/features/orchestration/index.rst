@@ -21,6 +21,7 @@ Orchestration
 .. document:: Orchestration
    :id: doc__orchestration
    :status: valid
+   :security: YES
    :safety: ASIL_B
    :security: YES
    :realizes: PROCESS_wp__feat_request
@@ -404,4 +405,3 @@ Footnotes
    :hidden:
 
    docs/**/index
-   modules/index
