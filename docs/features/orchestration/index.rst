@@ -21,7 +21,6 @@ Orchestration
 .. document:: Orchestration
    :id: doc__orchestration
    :status: valid
-   :security: YES
    :safety: ASIL_B
    :security: YES
    :realizes: PROCESS_wp__feat_request
@@ -397,11 +396,3 @@ Footnotes
 =========
 
 .. [#s1] "Asynchronous Programming in Rust", https://rust-lang.github.io/async-book/
-
-.. toctree::
-   :maxdepth: 1
-   :glob:
-   :titlesonly:
-   :hidden:
-
-   docs/**/index
