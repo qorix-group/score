@@ -12,12 +12,12 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Executor Module
+Orchestrator Module
 ####################
 
-.. mod_view_sta:: Executor
-   :id: mod_view_sta__orch__executor
-   :includes: comp_arc_sta__orch__runtime
+.. mod_view_sta:: Orchestrator
+   :id: mod_view_sta__orch__orchestrator
+   :includes: comp_arc_sta__orch__orchestrator
 
    .. needarch::
       :scale: 50
@@ -29,5 +29,7 @@ Module Documents
 ================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :titlesonly:
+
+   ../orchestrator/docs/index

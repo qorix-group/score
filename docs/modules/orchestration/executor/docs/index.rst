@@ -12,12 +12,24 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Modules
-========
+Executor Module
+####################
+
+.. mod_view_sta:: Executor
+   :id: mod_view_sta__orch__executor
+   :includes: comp_arc_sta__orch__executor
+
+   .. needarch::
+      :scale: 50
+      :align: center
+
+      {{ draw_module(need(), needs) }}
+
+Module Documents
+================
 
 .. toctree::
    :maxdepth: 1
-   :glob:
+   :titlesonly:
 
-   */docs/index
-   */*/docs/index
+   ../executor/docs/index

@@ -12,22 +12,30 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Orchestration Module
-####################
+Component Architecture
+=======================
 
-.. mod_view_sta:: Orchestration
-   :id: mod_view_sta__orch__orchestration
-   :includes: comp_arc_sta__orch__orchestration
+.. document:: Executor Architecture
+   :id: doc__executor_architecture
+   :status: valid
+   :safety: ASIL_B
+   :security: YES
+   :realizes: PROCESS_wp__component_arch
+   :tags: orchestration, executor
+
+.. comp_arc_sta:: Executor
+   :id: comp_arc_sta__orch__executor
+   :security: YES
+   :safety:  ASIL_B
+   :status: valid
+   :uses: logic_arc_int__logging__logging, logic_arc_int__tracing__tracing
 
    .. needarch::
       :scale: 50
       :align: center
 
-      {{ draw_module(need(), needs) }}
-
-Module Documents
-================
+      {{ draw_component(need(), needs) }}
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :titlesonly:
