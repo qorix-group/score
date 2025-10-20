@@ -367,20 +367,12 @@ None
 
         * - :need:`PROCESS_wp__process_description`
           - n/a
-          - draft
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__process_impr_report`
           - :ref:`project_documents_list`
 
         * - :need:`PROCESS_wp__process_strategy`
           - n/a
-          - draft
-          - <Link to issue>
-          - <Link to WP>
-          - <automated>
 
         * - :need:`PROCESS_wp__project_mgt`
           - :ref:`project_documents_list`
