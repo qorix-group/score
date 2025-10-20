@@ -37,9 +37,9 @@ of the workflows.
 Statement of Independence
 -------------------------
 
-The :need:`PROCESS_rl__quality_manager` provides only support to the project with consulting them to improve the
-quality of the project/platform product. Although the quality report is also sent to the :need:`PROCESS_rl__technical_lead`,
-the :need:`PROCESS_rl__quality_manager` is independent of the delivery of the product.
+The Quality Manager :need:`PROCESS_rl__quality_manager` provides support to the project by consulting on quality improvements
+for the project/platform product. The Quality Manager is independent of the product delivery process. A quality report
+is sent to the Technical Lead :need:`PROCESS_rl__technical_lead`.
 
   .. image:: _assets/score_project_organisation.drawio.svg
      :width: 900
@@ -219,16 +219,6 @@ The project roles are defined in the processes and are aligned to Eclipse roles.
                 results.append(need)
 
 
-| **Critical dependencies**
-
-The project has not implemented a quality management system yet, but aims to be conformant to ASPICE 4.0,
-as defined in the management system. Continuous improvement is part of all processes. Improvements are handled
-in the scope of Quality Management.
-
-**Risk**
-
-Organization and management system is currently not mature.
-
 **Skills**
 
 The main quality related project roles are the Quality Manager :need:`PROCESS_rl__quality_manager` and the Technical Lead :need:`PROCESS_rl__technical_lead`. These also have to have
@@ -254,9 +244,9 @@ and Quality Manager :need:`PROCESS_rl__quality_manager` and documented in the ro
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 4.1 Quality Resources
 """"""""""""""""""""""
-A dedicated Quality Manager :need:`PROCESS_rl__quality_manager` is elected by :need:`PROCESS_rl__project_lead` for the project.
+Dedicated Quality Managers :need:`PROCESS_rl__quality_manager` are elected by :need:`PROCESS_rl__project_lead` for the platform.
 
-The Quality Manager :need:`PROCESS_rl__quality_manager`, supported by the
+The Quality Managers :need:`PROCESS_rl__quality_manager`, supported by the
 Project Lead :need:`PROCESS_rl__project_lead`, and all other stakeholders, will ensure that quality activities are actively planned, developed,
 analyzed, verified, tested, and managed throughout the life cycle of the project.
 
