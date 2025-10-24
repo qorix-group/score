@@ -64,15 +64,15 @@ Feature Safety Planning
       - doc :ndf:`copy('status', need_id='doc__orchestration_architecture')` & WP below
 
     * - :need:`PROCESS_wp__feature_fmea`
-      - :need:`gd_temp__feat_saf_fmea`
-      - :ndf:`copy('status', need_id='gd_temp__feat_saf_fmea')`
+      - :need:`PROCESS_gd_temp__feat_saf_fmea`
+      - :ndf:`copy('status', need_id='PROCESS_gd_temp__feat_saf_fmea')`
       - <link to issue>
       - :need:`doc__orchestration_fmea`
       - doc :ndf:`copy('status', need_id='doc__orchestration_fmea')` & WP below
 
     * - :need:`PROCESS_wp__feature_dfa`
-      - :need:`gd_temp__plat_saf_dfa`
-      - :ndf:`copy('status', need_id='gd_temp__plat_saf_dfa')`
+      - :need:`PROCESS_gd_temp__feat_saf_dfa`
+      - :ndf:`copy('status', need_id='PROCESS_gd_temp__feat_saf_dfa')`
       - <Link to issue>
       - :need:`doc__orchestration_dfa`
       - doc :ndf:`copy('status', need_id='doc__orchestration_dfa')` & WP below
