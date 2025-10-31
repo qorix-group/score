@@ -13,23 +13,20 @@
    # *******************************************************************************
 
 Orchestrator Module
-####################
-
-.. mod_view_sta:: Orchestrator
-   :id: mod_view_sta__orch__orchestrator
-   :includes: comp_arc_sta__orch__orchestrator, comp_arc_sta__orch__executor
-
-   .. needarch::
-      :scale: 50
-      :align: center
-
-      {{ draw_module(need(), needs) }}
-
-Module Documents
-================
+###################
 
 .. toctree::
-   :maxdepth: 1
    :titlesonly:
+   :maxdepth: 2
 
-   ../orchestrator/docs/index
+   ./docs/index
+
+Components
+==========
+
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+   :glob:
+
+   ./*/docs/index
