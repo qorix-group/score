@@ -67,14 +67,14 @@ Design guideline
 
 The design guideline is defined in :need:`doc_concept__imp_concept` and :need:`gd_guidl__implementation`.
 
-API guideline
-^^^^^^^^^^^^^
+API guidelines
+^^^^^^^^^^^^^^
 
 To provide the user with a consistent approach on the use of APIs, there are guidelines documented in :need:`doc__api_guidelines`
-and :need:`doc__rust_api_guidelines`, this defines for example the error handling concept or rules to improve user experience.
+and :need:`doc__rust_api_design`, this defines for example the error handling concept or rules to improve user experience.
 
-Coding guideline
-^^^^^^^^^^^^^^^^
+Coding guidelines
+^^^^^^^^^^^^^^^^^
 
 **C++** - see :need:`doc__cpp_coding_guidelines`
 
@@ -83,16 +83,8 @@ Coding guideline
 SW configuration guideline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-<tbd>
-:need:`PROCESS_doc_concept__configuration_process`
-:need:`PROCESS_wp__config_mgt_plan`
-
- Development
-
-Method selection
-^^^^^^^^^^^^^^^^
-
-<tbd>
+The configuration is described in the :need:`doc__config_mgt_plan` and guided by :need:`PROCESS_doc_concept__configuration_process`
+and :need:`PROCESS_gd_temp__config_mgt_plan`.
 
 SW development tools
 ^^^^^^^^^^^^^^^^^^^^
@@ -107,7 +99,7 @@ Additional tools for static and dynamic analysis (in addition to compilers and C
 
 is used for hosting, versioning and contribution of the software. Within
 pull requests it's possible to contribute. For contribution a separate process description is
-:need:`doc__contribution_guideline` available. In the discussion section the information regarding meeting
+:need:`doc__contr_guideline` available. In the discussion section the information regarding meeting
 minutes and Working Sections were stored. Within issues can bugfixes, improvements, blank issues
 set up. It's also possible to report there Security vulnerabilities. GitHub Actions is used
 as a support for continuous integration.
