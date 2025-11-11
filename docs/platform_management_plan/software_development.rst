@@ -54,8 +54,8 @@ This is described in :need:`doc_concept__imp_concept` and guided by :need:`gd_te
 As required in :need:`stkh_req__dev_experience__prog_languages`, S-CORE allows the use of two programming languages:
 
 **C++ with the language set of C++17** - in case additional elements from C++20 are needed this will be considered by
-:need:`PROCESS_rl__safety_manager`, :need:`PROCESS_rl__security_manager` and :need:`PROCESS_rl__quality_manager`
-and based on their analysis decided by the project lead circle (:need:`PROCESS_rl__project_lead`).
+:need:`rl__safety_manager`, :need:`rl__security_manager` and :need:`rl__quality_manager`
+and based on their analysis decided by the project lead circle (:need:`rl__project_lead`).
 
 **Rust - in Edition 2021** - selection of language edition has still to be done in the S-CORE project.
 For the Rust code of ASIL rated units the "safe subset" shall be used (which is checked by the compiler by configuration of #![forbid(unsafe_code)] in lib.rs)
