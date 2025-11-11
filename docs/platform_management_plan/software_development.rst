@@ -13,8 +13,8 @@
    # *******************************************************************************
 .. _sw_development:
 
-Software Development
---------------------
+Software Development Plan
+-------------------------
 
 .. document:: Software Development Plan
    :id: doc__software_development_plan
@@ -83,8 +83,7 @@ Coding guidelines
 SW configuration guideline
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The configuration is described in the :need:`doc__config_mgt_plan` and guided by :need:`PROCESS_doc_concept__configuration_process`
-and :need:`PROCESS_gd_temp__config_mgt_plan`.
+The configuration of the software is done by the code. Which means that there are no external configuration files.
 
 SW development tools
 ^^^^^^^^^^^^^^^^^^^^
