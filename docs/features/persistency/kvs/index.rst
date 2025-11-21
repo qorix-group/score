@@ -31,6 +31,7 @@ Key-Value-Storage
    safety_analysis/fmea.rst
    safety_analysis/dfa.rst
    safety_planning/index.rst
+   safety_analysis/chklst_safety_analysis_inspection.rst
 
 
 
