@@ -109,6 +109,7 @@ The purpose of this requirement inspection checklist is to collect the topics to
   * - REQ_05_01
     - Do the software requirements consider *timing constraints*?
     - This checkpoint encourages to think about timing constraints even if those are not explicitly mentioned in the parent requirement. If the reviewer of a requirement already knows or suspects that the code execution will be consuming a lot of time, one should think of the expectation of a "user".
+    - Yes
     - No remarks
     - https://github.com/eclipse-score/score/issues/960
   * - REQ_06_01
@@ -146,4 +147,4 @@ The purpose of this requirement inspection checklist is to collect the topics to
     - Alternatively to the safe state there could also be "repair" mechanisms. Also do not forget to consider REQ_05_01 for these.
     - YES
     - Repair mechanisms are described. Persistency is developed as full deterministic. Potential failures are considered in safety analysis.
-    -
+    - https://github.com/eclipse-score/score/issues/960
