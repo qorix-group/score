@@ -198,11 +198,9 @@ The following use-cases are considered in scope of this feature request for S-CO
 
 The following components are considered in scope of this feature request for S-CORE v1.0.
 
-- all componenets are in scope for v1.0 but with limited functionality as described above.
-- the requirements can be found in :doc:`requirements/index`.
+- All componenets are in scope for v1.0 but with limited functionality to support the use-cases described above.
 
-Further information can be found here: <https://github.com/eclipse-opensovd/opensovd/blob/main/docs/design/mvp.md>
-
+Further information can be found here: https://github.com/eclipse-opensovd/opensovd/blob/main/docs/design/mvp.md
 
 Out of scope components
 -----------------------
