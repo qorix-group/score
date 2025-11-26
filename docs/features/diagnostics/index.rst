@@ -97,10 +97,10 @@ The next diagram shows the concept in a distributed view to highlight components
 .. image:: _assets/score-diagnostics-distributed.drawio.svg
    :alt: Diagnostic stack component architecture
 
-In scope components
--------------------
+In scope components (full stack)
+--------------------------------
 
-The following components are considered in scope of this feature request.
+The following components are considered in scope of this feature request for the long term implementation of the diagnostic system (beyond v1.0).
 
 Fault Library
 
@@ -182,6 +182,26 @@ UDS2SOVD Proxy
 - Implements the UDS session handling concept.
 - UDS transport layer (e.g. DoIP or other vendor specific transports) shared with Classic Diagnostic Adapter.
 - Central component and unique per ECU (one per ECU or per System is possible).
+
+In scope components (v1.0)
+--------------------------
+
+The following use-cases are considered in scope of this feature request for S-CORE v1.0.
+
+- Read DTCs through the SOVD API.
+- Report new faults from platform and app components via the Fault API and handle them in the DFM.
+- Clear DTCs over SOVD.
+- Reach an UDS ECU through the Classic Diagnostic Adapter, at least for read/clear DTC paths.
+- A sample Diagnostic service can be triggered via SOVD (Diagnostic service = a function which can be triggered via SOVD).
+- OPTIONAL: Retrieve ECU- and app-level metadata (HW revision, SW version) via SOVD.
+- OPTIONAL: Read/write component configuration through SOVD, backed by the S-CORE configuration service.
+
+The following components are considered in scope of this feature request for S-CORE v1.0.
+
+- all componenets are in scope for v1.0 but with limited functionality as described above.
+- the requirements can be found in :doc:`requirements/index`.
+
+Further information can be found here: <https://github.com/eclipse-opensovd/opensovd/blob/main/docs/design/mvp.md>
 
 
 Out of scope components
