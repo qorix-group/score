@@ -25,7 +25,7 @@ Key-Value-Storage
 
 .. toctree::
    architecture/index.rst
-   architecture/chklst_arc_inspection.rst
+   architecture/chklst_arch_inspection.rst
    requirements/index.rst
    requirements/chklst_req_inspection.rst
    safety_analysis/fmea.rst
