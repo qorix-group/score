@@ -46,7 +46,7 @@ As an example for one requirement:
       """Your function that implements the requirement partiall or fully"""
       ...
 
-An rendered example of a need where this is implemented can be seen in `Rendered Example <https://eclipse-score.github.io/docs-as-code/main/internals/requirements/requirements.html#tool_req__docs_common_attr_id>`_
+`A Rendered Example <https://eclipse-score.github.io/docs-as-code/main/internals/requirements/requirements.html#tool_req__docs_common_attr_id>`_
 
 An Example of multiple requirements:
 
@@ -59,17 +59,17 @@ An Example of multiple requirements:
       """Your function that implements the requirement partiall or fully"""
       ...
 
-The parser will look through most files but not those that fulfil any of these properties
+The tool will look through any files except:
 
-Skips files with suffixes of: 
-   - .pyc
-   - .so
-   - .exe
-   - .bin
-   - .rst
-   - .md
+Directories or files that start with '.' or '_'
+It skips all files that end with one of the following:
+- .pyc
+- .so
+- .exe
+- .bin
+- .rst
+- .md
 
-It also skips any file that starts with a '.' or an '_'.
 
 The template string works regardless of the language.
 This means both following examples are valid and will work.
@@ -90,14 +90,16 @@ This means both following examples are valid and will work.
    }
 
 
-Find the rust example rendered here `Rust Example Render <https://eclipse-score.github.io/baselibs_rust/pr-49/baselibs_rust/containers_rust/requirements/index.html#comp_req__containers_rust__fixed_vector>`_
+Here is how this would look rendered: 
+
+.. image:: assets/example_rust_source_code_link.png
 
 
 
 Link Requirements to Tests
 **************************
 
-There is a tool that has the ability to link requirements to your tests as well as provide virtual tests needs in order to make statistics etc. possible to be rendered.
+There is a tool that has the ability to link requirements to your tests as well as provide virtual tests sphinx-needs in order to make statistics etc. possible to be rendered.
 
 The implementation here differs based on your source code language though.
 So it is best if you read up in the language you want to develop in how to do this.
@@ -105,17 +107,38 @@ So it is best if you read up in the language you want to develop in how to do th
 In rough terms the data flow looks as follows.
 
 Your testing framework produces XML files with pre-defined properties.
-These XML files get read in and parsed. The test needs get build from the parsed data and linked to the requirements mentioned.
+These XML files are loaded and parsed. The test needs to get build details from the parsed data and link it to the requirements mentioned.
 
-You can now also do statistics on your tests. `Docs as Code Test Statistics examples <https://eclipse-score.github.io/docs-as-code/main/internals/requirements/test_overview.html>`_
+You can now also do statistics on your tests. 
+
+
+.. code-block:: rst
+
+   .. needtable:: SUCCESSFUL TESTS
+      :filter: result == "passed"
+      :tags: TEST
+      :columns: name as "testcase";result;fully_verifies;partially_verifies;test_type;derivation_technique;id as "link"
+
+   
+   .. needpie:: Test Results
+      :labels: passed, failed, skipped
+      :colors: green, red, orange
+      :legend:
+
+      type == 'testcase' and result == 'passed'
+      type == 'testcase' and result == 'failed'
+      type == 'testcase' and result == 'skipped'
+
+
+Find the rendered examples here: `Docs as Code Test Statistics examples <https://eclipse-score.github.io/docs-as-code/main/internals/requirements/test_overview.html>`_
 
 
 Specific Language Implementations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-`Python implementation [NOT LINKED YET]`
-`RUST Implementation [NOT LINKED YET]`
-`CPP Implementation [NOT LINKED YET]`
+`Python implementation [NOT LINKED YET]`  
+`RUST Implementation [NOT LINKED YET]`  
+`CPP Implementation [NOT LINKED YET]`  
 
 
 Find More Information
