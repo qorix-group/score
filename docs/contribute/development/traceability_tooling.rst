@@ -133,14 +133,6 @@ You can now also do statistics on your tests.
 Find the rendered examples here: `Docs as Code Test Statistics examples <https://eclipse-score.github.io/docs-as-code/main/internals/requirements/test_overview.html>`_
 
 
-Specific Language Implementations
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-`Python implementation [NOT LINKED YET]`  
-`RUST Implementation [NOT LINKED YET]`  
-`CPP Implementation [NOT LINKED YET]`  
-
-
 Find More Information
 =====================
 
