@@ -98,7 +98,7 @@ Technical committees
 
   Every *Feature Team* should also have a *Feature Team Lead*. The person with this role is responsible for
   organizing the meetings, writing meeting protocols and representing the current status of the *Feature Team*
-  work in various management reporting or plannig calls. *Feature Team Lead* is nominated by *Technical Leads* by election.
+  work in various management reporting or planning calls. *Feature Team Lead* is nominated by *Technical Leads* by election.
   Normally, this is the owner of the original *Feature Request*.
 
 
@@ -107,8 +107,8 @@ Creation of a new Feature Team
 Decision to create a new *Feature Team* is normally done in *Technical Lead Circle* in case a particular,
 already *accepted* *Feature Request* can not be assigned to any of already existing *Feature Teams*.
 
-As a first step, the decision to create a new Feature Team is protocolled in the `Tech Lead Circle meeeting minutes <https://github.com/orgs/eclipse-score/discussions/categories/technical-lead-circle>`_.
-Afterwards a GitHub Issue is created in the `Technical Lead Cirle LOP project <https://github.com/orgs/eclipse-score/projects/3>`_
+As a first step, the decision to create a new Feature Team is recorded in the `Tech Lead Circle meeting minutes <https://github.com/orgs/eclipse-score/discussions/categories/technical-lead-circle>`_.
+Afterwards a GitHub Issue is created in the `Technical Lead Circle LOP project <https://github.com/orgs/eclipse-score/projects/3>`_
 using the special *Feature Team Creation* GitHub Issue template and is assigned to one of the Technical Leads.
 
 **ToDo**: create such a template.
@@ -182,10 +182,10 @@ technical competence of the software developers, e.g. in case during the :ref:`F
 it was decided to take over already existing source code, then persons who were actively participating in the
 development of that code are always good candidates to be part of *Codeowner GitHub team*.
 The decision who should be initially part of the *Codeowner GitHub team* and the reasoning for this
-should be protocolled in the GitHub Issue, that is used for creation of the *Feature Team*.
+should be recorded in the GitHub Issue, that is used for creation of the *Feature Team*.
 
-In case further software developers should be added to the *Codeowener GitHub team* in the future,
-that decision and its reasoning should be protocolled in one of the *Feature Team* GitHub discussions.
+In case further software developers should be added to the *Codeowner GitHub team* in the future,
+that decision and its reasoning should be recorded in one of the *Feature Team* GitHub discussions.
 
 Members of the *Codeowner GitHub team* should also be authorized to merge pull requests (PRs) into the corresponding repository.
 Therefore, once the *Codeowner GitHub team* has been created, the Technical Lead assigned to the ticket for the *Feature
