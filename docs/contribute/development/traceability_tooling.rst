@@ -130,7 +130,7 @@ You can now also do statistics on your tests.
       type == 'testcase' and result == 'skipped'
 
 
-Find the rendered examples here: `Docs as Code Test Statistics examples <https://eclipse-score.github.io/docs-as-code/main/internals/requirements/test_overview.html>`_
+Find the rendered examples here: `Docs as Code Test Statistics examples <https://eclipse-score.github.io/docs-as-code/main/internals/requirements/implementation_state.html>`_
 
 
 Find More Information
