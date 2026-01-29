@@ -91,11 +91,9 @@ S-CORE Commits:
 Election
 ========
 
-For the election further Committers with similar skills are asked for approval:
+For the election Quality Managers are asked for approval:
 
 - `<https://github.com/masc2023>`_
-- `<https://github.com/pahmann>`_
-
 
 The election is performed by approving the pull request of this document.
 The nominee is elected if more than half of the above committers in the list approved and nobody "request changes".
