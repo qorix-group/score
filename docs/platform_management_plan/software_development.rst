@@ -103,7 +103,7 @@ minutes and Working Sections were stored. Within issues can bugfixes, improvemen
 set up. It's also possible to report there Security vulnerabilities. GitHub Actions is used
 as a support for continuous integration.
 
-The following GitHub features are activated to improve security and quality for software development:
+The following GitHub features are activated to improve security :need:`doc__platform_vulnerability_mgt_plan` and quality for software development:
 * **GitHub Dependabot** - Automated dependency vulnerability detection and update pull requests
 * **GitHub Advanced Security** - Code scanning and secret scanning capabilities where available (CodeQL)
 
