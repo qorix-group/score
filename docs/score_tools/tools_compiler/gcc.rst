@@ -57,13 +57,13 @@ Available information
 Installation and integration
 ----------------------------
 Installation
-~~~~~~~~~~~
-To use QCC in a project, add the appropriate toolchain configuration to the `MODULE.bazel` file.
+~~~~~~~~~~~~
+To use GCC in a project, add the appropriate toolchain configuration to the `MODULE.bazel` file.
 
 .. code-block:: Python
 
   # Configure the gcc toolchain.
-  bazel_dep(name = "score_toolchains_gcc", version = "0.5", dev_dependency = True)
+  bazel_dep(name = "score_toolchains_gcc", version = "<X.Y>", dev_dependency = True)
 
   gcc = use_extension("@score_toolchains_gcc//extentions:gcc.bzl", "gcc", dev_dependency = True)
   gcc.toolchain(
@@ -73,7 +73,7 @@ To use QCC in a project, add the appropriate toolchain configuration to the `MOD
   )
   use_repo(gcc, "gcc_toolchain", "gcc_toolchain_gcc")
 
-If your project uses multiple toolchains or configurations, update the `.bazelrc` file in the project root to reference the QCC toolchain.
+If your project uses multiple toolchains or configurations, update the `.bazelrc` file in the project root to reference the GCC toolchain.
 
 .. code-block:: Python
 
@@ -145,6 +145,26 @@ This section outlines the safety evaluation of GCC for its use within the S-CORE
      - yes
      - no
      - high
+   * - 5
+     - Instrumentation / code coverage
+     - | Coverage data too high
+       | compiler with instrumentation reports higher coverage than actual, masking untested code.
+     - yes
+     - no
+     - no
+     - yes (qualification)
+     - low
+   * - 6
+     - Instrumentation / code coverage
+     - | Coverage data too low
+       | Instrumentation reports lower coverage than actual, leading to unnecessary rework.
+     - no
+     - | (implicit) Manual review or redundant testing
+       | Required coverage goals are defined for software components. If reported coverage is lower than the goal, the required coverage objective is not achieved.
+       | Any coverage gaps identified must be addressed through manual review.
+     - yes
+     - no
+     - low
 
 Security evaluation
 -------------------
@@ -178,7 +198,7 @@ GCC requires qualification for use in safety-related software development accord
 Based on method: validation of the software tool.
 
 Requirements and testing aspects
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 GCC is an open-source tool and does not provide formal, vendor-defined requirements.
 Therefore, the tooling team is responsible for qualification of GCC used for the the project.
