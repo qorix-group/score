@@ -103,6 +103,10 @@ minutes and Working Sections were stored. Within issues can bugfixes, improvemen
 set up. It's also possible to report there Security vulnerabilities. GitHub Actions is used
 as a support for continuous integration.
 
+The following GitHub features are activated to improve security and quality for software development:
+* **GitHub Dependabot** - Automated dependency vulnerability detection and update pull requests
+* **GitHub Advanced Security** - Code scanning and secret scanning capabilities where available (CodeQL)
+
 .. rubric:: Sphinx
 
 is used for software documentation to generate html-sides from reStructuredText.
@@ -138,7 +142,7 @@ is used in conjunction with the Clang compiler to perform static analysis.
 
 .. rubric:: Host Compiler Rust
 
-There is currently no selection of a Rust compiler for S-CORE. Pick your own favorite.
+There is currently no selection of a Rust compiler for S-CORE. Pick your own favourite.
 
 .. rubric:: Target Compiler Rust
 
