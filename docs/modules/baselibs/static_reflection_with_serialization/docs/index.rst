@@ -26,6 +26,8 @@ static_reflection_with_serialization
 .. toctree::
    :hidden:
 
+   architecture/index.rst
+   
 Abstract
 =========
 
