@@ -135,7 +135,7 @@ part of the ISSUE.
 
 To provide solutions, use the Solution part of the ISSUE.
 
-:need:`[[title]] <gd_req__problem_attr_anaylsis_results>` is provided in the analysis
+:need:`[[title]] <gd_req__problem_attr_analysis_results>` is provided in the analysis
 results part of the ISSUE. State here, if the problem is accepted or rejected. Safety/Security
 experts must confirm or deny, if safety/security is affected is set correctly
 
