@@ -17,7 +17,7 @@ Safety Plan Formal Review Report
 ================================
 
 .. document:: S-CORE Platform Safety Plan Formal Review
-   :id: doc__platform_safety_plan_fdr
+   :id: doc__score_platform_safety_plan_fdr
    :status: draft
    :safety: ASIL_B
    :security: NO

@@ -17,7 +17,7 @@ Safety Package Formal Review Report
 ===================================
 
 .. document:: Platform Safety Package Formal Review
-   :id: doc__platform_safety_package_fdr
+   :id: doc__score_platform_safety_package_fdr
    :status: draft
    :safety: ASIL_B
    :security: NO

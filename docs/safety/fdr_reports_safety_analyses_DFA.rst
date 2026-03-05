@@ -17,7 +17,7 @@ Safety Analysis Formal Review Report
 ====================================
 
 .. document:: Safety Analysis Formal Review Report
-   :id: doc__platform_safety_analysis_fdr
+   :id: doc__score_platform_safety_analysis_fdr
    :status: draft
    :safety: ASIL_B
    :security: NO

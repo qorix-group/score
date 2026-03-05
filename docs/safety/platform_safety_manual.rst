@@ -17,7 +17,7 @@ Platform Safety Manual
 ======================
 
 .. document:: Platform Safety Manual
-   :id: doc__platform_safety_manual
+   :id: doc__score_platform_safety_manual
    :status: draft
    :safety: ASIL_B
    :security: NO
