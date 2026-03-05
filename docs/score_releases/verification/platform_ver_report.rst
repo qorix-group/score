@@ -16,7 +16,7 @@ Platform Verification Report
 ============================
 
 .. document:: Platform Verification Report
-   :id: doc__platform_verification_report
+   :id: doc__score_platform_verification_report
    :status: draft
    :safety: ASIL_B
    :security: NO

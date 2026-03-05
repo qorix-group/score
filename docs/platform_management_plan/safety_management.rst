@@ -381,7 +381,7 @@ Functional Safety/Security Management SW Platform Work Products
 
     * - :need:`wp__verification_platform_ver_report`
       - :ndf:`copy('status', need_id='wf__verification_platform_ver_report')`
-      - :need:`doc__platform_verification_report`
+      - :need:`doc__score_platform_verification_report`
       - draft
 
     * - :need:`wp__requirements_stkh`
@@ -433,17 +433,17 @@ Functional Safety Specific SW Platform Work Products
 
     * - :need:`wp__fdr_reports` (platform Safety Plan)
       - :ndf:`copy('status', need_id='wf__p_formal_rv')`
-      - :need:`doc__platform_safety_plan_fdr`
+      - :need:`doc__score_platform_safety_plan_fdr`
       - draft
 
     * - :need:`wp__fdr_reports` (platform Safety Package)
       - :ndf:`copy('status', need_id='wf__p_formal_rv')`
-      - :need:`doc__platform_safety_package_fdr`
+      - :need:`doc__score_platform_safety_package_fdr`
       - draft
 
     * - :need:`wp__fdr_reports` (feature's Safety Analyses & DFA)
       - :ndf:`copy('status', need_id='wf__p_formal_rv')`
-      - :need:`doc__platform_safety_analysis_fdr`
+      - :need:`doc__score_platform_safety_analysis_fdr`
       - draft
 
     * - :need:`wp__audit_report`
@@ -458,7 +458,7 @@ Functional Safety Specific SW Platform Work Products
 
     * - :need:`wp__platform_safety_manual`
       - :ndf:`copy('status', need_id='wf__cr_mt_safety_manual')`
-      - :need:`doc__platform_safety_manual`
+      - :need:`doc__score_platform_safety_manual`
       - draft
 
     * - :need:`wp__safety_tailoring` (generic)
