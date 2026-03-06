@@ -16,6 +16,16 @@ Decision Records
 ================
 
 
+Architecture
+~~~~~~~~~~~~
+
+.. toctree::
+   :maxdepth: 1
+   :glob:
+
+   DR-*-arch*
+
+
 Infrastructure
 ~~~~~~~~~~~~~~
 
