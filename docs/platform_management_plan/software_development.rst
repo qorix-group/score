@@ -47,9 +47,8 @@ Approach
 Selection of design and programming language
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For the selection of design and programming language stakeholder requirements were defined in :need:`stkh_req__dev_experience__prog_languages`
-and :need:`stkh_req__dev_experience__design_languages` and are based on the experience. The criteria for selection are based on the following
-aspects:
+For the selection of design and programming language a stakeholder requirement is defined in :need:`stkh_req__dev_experience__prog_languages`,
+which is based on experience. The criteria for selection are based on the following aspects:
 
 * Unambiguous definition of syntax and semantics
 * Suitability for specifying and managing for safety related requirements and design
