@@ -67,7 +67,7 @@ The selected languages form the stakeholder requirements were analysed in the fo
    * - Unambiguous definition of syntax and semantics
      - Standardized, strict syntax, strong tooling
      - Strict syntax, single compiler, strong tooling
-   * - Suitability for specifying and managing for safety related requirements and design
+   * - Suitability for safety related programming
      - Certified tools, MISRA, static analysis, traceability
      - Compiler-enforced safety, strong type system, documentation, emerging safety support
    * - Support of modularity, abstraction and encapsulation
