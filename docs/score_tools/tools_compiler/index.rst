@@ -30,3 +30,4 @@ Compiler Tools Overview
    :maxdepth: 2
 
    gcc
+   qcc
