@@ -528,7 +528,7 @@ release, as part of the Tool Verification Report.
      - 12+ (see [1]_)
      - YES
      - :need:`rl__infrastructure_tooling_community`
-     - :need:`doc_tool__bazel`
+     - :need:`doc_tool__qcc`
      - N/A
    * - 5a-3
      - LLVM/Clang
