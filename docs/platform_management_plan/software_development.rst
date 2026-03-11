@@ -69,7 +69,7 @@ The selected languages form the stakeholder requirements were analysed in the fo
      - Strict syntax, single compiler, strong tooling
    * - Suitability for safety related programming
      - Certified tools, MISRA, static analysis, traceability
-     - Compiler-enforced safety, strong type system, documentation, emerging safety support
+     - Compiler-enforced safety, strong type system, documentation, emerging safety support, certified tools
    * - Support of modularity, abstraction and encapsulation
      - Classes, templates, modules, access control
      - Modules, crates, traits, strong visibility control
