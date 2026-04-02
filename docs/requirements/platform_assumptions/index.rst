@@ -273,7 +273,7 @@ In this section assumptions are described which need to be fulfilled by the appl
    This is supported by the library safecpp/aborts_upon_exception supplied by S-CORE "base libraries" feature.
 
 .. aou_req:: Avoidance of heap allocations after initialization
-   :id: aou_req__platform__no_heap_allocations_after_init
+   :id: aou_req__platform__no_heap_alloc_after_init
    :reqtype: Functional
    :security: YES
    :safety: ASIL_B
