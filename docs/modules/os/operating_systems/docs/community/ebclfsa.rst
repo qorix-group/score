@@ -27,7 +27,7 @@ It allows to run HI Applications (High Integrity Applications) for safety-relate
 The full and qualified stack uses a hypervisor to separate HI Applications from other applications and from the Linux kernel.
 To ensure spatial isolation even from the Linux kernel, an HI Application shall not execute very few system calls.
 These system calls let the Linux kernel perform unsupervised operations on the HI Application's memory.
-Linux for Safety Applications protects an HI Application from such operations and guarantees it execution integrity.
+Linux for Safety Applications protects an HI Application from such operations and guarantees its execution integrity.
 
 The public variant of EBcLfSA (which is the variant currently integrated in S-CORE) uses a single Linux kernel and is intended for use in development.
 It is capable to analyze HI Applications in a so-called "fastdev" (fast development) environment.
