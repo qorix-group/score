@@ -79,7 +79,7 @@ Receiving function is affected by information that is false, lost, sent multiple
 
 
 Shared information inputs
-^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Same information input used by multiple functions.
 
