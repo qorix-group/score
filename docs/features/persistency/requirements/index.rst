@@ -505,12 +505,3 @@ AoU Requirements
 
    The application shall be designed in a way that deadlocks are avoided.
 
-.. aou_req:: Application execution
-   :id: aou_req__persistency__appl_exec
-   :reqtype: Functional
-   :security: NO
-   :safety: ASIL_B
-   :status: valid
-   :tags: environment
-
-   The execution of persistency shall not be blocked by the application.
