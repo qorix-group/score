@@ -30,10 +30,15 @@ following tables. For all applicable failure initiators, the DFA has to be perfo
 Dependent Failure Initiators
 ----------------------------
 
-2.1 Shared resources
+Shared resources
+^^^^^^^^^^^^^^^^
 
-| 2.2 Communication between the two elements:
-| Receiving function is affected by information that is false, lost, sent multiple times, or in the wrong order etc. from the sender.
+The dependent failure initiators related to shared resources are not applicable for the features. The shared resources will be considered in the platform DFA.
+
+Communication between the two elements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Receiving function is affected by information that is false, lost, sent multiple times, or in the wrong order etc. from the sender.
 
 .. list-table:: DFA communication between elements
   :header-rows: 1
@@ -73,8 +78,10 @@ Dependent Failure Initiators
     - Failure initiator not applicable at persistency, so no mitigation is needed.
 
 
-| 2.3 Shared information inputs
-| Same information input used by multiple functions.
+Shared information inputs
+^^^^^^^^^^^^^^^^^^^^^^^
+
+Same information input used by multiple functions.
 
 .. list-table:: DFA shared information inputs
   :header-rows: 1
@@ -102,8 +109,10 @@ Dependent Failure Initiators
     - Failure initiator not applicable at persistency, so no mitigation is needed.
 
 
-| 2.4 Unintended impact
-| Unintended impacts to function due to various failures.
+Unintended impact
+^^^^^^^^^^^^^^^^^
+
+Unintended impacts to function due to various failures.
 
 .. list-table:: DFA unintended impact
   :header-rows: 1
@@ -135,8 +144,8 @@ Dependent Failure Initiators
     - Same consideration as done in UI_01_04.
   * - UI_01_06
     - Blocking of execution
-    - yes
-    - :need:`feat_saf_dfa__persistency__execution_blocking`
+    - no
+    - Failure initiator not applicable at persistency, so no mitigation is needed.
   * - UI_01_07
     - Incorrect allocation of execution time
     - no
@@ -167,14 +176,5 @@ DFA
 ---
 For all identified applicable failure initiators, the DFA is performed in the following section.
 
-.. feat_saf_dfa:: Persistency execution blocking
-   :violates: feat_arc_sta__persistency__static
-   :id: feat_saf_dfa__persistency__execution_blocking
-   :failure_id: UI_01_06
-   :failure_effect: Blocking of execution. This will lead to a unavailability of the persistency feature.
-   :mitigated_by: aou_req__persistency__appl_exec
-   :mitigation_issue:
-   :sufficient: yes
-   :status: valid
-
-   Execution blocking will make persistency not available.
+Due to to analysis of the failure initiators, no applicable failure initiator is identified. Therefore, no DFA is needed for
+the feature persistency.
