@@ -56,22 +56,8 @@ Mandatory: a motivation for the decomposition or reason for not further splittin
 .. note:: Common decisions across components / cross cutting concepts is at the higher level.
 
 
-
-
-
 Component Architecture
 =======================
-
-
-
-
-
-
-
-
-
-
-
 
 Static Architecture
 -------------------
@@ -103,7 +89,7 @@ The components are designed to cover the expectations from the feature architect
    :status: valid
    :uses: logic_arc_int__logging__logging, logic_arc_int__tracing__tracing, logic_arc_int__communication__user
    :belongs_to: comp__orchestrator
-   :fulfils: comp_req__component_name__some_title
+   :fulfils: comp_req__orchestrator__deploy
 
    .. needarch::
       :scale: 50
@@ -287,6 +273,34 @@ Interfaces
 ..       :safety: <QM|ASIL_B>
 ..       :fulfils: <link to component requirement id>
 ..       :language: cpp
+
+
+Functional Requirements
+=======================
+
+.. comp_req:: Error logging
+   :id: comp_req__orchestrator__logging
+   :reqtype: Functional
+   :security: NO
+   :safety: ASIL_B
+   :satisfies: feat_req__orchestration__obsv_trace_corr
+   :status: valid
+   :belongs_to: comp__orchestrator
+
+   In case, that there is an fault in the orchestration an ERROR message shall be logged.
+
+
+.. comp_req:: Error logging
+   :id: comp_req__orchestrator__deploy
+   :reqtype: Functional
+   :security: NO
+   :safety: ASIL_B
+   :satisfies: feat_req__orchestration__orch_single_deploy
+   :status: valid
+   :belongs_to: comp__orchestrator
+
+   The orchestrator shall provide an design interface.
+
 
 Lower Level Components
 ----------------------

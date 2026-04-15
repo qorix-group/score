@@ -23,14 +23,6 @@ Tracing Component Architecture
    :implements: logic_arc_int__tracing__tracing
    :belongs_to: feat__tracing
 
-.. comp_arc_sta:: Tracing
-   :id: comp_arc_sta__tracing__tracing
-   :security: YES
-   :safety: ASIL_B
-   :status: valid
-   :belongs_to: comp__tracing
-   :fulfils: comp_req__component_name__some_title
-
    .. needarch::
       :scale: 50
       :align: center

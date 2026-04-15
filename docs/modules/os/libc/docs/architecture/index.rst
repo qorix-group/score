@@ -23,15 +23,6 @@ libc Component Architecture
    :implements: logic_arc_int__os__fcntl, logic_arc_int__os__stat, logic_arc_int__os__mman, logic_arc_int__os__unistd
    :belongs_to: feat__os
 
-.. comp_arc_sta:: libc
-   :id: comp_arc_sta__os__libc
-   :security: YES
-   :safety: ASIL_B
-   :status: valid
-   :satisfies:
-   :belongs_to: comp__os_libc
-   :fulfils: comp_req__component_name__some_title
-
    .. needarch::
       :scale: 50
       :align: center
