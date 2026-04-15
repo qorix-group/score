@@ -69,16 +69,6 @@ The components are designed to cover the expectations from the feature architect
    :uses: logic_arc_int__logging__logging, logic_arc_int__tracing__tracing
    :belongs_to: feat__orchestration
 
-
-.. comp_arc_sta:: Executor
-   :id: comp_arc_sta__orch__executor
-   :security: YES
-   :safety:  ASIL_B
-   :status: valid
-   :uses: logic_arc_int__logging__logging, logic_arc_int__tracing__tracing
-   :belongs_to: comp__orch_executor
-   :fulfils: comp_req__component_name__some_title
-
    .. needarch::
       :scale: 50
       :align: center
