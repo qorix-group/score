@@ -97,7 +97,7 @@ as this level is not expected sufficient for a product release, only for incubat
 Functional Level
 ++++++++++++++++
 
-This is the middle level of integraton, the higher level will build on this.
+This is the middle level of integration, the higher level will build on this.
 It is the level where the S-CORE SW-platform will functionally "work" with the external SW element.
 
 .. aou_req:: Bazel tooling
@@ -149,7 +149,7 @@ It is the level where the S-CORE SW-platform will functionally "work" with the e
 Certifiable Level
 +++++++++++++++++
 
-This is the highest level of integraton. This is the level where the S-CORE SW-platform will be certifiable with an external SW element.
+This is the highest level of integration. This is the level where the S-CORE SW-platform will be certifiable with an external SW element.
 
 .. aou_req:: Integration levels
    :id: aou_req__platform__levels
