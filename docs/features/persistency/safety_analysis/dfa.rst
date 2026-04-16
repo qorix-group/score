@@ -175,6 +175,14 @@ Unintended impacts to function due to various failures.
 DFA
 ---
 For all identified applicable failure initiators, the DFA is performed in the following section.
+ - Execution blocking will make persistency not available.
 
-Due to to analysis of the failure initiators, no applicable failure initiator is identified. Therefore, no DFA is needed for
-the feature persistency.
+.. feat_saf_dfa:: Persistency execution blocking
+   :violates: feat_arc_sta__persistency__static
+   :id: feat_saf_dfa__persistency__execution_blocking
+   :failure_id: UI_01_06
+   :failure_effect: Blocking of execution. This will lead to a unavailability of the persistency feature.
+   :mitigated_by: aou_req__persistency__appl_exec
+   :mitigation_issue:
+   :sufficient: yes
+   :status: valid
