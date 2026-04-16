@@ -177,6 +177,8 @@ DFA
 For all identified applicable failure initiators, the DFA is performed in the following section.
  - Execution blocking will make persistency not available.
 
+
+
 .. feat_saf_dfa:: Persistency execution blocking
    :violates: feat_arc_sta__persistency__static
    :id: feat_saf_dfa__persistency__execution_blocking
@@ -186,3 +188,5 @@ For all identified applicable failure initiators, the DFA is performed in the fo
    :mitigation_issue:
    :sufficient: yes
    :status: valid
+
+   Execution blocking will make persistency not available.
