@@ -101,7 +101,10 @@ cross-repository builds and detect integration issues early in the development c
                                              e.g. ``qnx_aarch64``, ``autosd_x86_64``, ``ebclfsa_aarch64``,
                                              ``linux_x86_64``. Each image deploys all showcases and
                                              contains platform-specific code.
+    known_good.json                    -> Pinned versions of all integrated S-CORE modules
     patches/                           -> Patches applied during the build
+    platform_integration_tests/        -> Integration tests on reference hardware verifying stakeholder requirements.
+                                             [:need:`wp__verification_platform_int_test`]
     runners/                           -> Thin logic to reuse runners (e.g. docker runner) between images
     rust_coverage/                     -> Rust coverage configuration
     scripts/                           -> Internal tooling scripts (known_good management,
@@ -109,9 +112,8 @@ cross-repository builds and detect integration issues early in the development c
         tooling/                       -> Single point of interaction with all tooling artifacts
     showcases/                         -> S-CORE wide showcases deployed into images
         cli/                           -> CLI tool running on the target to guide users through examples
-    MODULE.bazel                       -> Bazel module definition
-    known_good.json                    -> Pinned versions of all integrated S-CORE modules
     score_starter                      -> Launcher script to select and run an integration scenario
+    MODULE.bazel                       -> Bazel module definition
     README.md                          -> Entrypoint of the repository
 
 .. _module_folder_structure:
