@@ -35,7 +35,7 @@ As described in :need:`wf__p_formal_rv`, the formal document review is performed
 
 **Checklist**
 
-Please note that the "passed" column must contain "yes" or "no" for each checklist item. Additionally, the remarks column must explain why item passed or did not passed. In case of "no" an issue link to the issue tracking system has to be added in the last column. See also :ref:`review_concept` for further information about reviews in general and inspection in particular.
+Please note that the "passed" column must contain "yes" or "no" for each checklist item. Additionally, the remarks column must explain why item passed or did not passed. In case of "no" an issue link to the issue tracking system has to be added in the last column. See also :need:`doc_concept__wp_inspections` for further information about reviews in general and inspection in particular.
 
 .. list-table:: General Checklist
       :header-rows: 1
@@ -48,7 +48,7 @@ Please note that the "passed" column must contain "yes" or "no" for each checkli
         - Comment
 
       * - 1
-        - Are the safety analysis performed according to the defined process and templates? See :ref:`process_requirements_safety_analysis` and also :ref:`FMEA_templates` and :ref:`dfa_templates`
+        - Are the safety analysis performed according to the defined process and templates? See :need:`gd_req__saf_structure` and also :need:`doc__feature_name_fmea` and :need:`doc__feature_name_dfa`
         - YES
         - :need:`[[title]] <std_req__iso26262__analysis_841>`
         - Templates for safety analysis are used and the process is followed.
@@ -137,7 +137,7 @@ Please note that the "passed" column must contain "yes" or "no" for each checkli
         - The required level of independence can be shown for the identified potential dependent failures.
 
       * - 8
-        - Are the templates for DFA used? See :ref:`dfa_templates` and also :ref:`process_requirements_safety_analysis`
+        - Are the templates for DFA used? See :need:`doc__feature_name_dfa` and also :need:`gd_req__saf_structure`
         - YES
         - :need:`[[title]] <std_req__iso26262__analysis_748>`
         - The templates for DFA are used.
@@ -160,7 +160,7 @@ Please note that the "passed" column must contain "yes" or "no" for each checkli
         - Comment
 
       * - 1
-        - Are the fault models suitable and applied for the FMEA? See :ref:`fault_models` and also :ref:`process_requirements_safety_analysis`
+        - Are the fault models suitable and applied for the FMEA? See :need:`gd_guidl__fault_models` and also :need:`gd_req__saf_structure`
         - YES
         - :need:`[[title]] <std_req__iso26262__analysis_846>`
         - The fault models are suitable and have been applied for the FMEA.
@@ -172,7 +172,7 @@ Please note that the "passed" column must contain "yes" or "no" for each checkli
         - The FMEA is performed in a systematic way to identify the potential failure modes and their effects. The failure effect and the mitigation are described.
 
       * - 3
-        - Are the templates for FMEA used? See :ref:`FMEA_templates` and also :ref:`process_requirements_safety_analysis`
+        - Are the templates for FMEA used? See :need:`doc__feature_name_fmea` and also :need:`gd_req__saf_structure`
         - YES
         - :need:`[[title]] <std_req__iso26262__analysis_849>`, :need:`[[title]] <std_req__iso26262__analysis_8410>`
         - The templates for FMEA are used.
