@@ -481,7 +481,7 @@ Platform Management Plan - Feature Work Product Lists
 
 :need:`doc__orchestration_safety_wp`
 
-:need:`doc__persistency_safety_wp`
+.. :need:`doc__persistency_safety_wp`
 
 Note: list of features according to :ref:`releases`
 
