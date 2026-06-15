@@ -27,7 +27,6 @@ Persistency (v0.5 beta)
 
 .. toctree::
    architecture/index.rst
-   architecture/chklst_arc_inspection.rst
    requirements/index.rst
    requirements/chklst_req_inspection.rst
 
