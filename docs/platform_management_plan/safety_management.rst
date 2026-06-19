@@ -474,7 +474,7 @@ Link to project planning: `Platform safety work product issue for V1.0 <https://
 Platform Management Plan - Feature Work Product Lists
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-:need:`doc__baselibs_safety_wp`
+`Baselibs Safety Planning <https://eclipse-score.github.io/baselibs/main/baselibs/feature/safety_planning/index.html>`__
 
 :need:`doc__com_ipc_safety_wp`
 
@@ -482,7 +482,7 @@ Platform Management Plan - Feature Work Product Lists
 
 :need:`doc__orchestration_safety_wp`
 
-:need:`doc__persistency_safety_wp`
+`Persistency Safety Planning <https://eclipse-score.github.io/persistency/main/docs/features/persistency/safety_planning/index.html>`__
 
 Note: list of features according to :ref:`releases`
 
