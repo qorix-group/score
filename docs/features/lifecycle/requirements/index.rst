@@ -212,7 +212,7 @@ Launching Processes
 .. feat_req:: Security policy support
     :id: feat_req__lifecycle__support_secpol_type
     :reqtype: Functional
-    :security: NO
+    :security: YES
     :safety: ASIL_B
     :derived_from: stkh_req__dependability__safety_features_4
     :status: invalid
@@ -257,7 +257,7 @@ Launching Processes
 .. feat_req:: ASLR support
     :id: feat_req__lifecycle__aslr_support
     :reqtype: Functional
-    :security: NO
+    :security: YES
     :safety: ASIL_B
     :derived_from: stkh_req__dependability__security_features
     :status: invalid
