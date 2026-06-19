@@ -18,9 +18,10 @@ Release Note
 .. document:: Orchestrator Release Note
    :id: doc__orchestrator_release_note
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: YES
-   :realizes: wp__module_sw_release_note
+   :realizes: wp__module_sw_release_note[version==1]
    :tags: orchestrator
 
 

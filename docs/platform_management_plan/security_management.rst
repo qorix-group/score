@@ -15,9 +15,10 @@
 .. document:: Platform Security Plan
    :id: doc__score_platform_security_plan
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: YES
-   :realizes: wp__platform_security_plan, wp__tailoring_work_products
+   :realizes: wp__platform_security_plan[version==1], wp__tailoring_work_products[version==1]
    :tags: platform_management
 
 Security management / Platform Security Plan

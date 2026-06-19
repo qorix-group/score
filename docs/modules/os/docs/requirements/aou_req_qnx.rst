@@ -18,9 +18,10 @@ Assumptions of Use - QNX
 .. document:: QNX Assumptions of Use
    :id: doc__os_aou_qnx
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: YES
-   :realizes: wp__requirements_comp
+   :realizes: wp__requirements_comp[version==1]
 
 Note: Document is draft until all relevant restrictions from the QNX safety manual(s) are included.
 
@@ -45,6 +46,7 @@ requirements inspection checklist's scope and document findings like for other i
    :security: YES
    :safety: ASIL_B
    :status: valid
+   :version: 1
 
    see QNX OsSafetyManual, expect to be verified by requirements analysis
 

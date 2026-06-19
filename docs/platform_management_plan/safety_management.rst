@@ -15,9 +15,10 @@
 .. document:: Platform Safety Plan
    :id: doc__score_platform_safety_plan
    :status: draft
+   :version: 1
    :safety: ASIL_B
    :security: NO
-   :realizes: wp__platform_safety_plan, wp__safety_tailoring
+   :realizes: wp__platform_safety_plan[version==1], wp__safety_tailoring[version==1]
    :tags: platform_management
 
 
