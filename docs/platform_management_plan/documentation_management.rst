@@ -15,7 +15,7 @@
 .. document:: Documentation Management Plan
    :id: doc__documentation_mgt_plan
    :status: valid
-   :version: 1
+   :version: 2
    :safety: ASIL_B
    :security: YES
    :tags: platform_management
