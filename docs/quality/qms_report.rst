@@ -21,7 +21,7 @@ Quality Report
    :status: draft
    :version: 1
    :safety: ASIL_B
-   :security: NO
+   :security: YES
    :realizes: wp__qms_report[version==1]
    :tags:
 
@@ -60,15 +60,15 @@ Quality Objectives
     * - 2
       - ISO 262626:2018
       - 2018
-      - Requirements and workproducts fully linked to process descriptions
+      - Requirements and work products fully linked to process descriptions
     * - 3
       - ISO/SAE 21434:2021
       - 2021
-      - Requirements linked to 75%, workproducts linked to 100% to process descriptions
+      - Requirements linked to 75%, work products linked to 100% to process descriptions
     * - 4
       - ISO PAS 8926:2024 (will be integrated into ISO 26262 3rd edition as updated part 8 clause 12)
       - 2024
-      - Requirements and workproducts fully linked to process descriptions
+      - Requirements and work products fully linked to process descriptions
 
 
 Quality Performance Objectives
@@ -191,8 +191,8 @@ project.
 ===============================
 
 
-Quality Management Generic workproducts
----------------------------------------
+Quality Management Generic work products
+----------------------------------------
 
 .. list-table:: Quality related work products
     :header-rows: 1
@@ -362,7 +362,7 @@ Quality Management Generic workproducts
       - :ndf:`copy('status', need_id='doc__platform_problem_resolution_plan')`
 
     * - :need:`wp__process_description`
-      - -
+      - <https://eclipse-score.github.io/process_description/main/>`_
       - -
 
     * - :need:`wp__platform_mgmt`
