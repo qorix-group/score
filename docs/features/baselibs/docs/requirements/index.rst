@@ -32,6 +32,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall include core software utilities and common infrastructure components needed by multiple platform modules.
@@ -45,6 +46,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall implement functionality necessary to support safety-relevant platform components up to ASIL-B for selected functionalities.
@@ -58,6 +60,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall provide APIs for C++, Rust, or both, depending on the requirements of consuming platform components.
@@ -71,6 +74,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall provide consistent APIs while respecting language-specific idioms.
@@ -84,6 +88,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall be designed for maintainability and code reuse.
@@ -97,6 +102,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall adhere to secure coding standards to prevent vulnerabilities across platform components.
@@ -110,6 +116,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall provide a JSON-Library with parsing functionality.
@@ -141,6 +148,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall provide error handling mechanisms that enable development without relying on C++ exceptions.
@@ -154,6 +162,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The base libraries shall provide error handling mechanisms that enable development without relying on Rust panics.
    Where an idiomatic interface requires panics, an additional non-panicking option shall be provided as well.
@@ -167,6 +176,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall provide a container library offering additional container types not present in the C++ standard library.
@@ -180,6 +190,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The base libraries shall provide a library of containers that can serve as the basis for ABI-compatible container data structures.
 
@@ -192,6 +203,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall provide bit manipulation utilities for low-level operations on integral types.
@@ -205,6 +217,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall provide a filesystem library with file and directory manipulation functionality.
@@ -218,6 +231,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The baselibs shall provide a memory management library that includes utilities for shared memory operations, polymorphic memory resources, position-independent pointers, endianness conversion, and inter-process synchronization mechanisms.
@@ -231,6 +245,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
    :tags: inspected
 
    The base libraries shall provide a library for parallel execution of C++ callables with thread pool management.
@@ -244,6 +259,7 @@ Requirements
    :satisfied_by: feat__baselibs[version==1]
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The base libraries shall provide a hash library supporting cryptographic hash
    calculation (e.g. SHA-256, SHA-512) and checksum algorithms (e.g. CRC-32) over
