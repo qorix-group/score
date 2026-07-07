@@ -36,6 +36,7 @@ Overall goals
    :rationale: This is a usability constraint needed for long maintenance support
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall enable the reuse of application software via a set of managed APIs.
    These APIs shall be developed via a well-defined life-cycle ensuring
@@ -50,6 +51,7 @@ Overall goals
     :rationale: To enable cooperation with other cooperation partners.
     :status: valid
     :version: 1
+    :valid_from: v1.0.0
 
     The SW-platform shall where possible be based on existing standards (e.g. network protocols).
 
@@ -61,6 +63,7 @@ Overall goals
     :rationale: tbd
     :status: valid
     :version: 1
+    :valid_from: v1.0.0
 
     The SW-platform shall provide variant management support.
     Variant management support shall enable users to ensure the
@@ -94,6 +97,7 @@ Functional requirements
    :rationale: File based configuration allows changes without rebuilding the software.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support configuration of applications via files (e.g. yaml, json)
 
@@ -106,6 +110,7 @@ Functional requirements
    :status: valid
    :version: 1
    :tags: safety_mechanism
+   :valid_from: v1.0.0
 
    The SW-platform shall provide towards the applications a safe key/value store.
 
@@ -120,6 +125,7 @@ Functional requirements
    :status: valid
    :version: 1
    :tags: safety_mechanism
+   :valid_from: v1.0.0
 
    The SW-platform shall support safe configuration.
 
@@ -134,6 +140,7 @@ Functional requirements
    :rationale: Safe systems require computations to be done in safe environments.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support safe computation.
 
@@ -148,6 +155,7 @@ Functional requirements
    :rationale: Common libraries reduce duplication, improve consistency and quality across components.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide a set of base libraries offering common functionality for SW-platform components.
 
@@ -172,6 +180,7 @@ Functional requirements
    :rationale: Applications typically need to store data across power cycles.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support to store data on non-volatile memory e.g. disks, flash, etc.
 
@@ -184,6 +193,7 @@ Functional requirements
    :rationale: This allows portability of SW-platform on POSIX compliant operating systems.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support operating systems compliant with IEEE Std 1003.1 (2004 Edition or newer)
 
@@ -260,6 +270,7 @@ Dependability
    :rationale: The SW-platform shall be usable by safety relevant applications.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support applications with an automotive safety
    integrity level up to ASIL-B.
@@ -519,6 +530,7 @@ Dependability
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support the development of highly available systems.
    (see also `Availability <https://en.wikipedia.org/wiki/Availability>`_).
@@ -532,6 +544,7 @@ Dependability
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support the following security features:
 
@@ -590,6 +603,7 @@ interaction)** — each emphasize different operational priorities.
    :status: valid
    :version: 1
    :tags: safety_mechanism
+   :valid_from: v1.0.0
 
    The SW-platform shall support a deterministic, time-based application execution model that triggers logic based on predefined schedules or
    polling intervals.
@@ -603,6 +617,7 @@ interaction)** — each emphasize different operational priorities.
    :rationale: tbd - potentially above explanation
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support an event-driven, high-throughput application architecture where execution is triggered by data changes.
 
@@ -614,6 +629,7 @@ interaction)** — each emphasize different operational priorities.
    :rationale: tbd - potentially above explanation
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support a request-driven, asynchronous application architecture that processes requests on-demand.
 
@@ -630,6 +646,7 @@ Execution model
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support the following scheduling strategies:
 
@@ -654,6 +671,7 @@ Execution model
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support cycle times of less then 5 ms on application level
    if this is supported by the underlying hardware.
@@ -704,6 +722,7 @@ Communication
    :rationale: Application software typically consists of multiple processes which need to interact.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support inter-process communication.
 
@@ -715,6 +734,7 @@ Communication
    :rationale: ABI compatiblity ensures that the same memory location is correctly interpreted by different programming languages.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support ABI compatible data types for zero-copy communication between Rust and C++ applications.
 
@@ -726,6 +746,7 @@ Communication
    :rationale: Application software typically maps software building blocks into the same process.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support intra-process communication.
 
@@ -749,6 +770,7 @@ Communication
    :rationale: ECUs need to interact with each other. There are multiple protocols today and more to come in the future.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support external communication via well established protocols e.g. Zenoh, DDS.
 
@@ -762,6 +784,7 @@ Communication
    :status: valid
    :version: 1
    :tags: safety_mechanism
+   :valid_from: v1.0.0
 
    The SW-platform shall support safe communication.
 
@@ -787,6 +810,7 @@ Communication
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support the following automotive network
    protocols
@@ -843,6 +867,7 @@ Time
    :rationale: Enables the system to compare events chronologically.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide a time synchronization framework to synchronize its clock
    to Time Master within the vehicle.
@@ -855,6 +880,7 @@ Time
    :rationale: Enables an application to correlate its data with a vehicle-internal time reference for event timestamp and chronological events comparison.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide access to synchronized vehicle time.
 
@@ -877,6 +903,7 @@ Time
    :rationale: Enables the system to validate a certificate or token with temporal validity conditions, adding a UTC-timestamp to a data set.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide a framework to synchronize the clock to external-to-vehicle absolute time base (UTC).
 
@@ -888,6 +915,7 @@ Time
    :rationale: Enables an application to correlate its data with an absolute vehicle-external time reference for event timestamping and chronological events comparison.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide access to the absolute time base, synchronized with external time sources.
 
@@ -899,6 +927,7 @@ Time
    :rationale: Enables an application to get the current system time, which is essential for time-sensitive operations and event scheduling, via common, mockable and standardized API.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide access to the current high precision clock from the system time provider in nanoseconds.
 
@@ -912,6 +941,7 @@ Time
    :rationale: Enables an application to get the current system time, which is essential for time-sensitive operations and event scheduling, via common, mockable and standardized API.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide access to the current monotonic clock from the system time provider.
 
@@ -1062,6 +1092,7 @@ Diagnostics and Fault Management
    :rationale: Enables modern, scalable diagnostics using a standard REST-based protocol to improve integration, interoperability, and maintainability.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support vehicle diagnostics via the SOVD protocol as defined in ISO 17978, to allow scalable and secure diagnostic access.
 
@@ -1073,6 +1104,7 @@ Diagnostics and Fault Management
    :rationale: Enables applications and components to report faults in a structured, reusable, and system-wide accessible manner.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support a reusable fault reporting infrastructure that enables applications and SW-platform components to report, persist, and manage diagnostic fault information.
 
@@ -1084,6 +1116,7 @@ Diagnostics and Fault Management
    :rationale: Enables reading of Diagnostic Trouble Codes (DTCs) from the ECU for various use-cases like production or maintenance.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide users the ability to retrieve current Diagnostic Trouble Codes (DTCs) from the ECU via the SOVD protocol.
 
@@ -1095,6 +1128,7 @@ Diagnostics and Fault Management
    :rationale: Enables OEMs and developers to implement system-specific or project-specific routines for diagnostic control and testing.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support extensibility mechanisms that allow integration of custom diagnostic services and routines via the SOVD interface.
 
@@ -1106,6 +1140,7 @@ Diagnostics and Fault Management
    :rationale: Ensures continued usability of existing test infrastructure, avoiding costly replacement of legacy tools and ensuring fulfillment of legal requirements.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide compatibility with UDS-based testers by offering a proxy to translate UDS requests into SOVD-compatible actions.
 
@@ -1117,6 +1152,7 @@ Diagnostics and Fault Management
    :rationale: Ensures continued operability of ECUs that are not SOVD-capable.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support integration with ECUs that use UDS by providing a compatibility adapter to translate SOVD requests to UDS commands.
 
@@ -1128,6 +1164,7 @@ Diagnostics and Fault Management
    :rationale: Enables the system to operate in modern, distributed vehicle architectures where diagnostics span multiple ECUs and subsystems.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support distributed diagnostics across multiple ECUs and network segments, enabling routing and aggregation of diagnostic data.
 
@@ -1139,6 +1176,7 @@ Diagnostics and Fault Management
    :rationale: Diagnostic access allows deep system introspection and manipulation, which must be protected against unauthorized use.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall enforce secure access control for all diagnostic interfaces, including authentication, encryption, and role-based access enforcement.
 
@@ -1265,6 +1303,7 @@ Developer experience
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support the tracing of communication events for internal
    and external communication systems.
@@ -1304,6 +1343,7 @@ Developer experience
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide a method and interface to enable
    debugging of the software on target and in vehicle.
@@ -1316,6 +1356,7 @@ Developer experience
    :rationale: Enables unit, component and integration testing for both SW-platform related and non-platform related applications.
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall provide support for mocking its public interfaces,
    enabling unit, component and integration testing of applications.
@@ -1328,6 +1369,7 @@ Developer experience
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support implementation of applications in the following
    programming languages up to the highest ASIL level as defined in :need:`stkh_req__dependability__automotive_safety`:
@@ -1357,6 +1399,7 @@ Developer experience
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support the following logging setups:
 
@@ -1375,6 +1418,7 @@ Developer experience
    :rationale: tbd
    :status: valid
    :version: 1
+   :valid_from: v1.0.0
 
    The SW-platform shall support logging of data to memory which survives a reboot
    cycle.
