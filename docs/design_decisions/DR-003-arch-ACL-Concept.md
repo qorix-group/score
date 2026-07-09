@@ -16,7 +16,7 @@
    For Service Providers: Once the IPC Channel/SharedMemory is created, whom to grant which rights to what area (data/control)
    This permissions will be based on uid.
    
-   - SOME/IPC
+   - SOME/IP
    Same to IPC, except the permissions will be based on IP address / netmask. 
    In addition: Should TLS be enforced for a service? Should IP & MACsec be active as basis for a certain service? 
    
