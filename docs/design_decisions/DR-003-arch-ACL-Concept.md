@@ -29,7 +29,7 @@
 
    Consequences
    ------------
-   To prevent each component from implementing compeletley own mechanism for persmission enforcement; the decision schould be an alignment on a common ACL format, so that all components can use:
+   To prevent each component from implementing compeletley own mechanism for persmission enforcement; the decision should be an alignment on a common ACL format, so that all components can use:
    - the same parser as a baselib to read the ACL
    - (optionally) the same "ACLHandler" to update/edit and recompile the ACL
    One additional big advantage of a harmonized ACL is that:
