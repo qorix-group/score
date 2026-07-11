@@ -628,7 +628,7 @@
 # <strong>***************************************************************************</strong></p>
 <section id="feature-enhancement-proposal-fep-process">
 <h1>Feature &amp; Enhancement Proposal (FEP) Process<a class="headerlink" href="#feature-enhancement-proposal-fep-process" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-32b99172">
+<div class="need_container docutils container" id="SNCB-6ecf5dfd">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__feature_request_guideline">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -688,22 +688,29 @@
 <p><strong>Shepherd</strong> - an Architecture Community member, not the author, who guides the FEP to maturity and judges when it is ready for the Final Comment Period. Finding a Shepherd is the author’s responsibility. If no one is willing to shepherd a proposal, it does not proceed.</p>
 <p><strong>Architecture Community</strong> - all architects and Feature Team leads with standing to review FEPs. During the Final Comment Period, every member is expected to either raise a substantive objection or approve, explicitly or by silence.</p>
 </section>
+<section id="labels">
+<h2>Labels<a class="headerlink" href="#labels" title="Link to this heading">#</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">fep</span></code> is applied to the FEP PR and its tracking Issue throughout the whole lifecycle, and is what a board or filtered view is built on.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fep:needs-shepherd</span></code> is applied to the tracking Issue while no Shepherd is confirmed, and removed once one is.</p>
+<p><code class="docutils literal notranslate"><span class="pre">fep:fcp</span></code> is applied to the tracking Issue only while it is in its Final Comment Period, and removed once the FCP closes.</p>
+<p>A FEP that sees no activity for an extended period, most commonly while unshepherded or shepherded but not yet ready for FCP, may be marked with the existing <code class="docutils literal notranslate"><span class="pre">Stale</span></code> label like any other inactive issue. This does not reject the FEP; it signals that it has lost momentum and may be picked up again later.</p>
+</section>
 <section id="the-process-five-phases">
 <h2>The Process: Five Phases<a class="headerlink" href="#the-process-five-phases" title="Link to this heading">#</a></h2>
 <p><strong>Phase 0 - Idea Exploration</strong> (informal, no status)</p>
 <p>Post the idea informally in the S-CORE architecture channel before writing anything formal. This surfaces obvious problems early, finds prior related proposals, and identifies whether a Shepherd might be willing to pick it up. Move to Phase 1 once you have a willing Shepherd.</p>
 <p><strong>Phase 1 - Draft + Shepherd Shaping</strong> (status: <code class="docutils literal notranslate"><span class="pre">Draft</span></code>)</p>
-<p>Open a PR with your FEP draft, using the FEP template below. A FEP in draft, before a Shepherd is confirmed, does not need a GitHub Issue.</p>
-<p>Once a Shepherd is confirmed, open a tracking Issue for the FEP, following the standard Change Request infrastructure described in the <a class="reference internal" href="../../platform_management_plan/change_management.html#change-mgmt-plan"><span class="std std-ref">Change Management Plan</span></a>, and reference it in the FEP via the <code class="docutils literal notranslate"><span class="pre">:tracking:</span></code> field. The Issue links back to the FEP PR, giving bidirectional traceability.</p>
-<p>Author and Shepherd iterate until the proposal is complete and well-argued. When the Shepherd judges it ready, they signal readiness for the Final Comment Period. The Architecture Community chair (or proxy) then announces it to the full community.</p>
+<p>Open a PR with your FEP draft, using the FEP template below. At the same time, open a tracking Issue of type <em>Epic</em>, labeled <code class="docutils literal notranslate"><span class="pre">fep</span></code> and <code class="docutils literal notranslate"><span class="pre">fep:needs-shepherd</span></code>, and reference it in the FEP via the <code class="docutils literal notranslate"><span class="pre">:tracking:</span></code> field. The Issue links back to the FEP PR, giving bidirectional traceability.</p>
+<p>Once a Shepherd is confirmed, remove the <code class="docutils literal notranslate"><span class="pre">fep:needs-shepherd</span></code> label and update the tracking Issue to name the Shepherd.</p>
+<p>Author and Shepherd iterate until the proposal is complete and well-argued. When the Shepherd judges it ready, they propose entry into the Final Comment Period to the Architecture Community chair (or proxy). The chair/proxy then formally announces the FCP across all channels, including Slack, and adds the <code class="docutils literal notranslate"><span class="pre">fep:fcp</span></code> label to the tracking Issue.</p>
 <p><strong>Phase 2 - Final Comment Period (FCP)</strong> (status: <code class="docutils literal notranslate"><span class="pre">Under</span> <span class="pre">Review</span></code>)</p>
-<p>The Architecture Community has 10 calendar days to engage. Objections must be substantive and technical; the Shepherd distinguishes blocking from non-blocking feedback and can reset the FCP once if a significant new issue requires a revised proposal.</p>
-<p>Silence is approval. FCP closes with no unresolved blocking objections, the FEP is accepted. FCP closes with unresolved blocking objections, the FEP is rejected. Escalation may intervene in exceptional cases but is not the default path.</p>
+<p>The Architecture Community has 14 calendar days to engage. Objections must be substantive and technical; the Shepherd distinguishes blocking from non-blocking feedback and can reset the FCP once if a significant new issue requires a revised proposal.</p>
+<p>Silence is approval. FCP closes with no unresolved blocking objections, the FEP is accepted. FCP closes with unresolved blocking objections, the FEP is rejected. Escalation may intervene in exceptional cases but is not the default path. Either way, the <code class="docutils literal notranslate"><span class="pre">fep:fcp</span></code> label is removed from the tracking Issue once FCP closes.</p>
 <p><strong>Phase 3 - Decision</strong> (status: <code class="docutils literal notranslate"><span class="pre">Accepted</span></code> | <code class="docutils literal notranslate"><span class="pre">Rejected</span></code> | <code class="docutils literal notranslate"><span class="pre">Withdrawn</span></code>)</p>
 <p>If the FCP closed cleanly, the FEP PR is merged and recorded as a Decision Record. If the FCP closed with unresolved blocking objections, the FEP is rejected. The author may withdraw at any point before acceptance.</p>
 <p>Breaking Change FEPs additionally require explicit approval from a minimum quorum of Architecture Community members; they cannot pass by silence alone.</p>
 <p><strong>Phase 4 - Implementation Tracking</strong> (status: <code class="docutils literal notranslate"><span class="pre">Implementing</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">Implemented</span></code>)</p>
-<p>The tracking Issue opened in Phase 1 stays open and becomes the implementation tracking artifact. It is closed only when the implementation, not the FEP, is merged. If implementation reveals the accepted design is materially wrong, file a follow-up FEP rather than diverging silently.</p>
+<p>The tracking Issue opened in Phase 1 stays open and becomes the implementation tracking artifact; being an Epic, it can carry child Task issues for the implementing teams. It is closed only when the implementation, not the FEP, is merged. If implementation reveals the accepted design is materially wrong, file a follow-up FEP rather than diverging silently.</p>
 </section>
 <section id="fep-template">
 <h2>FEP Template<a class="headerlink" href="#fep-template" title="Link to this heading">#</a></h2>
@@ -804,6 +811,7 @@
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="pst-show_toc_level nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#roles">Roles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">Labels</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-process-five-phases">The Process: Five Phases</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fep-template">FEP Template</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#breaking-change-feps-additional-requirements">Breaking Change FEPs - Additional Requirements</a></li>
