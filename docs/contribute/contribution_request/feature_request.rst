@@ -65,13 +65,13 @@ The Process: Five Phases
 
 Post the idea informally in the S-CORE architecture channel before writing anything formal. This surfaces obvious problems early, finds prior related proposals, and identifies whether a Shepherd might be willing to pick it up. Move to Phase 1 once you have a willing Shepherd.
 
-**Phase 1 - Draft + Shepherd Shaping** (status: ``Draft``)
+**Phase 1 - Draft + Shepherd Shaping** (status: ``Draft - Needs Shepherd`` -> ``Draft - Shepherded``)
 
-Open a PR with your FEP draft, using the FEP template below. At the same time, open a tracking Issue of type *Epic*, labeled ``fep`` and ``fep:needs-shepherd``, and reference it in the FEP via the ``:tracking:`` field. The Issue links back to the FEP PR, giving bidirectional traceability.
+Open a PR with your FEP draft, using the FEP template below. At the same time, open a tracking Issue of type *Feature Request*, labeled ``fep`` and ``fep:needs-shepherd``, set to status ``Draft - Needs Shepherd``, and reference it in the FEP via the ``:tracking:`` field. The Issue links back to the FEP PR, giving bidirectional traceability.
 
-Once a Shepherd is confirmed, remove the ``fep:needs-shepherd`` label and update the tracking Issue to name the Shepherd.
+Once a Shepherd is confirmed, remove the ``fep:needs-shepherd`` label, move the tracking Issue to status ``Draft - Shepherded``, and update it to name the Shepherd.
 
-Author and Shepherd iterate until the proposal is complete and well-argued. When the Shepherd judges it ready, they propose entry into the Final Comment Period to the Architecture Community chair (or proxy). The chair/proxy then formally announces the FCP across all channels, including Slack, and adds the ``fep:fcp`` label to the tracking Issue.
+Author and Shepherd iterate until the proposal is complete and well-argued. When the Shepherd judges it ready, they propose entry into the Final Comment Period to the Architecture Community chair (or proxy). The chair/proxy then formally announces the FCP across all channels, including Slack, moves the tracking Issue to status ``Under Review``, and adds the ``fep:fcp`` label.
 
 **Phase 2 - Final Comment Period (FCP)** (status: ``Under Review``)
 
@@ -81,13 +81,13 @@ Silence is approval. FCP closes with no unresolved blocking objections, the FEP 
 
 **Phase 3 - Decision** (status: ``Accepted`` | ``Rejected`` | ``Withdrawn``)
 
-If the FCP closed cleanly, the FEP PR is merged and recorded as a Decision Record. If the FCP closed with unresolved blocking objections, the FEP is rejected. The author may withdraw at any point before acceptance.
+If the FCP closed cleanly, the FEP PR is merged and recorded as a Decision Record. If the FCP closed with unresolved blocking objections, the FEP is rejected. The author may withdraw at any point before acceptance. In each case, the tracking Issue's status is updated to match: ``Accepted``, ``Rejected``, or ``Withdrawn``.
 
 Breaking Change FEPs additionally require explicit approval from a minimum quorum of Architecture Community members; they cannot pass by silence alone.
 
 **Phase 4 - Implementation Tracking** (status: ``Implementing`` -> ``Implemented``)
 
-The tracking Issue opened in Phase 1 stays open and becomes the implementation tracking artifact; being an Epic, it can carry child Task issues for the implementing teams. It is closed only when the implementation, not the FEP, is merged. If implementation reveals the accepted design is materially wrong, file a follow-up FEP rather than diverging silently.
+The tracking Issue opened in Phase 1 stays open, moves to status ``Implementing``, and becomes the implementation tracking artifact; it can carry child Task issues for the implementing teams via GitHub's sub-issue feature. It is closed only when the implementation, not the FEP, is merged, at which point it moves to status ``Implemented`` before closing. If implementation reveals the accepted design is materially wrong, file a follow-up FEP rather than diverging silently.
 
 FEP Template
 ================================
