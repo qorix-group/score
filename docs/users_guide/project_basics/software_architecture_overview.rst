@@ -26,7 +26,7 @@ Please note that the Eclipse S-CORE´s software architecture is continuously ref
 Eclipse S-CORE has a `software architecture community <https://github.com/orgs/eclipse-score/discussions/categories/architecture-community>`_
 **responsible for maintaining and evolving the architecture**.
 
-Structural changes and new functionality are proposed through the **FEP process** (:need:`DR-002-Proc <dec_rec__proc__fep_process>`).
+Structural changes and new functionality are proposed through the **FEP process**.
 All **past feature requests** are documented in the corresponding
 `Feature Requests / Modification <https://github.com/orgs/eclipse-score/projects/4/views/1>`_ GitHub project.
 
