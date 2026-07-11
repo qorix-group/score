@@ -676,7 +676,7 @@ A *Feature Request* represents an independent work package used to describe and
 track a high-level request for the project. *Feature Request* work packages can be linked to
 other work packages, but they must not be treated as parent work packages. *Feature Request* covers new Features as well as significant modifications of existing Features.
 
-Feature Requests are governed by the FEP process (:need:`DR-002-Proc <dec_rec__proc__fep_process>`): the :ref:`Architecture Community <pmp_pm_arc>` owns the review via a Shepherd and Final Comment Period. The :ref:`Project / Technical Lead Circle <pmp_pm_plctlc>` triages incoming requests and is notified once a FEP enters its Final Comment Period, for roadmap awareness. Feature Requests are part of the :ref:`Root Repository <pmp_pm_root_repository>`.
+Feature Requests are governed by the FEP process (see the :ref:`FEP Process Guide <feature_request_guideline>`): the :ref:`Architecture Community <pmp_pm_arc>` owns the review via a Shepherd and Final Comment Period. The :ref:`Project / Technical Lead Circle <pmp_pm_plctlc>` triages incoming requests and is notified once a FEP enters its Final Comment Period, for roadmap awareness. Feature Requests are part of the :ref:`Root Repository <pmp_pm_root_repository>`.
 
 `About Features <https://eclipse-score.github.io/score/main/features/index.html>`_
 
