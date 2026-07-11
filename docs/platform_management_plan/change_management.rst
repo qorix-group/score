@@ -132,7 +132,7 @@ Changes are clustered in the following types:
 Routing to the FEP Process
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Feature** change requests go through the FEP process (:need:`DR-002-Proc <dec_rec__proc__fep_process>`).
+**Feature** change requests go through the FEP process (see the :ref:`FEP Process Guide <feature_request_guideline>`).
 
 **Feature Modification** change requests go through the FEP process when the change has major impact, e.g. affecting the platform or other Feature Teams. Feature Teams retain authority over modifications limited to their own domain.
 
