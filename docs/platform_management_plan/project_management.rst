@@ -1,16 +1,15 @@
-..
-   # *******************************************************************************
-   # Copyright (c) 2024 Contributors to the Eclipse Foundation
-   #
-   # See the NOTICE file(s) distributed with this work for additional
-   # information regarding copyright ownership.
-   #
-   # This program and the accompanying materials are made available under the
-   # terms of the Apache License Version 2.0 which is available at
-   # https://www.apache.org/licenses/LICENSE-2.0
-   #
-   # SPDX-License-Identifier: Apache-2.0
-   # *******************************************************************************
+# *******************************************************************************
+# Copyright (c) 2024 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
 
 .. document:: Project Management Plan
    :id: doc__project_mgt_plan
@@ -104,7 +103,7 @@ Steering of the project is done with the help of *Lead Circles*.
      - **-----------**
      - **-----------------------**
    * - - Decisions about strategical topics
-       - Review and approval of contributions, e.g. Feature Requests, which add or modify features
+       - Triage of incoming Feature Requests, routing platform-level and cross-Feature-Team requests to the FEP process
        - Project Management
        - High-level project control and coordination between multiple software modules.
        - Deciding of adding / removing Repositories
@@ -514,7 +513,6 @@ Each *Feature Team* has one *Lead* to organize the Team`s work.
      - `ORCSLC`_
      - `ORCBKL`_
      - | https://github.com/eclipse-score/orchestrator
-
    * - .. _pmp_pm_per:
 
        **PER**
@@ -677,7 +675,8 @@ Architectural Issues
 A *Feature Request* represents an independent work package used to describe and
 track a high-level request for the project. *Feature Request* work packages can be linked to
 other work packages, but they must not be treated as parent work packages. *Feature Request* covers new Features as well as significant modifications of existing Features.
-They are in the responsibility of the :ref:`Architecture Community <pmp_pm_arc>`, shall aligned with :ref:`Project / Technical Lead Circle <pmp_pm_plctlc>` and the issues are part of the :ref:`Root Repository <pmp_pm_root_repository>`.
+
+Feature Requests are governed by the FEP process (:need:`DR-002-Proc <dec_rec__proc__fep_process>`): the :ref:`Architecture Community <pmp_pm_arc>` owns the review via a Shepherd and Final Comment Period. The :ref:`Project / Technical Lead Circle <pmp_pm_plctlc>` triages incoming requests and is notified once a FEP enters its Final Comment Period, for roadmap awareness. Feature Requests are part of the :ref:`Root Repository <pmp_pm_root_repository>`.
 
 `About Features <https://eclipse-score.github.io/score/main/features/index.html>`_
 
