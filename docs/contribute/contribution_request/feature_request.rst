@@ -46,6 +46,17 @@ Roles
 
 **Architecture Community** - all architects and Feature Team leads with standing to review FEPs. During the Final Comment Period, every member is expected to either raise a substantive objection or approve, explicitly or by silence.
 
+Labels
+================================
+
+``fep`` is applied to the FEP PR and its tracking Issue throughout the whole lifecycle, and is what a board or filtered view is built on.
+
+``fep:needs-shepherd`` is applied to the tracking Issue while no Shepherd is confirmed, and removed once one is.
+
+``fep:fcp`` is applied to the tracking Issue only while it is in its Final Comment Period, and removed once the FCP closes.
+
+A FEP that sees no activity for an extended period, most commonly while unshepherded or shepherded but not yet ready for FCP, may be marked with the existing ``Stale`` label like any other inactive issue. This does not reject the FEP; it signals that it has lost momentum and may be picked up again later.
+
 The Process: Five Phases
 ================================
 
@@ -55,17 +66,17 @@ Post the idea informally in the S-CORE architecture channel before writing anyth
 
 **Phase 1 - Draft + Shepherd Shaping** (status: ``Draft``)
 
-Open a PR with your FEP draft, using the FEP template below. A FEP in draft, before a Shepherd is confirmed, does not need a GitHub Issue.
+Open a PR with your FEP draft, using the FEP template below. At the same time, open a tracking Issue of type *Epic*, labeled ``fep`` and ``fep:needs-shepherd``, and reference it in the FEP via the ``:tracking:`` field. The Issue links back to the FEP PR, giving bidirectional traceability.
 
-Once a Shepherd is confirmed, open a tracking Issue for the FEP, following the standard Change Request infrastructure described in the :ref:`Change Management Plan <change_mgmt_plan>`, and reference it in the FEP via the ``:tracking:`` field. The Issue links back to the FEP PR, giving bidirectional traceability.
+Once a Shepherd is confirmed, remove the ``fep:needs-shepherd`` label and update the tracking Issue to name the Shepherd.
 
-Author and Shepherd iterate until the proposal is complete and well-argued. When the Shepherd judges it ready, they signal readiness for the Final Comment Period. The Architecture Community chair (or proxy) then announces it to the full community.
+Author and Shepherd iterate until the proposal is complete and well-argued. When the Shepherd judges it ready, they propose entry into the Final Comment Period to the Architecture Community chair (or proxy). The chair/proxy then formally announces the FCP across all channels, including Slack, and adds the ``fep:fcp`` label to the tracking Issue.
 
 **Phase 2 - Final Comment Period (FCP)** (status: ``Under Review``)
 
-The Architecture Community has 10 calendar days to engage. Objections must be substantive and technical; the Shepherd distinguishes blocking from non-blocking feedback and can reset the FCP once if a significant new issue requires a revised proposal.
+The Architecture Community has 14 calendar days to engage. Objections must be substantive and technical; the Shepherd distinguishes blocking from non-blocking feedback and can reset the FCP once if a significant new issue requires a revised proposal.
 
-Silence is approval. FCP closes with no unresolved blocking objections, the FEP is accepted. FCP closes with unresolved blocking objections, the FEP is rejected. Escalation may intervene in exceptional cases but is not the default path.
+Silence is approval. FCP closes with no unresolved blocking objections, the FEP is accepted. FCP closes with unresolved blocking objections, the FEP is rejected. Escalation may intervene in exceptional cases but is not the default path. Either way, the ``fep:fcp`` label is removed from the tracking Issue once FCP closes.
 
 **Phase 3 - Decision** (status: ``Accepted`` | ``Rejected`` | ``Withdrawn``)
 
@@ -75,7 +86,7 @@ Breaking Change FEPs additionally require explicit approval from a minimum quoru
 
 **Phase 4 - Implementation Tracking** (status: ``Implementing`` -> ``Implemented``)
 
-The tracking Issue opened in Phase 1 stays open and becomes the implementation tracking artifact. It is closed only when the implementation, not the FEP, is merged. If implementation reveals the accepted design is materially wrong, file a follow-up FEP rather than diverging silently.
+The tracking Issue opened in Phase 1 stays open and becomes the implementation tracking artifact; being an Epic, it can carry child Task issues for the implementing teams. It is closed only when the implementation, not the FEP, is merged. If implementation reveals the accepted design is materially wrong, file a follow-up FEP rather than diverging silently.
 
 FEP Template
 ================================
