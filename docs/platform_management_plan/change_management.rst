@@ -1,16 +1,15 @@
-..
-   # *******************************************************************************
-   # Copyright (c) 2025 Contributors to the Eclipse Foundation
-   #
-   # See the NOTICE file(s) distributed with this work for additional
-   # information regarding copyright ownership.
-   #
-   # This program and the accompanying materials are made available under the
-   # terms of the Apache License Version 2.0 which is available at
-   # https://www.apache.org/licenses/LICENSE-2.0
-   #
-   # SPDX-License-Identifier: Apache-2.0
-   # *******************************************************************************
+# *******************************************************************************
+# Copyright (c) 2025 Contributors to the Eclipse Foundation
+#
+# See the NOTICE file(s) distributed with this work for additional
+# information regarding copyright ownership.
+#
+# This program and the accompanying materials are made available under the
+# terms of the Apache License Version 2.0 which is available at
+# https://www.apache.org/licenses/LICENSE-2.0
+#
+# SPDX-License-Identifier: Apache-2.0
+# *******************************************************************************
 
 .. document:: Change Management Plan
    :id: doc__platform_change_management_plan
@@ -130,6 +129,16 @@ Changes are clustered in the following types:
      - Created by :need:`Contributor <rl__contributor>` to change requirements and work products, scope change
      - ISSUE with label ``component_modification``
 
+Routing to the FEP Process
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Feature** change requests go through the FEP process (:need:`DR-002-Proc <dec_rec__proc__fep_process>`).
+
+**Feature Modification** change requests go through the FEP process when the change has major impact, e.g. affecting the platform or other Feature Teams. Feature Teams retain authority over modifications limited to their own domain.
+
+A clean, exhaustive definition of "major impact" is not achievable up front. This classification is a judgment call made by the responsible :need:`Committer <rl__committer>` at the time the change is proposed, including changes proposed directly as a PR without a prior FEP. A change can be waived from the FEP process by community agreement if it is judged not to warrant it, or pulled into the FEP process after the fact if a maintainer judges it major.
+
+**Component** and **Component Modification** change requests are unaffected by the FEP process.
 
 Change Request Traceability Impact Analysis requires the following tools:
 
