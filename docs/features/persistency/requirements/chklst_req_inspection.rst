@@ -12,23 +12,41 @@
    # SPDX-License-Identifier: Apache-2.0
    # *******************************************************************************
 
-Persistency Requirements Inspection Checklist
-#############################################
 
 .. document:: Persistency Requirements Inspection Checklist
-  :id: doc__feature_persistency_requirements_chklst
-  :status: valid
-  :version: 1
-  :safety: ASIL_B
-  :security: NO
-  :tags: persistency
-  :realizes: wp__requirements_inspect[version==1]
+   :id: doc__persistency_req_inspection
+   :status: valid
+   :version: 1
+   :safety: ASIL_B
+   :security: NO
+   :tags: persistency
+   :realizes: wp__requirements_inspect[version==1]
 
-**Purpose**
+
+Requirement Inspection Checklist
+================================
+
+Purpose
+-------
 
 The purpose of this requirement inspection checklist is to collect the topics to be checked during requirements inspection.
 
-**Checklist**
+Conduct
+-------
+
+As described in the concept :need:`doc_concept__wp_inspections` the following "inspection roles" are expected to be filled:
+
+- content responsible (author): S.Bachmann
+- reviewer: vinodreddy-g
+- moderator: PandaeDo
+- test expert: <one of the reviewers explicitly named here, to cover REQ_08_01 as described>
+
+Checklist
+---------
+
+It is mandatory to fill in the "passed" column with "yes" or "no" for each checklist item and additionally to add in the remarks why it is passed or not passed.
+In case of "no" an issue link to the issue tracking system has to be added in the last column (if not solved in the same issue).
+See also :need:`doc_concept__wp_inspections` for further information about reviews in general and inspection in particular.
 
 .. list-table:: Persistency Requirements Inspection Checklist
   :header-rows: 1
@@ -130,6 +148,13 @@ The purpose of this requirement inspection checklist is to collect the topics to
     -
     -
     -
+  * - REQ_10_01
+    - Is the requirement description *complete* ?
+    - For every requirement in the inspection, follow to its parent (feature) requirement(s) and then check if this/these are fulfilled completely by its/their linked children (component requirements, including those which are not in scope of the inspection).
+    -
+    -
+    -
+
 
 The following requirements in "valid" state and with "inspected" tag set are in the scope of this inspection:
 
