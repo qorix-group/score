@@ -1068,6 +1068,45 @@ Monitoring, Notification and Recovery
     The :term:`Launch Manager` shall support configuring the :term:`Interval` of
     the internal health check executions.
 
+.. feat_req:: Health Monitor deadline supervision
+    :id: feat_req__lifecycle__hm_deadline
+    :reqtype: Functional
+    :security: NO
+    :safety: ASIL_B
+    :derived_from: stkh_req__execution_model__processes[version==1]
+    :status: invalid
+    :version: 1
+    :valid_from: v1.0.0
+
+    The :term:`Health Monitor` shall support deadline supervision to allow
+    monitoring timely execution within application to detect timing violations.
+
+.. feat_req:: Health Monitor logical supervision
+    :id: feat_req__lifecycle__hm_logical
+    :reqtype: Functional
+    :security: NO
+    :safety: ASIL_B
+    :derived_from: stkh_req__execution_model__processes[version==1]
+    :status: invalid
+    :version: 1
+    :valid_from: v1.0.0
+
+    The :term:`Health Monitor` shall support logical supervision to allow
+    monitoring execution flow within application to detect logical errors.
+
+.. feat_req:: Health Monitor checkpoint supervision
+    :id: feat_req__lifecycle__hm_checkpoint
+    :reqtype: Functional
+    :security: NO
+    :safety: ASIL_B
+    :derived_from: stkh_req__execution_model__processes[version==1]
+    :status: invalid
+    :version: 1
+    :valid_from: v1.0.0
+
+    The :term:`Health Monitor` shall support checkpoint supervision to allow
+    monitoring periodic execution within application to detect failures.
+
 Logging
 -------
 
@@ -1241,3 +1280,16 @@ Configuration file
     :valid_from: v1.0.0
 
     The Launch Manager shall have a means to validate the configuration offline.
+
+.. feat_req:: Health Monitor configuration file support
+    :id: feat_req__lifecycle__hm_config_support
+    :reqtype: Functional
+    :security: NO
+    :safety: ASIL_B
+    :derived_from: stkh_req__functional_req__file_based[version==1]
+    :status: invalid
+    :version: 1
+    :valid_from: v1.0.0
+
+    The :term:`Health Monitor` shall provide modular configuration file support to
+    configure health checks.
