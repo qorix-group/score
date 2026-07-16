@@ -15,8 +15,8 @@
 
 .. document:: Persistency Requirements Inspection Checklist
    :id: doc__persistency_req_inspection
-   :status: valid
-   :version: 1
+   :status: draft
+   :version: 2
    :safety: ASIL_B
    :security: NO
    :tags: persistency
@@ -36,10 +36,10 @@ Conduct
 
 As described in the concept :need:`doc_concept__wp_inspections` the following "inspection roles" are expected to be filled:
 
-- content responsible (author): S.Bachmann
-- reviewer: vinodreddy-g
-- moderator: PandaeDo
-- test expert: <one of the reviewers explicitly named here, to cover REQ_08_01 as described>
+- content responsible (author): `<https://github.com/sbachmann-qorix>`_
+- reviewer: `<https://github.com/vinodreddy-g>`_
+- moderator: `<https://github.com/PandaeDo>`_
+- test expert: `<https://github.com/PiotrKorkus>`_
 
 Checklist
 ---------
