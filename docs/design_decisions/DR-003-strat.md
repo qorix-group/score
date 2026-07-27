@@ -16,8 +16,8 @@ SPDX-License-Identifier: Apache-2.0
 - **Date:** 2026-07-27
 
 ```{dec_rec} Module Maturity Classification
-:id: dec_rec__strat__module_maturity_classification
-:status: draft
+:id: dec_rec__strat__module_maturity_levels
+:status: proposed
 :context: Strategy
 :decision: Classify every module into one of three maturity levels — Release, Experimental, or Preview — based on requirement coverage and S-CORE process artifact completeness.
 ```
