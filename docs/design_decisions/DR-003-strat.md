@@ -62,7 +62,7 @@ dimensions:
 
 **Release**
 
-- The module implements **all** currently existing feature and component requirements.
+- The module implements **all** currently existing feature and component requirements, unless excluded by the valid_from / valid_until attributes
 - All feature and component requirements are **fully covered / tested**.
 - The module provides **all artifacts** mandated by the current state of the S-CORE developer
   process (e.g. verification and traceability reports, inspection checklists), possibly with a
