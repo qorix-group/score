@@ -91,7 +91,7 @@ dimensions:
 | Deviations from process | undetermined | major, but transparent | minor only |
 | Requirements implemented | undetermined | not necessarily all | all currently existing |
 | Requirements covered / tested | undetermined | not necessarily all | fully |
-| Quality statement possible | no | yes (with known gaps) | yes |
+| Quality statement possible (code quality, code coverage)| no | yes (with known gaps) | yes |
 
 This makes it possible to **include all modules in platform releases** while giving users a
 clear, comparable indicator of each module's maturity and intended usage.
