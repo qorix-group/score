@@ -102,15 +102,37 @@
 	"crypto": {
 	  "type": "object",
 	  "additionalProperties": false,
+	  "required": [
+		"keyspaces"
+	  ],
 	  "properties": {
-        "generic": {
-          "$ref": "#/$defs/cryptoLimits"
-        }
-      },
-	  "patternProperties": {
-        "^(0|[1-9][0-9]{0,3}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$": {
-          "$ref": "#/$defs/keyspace"
-        }
+		"profiles": {
+		  "type": "object",
+		  "propertyNames": {
+			"$ref": "#/$defs/uint16Key"
+		  },
+		  "additionalProperties": {
+			"$ref": "#/$defs/cryptoProfile"
+		  }
+		},
+		"operationalRights": {
+		  "type": "object",
+		  "propertyNames": {
+			"$ref": "#/$defs/subjectKey"
+		  },
+		  "additionalProperties": {
+			"$ref": "#/$defs/operationalRight"
+		  }
+		},
+		"keyspaces": {
+		  "type": "object",
+		  "propertyNames": {
+			"$ref": "#/$defs/uint16Key"
+		  },
+		  "additionalProperties": {
+			"$ref": "#/$defs/keyspace"
+		  }
+		}
 	  }
 	}
   },
@@ -434,7 +456,11 @@
         "wrap",
         "unwrap",
         "mac",
-        "random"
+        "random",
+        "keygen",
+        "keyimport",
+        "keyexport",
+        "keydelete"
       ]
     },
     "keyAccessOptions": {
@@ -461,25 +487,121 @@
         "$ref": "#/$defs/keyAccessOptions"
       }
 	},    
-	"cryptoLimits": {
-      "type": "object",
-      "propertyNames": {
-        "$ref": "#/$defs/subjectKey"
-      },
-      "additionalProperties": {
-        "type": "object",
-        "additionalProperties": false,
-        "properties": {
-          "job_limit": {
-            "type": "integer",
-            "minimum": 0
-          },
-          "memory_limit_bytes": {
-            "type": "integer",
-            "minimum": 0
-          }
-        }
-      }
+	"memoryLimiting": {
+	  "type": "object",
+	  "additionalProperties": false,
+	  "minProperties": 1,
+	  "properties": {
+		"bytes": {
+		  "type": "integer",
+		  "minimum": 0
+		},
+		"slots": {
+		  "type": "integer",
+		  "minimum": 0
+		}
+	  }
+	},
+	"jobLimiting": {
+	  "oneOf": [
+		{
+		  "type": "object",
+		  "additionalProperties": false,
+		  "required": ["parallel"],
+		  "properties": {
+			"parallel": {
+			  "type": "integer",
+			  "minimum": 1
+			}
+		  }
+		},
+		{
+		  "type": "object",
+		  "additionalProperties": false,
+		  "required": ["interval", "intervaltype"],
+		  "properties": {
+			"interval": {
+			  "type": "integer",
+			  "minimum": 1
+			},
+			"intervaltype": {
+			  "type": "string",
+			  "enum": ["cycle", "second"]
+			}
+		  }
+		}
+	  ]
+	},
+	"cryptoProviderRights": {
+	  "type": "object",
+	  "additionalProperties": false,
+	  "properties": {
+		"nonKeyspaceDependent": {
+		  "description": "Operations not using a key from a configured keyspace, including operations where the caller supplies the key with the request.",
+		  "type": "array",
+		  "minItems": 1,
+		  "uniqueItems": true,
+		  "items": {
+			"$ref": "#/$defs/cryptoOperation"
+		  }
+		},
+		"memoryLimiting": {
+		  "$ref": "#/$defs/memoryLimiting"
+		},
+		"jobLimiting": {
+		  "$ref": "#/$defs/jobLimiting"
+		}
+	  }
+	},
+	"cryptoRights": {
+	  "type": "object",
+	  "minProperties": 1,
+	  "propertyNames": {
+		"type": "string",
+		"minLength": 1,
+		"maxLength": 48
+	  },
+	  "additionalProperties": {
+		"$ref": "#/$defs/cryptoProviderRights"
+	  }
+	},
+	"cryptoProfile": {
+	  "type": "object",
+	  "additionalProperties": false,
+	  "required": [
+		"profileName",
+		"rights"
+	  ],
+	  "properties": {
+		"profileName": {
+		  "type": "string",
+		  "minLength": 1,
+		  "maxLength": 48
+		},
+		"rights": {
+		  "$ref": "#/$defs/cryptoRights"
+		}
+	  }
+	},
+	"profileReference": {
+	  "type": "object",
+	  "additionalProperties": false,
+	  "required": ["profileId"],
+	  "properties": {
+		"profileId": {
+		  "$ref": "#/$defs/uint16Key"
+		}
+	  }
+	},
+	"operationalRight": {
+	  "oneOf": [
+		{
+		  "$ref": "#/$defs/cryptoRights"
+		},
+		{
+		  "$ref": "#/$defs/profileReference"
+		}
+	  ]
 	}
   }
 }
@@ -555,51 +677,95 @@
   },
   "crypto": 
   {
-	"generic": 
+	"profiles":
 	{
-		"uid=1": {"job_limit":5, "memory_limit_bytes": 8178},
-		"vmid=3|uid=1": {"job_limit": 3, "memory_limit_bytes": 128},
-		"otherid=someipd": {"job_limit":10, "memory_limit_bytes": 20000}
-	},
-	"0":
-	{
-		"keyspaceName": "tls_auth",
-		"keys": 
+		"1":
 		{
-			"1":
-			{	
-				"name": "tls_auth_priv",
-				"read": {},
-				"use":
+			"profileName":"encrypt_and_sign_software",
+			"rights":
+			{
+				"Software":
 				{
-					"otherid=special_handling_1|uid=1": {},
-					"vmid=4|uid=2": {"operations": ["hash"]}
-				},
-				"write":
-				{
-					"uid=1|policy=someipd_t": {}
+					"nonKeyspaceDependent": ["hash","keygen","keyimport"],
+					"memoryLimiting": {"slots":4,"bytes":896},
+					"jobLimiting": {"parallel":3}				
 				}
+			}
+		}
+	},
+	"operationalRights": 
+	{
+		"uid=1": 
+		{
+			"Software":
+			{
+				"nonKeyspaceDependent": ["hash","keygen","keyimport"],
+				"memoryLimiting": {"bytes":8178},
+				"jobLimiting": {"parallel":3}				
 			},
-			"2":
-			{ 
-				"name": "tls_auth_pub",
-				"read": 
-				{
-					"uid=-1":{}
+			"PKCS11_HW":
+			{
+				"nonKeyspaceDependent": ["hash"],
+				"memoryLimiting": {"slots":4,"bytes":896},
+				"jobLimiting": {"parallel":1}	
+			}
+		},
+		"vmid=3|uid=1": 
+		{
+			"profileId":"1"
+		},
+		"otherid=someipd": 
+		{
+			"PKCS11_HW":
+			{
+				"nonKeyspaceDependent": ["hash"],
+				"memoryLimiting": {"slots":4},
+				"jobLimiting": {"parallel":1}	
+			}
+		}
+	},
+	"keyspaces":
+	{
+		"0":
+		{
+			"keyspaceName": "tls_auth",
+			"keys": 
+			{
+				"1":
+				{	
+					"name": "tls_auth_priv",
+					"read": {},
+					"use":
+					{
+						"otherid=special_handling_1|uid=1": {},
+						"vmid=4|uid=2": {"operations": ["sign"]}
+					},
+					"write":
+					{
+						"uid=1|policy=someipd_t": {}
+					}
 				},
-				"use": 
-				{
-					"uid=1": {},
-					"vmid=4|uid=2": {}
-				},
-				"write": 
-				{
-					"uid=1|policy=someipd_t":{}
+				"2":
+				{ 
+					"name": "tls_auth_pub",
+					"read": 
+					{
+						"uid=-1":{}
+					},
+					"use": 
+					{
+						"uid=1": {},
+						"vmid=4|uid=2": {}
+					},
+					"write": 
+					{
+						"uid=1|policy=someipd_t":{}
+					}
 				}
 			}
 		}
 	}
-  }
+}
 }
 ```
 
