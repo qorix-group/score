@@ -38,11 +38,11 @@
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-data-viewer/jsonview.bundle.css?v=f6ef2277" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css?v=4b4fd840" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_toggle.css?v=5c6620df" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_core.css?v=f5b60a78" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_style.css?v=92936fa5" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/need_links.css?v=2150a916" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common_css/needstable.css?v=5e1b6797" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/modern.css?v=803738c0" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css?v=2e2696d1" />
   
@@ -544,15 +544,15 @@
   <div class="bd-toc-item navbar-nav"><ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="ai_platform/index.html">AI Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analysis-infra/index.html">Analysis Infrastructure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselibs/index.html">Base Libraries (v0.5 beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselibs/index.html">Base Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="code_generation/index.html">Code Generation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communication/index.html">Communication (v0.5 beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication/index.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration/index.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diagnostics/index.html">Diagnostic and Fault Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="frameworks/index.html">Frameworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lifecycle/index.html">Lifecycle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="orchestration/index.html">Orchestration (v0.5 beta)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="persistency/index.html">Persistency (v0.5 beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orchestration/index.html">Orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistency/index.html">Persistency</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security_crypto/index.html">Security &amp; Cryptography</a></li>
 <li class="toctree-l1"><a class="reference internal" href="time/index.html">Time</a></li>
 </ul>
@@ -620,15 +620,15 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="ai_platform/index.html">AI Platform</a></li>
 <li class="toctree-l1"><a class="reference internal" href="analysis-infra/index.html">Analysis Infrastructure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="baselibs/index.html">Base Libraries (v0.5 beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="baselibs/index.html">Base Libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="code_generation/index.html">Code Generation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="communication/index.html">Communication (v0.5 beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="communication/index.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration/index.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diagnostics/index.html">Diagnostic and Fault Management</a></li>
 <li class="toctree-l1"><a class="reference internal" href="frameworks/index.html">Frameworks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lifecycle/index.html">Lifecycle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="orchestration/index.html">Orchestration (v0.5 beta)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="persistency/index.html">Persistency (v0.5 beta)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orchestration/index.html">Orchestration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="persistency/index.html">Persistency</a></li>
 <li class="toctree-l1"><a class="reference internal" href="security_crypto/index.html">Security &amp; Cryptography</a></li>
 <li class="toctree-l1"><a class="reference internal" href="time/index.html">Time</a></li>
 </ul>
@@ -651,8 +651,18 @@
 </tr>
 </thead>
 <tbody>
-<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="baselibs/docs/architecture/index.html#feat__baselibs">feat__baselibs</a></p></td>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="ai_platform/architecture/index.html#feat__ai_platform">feat__ai_platform</a></p></td>
+<td class="needs_security"><p>NO</p></td>
+<td class="needs_safety"><p>ASIL_B</p></td>
+<td class="needs_status"><p>valid</p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="baselibs/docs/architecture/index.html#feat__baselibs">feat__baselibs</a></p></td>
 <td class="needs_security"><p>YES</p></td>
+<td class="needs_safety"><p>ASIL_B</p></td>
+<td class="needs_status"><p>valid</p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="code_generation/architecture/index.html#feat__code_generation">feat__code_generation</a></p></td>
+<td class="needs_security"><p>NO</p></td>
 <td class="needs_safety"><p>ASIL_B</p></td>
 <td class="needs_status"><p>valid</p></td>
 </tr>
@@ -661,12 +671,32 @@
 <td class="needs_safety"><p>ASIL_B</p></td>
 <td class="needs_status"><p>valid</p></td>
 </tr>
-<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="frameworks/feo/architecture/feature_architecture.html#feat__feo">feat__feo</a></p></td>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="configuration/config_mgmt/architecture/index.html#feat__config_mgmt">feat__config_mgmt</a></p></td>
 <td class="needs_security"><p>YES</p></td>
 <td class="needs_safety"><p>ASIL_B</p></td>
 <td class="needs_status"><p>valid</p></td>
 </tr>
-<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="lifecycle/index.html#feat__lifecycle">feat__lifecycle</a></p></td>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="frameworks/daal/architecture/index.html#feat__daal">feat__daal</a></p></td>
+<td class="needs_security"><p>NO</p></td>
+<td class="needs_safety"><p>QM</p></td>
+<td class="needs_status"><p>valid</p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="diagnostics/architecture/index.html#feat__diagnostics">feat__diagnostics</a></p></td>
+<td class="needs_security"><p>YES</p></td>
+<td class="needs_safety"><p>QM</p></td>
+<td class="needs_status"><p>valid</p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="frameworks/feo/architecture/feature_architecture.html#feat__feo">feat__feo</a></p></td>
+<td class="needs_security"><p>YES</p></td>
+<td class="needs_safety"><p>ASIL_B</p></td>
+<td class="needs_status"><p>valid</p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="ai_platform/gen_ai/architecture/index.html#feat__gen_ai">feat__gen_ai</a></p></td>
+<td class="needs_security"><p>NO</p></td>
+<td class="needs_safety"><p>QM</p></td>
+<td class="needs_status"><p>valid</p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="lifecycle/architecture/index.html#feat__lifecycle">feat__lifecycle</a></p></td>
 <td class="needs_security"><p>YES</p></td>
 <td class="needs_safety"><p>ASIL_B</p></td>
 <td class="needs_status"><p>valid</p></td>
@@ -687,6 +717,16 @@
 <td class="needs_status"><p>valid</p></td>
 </tr>
 <tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="persistency/architecture/index.html#feat__persistency">feat__persistency</a></p></td>
+<td class="needs_security"><p>YES</p></td>
+<td class="needs_safety"><p>ASIL_B</p></td>
+<td class="needs_status"><p>valid</p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="security_crypto/architecture/index.html#feat__security_crypto">feat__security_crypto</a></p></td>
+<td class="needs_security"><p>YES</p></td>
+<td class="needs_safety"><p>QM</p></td>
+<td class="needs_status"><p>valid</p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="time/docs/architecture/index.html#feat__time">feat__time</a></p></td>
 <td class="needs_security"><p>YES</p></td>
 <td class="needs_safety"><p>ASIL_B</p></td>
 <td class="needs_status"><p>valid</p></td>
@@ -758,7 +798,7 @@
 
   
   <div class="tocsection editthispage">
-    <a href="https://github.com/qorix-group/score/edit/main/docs/features/index.rst">
+    <a href="https://github.com/qorix-group/score/edit/main//home/runner/work/score/score/docs/features/index.rst">
       <i class="fa-solid fa-pencil"></i>
       
       
