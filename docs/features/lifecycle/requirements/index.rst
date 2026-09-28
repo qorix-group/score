@@ -42,22 +42,6 @@ Launching Processes
 
     The :term:`Lifecycle Feature` shall provide support for launching :term:`Processes <Process>`.
 
-..
-    Should be a component requirement derived from feat_req__lifecycle__launch_support
-.. feat_req:: Launching processes in parallel
-    :id: feat_req__lifecycle__parallel_launch_support
-    :reqtype: Functional
-    :security: NO
-    :safety: ASIL_B
-    :derived_from: stkh_req__execution_model__processes[version==1]
-    :satisfied_by: feat__lifecycle[version==1]
-    :status: valid
-    :version: 1
-    :valid_from: v1.0.0
-
-    The :term:`Lifecycle Feature` shall provide support for launching :term:`Processes <Process>`
-    in parallel.
-
 .. feat_req:: Control interface support
     :id: feat_req__lifecycle__custom_cond_support
     :reqtype: Functional
