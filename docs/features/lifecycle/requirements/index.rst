@@ -44,22 +44,6 @@ Launching Processes
 
 ..
     Should be a component requirement derived from feat_req__lifecycle__launch_support
-.. feat_req:: Process dependency handling
-    :id: feat_req__lifecycle__process_ordering
-    :reqtype: Functional
-    :security: NO
-    :safety: ASIL_B
-    :derived_from: stkh_req__execution_model__processes[version==1]
-    :satisfied_by: feat__lifecycle[version==1]
-    :status: valid
-    :version: 1
-    :valid_from: v1.0.0
-
-    The :term:`Lifecycle Feature` shall provide support for ordering the launching of
-    :term:`Processes <Process>` based on the dependencies.
-
-..
-    Should be a component requirement derived from feat_req__lifecycle__launch_support
 .. feat_req:: Launching processes in parallel
     :id: feat_req__lifecycle__parallel_launch_support
     :reqtype: Functional
