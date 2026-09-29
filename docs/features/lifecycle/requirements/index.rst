@@ -42,6 +42,20 @@ Launching Processes
 
     The :term:`Lifecycle Feature` shall provide support for launching :term:`Processes <Process>`.
 
+.. feat_req:: Process dependency handling
+    :id: feat_req__lifecycle__process_ordering
+    :reqtype: Functional
+    :security: NO
+    :safety: ASIL_B
+    :derived_from: stkh_req__execution_model__processes[version==1]
+    :satisfied_by: feat__lifecycle[version==1]
+    :status: valid
+    :version: 1
+    :valid_from: v1.0.0
+
+    The :term:`Lifecycle Feature` shall provide support for ordering the launching of
+    :term:`Processes <Process>` based on the dependencies.
+
 .. feat_req:: Control interface support
     :id: feat_req__lifecycle__custom_cond_support
     :reqtype: Functional
@@ -90,9 +104,6 @@ Process Management
 
     The :term:`Lifecycle Feature` shall be able to control already running :term:`Processes <Process>`.
 
-
-..
-    TBC: Drop valid_from field?
 .. feat_req:: OCI Compliant
     :id: feat_req__lifecycle__oci_compliant
     :reqtype: Functional
@@ -109,9 +120,6 @@ Process Management
 
 Run targets
 -----------
-
-..
-    See comment for next requirement
 
 .. feat_req:: Run target support
     :id: feat_req__lifecycle__run_target_support
@@ -234,11 +242,6 @@ Control Interface
 
     The :term:`Lifecycle Feature` shall provide support for commands to query component
     states via the :term:`Control Interface`.
-
-..
-    Rather feature requirement, because of external interface. However report_running() is missing in the architecture.
-    The question is which interface exactly is meant here.
-    If it goes in a similar direction as the previous requirement, it would probably be invalid for V 1.0.
 
 .. feat_req:: Report "started/running/degraded"
     :id: feat_req__lifecycle__controlif_status
