@@ -26,9 +26,6 @@ Lifecycle Requirements
 Launching Processes
 -------------------
 
-..
-    NOTE: Currently health monitor dummy requirement is linked to it
-
 .. feat_req:: Support for launching processes
     :id: feat_req__lifecycle__launch_support
     :reqtype: Functional
@@ -41,9 +38,6 @@ Launching Processes
     :valid_from: v1.0.0
 
     The :term:`Lifecycle Feature` shall provide support for launching :term:`Processes <Process>`.
-
-..
-    TODO: May be we need to remove this again, if everything regarding process ordering is depending on feat_req__lifecycle__conditional_startup
 
 .. feat_req:: Process dependency handling
     :id: feat_req__lifecycle__process_ordering
@@ -187,9 +181,6 @@ Control Interface
     The :term:`Lifecycle Feature` shall provide support for run-target selection via the
     :term:`Control Interface`.
 
-..
-    Clarify if this is needed for version 1.0
-
 .. feat_req:: Query commands
     :id: feat_req__lifecycle__query_commands
     :reqtype: Functional
@@ -248,8 +239,9 @@ Monitoring, Notification and Recovery
     :version: 1
     :valid_from: v1.0.0
 
-    The :term:`Lifecycle Feature` shall support the configuration of :term:`Recovery Action` for the
-    abnormally terminated :term:`Processes <Process>`.
+    The :term:`Lifecycle Feature` shall support the configuration of :term:`Recovery Action`
+    to react on failed :term:`monitoring of processes <Monitoring of Processes>` or the loss of
+    :term:`Liveliness` of the :term:`Processes <Process>`.
 
 .. feat_req:: Monitoring and recovery: watchdog support
     :id: feat_req__lifecycle__smart_watchdog_config
@@ -265,7 +257,6 @@ Monitoring, Notification and Recovery
     The :term:`Lifecycle Feature` shall support a smart :term:`Watchdog`, configurable
     per process.
 
-
 .. feat_req:: Process liveliness detection
     :id: feat_req__lifecycle__liveliness_detection
     :reqtype: Functional
@@ -277,10 +268,8 @@ Monitoring, Notification and Recovery
     :version: 1
     :valid_from: v1.0.0
 
-    The :term:`Lifecycle Feature` shall be able to detect and react to loss of
-    :term:`Liveliness` of the :term:`Processes <Process>` it owns, by monitoring
-    the state of the :term:`Processes <Process>` as specified by the set of
-    executables.
+    The :term:`Lifecycle Feature` shall be able to detect the loss of :term:`Liveliness`
+    of the :term:`Processes <Process>` it owns as specified by the set of executables.
 
 
 .. feat_req:: Multi-instance
