@@ -405,6 +405,9 @@ Needed for each feature.
         * - :need:`wp__requirements_feat`
           - :ref:`documents_docs_features`
 
+        * - :need:`wp__requirements_inspect`
+          - :ref:`documents_docs_features`
+
         * - :need:`wp__feature_arch`
           - :ref:`documents_docs_features`
 
@@ -449,6 +452,9 @@ Needed for each component of a module.
         * - :need:`wp__requirements_comp`
           - :ref:`documents_docs_modules`
 
+        * - :need:`wp__requirements_inspect`
+          - :ref:`documents_docs_modules`
+
         * - :need:`wp__component_arch`
           - :ref:`documents_docs_modules`
 
@@ -456,6 +462,9 @@ Needed for each component of a module.
           - :ref:`documents_docs_modules`
 
         * - :need:`wp__sw_implementation`
+          - :ref:`documents_docs_modules`
+
+        * - :need:`wp__sw_implementation_inspection`
           - :ref:`documents_docs_modules`
 
         * - :need:`wp__verification_sw_unit_test`
