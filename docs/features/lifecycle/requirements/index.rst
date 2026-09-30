@@ -27,7 +27,7 @@ Launching Processes
 -------------------
 
 ..
-    Currently health monitor dummy requirement is linked to it
+    NOTE: Currently health monitor dummy requirement is linked to it
 
 .. feat_req:: Support for launching processes
     :id: feat_req__lifecycle__launch_support
@@ -41,6 +41,9 @@ Launching Processes
     :valid_from: v1.0.0
 
     The :term:`Lifecycle Feature` shall provide support for launching :term:`Processes <Process>`.
+
+..
+    TODO: May be we need to remove this again, if everything regarding process ordering is depending on feat_req__lifecycle__conditional_startup
 
 .. feat_req:: Process dependency handling
     :id: feat_req__lifecycle__process_ordering
@@ -135,50 +138,10 @@ Run targets
     The :term:`Lifecycle Feature` shall provide support for :term:`run targets <Run target>` to define
     collections of :term:`Processes <Process>` that can be launched together.
 
-..
-    Should be a component requirement derived from feat_req__lifecycle__run_target_support
-.. feat_req:: Launching run target
-    :id: feat_req__lifecycle__start_named_run_target
-    :reqtype: Functional
-    :security: NO
-    :safety: ASIL_B
-    :derived_from: stkh_req__execution_model__processes[version==1]
-    :satisfied_by: feat__lifecycle[version==1]
-    :status: valid
-    :version: 1
-    :valid_from: v1.0.0
-
-    The :term:`Lifecycle Feature` shall be able to start a named :term:`Run target`.
-
-..
-    Should be a component requirement derived from feat_req__lifecycle__run_target_support
-    Even if there are already three component requirements inheriting from it.
-    comp_req__launch_man__failure_detect should inherit from feat_req__lifecycle__launch_support
-    comp_req__launch_man__process_state_comm should inherit from something related to process monitoring
-    comp_req__launch_man__configurable_timeout should inherit from feat_req__lifecycle__process_termination (see below)
-
-
-    See also:
-    https://github.com/etas-contrib/score_lifecycle/blob/feature/integration_test_report/tests/integration/integration_test_coverage.md#appendix-b--features-directly-fully-verified-by-a-test-and-having-derived-component-requirements
-.. feat_req:: Switch between run targets
-    :id: feat_req__lifecycle__switch_run_targets
-    :reqtype: Functional
-    :security: NO
-    :safety: ASIL_B
-    :derived_from: stkh_req__execution_model__processes[version==1]
-    :satisfied_by: feat__lifecycle[version==1]
-    :status: valid
-    :version: 1
-    :valid_from: v1.0.0
-
-    The :term:`Lifecycle Feature` shall be able to switch between different :term:`run targets <Run target>`.
-
 
 Terminating Processes
 ---------------------
 
-..
-    Should stay a feature level requirement, but for example comp_req__launch_man__configurable_timeout should inherit
 .. feat_req:: Terminating process
     :id: feat_req__lifecycle__process_termination
     :reqtype: Functional
@@ -192,10 +155,8 @@ Terminating Processes
 
     The :term:`Lifecycle Feature` shall provide support for terminating :term:`Processes <Process>`.
 
-..
-    Move to component level requirement, if no derived component requirements exists or relink existing deriveed cr
 .. feat_req:: Handling process dependency in termination
-    :id: feat_req__lifecycle__terminationn_dependency
+    :id: feat_req__lifecycle__termination_dependency
     :reqtype: Functional
     :security: NO
     :safety: ASIL_B
@@ -259,35 +220,9 @@ Control Interface
 
     Note: status can be "started/running/degraded" - refer to documentation for details
 
-..
-    This is confusing. Is this requirement about the possibility to start a run target via Control Interface
-    or is it that requesting to start a run target should respect the dependency order?
-    If it is the latter, then it is in the wrong chapter. May be this requirement needs to be split up.
-
-    To be deleted
-.. feat_req:: Request run target launch
-    :id: feat_req__lifecycle__request_run_target_start
-    :reqtype: Functional
-    :security: NO
-    :safety: ASIL_B
-    :derived_from: stkh_req__execution_model__processes[version==1]
-    :satisfied_by: feat__lifecycle[version==1]
-    :status: valid
-    :version: 1
-    :valid_from: v1.0.0
-
-    The :term:`Lifecycle Feature` shall be able to start a named :term:`Run target` respecting the
-    dependencies when requested.
-
 
 Monitoring, Notification and Recovery
 -------------------------------------
-
-..
-    Linked component requirement is most probably not implemented in Version 1.0.0. Needs clarification with Nicolas and others.
-    If this is not implemented in Version 1.0.0, the requirement should be moved to component level.
-    Or introduce component level requirement which describes what kind of monitoring is done.
-    -> The latter.
 
 .. feat_req:: Process monitoring
     :id: feat_req__lifecycle__monitor_processes
@@ -300,10 +235,7 @@ Monitoring, Notification and Recovery
     :version: 1
     :valid_from: v1.0.0
 
-    The :term:`Lifecycle Feature` shall provide support for monitoring of :term:`Processes <Process>`.
-
-..
-    See comment for next requirement
+    The :term:`Lifecycle Feature` shall provide support for :term:`monitoring of processes <Monitoring of Processes>`.
 
 .. feat_req:: Recovery action
     :id: feat_req__lifecycle__recovery_action_support
@@ -318,29 +250,6 @@ Monitoring, Notification and Recovery
 
     The :term:`Lifecycle Feature` shall support the configuration of :term:`Recovery Action` for the
     abnormally terminated :term:`Processes <Process>`.
-
-..
-    If possible I would like to have on feature level only the Recovery Action support listed,
-    but on component level the kinds of recovery actions specified and map them to feat_req__lifecycle__recovery_action_support
-    See also here https://github.com/eclipse-score/lifecycle/pull/647
-    and discussion from last Wednesday regarding comp_req__launch_man__process_failure_react split-up.
-
-    -> Can be dropped, or rephrased as component requirement
-    Compromise: Rephrase it and move it to the component level. Replace the current component requirement comp_req__launch_man__recovery_stop_start with it.
-.. feat_req:: Run target switch as recovery action
-    :id: feat_req__lifecycle__recov_run_target_switch
-    :reqtype: Functional
-    :security: NO
-    :safety: ASIL_B
-    :derived_from: stkh_req__execution_model__processes[version==1]
-    :satisfied_by: feat__lifecycle[version==1]
-    :status: invalid
-    :version: 1
-    :valid_from: v1.0.0
-
-    The :term:`Lifecycle Feature` shall support switching to a different :term:`Run target` as
-    recovery action in case a single process terminated abnormally or lost its
-    :term:`Liveliness`.
 
 .. feat_req:: Monitoring and recovery: watchdog support
     :id: feat_req__lifecycle__smart_watchdog_config
