@@ -239,8 +239,8 @@ Monitoring, Notification and Recovery
     :version: 1
     :valid_from: v1.0.0
 
-    The :term:`Lifecycle Feature` shall support the configuration of :term:`Recovery Action`
-    to react on failed :term:`monitoring of processes <Monitoring of Processes>` or the loss of
+    The :term:`Lifecycle Feature` shall support the configuration of a :term:`Recovery Action`,
+    that reacts to a failure in :term:`monitoring of processes <Monitoring of Processes>` or the loss of
     :term:`Liveliness` of the :term:`Processes <Process>`.
 
 .. feat_req:: Monitoring and recovery: watchdog support
