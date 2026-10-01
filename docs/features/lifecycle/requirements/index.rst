@@ -53,8 +53,8 @@ Launching Processes
     The :term:`Lifecycle Feature` shall provide support for ordering the launching of
     :term:`Processes <Process>` based on the dependencies.
 
-.. feat_req:: Control interface support
-    :id: feat_req__lifecycle__custom_cond_support
+.. feat_req:: Process sandbox options
+    :id: feat_req__lifecycle__sandbox_options
     :reqtype: Functional
     :security: NO
     :safety: ASIL_B
@@ -64,8 +64,8 @@ Launching Processes
     :version: 1
     :valid_from: v1.0.0
 
-    The :term:`Lifecycle Feature` shall provide support to wait for configurable custom
-    conditions, which can be signaled from applications via :term:`Control Interface`.
+    The :term:`Lifecycle Feature` shall provide support to set :term:`sandbox <Sandbox>` options for
+    each :term:`Process`.
 
 
 Conditional Launching
@@ -178,8 +178,8 @@ Control Interface
     :version: 1
     :valid_from: v1.0.0
 
-    The :term:`Lifecycle Feature` shall provide support for run-target selection via the
-    :term:`Control Interface`.
+    The :term:`Lifecycle Feature` shall provide support for selecting a
+    :term:`run target <Run target>` via the :term:`Control Interface`.
 
 .. feat_req:: Query commands
     :id: feat_req__lifecycle__query_commands
@@ -269,7 +269,7 @@ Monitoring, Notification and Recovery
     :valid_from: v1.0.0
 
     The :term:`Lifecycle Feature` shall be able to detect the loss of :term:`Liveliness`
-    of the :term:`Processes <Process>` it owns as specified by the set of executables.
+    of the :term:`Processes <Process>` it owns.
 
 
 .. feat_req:: Multi-instance
