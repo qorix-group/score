@@ -259,7 +259,7 @@ docs/score_tools
 
 .. needtable::
    :style: table
-   :columns: title;id;safety_affected;security_affected;status
+   :columns: title;id;safety;security;status
    :colwidths: 25,45,10,10,10
    :sort: docname
 
@@ -1299,7 +1299,31 @@ the sections above, e.g. documents of included dependencies or of modules which 
    assigned_modules = ["score_baselibs", "score_communication", "score_someip_gateway", "communication", "score_config_management", "score_diagnostics", "score_feo", "score_inc_daal", "feo", "score_lifecycle", "score_logging", "score_kyron", "orchestrator", "os", "score_persistency", "score_security_crypto", "score_time"]
    results = []
 
-   for need in needs.filter_types(["document", "doc_tool"]):
+   for need in needs.filter_types(["document"]):
+       docname = need["docname"] or ""
+       if "score_platform/" in docname:
+           docname = docname.split("score_platform/", 1)[1]
+       folders = docname.split("/")
+       if len(folders) == 1:
+           continue
+       if folders[0] == "modules":
+           if folders[1] in assigned_modules:
+               continue
+       elif folders[0] in platform_folders:
+           continue
+       results.append(need)
+
+.. needtable::
+   :style: table
+   :columns: title;id;safety_affected;security_affected;status
+   :colwidths: 25,45,10,10,10
+   :sort: docname
+
+   platform_folders = ["architecture", "contribute", "features", "modules", "platform_management_plan", "quality", "requirements", "safety", "score_tools"]
+   assigned_modules = ["score_baselibs", "score_communication", "score_someip_gateway", "communication", "score_config_management", "score_diagnostics", "score_feo", "score_inc_daal", "feo", "score_lifecycle", "score_logging", "score_kyron", "orchestrator", "os", "score_persistency", "score_security_crypto", "score_time"]
+   results = []
+
+   for need in needs.filter_types(["doc_tool"]):
        docname = need["docname"] or ""
        if "score_platform/" in docname:
            docname = docname.split("score_platform/", 1)[1]
