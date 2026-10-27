@@ -16,7 +16,7 @@
    :id: doc__contribution_guidelines
    :status: valid
    :version: 1
-   :safety: NO
+   :safety: QM
    :security: NO
    :realizes: wp__sw_development_plan[version==1]
 
