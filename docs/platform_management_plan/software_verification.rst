@@ -510,6 +510,9 @@ Remaining Medium severity findings are reviewed and justified by documented risk
 
 Where no severity rating is provided the violation is part of the coverage calculation and needs to be resolved to reach the defined goals.
 
+Rule sets
+"""""""""
+
 The following rule sets are the minimum to be applied by every module. Modules may add further rules or tools
 (e.g. ``clang-tidy``), but may not remove rules without a documented deviation.
 
