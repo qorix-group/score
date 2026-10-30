@@ -543,6 +543,12 @@ The following rule sets are the minimum to be applied by every module. Modules m
      - Alerts with a ``security-severity`` of 9.0 or higher (Critical) and 7.0 to 8.9 (High)
      - All other alerts
 
+Further improvements are foreseen to extend the checks to match demands of safety-critical software development. Rules which are considered to be added (after evaluation) are:
+
+    - codeql/cpp-queries:codeql-suites/cpp-code-scanning.qls
+    - codeql/cert-cpp-coding-standards:codeql-suites/cert-cpp-l1.qls
+    - codeql/cert-c-coding-standards:codeql-suites/cert-c-l1.qls
+
 The static code analysis is executed for every module at least on each change of the main branch and before
 each release. The results (SARIF) of the release state are kept as release artifacts and summarized in the
 module verification report. A finding that is not fixed is justified in the source code at the finding location,
