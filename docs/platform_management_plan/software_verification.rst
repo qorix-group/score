@@ -554,6 +554,9 @@ each release. The results (SARIF) of the release state are kept as release artif
 module verification report. A finding that is not fixed is justified in the source code at the finding location,
 as described in :need:`doc__cpp_code_analysis`, and is listed in the module verification report.
 
+Deviation
+"""""""""
+
 Any deviation of the coverage percentage value is documented as part of the module documentation.
 A rationale for the deviation needs to be provided for an official release.
 
