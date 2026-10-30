@@ -543,7 +543,8 @@ The following rule sets are the minimum to be applied by every module. Modules m
      - Alerts with a ``security-severity`` of 9.0 or higher (Critical) and 7.0 to 8.9 (High)
      - All other alerts
 
-Further improvements are foreseen to extend the checks to match demands of safety-critical software development. Rules which are considered to be added (after evaluation) are:
+Further improvements are foreseen to extend the checks to match demands of safety-critical software development. 
+Rules which are considered to be added (after evaluation) are:
 
     - codeql/cpp-queries:codeql-suites/cpp-code-scanning.qls
     - codeql/cert-cpp-coding-standards:codeql-suites/cert-cpp-l1.qls
