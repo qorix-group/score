@@ -562,8 +562,16 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../code_generation/index.html">Code Generation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../communication/index.html">Communication</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../configuration/index.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../daal/index.html">Deterministic App Abstraction Layer</a></li>
+
+
+
+
+
+
+
 <li class="toctree-l1"><a class="reference internal" href="../../../diagnostics/index.html">Diagnostic and Fault Management</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../frameworks/index.html">Frameworks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../feo/index.html">Fixed Execution Order</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../lifecycle/index.html">Lifecycle</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../../index.html">Log and Trace</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="../index.html">Logging</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -648,7 +656,7 @@
                   
   <section id="logging-requirements">
 <h1>Logging Requirements<a class="headerlink" href="#logging-requirements" title="Link to this heading">#</a></h1>
-<div class="need_container docutils container" id="SNCB-35c91c0e">
+<div class="need_container docutils container" id="SNCB-37c4ee6d">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_document table" id="doc__logging_requirements">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -692,7 +700,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-06a9181d">
+<div class="need_container docutils container" id="SNCB-a0e5178e">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__timestamping_local">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -739,7 +747,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-705bb398">
+<div class="need_container docutils container" id="SNCB-5a930118">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__timestamping_original">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -786,7 +794,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-5e276e07">
+<div class="need_container docutils container" id="SNCB-0a885012">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__timestamping_sync">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -833,7 +841,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-1174acd4">
+<div class="need_container docutils container" id="SNCB-e6a52349">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__severity_levels">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -859,6 +867,7 @@
 </span></span></div>
 <div class="line"><span><div class="line">derived from: <span class="derived_from"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__dev_experience__logging_support" title="feat_req__logging__severity_levels">stkh_req__dev_experience__logging_support</a></span></span></div>
 <div class="line">satisfied by: <span class="satisfied_by"><span><a class="reference internal" href="../architecture/index.html#feat__logging" title="feat_req__logging__severity_levels">feat__logging</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#logic_arc_int__log_cpp__logging" title="feat_req__logging__severity_levels">logic_arc_int__log_cpp__logging</a>, <a class="reference internal" href="../architecture/index.html#logic_arc_int__log_rust__logging_rust" title="feat_req__logging__severity_levels">logic_arc_int__log_rust__logging_rust</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -880,7 +889,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-698c1f10">
+<div class="need_container docutils container" id="SNCB-5322923d">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__prioritization">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -927,7 +936,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-bb3f5e79">
+<div class="need_container docutils container" id="SNCB-2a2aacf5">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__early_startup">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -974,7 +983,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-d7fc9bfc">
+<div class="need_container docutils container" id="SNCB-ced441a6">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__entity_identifier">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1000,6 +1009,7 @@
 </span></span></div>
 <div class="line"><span><div class="line">derived from: <span class="derived_from"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__dev_experience__logging_support" title="feat_req__logging__entity_identifier">stkh_req__dev_experience__logging_support</a></span></span></div>
 <div class="line">satisfied by: <span class="satisfied_by"><span><a class="reference internal" href="../architecture/index.html#feat__logging" title="feat_req__logging__entity_identifier">feat__logging</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#logic_arc_int__log_cpp__logging" title="feat_req__logging__entity_identifier">logic_arc_int__log_cpp__logging</a>, <a class="reference internal" href="../architecture/index.html#logic_arc_int__log_rust__logging_rust" title="feat_req__logging__entity_identifier">logic_arc_int__log_rust__logging_rust</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -1021,7 +1031,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-76f2feff">
+<div class="need_container docutils container" id="SNCB-c9c17324">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__filtering_log_levels">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1068,7 +1078,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-456303ef">
+<div class="need_container docutils container" id="SNCB-78661123">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__filtering_entity_id">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1115,7 +1125,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-0a51f64d">
+<div class="need_container docutils container" id="SNCB-47cb878a">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__message_loss_detection">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1162,7 +1172,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-2f4c100d">
+<div class="need_container docutils container" id="SNCB-cfaf10df">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__message_loss_handling">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1211,7 +1221,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-6be86e83">
+<div class="need_container docutils container" id="SNCB-d528d8ba">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__context_log_level">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1258,7 +1268,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-fb1a8534">
+<div class="need_container docutils container" id="SNCB-92f692a3">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__log_sources_user_app">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1284,6 +1294,7 @@
 </span></span></div>
 <div class="line"><span><div class="line">derived from: <span class="derived_from"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__dev_experience__logging_support" title="feat_req__logging__log_sources_user_app">stkh_req__dev_experience__logging_support</a></span></span></div>
 <div class="line">satisfied by: <span class="satisfied_by"><span><a class="reference internal" href="../architecture/index.html#feat__logging" title="feat_req__logging__log_sources_user_app">feat__logging</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#logic_arc_int__log_cpp__logging" title="feat_req__logging__log_sources_user_app">logic_arc_int__log_cpp__logging</a>, <a class="reference internal" href="../architecture/index.html#logic_arc_int__log_rust__logging_rust" title="feat_req__logging__log_sources_user_app">logic_arc_int__log_rust__logging_rust</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -1305,7 +1316,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-31b9a674">
+<div class="need_container docutils container" id="SNCB-e60f13e0">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__log_sources">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1331,6 +1342,7 @@
 </span></span></div>
 <div class="line"><span><div class="line">derived from: <span class="derived_from"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__dev_experience__logging_support" title="feat_req__logging__log_sources">stkh_req__dev_experience__logging_support</a></span></span></div>
 <div class="line">satisfied by: <span class="satisfied_by"><span><a class="reference internal" href="../architecture/index.html#feat__logging" title="feat_req__logging__log_sources">feat__logging</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#logic_arc_int__log_cpp__logging" title="feat_req__logging__log_sources">logic_arc_int__log_cpp__logging</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -1352,7 +1364,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-97e4d8fa">
+<div class="need_container docutils container" id="SNCB-447f77cd">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__log_sinks_console">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1399,7 +1411,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-857ab58c">
+<div class="need_container docutils container" id="SNCB-381cce1e">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__log_sinks_local_fs">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1446,7 +1458,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-cef51ab8">
+<div class="need_container docutils container" id="SNCB-1b19c6d3">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__log_sinks_cloud_drive">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1493,7 +1505,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c9d2f404">
+<div class="need_container docutils container" id="SNCB-4f635bce">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__log_sinks_network">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1540,7 +1552,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-42658566">
+<div class="need_container docutils container" id="SNCB-3c108fff">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__log_sinks_stdout">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1587,7 +1599,7 @@
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-54fa62cb">
+<div class="need_container docutils container" id="SNCB-3408b82b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__boot_logging">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1635,7 +1647,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-e3c1aecf">
+<div class="need_container docutils container" id="SNCB-322f9472">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_log_level">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1682,7 +1694,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-251cd401">
+<div class="need_container docutils container" id="SNCB-d821756b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__sink_device">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1729,7 +1741,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-572b9e4a">
+<div class="need_container docutils container" id="SNCB-07c06584">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__sink_multiple_device">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1776,7 +1788,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-6b247b10">
+<div class="need_container docutils container" id="SNCB-95d8cdee">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__sink_strategy">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1823,7 +1835,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-39c4144b">
+<div class="need_container docutils container" id="SNCB-84b4b095">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_buffer_size">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1870,7 +1882,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-38a73a2f">
+<div class="need_container docutils container" id="SNCB-e11d97a0">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_storage_size">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1917,7 +1929,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-fc582c42">
+<div class="need_container docutils container" id="SNCB-f2a843ed">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_permissions">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -1964,7 +1976,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-299ae0ae">
+<div class="need_container docutils container" id="SNCB-661423ac">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_log_filter">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2011,7 +2023,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-f17e8693">
+<div class="need_container docutils container" id="SNCB-5527f819">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_entity_id">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2058,7 +2070,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-60d5a198">
+<div class="need_container docutils container" id="SNCB-f08b2c64">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_on_demand">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2105,7 +2117,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-1c603a4e">
+<div class="need_container docutils container" id="SNCB-6e12cdb3">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_fallback">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2152,7 +2164,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-0ec88af8">
+<div class="need_container docutils container" id="SNCB-9ae6b1da">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__config_custom_types">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2199,7 +2211,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-69cd766d">
+<div class="need_container docutils container" id="SNCB-8fb1b631">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__error_handling_recoverable">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2246,7 +2258,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-436b1afd">
+<div class="need_container docutils container" id="SNCB-514e2ee3">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__log__err_handling_nonrec">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2293,7 +2305,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-727d5f7a">
+<div class="need_container docutils container" id="SNCB-c85fa436">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__error_handling_isolation">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2340,7 +2352,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-822482a4">
+<div class="need_container docutils container" id="SNCB-40ea445b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__compat_os">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2387,7 +2399,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-bfbcc224">
+<div class="need_container docutils container" id="SNCB-0f385b39">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__compat_languages">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2413,6 +2425,7 @@ cycle.</p></td>
 </span></span></div>
 <div class="line"><span><div class="line">derived from: <span class="derived_from"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__dev_experience__logging_support" title="feat_req__logging__compat_languages">stkh_req__dev_experience__logging_support</a>, <a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__dev_experience__prog_languages" title="feat_req__logging__compat_languages">stkh_req__dev_experience__prog_languages</a></span></span></div>
 <div class="line">satisfied by: <span class="satisfied_by"><span><a class="reference internal" href="../architecture/index.html#feat__logging" title="feat_req__logging__compat_languages">feat__logging</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#logic_arc_int__log_rust__logging_rust" title="feat_req__logging__compat_languages">logic_arc_int__log_rust__logging_rust</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -2434,7 +2447,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-844f4f15">
+<div class="need_container docutils container" id="SNCB-92a300cf">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__resource_storage">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2481,7 +2494,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c8aad222">
+<div class="need_container docutils container" id="SNCB-09fcd35e">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__resource_comm_channel">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2528,7 +2541,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-4bd02b34">
+<div class="need_container docutils container" id="SNCB-2cd5854e">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__resource_runtime">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2575,7 +2588,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-aa4e594c">
+<div class="need_container docutils container" id="SNCB-99299e77">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__resource_performance">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2622,7 +2635,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-f0f42d27">
+<div class="need_container docutils container" id="SNCB-861d3f7b">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__qos_message_handling">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2669,7 +2682,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-ccdfa3bc">
+<div class="need_container docutils container" id="SNCB-aea8894a">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__compat_dlt">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2718,7 +2731,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-331b10d2">
+<div class="need_container docutils container" id="SNCB-c770c6fb">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__security_log_access">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2765,7 +2778,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-503c6b97">
+<div class="need_container docutils container" id="SNCB-4edcfac6">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__asil_support">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
@@ -2791,6 +2804,7 @@ cycle.</p></td>
 </span></span></div>
 <div class="line"><span><div class="line">derived from: <span class="derived_from"><span><a class="reference internal" href="../../../../requirements/stakeholder/index.html#stkh_req__functional_req__safe_comput" title="feat_req__logging__asil_support">stkh_req__functional_req__safe_comput</a></span></span></div>
 <div class="line">satisfied by: <span class="satisfied_by"><span><a class="reference internal" href="../architecture/index.html#feat__logging" title="feat_req__logging__asil_support">feat__logging</a></span></span></div>
+<div class="line">fulfilled by: <span class="fulfils"><span><a class="reference internal" href="../architecture/index.html#logic_arc_int__log_cpp__logging" title="feat_req__logging__asil_support">logic_arc_int__log_cpp__logging</a>, <a class="reference internal" href="../architecture/index.html#logic_arc_int__log_rust__logging_rust" title="feat_req__logging__asil_support">logic_arc_int__log_rust__logging_rust</a></span></span></div>
 </span></div>
 </div>
 </td>
@@ -2814,7 +2828,7 @@ cycle.</p></td>
 </table>
 </div>
 </div>
-<div class="need_container docutils container" id="SNCB-c70c27f8">
+<div class="need_container docutils container" id="SNCB-32da3b8c">
 <div class="pst-scrollable-table-container"><table class="need needs_grid_complex needs_layout_score needs_style_none needs_type_feat_req table" id="feat_req__logging__system_class">
 <tbody>
 <tr class="head row-odd"><td class="head_left" colspan="2"><div class="needs_head_left line-block">
