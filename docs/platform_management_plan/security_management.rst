@@ -119,6 +119,15 @@ Treatment of the clauses that are not fully in the platform's scope:
    * - 11, 12, 14 Validation, production, end of support
      - Performed by the integrator through the interface
      - The platform part (security manual, requirements for post-development) stays in this plan.
+   * - 5 Organisational management
+     - Configuration information for maintenance (RQ-05-12) is claimed by this plan; quality and tool requirements (RQ-05-11, RQ-05-14) by the quality and tool areas
+     - Those requirements are organisational; the platform plan claims only what it produces (the SBOM).
+   * - 10 Product development
+     - Claimed by the security engineering area, not by this plan
+     - Development requirements are the work of the security engineering process.
+   * - 13 Operations and maintenance
+     - Incident handling (RQ-13-01, RQ-13-02) is in the monitor workflow. The incident response plan is not a separate document. Field updates (RQ-13-03) are performed by the integrator.
+     - The platform has no vehicles in the field. Field updates reach the platform through the interface, and the platform part is the release for post-development.
 
 Cybersecurity Interface
 ^^^^^^^^^^^^^^^^^^^^^^^
