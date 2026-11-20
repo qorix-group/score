@@ -101,6 +101,18 @@ The formal security reviews are not tailored out. An independent reviewer, who d
 
 [Proposal E2-S, pending the Project Lead Circle] The platform performs a cybersecurity assessment before its first release for post-development. The cybersecurity case (ISO/SAE 21434 clause 6.4.7) is confirmed by that assessment. The decision and its rationale are recorded in the cybersecurity case, and the assessment is performed by a person who is independent of the activities assessed (clauses 6.4.8 and 6.4.3).
 
+Cybersecurity Interface
+^^^^^^^^^^^^^^^^^^^^^^^
+
+The platform is developed out of context and delivered to integrators. The cybersecurity activities
+that the integrator performs (the item-level assessment, the cybersecurity case of the item, and
+post-development monitoring) are distributed activities (ISO/SAE 21434 clause 7). Their interface
+is defined in a cybersecurity interface agreement between the platform and the integrator
+(work product WP-07-01), which this plan references.
+
+[Open, proposal (decision of the process community, with the Project Lead Circle): the interface
+agreement does not exist yet. This section names what it must cover.]
+
 Approach
 ++++++++
 
