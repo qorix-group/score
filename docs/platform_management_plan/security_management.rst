@@ -95,6 +95,11 @@ Because these are in responsibility of the system integrator: :need:`std_wp__iso
 Summary: :need:`wp__tailoring_work_products` links to all the work products which are tailored out in the platform security plan,
 to be able to demonstrate completeness in `REPLACE_external_standards`
 
+The formal security reviews are not tailored out. An independent reviewer, who did not create the reviewed work product, performs them (proposal E7, pending the security manager pool).
+
+[Proposal E15-S, pending the process community] The external security audit of the process is tailored out for ML 2. It is the gate for ML 3, and it is planned before the ML 3 assessment, as the safety audits are for ML 3.
+
+[Proposal E2-S, pending the Project Lead Circle] The platform performs a cybersecurity assessment before its first release for post-development. The cybersecurity case (ISO/SAE 21434 clause 6.4.7) is confirmed by that assessment. The decision and its rationale are recorded in the cybersecurity case, and the assessment is performed by a person who is independent of the activities assessed (clauses 6.4.8 and 6.4.3).
 
 Approach
 ++++++++
@@ -224,7 +229,7 @@ The security lifecycle of the S-CORE project is initiated at the project set-up 
 Note that the Eclipse Foundation also defines `project phases <https://www.eclipse.org/projects/handbook/#starting-project-phases>`_.
 Eclipse definition is more about the process maturity for the whole project, if we are in Mature Phase, we latest will have the project lifecycle as defined in our process description.
 Nevertheless, Security Development and even Security Package release is independent from Mature and Incubation Phase as the completeness and appropriateness of the platform process and artifacts
-is determined by Security Audit and not be Eclipse project reviews.
+is determined by the security audit of the process, which is planned before the ML 3 assessment, and not by Eclipse project reviews.
 
 Security Requirements
 ^^^^^^^^^^^^^^^^^^^^^
@@ -283,23 +288,23 @@ Security Specific SW Platform Work Products
 
     * - :need:`wp__platform_security_package`
       - :ndf:`copy('status', need_id='wf__cr_mt_security_package')`
-      - <Link to WP>
-      - <automated>
+      - not produced yet: the package is compiled per release from its work products; no platform package exists in this repository
+      - not produced
 
     * - :need:`wp__fdr_reports_security` (platform Security Plan)
       - :ndf:`copy('status', need_id='wf__p_formal_security_rv')`
-      - <Link to WP>
-      - <automated>
+      - not performed yet: the review of this plan takes place on release (E7, proposal)
+      - not produced
 
     * - :need:`wp__fdr_reports_security` (platform Security Package)
       - :ndf:`copy('status', need_id='wf__p_formal_security_rv')`
-      - <Link to WP>
-      - <automated>
+      - not performed yet: the review of the package takes place with the package
+      - not produced
 
     * - :need:`wp__fdr_reports_security` (feature's Security Analyses)
-      - <Process Status>
-      - <Link to WP>
-      - <automated>
+      - not started (no feature analysis)
+      - not performed yet: no feature security analysis exists in this repository
+      - not produced
 
     * - :need:`wp__audit_report_security`
       - performed by external experts
@@ -308,8 +313,8 @@ Security Specific SW Platform Work Products
 
     * - :need:`wp__platform_security_manual`
       - :ndf:`copy('status', need_id='wf__cr_mt_security_manual')`
-      - <Link to WP>
-      - <automated>
+      - not produced yet: the platform security manual is not in this repository
+      - not produced
 
     * - :need:`wp__tailoring_work_products` (generic)
       - :ndf:`copy('status', need_id='wf__def_app_process_description')`
@@ -318,8 +323,8 @@ Security Specific SW Platform Work Products
 
     * - :need:`wp__sw_platform_sbom`
       - :ndf:`copy('status', need_id='wf__cr_mt_security_sbom')`
-      - <Link to WP>
-      - <automated>
+      - not produced yet: no platform SBOM exists in this repository
+      - not produced
 
 Process status: Status of the workflow which "outputs" the work product, derived from the docs it "has" and guidances it "contains".
 
