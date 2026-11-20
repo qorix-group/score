@@ -95,11 +95,30 @@ Because these are in responsibility of the system integrator: :need:`std_wp__iso
 Summary: :need:`wp__tailoring_work_products` links to all the work products which are tailored out in the platform security plan,
 to be able to demonstrate completeness in `REPLACE_external_standards`
 
-The formal security reviews are not tailored out. An independent reviewer, who did not create the reviewed work product, performs them (proposal E7, pending the security manager pool).
+The formal security reviews are not tailored out. An independent reviewer, who did not create the reviewed work product, performs them.
 
-[Proposal E15-S, pending the process community] The external security audit of the process is tailored out for ML 2. It is the gate for ML 3, and it is planned before the ML 3 assessment, as the safety audits are for ML 3.
+The process audit is tailored out for ML 2. It is the gate for ML 3 and is planned before the ML 3 assessment, as the safety audits are for ML 3.
 
-[Proposal E2-S, pending the Project Lead Circle] The platform performs a cybersecurity assessment before its first release for post-development. The cybersecurity case (ISO/SAE 21434 clause 6.4.7) is confirmed by that assessment. The decision and its rationale are recorded in the cybersecurity case, and the assessment is performed by a person who is independent of the activities assessed (clauses 6.4.8 and 6.4.3).
+The platform performs a cybersecurity assessment before its first release for post-development. The cybersecurity case (ISO/SAE 21434 clause 6.4.7) is confirmed by that assessment. The decision and its rationale are recorded in the cybersecurity case, and the assessment is performed by a person who is independent of the activities assessed (clauses 6.4.8 and 6.4.3).
+
+Treatment of the clauses that are not fully in the platform's scope:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 40 40
+
+   * - Clause
+     - Treatment
+     - Reason
+   * - 7 Distributed activities
+     - Partly relevant: the cybersecurity interface with the integrator
+     - The integrator performs item-level activities. Supplier selection is tailored out, S-CORE selects no suppliers.
+   * - 9 Concept
+     - Partly relevant: platform level
+     - The platform analysis is S-CORE's. The item level stays with the integrator (see clause 7).
+   * - 11, 12, 14 Validation, production, end of support
+     - Performed by the integrator through the interface
+     - The platform part (security manual, requirements for post-development) stays in this plan.
 
 Cybersecurity Interface
 ^^^^^^^^^^^^^^^^^^^^^^^
@@ -110,8 +129,7 @@ post-development monitoring) are distributed activities (ISO/SAE 21434 clause 7)
 is defined in a cybersecurity interface agreement between the platform and the integrator
 (work product WP-07-01), which this plan references.
 
-[Open, proposal (decision of the process community, with the Project Lead Circle): the interface
-agreement does not exist yet. This section names what it must cover.]
+The interface agreement is not written yet. This section names what it must cover.
 
 Approach
 ++++++++
@@ -305,7 +323,7 @@ Security Specific SW Platform Work Products
 
     * - :need:`wp__fdr_reports_security` (platform Security Plan)
       - :ndf:`copy('status', need_id='wf__p_formal_security_rv')`
-      - not performed yet: the review of this plan takes place on release (E7, proposal)
+      - not performed yet: the review of this plan takes place on release (E7)
       - not produced
 
     * - :need:`wp__fdr_reports_security` (platform Security Package)
