@@ -332,7 +332,7 @@ Security Specific SW Platform Work Products
 
     * - :need:`wp__fdr_reports_security` (platform Security Plan)
       - :ndf:`copy('status', need_id='wf__p_formal_security_rv')`
-      - not performed yet: the review of this plan takes place on release (E7)
+      - not performed yet: the review of this plan takes place on release
       - not produced
 
     * - :need:`wp__fdr_reports_security` (platform Security Package)
@@ -348,7 +348,7 @@ Security Specific SW Platform Work Products
     * - :need:`wp__audit_report_security`
       - performed by external experts
       - n/a
-      - currently tailored out
+      - tailored out for ML 2, the gate for ML 3
 
     * - :need:`wp__platform_security_manual`
       - :ndf:`copy('status', need_id='wf__cr_mt_security_manual')`
